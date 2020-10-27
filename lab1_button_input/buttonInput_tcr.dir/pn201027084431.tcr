@@ -1,0 +1,5 @@
+#Start recording tcl command: 10/27/2020 08:44:25
+#Project Location: C:/Users/10352/vhdl-labs/lab1_button_input; Project name: buttonInput
+prj_project new -name "buttonInput" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+prj_project save
+#Stop recording: 10/27/2020 08:44:31
