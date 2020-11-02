@@ -1,0 +1,6 @@
+#Start recording tcl command: 11/2/2020 20:25:45
+#Project Location: C:/Users/10352/vhdl-labs/lab4_digital_clock; Project name: digital_clock
+prj_project new -name "digital_clock" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+prj_project save
+prj_src add "C:/Users/10352/vhdl-labs/lab4_digital_clock/digital_clock.vhd"
+#Stop recording: 11/2/2020 20:26:11
