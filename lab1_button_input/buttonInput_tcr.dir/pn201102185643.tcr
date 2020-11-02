@@ -1,0 +1,14 @@
+#Start recording tcl command: 11/1/2020 19:22:57
+#Project Location: C:/Users/10352/vhdl-labs/lab1_button_input; Project name: buttonInput
+prj_project open "C:/Users/10352/vhdl-labs/lab1_button_input/buttonInput.ldf"
+prj_src add "C:/Users/10352/vhdl-labs/lab1_button_input/key_input.vhd"
+source "C:/Users/10352/vhdl-labs/lab1_button_input/hdle_generate_tbtemplate.tcl"
+prj_src add -simulate_only "Key_Input_tb.vhd"
+source "C:/Users/10352/vhdl-labs/lab1_button_input/hdle_generate_Symbol.tcl"
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+#Stop recording: 11/2/2020 18:56:43

@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+Report for cell Key_Input.TECH
+Register bits:  41 of 4635 (0.885%)
+I/O cells:      24
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9          100.0
+                            FD1P3AX         5          100.0
+                            FD1P3IX         1          100.0
+                            FD1S3AX        31          100.0
+                            FD1S3JX         4          100.0
+                                GSR         1          100.0
+                                 IB         5          100.0
+                                INV         1          100.0
+                               LUT4        27          100.0
+                                 OB        19          100.0
+                              TOTAL       103
