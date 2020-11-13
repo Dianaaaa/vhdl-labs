@@ -1,0 +1,31 @@
+---------------------------------------------------
+Report for cell Key_Input
+   Instance path: Key_Input
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     112.00        100.0
+                                  LUT4	     204.00        100.0
+                                 IOBUF	         27        100.0
+                                PFUREG	         81        100.0
+                                RIPPLE	          9        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                   segment_led_decoder	          1        32.1
+                 key_pressing_detector	          1        67.4
+---------------------------------------------------
+Report for cell key_pressing_detector
+   Instance path: Key_Input/detector
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      75.50        67.4
+                                  LUT4	     130.33        63.9
+                                PFUREG	         70        86.4
+                                RIPPLE	          9        100.0
+---------------------------------------------------
+Report for cell segment_led_decoder
+   Instance path: Key_Input/decoder
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.00        32.1
+                                  LUT4	      72.67        35.6
+                                PFUREG	         11        13.6

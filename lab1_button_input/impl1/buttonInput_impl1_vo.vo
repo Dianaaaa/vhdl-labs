@@ -1,0 +1,4621 @@
+
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
+
+// ldbanno -n Verilog -o buttonInput_impl1_vo.vo -w -neg -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml buttonInput_impl1.ncd 
+// Netlist created on Wed Nov 04 15:19:57 2020
+// Netlist written on Wed Nov 04 15:20:19 2020
+// Design is for device LCMXO2-4000HC
+// Design is for package CSBGA132
+// Design is for performance grade 4
+
+`timescale 1 ns / 1 ps
+
+module Key_Input ( row, col, independent_keys, seg1, seg2, clk );
+  input  [3:0] col;
+  input  [3:0] independent_keys;
+  input  clk;
+  output [3:0] row;
+  output [6:0] seg1;
+  output [6:0] seg2;
+  wire   \detector/clk_cnt_8 , \detector/clk_cnt_7 , \detector/n82 , 
+         \detector/n83 , clk_c, \detector/n3633 , \detector/n3634 , 
+         \detector/clk_cnt_6 , \detector/clk_cnt_5 , \detector/n84 , 
+         \detector/n85 , \detector/n3632 , \detector/clk_cnt_2 , 
+         \detector/clk_cnt_1 , \detector/n88 , \detector/n89_adj_164 , 
+         \detector/n3630 , \detector/n3631 , \detector/clk_cnt_16 , 
+         \detector/clk_cnt_15 , \detector/n74 , \detector/n75 , 
+         \detector/n3637 , \detector/clk_cnt_10 , \detector/clk_cnt_9 , 
+         \detector/n80 , \detector/n81 , \detector/n3635 , 
+         \detector/clk_cnt_14 , \detector/clk_cnt_13 , \detector/n76 , 
+         \detector/n77 , \detector/n3636 , \detector/clk_cnt_12 , 
+         \detector/clk_cnt_11 , \detector/n78 , \detector/n79 , 
+         \detector/clk_cnt_0 , \detector/n90 , \detector/clk_cnt_4 , 
+         \detector/clk_cnt_3 , \detector/n86 , \detector/n87 , 
+         \detector/LED_get_0 , \detector/LED_get_1 , \detector/n29 , 
+         \detector/n30 , \detector/n89 , \detector/apa , \detector/LED_get_2 , 
+         \detector/LED_get_3 , \detector/n27 , \detector/n28 , 
+         \detector/n4364 , \detector/LED_get_4 , \detector/n26 , n4467, 
+         \detector/clk_c_enable_1 , \detector/apa_N_10 , n4321, key_id_17, 
+         key_id_19, key_id_18, col_c_1, col_c_0, \detector/key_out_15__N_57 , 
+         n4311, \detector/key_out_12 , \detector/key_out_13 , col_c_3, col_c_2, 
+         \detector/n4089 , \detector/key_out_14 , \detector/n10 , 
+         \detector/key_out_15 , \detector/key_out_2 , \detector/key_out_3 , 
+         \detector/num_cnt_0 , \detector/n4131 , \detector/n567 , 
+         \detector/n4244 , \detector/num_cnt_1 , \detector/num_cnt_2 , 
+         \detector/n3944 , \detector/n3 , independent_keys_c_1, 
+         \detector/BTN_cache_1 , \detector/BTN_cache_3__N_83 , 
+         \detector/n1211 , \detector/BTN_cache_3 , \detector/BTN_cache_2 , 
+         \detector/n4343 , \detector/apa_enable_15 , \detector/n3868 , 
+         key_id_0, \detector/n2 , \detector/n4465 , 
+         \detector/key_id_19_N_11_1 , key_id_1, independent_keys_c_3, 
+         independent_keys_c_2, \detector/key_id_19_N_11_2 , 
+         \detector/apa_enable_20 , key_id_2, \detector/n6_adj_168 , 
+         \detector/key_id_19_N_11_3 , \detector/apa_enable_1 , key_id_3, 
+         \detector/n4095 , \detector/key_out_0 , \detector/n3954 , 
+         \detector/key_out_1 , \detector/key_id_19_N_109_5 , 
+         \detector/key_id_19_N_109_4 , \detector/apa_enable_19 , 
+         \detector/n1598 , key_id_4, key_id_5, \detector/n4018 , 
+         \detector/key_id_19_N_109_7 , \detector/key_id_19_N_109_6 , key_id_6, 
+         key_id_7, \detector/n4017 , \detector/key_out_4 , 
+         \detector/key_out_5 , \detector/key_id_19_N_109_9 , 
+         \detector/key_id_19_N_109_8 , key_id_8, key_id_9, 
+         \detector/key_out_7 , \detector/n3999 , \detector/key_out_6 , 
+         \detector/key_id_19_N_109_11 , \detector/key_id_19_N_109_10 , 
+         key_id_10, key_id_11, \detector/n4021 , \detector/key_out_8 , 
+         \detector/key_out_9 , \detector/key_id_19_N_109_13 , 
+         \detector/key_id_19_N_109_12 , key_id_12, key_id_13, 
+         \detector/key_out_11 , \detector/n4344 , \detector/n3994 , 
+         \detector/n4350 , \detector/n4354 , \detector/n4340 , 
+         \detector/key_out_10 , \detector/key_id_19_N_109_15 , 
+         \detector/key_id_19_N_109_14 , key_id_14, key_id_15, \detector/n4337 , 
+         \detector/n4359 , \detector/n3988 , \detector/key_id_19_N_109_17 , 
+         \detector/key_id_19_N_109_16 , key_id_16, \detector/n6_adj_166 , 
+         \detector/n4347 , \detector/n4362 , \detector/key_id_19_N_109_19 , 
+         \detector/key_id_19_N_109_18 , \decoder/seg1_6__N_154 , n4103, n1310, 
+         \detector/n4083 , \detector/n4144 , n1421, n1311, seg1_6__N_129, n582, 
+         \detector/row_3_N_1_1 , \detector/row_3_N_1_0 , row_c_0, row_c_1, 
+         \detector/row_3_N_1_3 , \detector/row_3_N_1_2 , row_c_2, row_c_3, n6, 
+         n4338, n4_adj_171, \decoder/n3652 , \decoder/n451 , \decoder/n2478 , 
+         \decoder/n2405 , seg1_c, \detector/n2476 , \detector/n4113 , n1400, 
+         \detector/n9 , n4262, seg1_6__N_152, seg1_6__N_153, seg1_c_0, 
+         seg1_c_3, \detector/n2428 , n4190, n4318, \detector/n3955 , n4320, 
+         n4312, seg2_6__N_160, seg2_6__N_161, seg2_c_0, seg2_c_1, 
+         \detector/n2381 , n1313, \detector/n4316 , seg2_6__N_158, 
+         seg2_6__N_159, seg2_c_2, seg2_c_3, n1278, seg2_6__N_156, 
+         seg2_6__N_157, seg2_c_4, seg2_c_5, n1283, n1315, n4, seg2_6__N_155, 
+         seg2_c_6, \decoder/n1423 , n4363, n4353, n4261, \detector/n4010 , 
+         \detector/n4368 , \decoder/n2409 , \decoder/n4371 , \detector/n33 , 
+         \detector/n4352 , \detector/n13 , \detector/n3978 , 
+         \detector/BTN_cache_0 , \decoder/n4328 , \decoder/n4339 , n1370, 
+         independent_keys_c_0, \decoder/n4334 , \decoder/n4332 , n1284, n1348, 
+         \detector/n3660 , \detector/n4127 , \detector/n3946 , \detector/n8 , 
+         \detector/n4360 , \detector/n4016 , \detector/n3998 , 
+         \detector/n4243 , \detector/n2325 , \detector/n4365 , \decoder/n4319 , 
+         \decoder/n4349 , n4313, \detector/n4230 , \detector/n4351 , 
+         \detector/n4265 , \detector/n4_adj_169 , \detector/n4266 , 
+         \detector/n4267 , \detector/n4019 , \detector/n3952 , \decoder/n4317 , 
+         \detector/n6_adj_165 , \detector/n4129 , \detector/n8_adj_167 , 
+         \detector/n4091 , \detector/n4355 , \detector/n3975 , \detector/n21 , 
+         \detector/n4237 , \detector/n4268 , \detector/n74_adj_170 , 
+         \detector/n4358 , \decoder/n4341 , \decoder/n4326 , \detector/n4361 , 
+         \detector/n3758 , \decoder/n4330 , \decoder/n4336 , \decoder/n4324 , 
+         \decoder/n4329 , \decoder/n4323 , \decoder/n4331 , \decoder/n4327 , 
+         \decoder/n4335 , \detector/key_out_15__N_62 , \decoder/n4322 , 
+         \decoder/n4325 , \decoder/n4357 , \detector/key_out_15__N_72 , 
+         \decoder/n4342 , \decoder/n4314 , \decoder/n4346 , \decoder/n4345 , 
+         \decoder/n4356 , \detector/key_out_15__N_67 , \decoder/n454 , 
+         \decoder/n2413 , \decoder/n2411 , \decoder/n4280 , \decoder/n4281 , 
+         \decoder/n2277 , \decoder/n428 , \decoder/n1244 , \decoder/n431 , 
+         \decoder/n4279 , \decoder/n4212 , \decoder/n4315 , VCCI;
+
+  detector_SLICE_0 \detector/SLICE_0 ( .A1(\detector/clk_cnt_8 ), 
+    .A0(\detector/clk_cnt_7 ), .DI1(\detector/n82 ), .DI0(\detector/n83 ), 
+    .CLK(clk_c), .FCI(\detector/n3633 ), .F0(\detector/n83 ), 
+    .Q0(\detector/clk_cnt_7 ), .F1(\detector/n82 ), .Q1(\detector/clk_cnt_8 ), 
+    .FCO(\detector/n3634 ));
+  detector_SLICE_1 \detector/SLICE_1 ( .A1(\detector/clk_cnt_6 ), 
+    .A0(\detector/clk_cnt_5 ), .DI1(\detector/n84 ), .DI0(\detector/n85 ), 
+    .CLK(clk_c), .FCI(\detector/n3632 ), .F0(\detector/n85 ), 
+    .Q0(\detector/clk_cnt_5 ), .F1(\detector/n84 ), .Q1(\detector/clk_cnt_6 ), 
+    .FCO(\detector/n3633 ));
+  detector_SLICE_2 \detector/SLICE_2 ( .A1(\detector/clk_cnt_2 ), 
+    .A0(\detector/clk_cnt_1 ), .DI1(\detector/n88 ), 
+    .DI0(\detector/n89_adj_164 ), .CLK(clk_c), .FCI(\detector/n3630 ), 
+    .F0(\detector/n89_adj_164 ), .Q0(\detector/clk_cnt_1 ), 
+    .F1(\detector/n88 ), .Q1(\detector/clk_cnt_2 ), .FCO(\detector/n3631 ));
+  detector_SLICE_3 \detector/SLICE_3 ( .A1(\detector/clk_cnt_16 ), 
+    .A0(\detector/clk_cnt_15 ), .DI1(\detector/n74 ), .DI0(\detector/n75 ), 
+    .CLK(clk_c), .FCI(\detector/n3637 ), .F0(\detector/n75 ), 
+    .Q0(\detector/clk_cnt_15 ), .F1(\detector/n74 ), 
+    .Q1(\detector/clk_cnt_16 ));
+  detector_SLICE_4 \detector/SLICE_4 ( .A1(\detector/clk_cnt_10 ), 
+    .A0(\detector/clk_cnt_9 ), .DI1(\detector/n80 ), .DI0(\detector/n81 ), 
+    .CLK(clk_c), .FCI(\detector/n3634 ), .F0(\detector/n81 ), 
+    .Q0(\detector/clk_cnt_9 ), .F1(\detector/n80 ), .Q1(\detector/clk_cnt_10 ), 
+    .FCO(\detector/n3635 ));
+  detector_SLICE_5 \detector/SLICE_5 ( .A1(\detector/clk_cnt_14 ), 
+    .A0(\detector/clk_cnt_13 ), .DI1(\detector/n76 ), .DI0(\detector/n77 ), 
+    .CLK(clk_c), .FCI(\detector/n3636 ), .F0(\detector/n77 ), 
+    .Q0(\detector/clk_cnt_13 ), .F1(\detector/n76 ), 
+    .Q1(\detector/clk_cnt_14 ), .FCO(\detector/n3637 ));
+  detector_SLICE_6 \detector/SLICE_6 ( .A1(\detector/clk_cnt_12 ), 
+    .A0(\detector/clk_cnt_11 ), .DI1(\detector/n78 ), .DI0(\detector/n79 ), 
+    .CLK(clk_c), .FCI(\detector/n3635 ), .F0(\detector/n79 ), 
+    .Q0(\detector/clk_cnt_11 ), .F1(\detector/n78 ), 
+    .Q1(\detector/clk_cnt_12 ), .FCO(\detector/n3636 ));
+  detector_SLICE_7 \detector/SLICE_7 ( .A1(\detector/clk_cnt_0 ), 
+    .DI1(\detector/n90 ), .CLK(clk_c), .F1(\detector/n90 ), 
+    .Q1(\detector/clk_cnt_0 ), .FCO(\detector/n3630 ));
+  detector_SLICE_8 \detector/SLICE_8 ( .A1(\detector/clk_cnt_4 ), 
+    .A0(\detector/clk_cnt_3 ), .DI1(\detector/n86 ), .DI0(\detector/n87 ), 
+    .CLK(clk_c), .FCI(\detector/n3631 ), .F0(\detector/n87 ), 
+    .Q0(\detector/clk_cnt_3 ), .F1(\detector/n86 ), .Q1(\detector/clk_cnt_4 ), 
+    .FCO(\detector/n3632 ));
+  detector_SLICE_11 \detector/SLICE_11 ( .B1(\detector/LED_get_0 ), 
+    .A1(\detector/LED_get_1 ), .A0(\detector/LED_get_0 ), .DI1(\detector/n29 ), 
+    .DI0(\detector/n30 ), .LSR(\detector/n89 ), .CLK(\detector/apa ), 
+    .F0(\detector/n30 ), .Q0(\detector/LED_get_0 ), .F1(\detector/n29 ), 
+    .Q1(\detector/LED_get_1 ));
+  detector_SLICE_12 \detector/SLICE_12 ( .D1(\detector/LED_get_0 ), 
+    .C1(\detector/LED_get_1 ), .B1(\detector/LED_get_2 ), 
+    .A1(\detector/LED_get_3 ), .C0(\detector/LED_get_1 ), 
+    .B0(\detector/LED_get_0 ), .A0(\detector/LED_get_2 ), .DI1(\detector/n27 ), 
+    .DI0(\detector/n28 ), .LSR(\detector/n89 ), .CLK(\detector/apa ), 
+    .F0(\detector/n28 ), .Q0(\detector/LED_get_2 ), .F1(\detector/n27 ), 
+    .Q1(\detector/LED_get_3 ));
+  detector_SLICE_13 \detector/SLICE_13 ( .B1(\detector/LED_get_1 ), 
+    .A1(\detector/LED_get_0 ), .D0(\detector/LED_get_3 ), 
+    .C0(\detector/n4364 ), .B0(\detector/LED_get_2 ), 
+    .A0(\detector/LED_get_4 ), .DI0(\detector/n26 ), .LSR(\detector/n89 ), 
+    .CLK(\detector/apa ), .F0(\detector/n26 ), .Q0(\detector/LED_get_4 ), 
+    .F1(\detector/n4364 ));
+  SLICE_14 SLICE_14( .DI0(n4467), .CE(\detector/clk_c_enable_1 ), 
+    .LSR(\detector/apa_N_10 ), .CLK(clk_c), .F0(n4467), .Q0(\detector/apa ));
+  SLICE_21 SLICE_21( .D0(n4321), .C0(key_id_17), .B0(key_id_19), 
+    .A0(key_id_18), .M1(col_c_1), .M0(col_c_0), 
+    .CE(\detector/key_out_15__N_57 ), .CLK(\detector/apa ), .F0(n4311), 
+    .Q0(\detector/key_out_12 ), .Q1(\detector/key_out_13 ));
+  detector_SLICE_22 \detector/SLICE_22 ( .D1(\detector/clk_cnt_4 ), 
+    .C1(\detector/clk_cnt_0 ), .B1(\detector/clk_cnt_1 ), 
+    .A1(\detector/clk_cnt_2 ), .D0(\detector/clk_cnt_5 ), 
+    .A0(\detector/clk_cnt_11 ), .M1(col_c_3), .M0(col_c_2), 
+    .CE(\detector/key_out_15__N_57 ), .CLK(\detector/apa ), 
+    .F0(\detector/n4089 ), .Q0(\detector/key_out_14 ), .F1(\detector/n10 ), 
+    .Q1(\detector/key_out_15 ));
+  detector_SLICE_23 \detector/SLICE_23 ( .B1(\detector/key_out_2 ), 
+    .A1(\detector/key_out_3 ), .C0(\detector/apa_N_10 ), 
+    .A0(\detector/num_cnt_0 ), .DI0(\detector/n4131 ), .LSR(\detector/n567 ), 
+    .CLK(clk_c), .F0(\detector/n4131 ), .Q0(\detector/num_cnt_0 ), 
+    .F1(\detector/n4244 ));
+  detector_SLICE_24 \detector/SLICE_24 ( .C1(\detector/num_cnt_0 ), 
+    .B1(\detector/num_cnt_1 ), .A1(\detector/num_cnt_2 ), 
+    .C0(\detector/num_cnt_0 ), .A0(\detector/num_cnt_1 ), 
+    .DI1(\detector/n3944 ), .DI0(\detector/n3 ), .CE(\detector/apa_N_10 ), 
+    .LSR(\detector/n567 ), .CLK(clk_c), .F0(\detector/n3 ), 
+    .Q0(\detector/num_cnt_1 ), .F1(\detector/n3944 ), 
+    .Q1(\detector/num_cnt_2 ));
+  detector_SLICE_25 \detector/SLICE_25 ( .C1(independent_keys_c_1), 
+    .A1(\detector/BTN_cache_1 ), .D0(\detector/BTN_cache_3__N_83 ), 
+    .C0(\detector/n1211 ), .B0(\detector/BTN_cache_3 ), 
+    .A0(\detector/BTN_cache_2 ), .DI0(\detector/n4343 ), 
+    .CE(\detector/apa_enable_15 ), .LSR(\detector/n3868 ), 
+    .CLK(\detector/apa ), .F0(\detector/n4343 ), .Q0(key_id_0), 
+    .F1(\detector/n2 ));
+  detector_SLICE_26 \detector/SLICE_26 ( .C1(\detector/n1211 ), 
+    .A1(\detector/BTN_cache_3__N_83 ), .D0(\detector/BTN_cache_2 ), 
+    .C0(\detector/BTN_cache_1 ), .B0(\detector/n4465 ), 
+    .A0(\detector/BTN_cache_3 ), .DI0(\detector/key_id_19_N_11_1 ), 
+    .CE(\detector/apa_enable_15 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_11_1 ), .Q0(key_id_1), .F1(\detector/n4465 ));
+  detector_SLICE_27 \detector/SLICE_27 ( .D1(\detector/BTN_cache_2 ), 
+    .C1(\detector/BTN_cache_3 ), .B1(independent_keys_c_3), 
+    .A1(independent_keys_c_2), .D0(\detector/BTN_cache_2 ), 
+    .C0(\detector/BTN_cache_3 ), .B0(\detector/BTN_cache_3__N_83 ), 
+    .A0(\detector/n1211 ), .DI0(\detector/key_id_19_N_11_2 ), 
+    .CE(\detector/apa_enable_20 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_11_2 ), .Q0(key_id_2), 
+    .F1(\detector/n6_adj_168 ));
+  detector_SLICE_28 \detector/SLICE_28 ( .D1(\detector/LED_get_4 ), 
+    .B1(\detector/LED_get_1 ), .D0(\detector/BTN_cache_3 ), 
+    .C0(\detector/n1211 ), .A0(\detector/BTN_cache_3__N_83 ), 
+    .DI0(\detector/key_id_19_N_11_3 ), .CE(\detector/apa_enable_1 ), 
+    .CLK(\detector/apa ), .F0(\detector/key_id_19_N_11_3 ), .Q0(key_id_3), 
+    .F1(\detector/n4095 ));
+  detector_SLICE_29 \detector/SLICE_29 ( .D1(\detector/key_out_0 ), 
+    .C1(\detector/n3954 ), .A1(\detector/key_out_1 ), 
+    .D0(\detector/key_out_0 ), .C0(\detector/n3954 ), 
+    .A0(\detector/key_out_1 ), .DI1(\detector/key_id_19_N_109_5 ), 
+    .DI0(\detector/key_id_19_N_109_4 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_4 ), .Q0(key_id_4), 
+    .F1(\detector/key_id_19_N_109_5 ), .Q1(key_id_5));
+  detector_SLICE_30 \detector/SLICE_30 ( .D1(\detector/key_out_2 ), 
+    .C1(\detector/n4018 ), .B1(\detector/key_out_3 ), 
+    .D0(\detector/key_out_2 ), .C0(\detector/n4018 ), 
+    .B0(\detector/key_out_3 ), .DI1(\detector/key_id_19_N_109_7 ), 
+    .DI0(\detector/key_id_19_N_109_6 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_6 ), .Q0(key_id_6), 
+    .F1(\detector/key_id_19_N_109_7 ), .Q1(key_id_7));
+  detector_SLICE_31 \detector/SLICE_31 ( .D1(\detector/n4017 ), 
+    .B1(\detector/key_out_4 ), .A1(\detector/key_out_5 ), 
+    .D0(\detector/n4017 ), .B0(\detector/key_out_4 ), 
+    .A0(\detector/key_out_5 ), .DI1(\detector/key_id_19_N_109_9 ), 
+    .DI0(\detector/key_id_19_N_109_8 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_8 ), .Q0(key_id_8), 
+    .F1(\detector/key_id_19_N_109_9 ), .Q1(key_id_9));
+  detector_SLICE_32 \detector/SLICE_32 ( .D1(\detector/key_out_7 ), 
+    .B1(\detector/n3999 ), .A1(\detector/key_out_6 ), 
+    .D0(\detector/key_out_7 ), .B0(\detector/n3999 ), 
+    .A0(\detector/key_out_6 ), .DI1(\detector/key_id_19_N_109_11 ), 
+    .DI0(\detector/key_id_19_N_109_10 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_10 ), .Q0(key_id_10), 
+    .F1(\detector/key_id_19_N_109_11 ), .Q1(key_id_11));
+  detector_SLICE_33 \detector/SLICE_33 ( .D1(\detector/n4021 ), 
+    .B1(\detector/key_out_8 ), .A1(\detector/key_out_9 ), 
+    .D0(\detector/n4021 ), .B0(\detector/key_out_8 ), 
+    .A0(\detector/key_out_9 ), .DI1(\detector/key_id_19_N_109_13 ), 
+    .DI0(\detector/key_id_19_N_109_12 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_12 ), .Q0(key_id_12), 
+    .F1(\detector/key_id_19_N_109_13 ), .Q1(key_id_13));
+  detector_SLICE_34 \detector/SLICE_34 ( .D1(\detector/key_out_11 ), 
+    .C1(\detector/n4344 ), .B1(\detector/n3994 ), .A1(\detector/n4350 ), 
+    .D0(\detector/key_out_11 ), .C0(\detector/n4354 ), .B0(\detector/n4340 ), 
+    .A0(\detector/key_out_10 ), .DI1(\detector/key_id_19_N_109_15 ), 
+    .DI0(\detector/key_id_19_N_109_14 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_14 ), .Q0(key_id_14), 
+    .F1(\detector/key_id_19_N_109_15 ), .Q1(key_id_15));
+  detector_SLICE_35 \detector/SLICE_35 ( .D1(\detector/n4337 ), 
+    .C1(\detector/key_out_13 ), .B1(\detector/key_out_14 ), 
+    .A1(\detector/n4359 ), .D0(\detector/n4337 ), .C0(\detector/key_out_12 ), 
+    .B0(\detector/n3988 ), .DI1(\detector/key_id_19_N_109_17 ), 
+    .DI0(\detector/key_id_19_N_109_16 ), .CE(\detector/apa_enable_19 ), 
+    .LSR(\detector/n1598 ), .CLK(\detector/apa ), 
+    .F0(\detector/key_id_19_N_109_16 ), .Q0(key_id_16), 
+    .F1(\detector/key_id_19_N_109_17 ), .Q1(key_id_17));
+  detector_SLICE_36 \detector/SLICE_36 ( .D1(\detector/n6_adj_166 ), 
+    .C1(\detector/n4347 ), .B1(\detector/n4362 ), .A1(\detector/key_out_15 ), 
+    .D0(\detector/n4359 ), .C0(\detector/key_out_14 ), 
+    .B0(\detector/key_out_13 ), .A0(\detector/n4337 ), 
+    .DI1(\detector/key_id_19_N_109_19 ), .DI0(\detector/key_id_19_N_109_18 ), 
+    .CE(\detector/apa_enable_19 ), .LSR(\detector/n1598 ), 
+    .CLK(\detector/apa ), .F0(\detector/key_id_19_N_109_18 ), .Q0(key_id_18), 
+    .F1(\detector/key_id_19_N_109_19 ), .Q1(key_id_19));
+  SLICE_37 SLICE_37( .D1(\decoder/seg1_6__N_154 ), .C1(n4103), .B1(n1310), 
+    .A1(key_id_7), .D0(\detector/n4083 ), .C0(\detector/n4144 ), .B0(n1421), 
+    .A0(n1311), .DI0(seg1_6__N_129), .CLK(\decoder/seg1_6__N_154 ), 
+    .F0(seg1_6__N_129), .Q0(n582), .F1(\detector/n4144 ));
+  detector_SLICE_38 \detector/SLICE_38 ( .C1(\detector/num_cnt_2 ), 
+    .B1(\detector/num_cnt_1 ), .A1(\detector/num_cnt_0 ), 
+    .C0(\detector/num_cnt_2 ), .B0(\detector/num_cnt_1 ), 
+    .A0(\detector/num_cnt_0 ), .DI1(\detector/row_3_N_1_1 ), 
+    .DI0(\detector/row_3_N_1_0 ), .CLK(\detector/apa ), 
+    .F0(\detector/row_3_N_1_0 ), .Q0(row_c_0), .F1(\detector/row_3_N_1_1 ), 
+    .Q1(row_c_1));
+  detector_SLICE_39 \detector/SLICE_39 ( .C1(\detector/num_cnt_0 ), 
+    .B1(\detector/num_cnt_2 ), .A1(\detector/num_cnt_1 ), 
+    .C0(\detector/num_cnt_0 ), .B0(\detector/num_cnt_2 ), 
+    .A0(\detector/num_cnt_1 ), .DI1(\detector/row_3_N_1_3 ), 
+    .DI0(\detector/row_3_N_1_2 ), .CLK(\detector/apa ), 
+    .F0(\detector/row_3_N_1_2 ), .Q0(row_c_2), .F1(\detector/row_3_N_1_3 ), 
+    .Q1(row_c_3));
+  SLICE_40 SLICE_40( .D1(n6), .C1(\decoder/seg1_6__N_154 ), .B1(n4338), 
+    .A1(n4_adj_171), .D0(\decoder/n3652 ), .C0(\decoder/n451 ), 
+    .B0(\decoder/n2478 ), .A0(\decoder/n2405 ), .DI0(\decoder/seg1_6__N_154 ), 
+    .CLK(\decoder/seg1_6__N_154 ), .F0(\decoder/seg1_6__N_154 ), .Q0(seg1_c), 
+    .F1(\detector/n2476 ));
+  SLICE_41 SLICE_41( .D1(\detector/n4113 ), .C1(n4311), .B1(n1400), 
+    .A1(\detector/n9 ), .D0(n4262), .A0(key_id_4), .DI1(seg1_6__N_152), 
+    .DI0(seg1_6__N_153), .CLK(\decoder/seg1_6__N_154 ), .F0(seg1_6__N_153), 
+    .Q0(seg1_c_0), .F1(seg1_6__N_152), .Q1(seg1_c_3));
+  SLICE_42 SLICE_42( .D1(\detector/n2428 ), .C1(n4190), .B1(n4318), 
+    .A1(\detector/n3955 ), .D0(\detector/n2476 ), .C0(n4320), .B0(n4312), 
+    .DI1(seg2_6__N_160), .DI0(seg2_6__N_161), .CLK(\decoder/seg1_6__N_154 ), 
+    .F0(seg2_6__N_161), .Q0(seg2_c_0), .F1(seg2_6__N_160), .Q1(seg2_c_1));
+  SLICE_43 SLICE_43( .D1(\detector/n2476 ), .C1(n4312), .B1(\detector/n2428 ), 
+    .D0(\detector/n2381 ), .C0(n1313), .B0(n4320), .A0(\detector/n4316 ), 
+    .DI1(seg2_6__N_158), .DI0(seg2_6__N_159), .CLK(\decoder/seg1_6__N_154 ), 
+    .F0(seg2_6__N_159), .Q0(seg2_c_2), .F1(seg2_6__N_158), .Q1(seg2_c_3));
+  SLICE_44 SLICE_44( .D1(\decoder/seg1_6__N_154 ), .C1(\detector/n3955 ), 
+    .B1(n1313), .C0(\detector/n4316 ), .B0(\decoder/seg1_6__N_154 ), 
+    .A0(n1278), .DI1(seg2_6__N_156), .DI0(seg2_6__N_157), 
+    .CLK(\decoder/seg1_6__N_154 ), .F0(seg2_6__N_157), .Q0(seg2_c_4), 
+    .F1(seg2_6__N_156), .Q1(seg2_c_5));
+  SLICE_45 SLICE_45( .D1(n1283), .C1(n1315), .B1(n1310), .A1(n4), 
+    .D0(\detector/n2476 ), .C0(\detector/n2428 ), .DI0(seg2_6__N_155), 
+    .CLK(\decoder/seg1_6__N_154 ), .F0(seg2_6__N_155), .Q0(seg2_c_6), 
+    .F1(\detector/n2428 ));
+  detector_i3796_SLICE_46 \detector/i3796/SLICE_46 ( .D1(key_id_17), 
+    .C1(key_id_1), .B1(\decoder/n1423 ), .A1(n4363), .D0(key_id_0), 
+    .C0(key_id_1), .B0(key_id_2), .A0(n4353), .M0(key_id_3), .OFX0(n4261));
+  detector_i3816_SLICE_47 \detector/i3816/SLICE_47 ( .D1(\detector/key_out_9 ), 
+    .C1(\detector/key_out_11 ), .B1(\detector/n4010 ), 
+    .A1(\detector/key_out_8 ), .D0(\detector/key_out_9 ), 
+    .C0(\detector/key_out_11 ), .B0(\detector/n4010 ), 
+    .A0(\detector/key_out_8 ), .M0(\detector/key_out_10 ), 
+    .OFX0(\detector/n4368 ));
+  decoder_i3818_SLICE_48 \decoder/i3818/SLICE_48 ( .D1(key_id_5), 
+    .C1(key_id_6), .B1(key_id_7), .A1(\decoder/n2409 ), .D0(key_id_5), 
+    .C0(key_id_6), .B0(key_id_7), .A0(\decoder/n2409 ), .M0(key_id_4), 
+    .OFX0(\decoder/n4371 ));
+  detector_SLICE_49 \detector/SLICE_49 ( .D1(\detector/num_cnt_0 ), 
+    .C1(\detector/num_cnt_1 ), .B1(\detector/num_cnt_2 ), .D0(\detector/n33 ), 
+    .C0(\detector/n4352 ), .B0(\detector/n4465 ), .A0(\detector/n13 ), 
+    .F0(\detector/apa_enable_19 ), .F1(\detector/n4352 ));
+  detector_SLICE_50 \detector/SLICE_50 ( .D1(\detector/n1211 ), 
+    .C1(\detector/BTN_cache_3__N_83 ), .B1(\detector/n13 ), 
+    .A1(\detector/n3978 ), .D0(\detector/BTN_cache_2 ), 
+    .C0(\detector/BTN_cache_3 ), .B0(\detector/BTN_cache_1 ), 
+    .A0(\detector/BTN_cache_0 ), .F0(\detector/n13 ), 
+    .F1(\detector/apa_enable_1 ));
+  SLICE_51 SLICE_51( .D1(\decoder/n4328 ), .C1(\decoder/n4339 ), .B1(key_id_9), 
+    .A1(key_id_8), .D0(n1315), .C0(n1370), .B0(key_id_0), .A0(key_id_2), 
+    .F0(\detector/n4316 ), .F1(n1370));
+  detector_SLICE_52 \detector/SLICE_52 ( .D1(\detector/BTN_cache_0 ), 
+    .C1(\detector/n2 ), .B1(\detector/n6_adj_168 ), .A1(independent_keys_c_0), 
+    .D0(\detector/n13 ), .C0(\detector/n1211 ), 
+    .B0(\detector/BTN_cache_3__N_83 ), .M1(independent_keys_c_1), 
+    .M0(independent_keys_c_0), .CE(\detector/BTN_cache_3__N_83 ), 
+    .CLK(\detector/apa ), .F0(\detector/n1598 ), .Q0(\detector/BTN_cache_0 ), 
+    .F1(\detector/BTN_cache_3__N_83 ), .Q1(\detector/BTN_cache_1 ));
+  SLICE_53 SLICE_53( .D1(\decoder/n4334 ), .C1(\decoder/n4332 ), .B1(key_id_5), 
+    .A1(key_id_7), .D0(n1311), .C0(n1284), .B0(n1348), .F0(\detector/n3955 ), 
+    .F1(n1311));
+  detector_SLICE_54 \detector/SLICE_54 ( .D1(\detector/clk_cnt_14 ), 
+    .B1(\detector/clk_cnt_6 ), .A1(\detector/clk_cnt_15 ), 
+    .D0(\detector/clk_cnt_9 ), .C0(\detector/n3660 ), .B0(\detector/n4089 ), 
+    .A0(\detector/clk_cnt_13 ), .F0(\detector/n4127 ), .F1(\detector/n3660 ));
+  detector_SLICE_55 \detector/SLICE_55 ( .D1(\detector/clk_cnt_3 ), 
+    .B1(\detector/n10 ), .A1(\detector/clk_cnt_8 ), .C0(\detector/n3946 ), 
+    .B0(\detector/clk_cnt_7 ), .A0(\detector/clk_cnt_16 ), .F0(\detector/n8 ), 
+    .F1(\detector/n3946 ));
+  detector_SLICE_56 \detector/SLICE_56 ( .D1(\detector/n3988 ), 
+    .C1(\detector/n4360 ), .B1(\detector/n4016 ), .A1(\detector/n3998 ), 
+    .C0(\detector/key_out_13 ), .B0(\detector/key_out_5 ), 
+    .A0(\detector/key_out_14 ), .F0(\detector/n3988 ), .F1(\detector/n4018 ));
+  detector_SLICE_57 \detector/SLICE_57 ( .D1(\detector/key_out_11 ), 
+    .A1(\detector/key_out_10 ), .D0(\detector/n4243 ), 
+    .C0(\detector/key_out_3 ), .B0(\detector/key_out_6 ), 
+    .A0(\detector/n4344 ), .F0(\detector/n4337 ), .F1(\detector/n4243 ));
+  detector_SLICE_58 \detector/SLICE_58 ( .D1(\detector/key_out_9 ), 
+    .C1(\detector/n2325 ), .B1(\detector/key_out_8 ), .A1(\detector/n4365 ), 
+    .C0(\detector/key_out_2 ), .A0(\detector/key_out_1 ), 
+    .M1(independent_keys_c_3), .M0(independent_keys_c_2), 
+    .CE(\detector/BTN_cache_3__N_83 ), .CLK(\detector/apa ), 
+    .F0(\detector/n2325 ), .Q0(\detector/BTN_cache_2 ), .F1(\detector/n4347 ), 
+    .Q1(\detector/BTN_cache_3 ));
+  detector_SLICE_59 \detector/SLICE_59 ( .D1(\detector/LED_get_3 ), 
+    .C1(\detector/n4095 ), .B1(\detector/LED_get_0 ), 
+    .A1(\detector/LED_get_2 ), .C0(\detector/BTN_cache_3__N_83 ), 
+    .B0(\detector/n1211 ), .F0(\detector/n89 ), .F1(\detector/n1211 ));
+  SLICE_60 SLICE_60( .D1(\decoder/n4319 ), .C1(key_id_12), 
+    .B1(\decoder/n4349 ), .A1(key_id_13), .D0(n1278), .C0(n4313), .B0(n1348), 
+    .F0(\detector/n2381 ), .F1(n4313));
+  detector_SLICE_61 \detector/SLICE_61 ( .D1(\detector/n4230 ), 
+    .C1(\detector/n4368 ), .B1(\detector/n4351 ), .A1(\detector/n4265 ), 
+    .D0(\detector/key_out_14 ), .C0(\detector/key_out_13 ), 
+    .B0(\detector/key_out_15 ), .A0(\detector/key_out_12 ), 
+    .F0(\detector/n4265 ), .F1(\detector/n4_adj_169 ));
+  detector_SLICE_62 \detector/SLICE_62 ( .D1(\detector/key_out_5 ), 
+    .C1(\detector/n4266 ), .B1(\detector/key_out_4 ), .A1(\detector/n4362 ), 
+    .D0(\detector/key_out_2 ), .C0(\detector/key_out_1 ), 
+    .B0(\detector/key_out_3 ), .A0(\detector/key_out_0 ), 
+    .F0(\detector/n4266 ), .F1(\detector/n4267 ));
+  detector_SLICE_63 \detector/SLICE_63 ( .D1(\detector/n4019 ), 
+    .C1(\detector/key_out_8 ), .B1(\detector/key_out_9 ), 
+    .A1(\detector/key_out_2 ), .D0(\detector/n4016 ), .B0(\detector/n3952 ), 
+    .A0(\detector/key_out_0 ), .F0(\detector/n4017 ), .F1(\detector/n3952 ));
+  SLICE_64 SLICE_64( .D1(\decoder/n4317 ), .C1(key_id_16), .B1(key_id_14), 
+    .A1(key_id_15), .D0(\detector/n2381 ), .C0(n1283), .A0(n1284), 
+    .F0(\detector/n4113 ), .F1(n1283));
+  SLICE_65 SLICE_65( .B1(key_id_18), .A1(key_id_19), .D0(n4321), .C0(n4312), 
+    .B0(n4363), .A0(key_id_17), .F0(\detector/n9 ), .F1(n4363));
+  detector_SLICE_66 \detector/SLICE_66 ( .D1(\detector/key_out_9 ), 
+    .C1(\detector/key_out_11 ), .B1(\detector/key_out_8 ), 
+    .A1(\detector/n4365 ), .D0(\detector/key_out_15 ), .C0(\detector/n3998 ), 
+    .B0(\detector/n2325 ), .A0(\detector/n6_adj_165 ), .F0(\detector/n3999 ), 
+    .F1(\detector/n3998 ));
+  detector_SLICE_67 \detector/SLICE_67 ( .D1(\detector/clk_cnt_13 ), 
+    .C1(\detector/clk_cnt_9 ), .B1(\detector/n3946 ), .D0(\detector/n4129 ), 
+    .C0(\detector/n8_adj_167 ), .B0(\detector/clk_cnt_11 ), 
+    .A0(\detector/clk_cnt_5 ), .F0(\detector/clk_c_enable_1 ), 
+    .F1(\detector/n8_adj_167 ));
+  detector_SLICE_68 \detector/SLICE_68 ( .D1(\detector/clk_cnt_10 ), 
+    .B1(\detector/clk_cnt_16 ), .D0(\detector/clk_cnt_12 ), 
+    .C0(\detector/n3660 ), .B0(\detector/clk_cnt_7 ), .A0(\detector/n4091 ), 
+    .F0(\detector/n4129 ), .F1(\detector/n4091 ));
+  detector_SLICE_69 \detector/SLICE_69 ( .D1(\detector/key_out_8 ), 
+    .C1(\detector/key_out_0 ), .B1(\detector/key_out_4 ), 
+    .A1(\detector/key_out_9 ), .D0(\detector/n2325 ), .C0(\detector/n4360 ), 
+    .B0(\detector/n4355 ), .A0(\detector/key_out_6 ), .F0(\detector/n4340 ), 
+    .F1(\detector/n4355 ));
+  detector_SLICE_70 \detector/SLICE_70 ( .D1(\detector/BTN_cache_0 ), 
+    .B1(\detector/BTN_cache_3 ), .A1(\detector/BTN_cache_2 ), 
+    .D0(\detector/BTN_cache_1 ), .C0(\detector/n4465 ), .B0(\detector/n3975 ), 
+    .A0(\detector/n3978 ), .F0(\detector/n3868 ), .F1(\detector/n3975 ));
+  detector_SLICE_71 \detector/SLICE_71 ( .D1(\detector/num_cnt_0 ), 
+    .C1(\detector/num_cnt_1 ), .B1(\detector/num_cnt_2 ), .A1(\detector/n33 ), 
+    .D0(\detector/n1211 ), .C0(\detector/n3978 ), 
+    .B0(\detector/BTN_cache_3__N_83 ), .A0(\detector/n21 ), 
+    .F0(\detector/apa_enable_15 ), .F1(\detector/n3978 ));
+  detector_SLICE_72 \detector/SLICE_72 ( .D1(\detector/BTN_cache_2 ), 
+    .C1(\detector/BTN_cache_0 ), .B1(\detector/BTN_cache_1 ), 
+    .A1(\detector/BTN_cache_3 ), .D0(\detector/BTN_cache_3__N_83 ), 
+    .C0(\detector/n21 ), .B0(\detector/n3978 ), .A0(\detector/n1211 ), 
+    .F0(\detector/apa_enable_20 ), .F1(\detector/n21 ));
+  detector_SLICE_73 \detector/SLICE_73 ( .D1(\detector/n4237 ), 
+    .C1(\detector/n4267 ), .B1(\detector/n4268 ), .A1(\detector/n4244 ), 
+    .D0(\detector/key_out_5 ), .C0(\detector/key_out_7 ), 
+    .B0(\detector/key_out_6 ), .A0(\detector/key_out_4 ), 
+    .F0(\detector/n4268 ), .F1(\detector/n74_adj_170 ));
+  detector_SLICE_74 \detector/SLICE_74 ( .B1(\detector/key_out_4 ), 
+    .A1(\detector/key_out_0 ), .D0(\detector/n4350 ), .C0(\detector/n4365 ), 
+    .B0(\detector/n4019 ), .A0(\detector/n2325 ), .F0(\detector/n4021 ), 
+    .F1(\detector/n4365 ));
+  detector_SLICE_75 \detector/SLICE_75 ( .D1(\detector/key_out_5 ), 
+    .A1(\detector/key_out_12 ), .D0(\detector/n4359 ), .C0(\detector/n4358 ), 
+    .B0(\detector/n3952 ), .A0(\detector/key_out_4 ), .F0(\detector/n3954 ), 
+    .F1(\detector/n4359 ));
+  SLICE_76 SLICE_76( .D1(\decoder/n4341 ), .C1(\decoder/n4326 ), .B1(key_id_4), 
+    .A1(key_id_3), .D0(n4320), .C0(n1313), .A0(n1370), .F0(\detector/n4083 ), 
+    .F1(n1313));
+  detector_SLICE_77 \detector/SLICE_77 ( .D1(\detector/key_out_9 ), 
+    .A1(\detector/key_out_8 ), .D0(\detector/n4360 ), .C0(\detector/n4361 ), 
+    .B0(\detector/n2325 ), .A0(\detector/n4365 ), .F0(\detector/n4344 ), 
+    .F1(\detector/n4361 ));
+  detector_SLICE_78 \detector/SLICE_78 ( .B1(\detector/key_out_0 ), 
+    .A1(\detector/key_out_1 ), .D0(\detector/n4237 ), .C0(\detector/n3758 ), 
+    .B0(\detector/n4244 ), .A0(\detector/n4_adj_169 ), .F0(\detector/n33 ), 
+    .F1(\detector/n4237 ));
+  detector_SLICE_79 \detector/SLICE_79 ( .D1(\detector/key_out_13 ), 
+    .C1(\detector/key_out_15 ), .B1(\detector/key_out_14 ), 
+    .A1(\detector/key_out_12 ), .D0(\detector/n4243 ), .C0(\detector/n4010 ), 
+    .B0(\detector/n74_adj_170 ), .A0(\detector/n4361 ), .F0(\detector/n3758 ), 
+    .F1(\detector/n4010 ));
+  detector_SLICE_80 \detector/SLICE_80 ( .D1(\detector/key_out_3 ), 
+    .C1(\detector/key_out_13 ), .A1(\detector/key_out_14 ), 
+    .D0(\detector/key_out_5 ), .C0(\detector/key_out_12 ), 
+    .B0(\detector/n3994 ), .F0(\detector/n4354 ), .F1(\detector/n3994 ));
+  detector_SLICE_81 \detector/SLICE_81 ( .D1(\detector/n4127 ), 
+    .C1(\detector/clk_cnt_12 ), .B1(\detector/clk_cnt_10 ), .A1(\detector/n8 ), 
+    .D0(\detector/num_cnt_2 ), .C0(\detector/num_cnt_1 ), 
+    .B0(\detector/apa_N_10 ), .A0(\detector/num_cnt_0 ), .F0(\detector/n567 ), 
+    .F1(\detector/apa_N_10 ));
+  decoder_SLICE_82 \decoder/SLICE_82 ( .D1(\decoder/n4330 ), .C1(key_id_7), 
+    .B1(key_id_9), .A1(\decoder/n4336 ), .D0(key_id_6), .C0(n4338), 
+    .B0(key_id_5), .A0(key_id_3), .F0(\decoder/n4330 ), .F1(n1421));
+  decoder_SLICE_83 \decoder/SLICE_83 ( .D1(\decoder/n4324 ), .C1(key_id_4), 
+    .B1(\decoder/n1423 ), .A1(key_id_1), .D0(key_id_18), .C0(n4321), 
+    .B0(key_id_19), .A0(key_id_17), .F0(n1278), .F1(n4321));
+  decoder_SLICE_84 \decoder/SLICE_84 ( .D1(\decoder/n4329 ), .C1(key_id_4), 
+    .B1(key_id_6), .A1(key_id_3), .D0(key_id_7), .C0(\decoder/n4336 ), 
+    .B0(key_id_9), .A0(key_id_5), .F0(\decoder/n4329 ), .F1(\decoder/n4323 ));
+  decoder_SLICE_85 \decoder/SLICE_85 ( .D1(key_id_5), .C1(\decoder/n4331 ), 
+    .B1(key_id_3), .A1(key_id_6), .D0(key_id_7), .C0(\decoder/n4339 ), 
+    .B0(key_id_9), .A0(key_id_8), .F0(\decoder/n4331 ), .F1(n4_adj_171));
+  decoder_SLICE_86 \decoder/SLICE_86 ( .D1(key_id_7), .C1(\decoder/n4332 ), 
+    .B1(key_id_5), .A1(key_id_9), .D0(\decoder/n4341 ), .C0(key_id_3), 
+    .B0(key_id_6), .A0(key_id_4), .F0(\decoder/n4332 ), .F1(\decoder/n4327 ));
+  SLICE_87 SLICE_87( .D1(key_id_9), .C1(\decoder/n4328 ), .B1(key_id_11), 
+    .A1(key_id_8), .D0(\decoder/n4335 ), .C0(key_id_6), .B0(key_id_7), 
+    .A0(key_id_5), .M1(col_c_1), .M0(col_c_0), 
+    .CE(\detector/key_out_15__N_62 ), .CLK(\detector/apa ), 
+    .F0(\decoder/n4328 ), .Q0(\detector/key_out_8 ), .F1(\decoder/n4322 ), 
+    .Q1(\detector/key_out_9 ));
+  SLICE_88 SLICE_88( .D1(key_id_16), .C1(\decoder/n4317 ), .B1(key_id_14), 
+    .A1(key_id_15), .D0(\decoder/n4325 ), .C0(key_id_10), .B0(key_id_11), 
+    .A0(\decoder/n4357 ), .M1(col_c_3), .M0(col_c_2), 
+    .CE(\detector/key_out_15__N_72 ), .CLK(\detector/apa ), 
+    .F0(\decoder/n4317 ), .Q0(\detector/key_out_2 ), .F1(n1348), 
+    .Q1(\detector/key_out_3 ));
+  decoder_SLICE_89 \decoder/SLICE_89 ( .D1(key_id_7), .C1(\decoder/n4334 ), 
+    .B1(key_id_6), .A1(key_id_5), .D0(\decoder/n4342 ), .C0(key_id_8), 
+    .B0(key_id_11), .A0(key_id_9), .F0(\decoder/n4334 ), .F1(\decoder/n4326 ));
+  SLICE_90 SLICE_90( .D1(n1400), .C1(\decoder/n4314 ), .B1(key_id_13), 
+    .A1(key_id_12), .D0(\decoder/n4325 ), .C0(key_id_11), .B0(\decoder/n4349 ), 
+    .A0(key_id_10), .M1(col_c_3), .M0(col_c_2), 
+    .CE(\detector/key_out_15__N_62 ), .CLK(\detector/apa ), 
+    .F0(\decoder/n4314 ), .Q0(\detector/key_out_10 ), .F1(n4190), 
+    .Q1(\detector/key_out_11 ));
+  decoder_SLICE_91 \decoder/SLICE_91 ( .D1(key_id_7), .C1(key_id_8), 
+    .B1(key_id_9), .A1(\decoder/n4330 ), .D0(key_id_10), .C0(\decoder/n4325 ), 
+    .B0(key_id_11), .A0(\decoder/n4346 ), .F0(n4320), .F1(\decoder/n4325 ));
+  decoder_SLICE_92 \decoder/SLICE_92 ( .D1(key_id_6), .C1(\decoder/n4334 ), 
+    .B1(key_id_5), .A1(\decoder/n4335 ), .D0(\decoder/n4345 ), .C0(key_id_3), 
+    .B0(key_id_4), .A0(\decoder/n1423 ), .F0(\decoder/n4335 ), .F1(n4103));
+  SLICE_93 SLICE_93( .D1(key_id_17), .C1(key_id_19), .B1(key_id_18), 
+    .A1(key_id_1), .D0(\decoder/n4326 ), .C0(key_id_4), .B0(\decoder/n4345 ), 
+    .A0(key_id_3), .M1(col_c_1), .M0(col_c_0), 
+    .CE(\detector/key_out_15__N_72 ), .CLK(\detector/apa ), .F0(n1315), 
+    .Q0(\detector/key_out_0 ), .F1(\decoder/n4345 ), .Q1(\detector/key_out_1 ));
+  decoder_SLICE_94 \decoder/SLICE_94 ( .D1(\decoder/n4357 ), .C1(key_id_16), 
+    .B1(key_id_15), .A1(key_id_14), .D0(key_id_8), .C0(\decoder/n4346 ), 
+    .B0(key_id_11), .A0(key_id_10), .F0(\decoder/n4336 ), .F1(\decoder/n4346 ));
+  decoder_SLICE_95 \decoder/SLICE_95 ( .D1(\decoder/n4357 ), .C1(key_id_15), 
+    .B1(key_id_10), .A1(\decoder/n4356 ), .D0(\decoder/n4327 ), 
+    .C0(\decoder/n4342 ), .B0(key_id_11), .A0(key_id_8), .F0(n1400), 
+    .F1(\decoder/n4342 ));
+  decoder_SLICE_96 \decoder/SLICE_96 ( .C1(key_id_17), .B1(key_id_19), 
+    .A1(key_id_18), .D0(key_id_1), .C0(n4353), .B0(\decoder/n1423 ), 
+    .A0(key_id_4), .F0(n4338), .F1(n4353));
+  SLICE_97 SLICE_97( .D1(\decoder/n4319 ), .C1(key_id_12), 
+    .B1(\decoder/n4349 ), .A1(key_id_13), .D0(\decoder/n4327 ), .C0(key_id_8), 
+    .B0(key_id_11), .A0(key_id_10), .M1(col_c_1), .M0(col_c_0), 
+    .CE(\detector/key_out_15__N_67 ), .CLK(\detector/apa ), 
+    .F0(\decoder/n4319 ), .Q0(\detector/key_out_4 ), .F1(n4312), 
+    .Q1(\detector/key_out_5 ));
+  decoder_SLICE_98 \decoder/SLICE_98 ( .D1(key_id_13), .A1(key_id_12), 
+    .D0(key_id_10), .C0(key_id_11), .B0(\decoder/n4349 ), .A0(\decoder/n4357 ), 
+    .F0(\decoder/n4339 ), .F1(\decoder/n4357 ));
+  decoder_SLICE_99 \decoder/SLICE_99 ( .D1(key_id_11), .C1(key_id_9), 
+    .B1(key_id_10), .A1(key_id_8), .D0(\decoder/n454 ), .C0(\decoder/n2413 ), 
+    .A0(\decoder/n2411 ), .F0(\decoder/n3652 ), .F1(\decoder/n2413 ));
+  decoder_SLICE_100 \decoder/SLICE_100 ( .D1(key_id_12), .C1(key_id_14), 
+    .B1(key_id_15), .A1(key_id_13), .D0(\decoder/n2411 ), .C0(\decoder/n2413 ), 
+    .B0(\decoder/n4280 ), .A0(\decoder/n4281 ), .F0(\decoder/n451 ), 
+    .F1(\decoder/n4280 ));
+  decoder_SLICE_101 \decoder/SLICE_101 ( .D1(key_id_7), .C1(key_id_6), 
+    .B1(\decoder/n2409 ), .A1(\decoder/n2277 ), .D0(\decoder/n428 ), 
+    .C0(\decoder/n1244 ), .B0(\decoder/n431 ), .A0(\decoder/n2478 ), 
+    .F0(\decoder/n454 ), .F1(\decoder/n2478 ));
+  decoder_SLICE_102 \decoder/SLICE_102 ( .D1(key_id_18), .C1(key_id_16), 
+    .B1(key_id_19), .A1(key_id_17), .D0(\decoder/n4279 ), .C0(\decoder/n4371 ), 
+    .B0(\decoder/n2405 ), .A0(\decoder/n4212 ), .F0(\decoder/n1244 ), 
+    .F1(\decoder/n2405 ));
+  decoder_SLICE_103 \decoder/SLICE_103 ( .C1(key_id_16), .B1(key_id_14), 
+    .D0(\decoder/n4357 ), .C0(\decoder/n4319 ), .B0(key_id_15), 
+    .A0(\decoder/n4356 ), .F0(n1284), .F1(\decoder/n4356 ));
+  decoder_SLICE_104 \decoder/SLICE_104 ( .D1(\decoder/n4323 ), .C1(key_id_17), 
+    .B1(\decoder/n1423 ), .A1(key_id_1), .D0(\decoder/n4315 ), .C0(n1421), 
+    .B0(key_id_19), .A0(key_id_18), .F0(n6), .F1(\decoder/n4315 ));
+  decoder_SLICE_105 \decoder/SLICE_105 ( .C1(key_id_0), .B1(key_id_2), 
+    .D0(key_id_1), .C0(key_id_17), .B0(\decoder/n1423 ), .A0(n4363), 
+    .F0(\decoder/n4341 ), .F1(\decoder/n1423 ));
+  decoder_SLICE_106 \decoder/SLICE_106 ( .D1(key_id_18), .C1(key_id_16), 
+    .B1(key_id_17), .A1(key_id_19), .D0(key_id_18), .C0(key_id_16), 
+    .B0(key_id_17), .A0(key_id_19), .F0(\decoder/n428 ), .F1(\decoder/n431 ));
+  decoder_SLICE_107 \decoder/SLICE_107 ( .D1(key_id_2), .C1(key_id_3), 
+    .B1(key_id_0), .A1(key_id_1), .D0(key_id_2), .C0(key_id_3), .B0(key_id_0), 
+    .A0(key_id_1), .F0(\decoder/n4279 ), .F1(\decoder/n2409 ));
+  detector_SLICE_108 \detector/SLICE_108 ( .D1(\detector/num_cnt_2 ), 
+    .B1(\detector/num_cnt_0 ), .A1(\detector/num_cnt_1 ), 
+    .D0(\detector/num_cnt_2 ), .B0(\detector/num_cnt_0 ), 
+    .A0(\detector/num_cnt_1 ), .F0(\detector/key_out_15__N_67 ), 
+    .F1(\detector/key_out_15__N_57 ));
+  detector_SLICE_109 \detector/SLICE_109 ( .D1(\detector/key_out_5 ), 
+    .C1(\detector/key_out_6 ), .B1(\detector/key_out_10 ), 
+    .A1(\detector/key_out_12 ), .D0(\detector/key_out_12 ), 
+    .C0(\detector/key_out_6 ), .B0(\detector/key_out_1 ), 
+    .A0(\detector/key_out_10 ), .F0(\detector/n4016 ), .F1(\detector/n4350 ));
+  detector_SLICE_110 \detector/SLICE_110 ( .D1(\detector/key_out_12 ), 
+    .C1(\detector/key_out_5 ), .B1(\detector/n3994 ), .A1(\detector/n4243 ), 
+    .D0(\detector/key_out_12 ), .C0(\detector/key_out_5 ), 
+    .B0(\detector/key_out_10 ), .A0(\detector/n3994 ), 
+    .F0(\detector/n6_adj_165 ), .F1(\detector/n6_adj_166 ));
+  detector_SLICE_111 \detector/SLICE_111 ( .D1(\detector/num_cnt_1 ), 
+    .B1(\detector/num_cnt_2 ), .A1(\detector/num_cnt_0 ), 
+    .D0(\detector/num_cnt_1 ), .B0(\detector/num_cnt_2 ), 
+    .A0(\detector/num_cnt_0 ), .F0(\detector/key_out_15__N_72 ), 
+    .F1(\detector/key_out_15__N_62 ));
+  SLICE_112 SLICE_112( .D1(\decoder/n4331 ), .C1(key_id_6), .B1(n4261), 
+    .A1(key_id_5), .D0(\decoder/n4331 ), .C0(key_id_6), .B0(key_id_5), 
+    .A0(key_id_3), .M1(col_c_3), .M0(col_c_2), 
+    .CE(\detector/key_out_15__N_67 ), .CLK(\detector/apa ), 
+    .F0(\decoder/n4324 ), .Q0(\detector/key_out_6 ), .F1(n4262), 
+    .Q1(\detector/key_out_7 ));
+  detector_SLICE_113 \detector/SLICE_113 ( .D1(\detector/key_out_15 ), 
+    .C1(\detector/n3994 ), .B1(\detector/key_out_7 ), 
+    .A1(\detector/key_out_11 ), .D0(\detector/key_out_15 ), 
+    .B0(\detector/key_out_7 ), .F0(\detector/n4360 ), .F1(\detector/n4019 ));
+  detector_SLICE_114 \detector/SLICE_114 ( .D1(\detector/key_out_5 ), 
+    .C1(\detector/key_out_6 ), .B1(\detector/key_out_4 ), 
+    .A1(\detector/key_out_7 ), .C0(\detector/key_out_6 ), 
+    .A0(\detector/key_out_7 ), .F0(\detector/n4362 ), .F1(\detector/n4351 ));
+  decoder_SLICE_115 \decoder/SLICE_115 ( .D1(key_id_12), .C1(key_id_14), 
+    .B1(key_id_15), .A1(key_id_13), .C0(key_id_16), .B0(key_id_14), 
+    .A0(key_id_15), .F0(\decoder/n4349 ), .F1(\decoder/n2411 ));
+  decoder_SLICE_116 \decoder/SLICE_116 ( .D1(key_id_5), .C1(key_id_4), 
+    .D0(key_id_5), .C0(key_id_7), .B0(key_id_6), .A0(key_id_4), 
+    .F0(\decoder/n4212 ), .F1(\decoder/n2277 ));
+  detector_SLICE_117 \detector/SLICE_117 ( .D1(\detector/key_out_8 ), 
+    .C1(\detector/key_out_9 ), .B1(\detector/key_out_10 ), 
+    .A1(\detector/key_out_11 ), .B0(\detector/key_out_10 ), 
+    .A0(\detector/key_out_6 ), .F0(\detector/n4358 ), .F1(\detector/n4230 ));
+  decoder_SLICE_118 \decoder/SLICE_118 ( .D1(n1313), .C1(\decoder/n4346 ), 
+    .B1(key_id_10), .A1(\decoder/n4322 ), .D0(key_id_10), .C0(key_id_8), 
+    .B0(key_id_11), .A0(key_id_9), .F0(\decoder/n4281 ), .F1(n4318));
+  decoder_SLICE_119 \decoder/SLICE_119 ( .D1(key_id_0), .B1(key_id_2), 
+    .D0(\decoder/n4331 ), .C0(key_id_5), .B0(\decoder/n4335 ), .A0(key_id_6), 
+    .F0(n1310), .F1(n4));
+  row_2_ \row[2]_I ( .PADDO(row_c_2), .row2(row[2]));
+  row_3_ \row[3]_I ( .PADDO(row_c_3), .row3(row[3]));
+  row_1_ \row[1]_I ( .PADDO(row_c_1), .row1(row[1]));
+  row_0_ \row[0]_I ( .PADDO(row_c_0), .row0(row[0]));
+  seg1_6_ \seg1[6]_I ( .PADDO(n582), .seg16(seg1[6]));
+  seg1_5_ \seg1[5]_I ( .PADDO(seg1_c), .seg15(seg1[5]));
+  seg1_4_ \seg1[4]_I ( .PADDO(seg1_c), .seg14(seg1[4]));
+  seg1_3_ \seg1[3]_I ( .PADDO(seg1_c_3), .seg13(seg1[3]));
+  seg1_2_ \seg1[2]_I ( .PADDO(n582), .seg12(seg1[2]));
+  seg1_1_ \seg1[1]_I ( .PADDO(n582), .seg11(seg1[1]));
+  seg1_0_ \seg1[0]_I ( .PADDO(seg1_c_0), .seg10(seg1[0]));
+  seg2_6_ \seg2[6]_I ( .PADDO(seg2_c_6), .seg26(seg2[6]));
+  seg2_5_ \seg2[5]_I ( .PADDO(seg2_c_5), .seg25(seg2[5]));
+  seg2_4_ \seg2[4]_I ( .PADDO(seg2_c_4), .seg24(seg2[4]));
+  seg2_3_ \seg2[3]_I ( .PADDO(seg2_c_3), .seg23(seg2[3]));
+  seg2_2_ \seg2[2]_I ( .PADDO(seg2_c_2), .seg22(seg2[2]));
+  seg2_1_ \seg2[1]_I ( .PADDO(seg2_c_1), .seg21(seg2[1]));
+  seg2_0_ \seg2[0]_I ( .PADDO(seg2_c_0), .seg20(seg2[0]));
+  col_3_ \col[3]_I ( .PADDI(col_c_3), .col3(col[3]));
+  col_2_ \col[2]_I ( .PADDI(col_c_2), .col2(col[2]));
+  col_1_ \col[1]_I ( .PADDI(col_c_1), .col1(col[1]));
+  col_0_ \col[0]_I ( .PADDI(col_c_0), .col0(col[0]));
+  independent_keys_3_ \independent_keys[3]_I ( .PADDI(independent_keys_c_3), 
+    .independentkeys3(independent_keys[3]));
+  independent_keys_2_ \independent_keys[2]_I ( .PADDI(independent_keys_c_2), 
+    .independentkeys2(independent_keys[2]));
+  independent_keys_1_ \independent_keys[1]_I ( .PADDI(independent_keys_c_1), 
+    .independentkeys1(independent_keys[1]));
+  independent_keys_0_ \independent_keys[0]_I ( .PADDI(independent_keys_c_0), 
+    .independentkeys0(independent_keys[0]));
+  clk clk_I( .PADDI(clk_c), .clk(clk));
+  VHI VHI_INST( .Z(VCCI));
+  PUR PUR_INST( .PUR(VCCI));
+  GSR GSR_INST( .GSR(VCCI));
+endmodule
+
+module detector_SLICE_0 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i8 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i7 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_9 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module vmuxregsre ( input D0, D1, SD, SP, CK, LSR, output Q );
+
+  FL1P3DX INST01( .D0(D0), .D1(D1), .SP(SP), .CK(CK), .SD(SD), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module vcc ( output PWR1 );
+
+  VHI INST1( .Z(PWR1));
+endmodule
+
+module gnd ( output PWR0 );
+
+  VLO INST1( .Z(PWR0));
+endmodule
+
+module ccu2 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO1 );
+
+  CCU2D inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT(CO1));
+  defparam inst1.INIT0 = 16'hfaaa;
+  defparam inst1.INIT1 = 16'hfaaa;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module detector_SLICE_1 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i6 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i5 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_7 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_2 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i2 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i1 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_3 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_3 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1 );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i16 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i15 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_17 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1());
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_4 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i10 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i9 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_11 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_5 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i14 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i13 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_15 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_6 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i12 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i11 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_13 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_7 ( input A1, DI1, CLK, output F1, Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i0 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  ccu20001 \detector/clk_cnt_154_add_4_1 ( .A0(GNDI), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(GNDI), .S0(), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module ccu20001 ( input A0, B0, C0, D0, A1, B1, C1, D1, CI, output S0, S1, CO1 );
+
+  CCU2D inst1( .CIN(CI), .A0(A0), .B0(B0), .C0(C0), .D0(D0), .A1(A1), .B1(B1), 
+    .C1(C1), .D1(D1), .S0(S0), .S1(S1), .COUT(CO1));
+  defparam inst1.INIT0 = 16'hF000;
+  defparam inst1.INIT1 = 16'h0555;
+  defparam inst1.INJECT1_0 = "NO";
+  defparam inst1.INJECT1_1 = "NO";
+endmodule
+
+module detector_SLICE_8 ( input A1, A0, DI1, DI0, CLK, FCI, output F0, Q0, F1, 
+    Q1, FCO );
+  wire   VCCI, GNDI, DI1_dly, CLK_dly, DI0_dly;
+
+  vmuxregsre \detector/clk_cnt_154__i4 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/clk_cnt_154__i3 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  ccu2 \detector/clk_cnt_154_add_4_5 ( .A0(A0), .B0(GNDI), .C0(GNDI), 
+    .D0(GNDI), .A1(A1), .B1(GNDI), .C1(GNDI), .D1(GNDI), .CI(FCI), .S0(F0), 
+    .S1(F1), .CO1(FCO));
+
+  specify
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A1 => FCO) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (A0 => F1) = (0:0:0,0:0:0);
+    (A0 => FCO) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    (FCI => F0) = (0:0:0,0:0:0);
+    (FCI => F1) = (0:0:0,0:0:0);
+    (FCI => FCO) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_11 ( input B1, A1, A0, DI1, DI0, LSR, CLK, output F0, Q0, 
+    F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut4 \detector/i3205_2_lut ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40002 \detector/i3203_1_lut ( .A(A0), .B(GNDI), .C(GNDI), .D(GNDI), 
+    .Z(F0));
+  vmuxregsre0003 \detector/LED_get_155__i1 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/LED_get_155__i0 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut4 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6666) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40002 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h5555) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module vmuxregsre0003 ( input D0, D1, SD, SP, CK, LSR, output Q );
+
+  FL1P3IY INST01( .D0(D0), .D1(D1), .SP(SP), .CK(CK), .SD(SD), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module detector_SLICE_12 ( input D1, C1, B1, A1, C0, B0, A0, DI1, DI0, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, LSR_dly;
+
+  lut40004 \detector/i3219_2_lut_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40005 \detector/i3212_2_lut_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0003 \detector/LED_get_155__i3 ( .D0(VCCI), .D1(DI1_dly), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/LED_get_155__i2 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40004 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6AAA) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40005 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6A6A) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_13 ( input B1, A1, D0, C0, B0, A0, DI0, LSR, CLK, 
+    output F0, Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+
+  lut40006 \detector/i3208_2_lut_rep_103 ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40007 \detector/i3226_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre0003 \detector/LED_get_155__i4 ( .D0(VCCI), .D1(DI0_dly), 
+    .SD(VCCI), .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40006 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8888) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40007 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6AAA) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_14 ( input DI0, CE, LSR, CLK, output F0, Q0 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40008 m1_lut( .A(GNDI), .B(GNDI), .C(GNDI), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0003 \detector/apa_75 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40008 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_21 ( input D0, C0, B0, A0, M1, M0, CE, CLK, output F0, Q0, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40009 \decoder/i2_3_lut_rep_50_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre \detector/key_out_i13 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i12 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40009 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_22 ( input D1, C1, B1, A1, D0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40010 \detector/i4_4_lut_adj_45 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40011 \detector/i3682_2_lut ( .A(A0), .B(GNDI), .C(GNDI), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i15 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \detector/key_out_i14 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40010 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40011 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hAA00) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_23 ( input B1, A1, C0, A0, DI0, LSR, CLK, output F0, Q0, 
+    F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, LSR_dly;
+
+  lut40012 \detector/i1_rep_43_2_lut ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40013 \detector/i3724_2_lut ( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  vmuxregsre0003 \detector/num_cnt__i0 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40012 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8888) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40013 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h5A5A) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_24 ( input C1, B1, A1, C0, A0, DI1, DI0, CE, LSR, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40005 \detector/i15_2_lut_3_lut ( .A(A1), .B(B1), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40014 \detector/i131_2_lut ( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  vmuxregsre0003 \detector/num_cnt__i2 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/num_cnt__i1 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40014 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h5A5A) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_25 ( input C1, A1, D0, C0, B0, A0, DI0, CE, LSR, CLK, 
+    output F0, Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, CE_dly, LSR_dly;
+
+  lut40014 \detector/independent_keys_3__I_0_i2_2_lut ( .A(A1), .B(GNDI), 
+    .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40015 \detector/i3791_3_lut_rep_82_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre0003 \detector/key_id_i0 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40015 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0008) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_26 ( input C1, A1, D0, C0, B0, A0, DI0, CE, CLK, output 
+    F0, Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, CE_dly;
+
+  lut40016 \detector/i1_2_lut_rep_105 ( .A(A1), .B(GNDI), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40017 \detector/i3782_2_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre \detector/key_id_i1 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40016 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFAFA) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40017 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0200) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_27 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI0, CE, CLK, 
+    output F0, Q0, F1 );
+  wire   VCCI, GNDI, DI0_dly, CLK_dly, CE_dly;
+
+  lut40018 \detector/i2_4_lut_adj_34 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40019 \detector/i2_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre \detector/key_id_i2 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40018 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h7DBE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40019 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0010) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_28 ( input D1, B1, D0, C0, A0, DI0, CE, CLK, output F0, 
+    Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly, CE_dly;
+
+  lut40020 \detector/i3688_2_lut ( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40021 \detector/i3794_2_lut_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre \detector/key_id_i3 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40020 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hCC00) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40021 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0005) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_29 ( input D1, C1, A1, D0, C0, A0, DI1, DI0, CE, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40022 \detector/i3772_3_lut ( .A(A1), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40023 \detector/i3774_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre0003 \detector/key_id_i5 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i4 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40022 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h5000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40023 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h00A0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_30 ( input D1, C1, B1, D0, C0, B0, DI1, DI0, CE, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40024 \detector/i3768_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40025 \detector/i3770_3_lut ( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre0003 \detector/key_id_i7 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i6 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40024 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h3000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40025 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h00C0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_31 ( input D1, B1, A1, D0, B0, A0, DI1, DI0, CE, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40026 \detector/i3764_3_lut ( .A(A1), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40027 \detector/i3766_3_lut ( .A(A0), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  vmuxregsre0003 \detector/key_id_i9 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i8 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40026 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h4400) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40027 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h2200) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_32 ( input D1, B1, A1, D0, B0, A0, DI1, DI0, CE, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40028 \detector/i3760_3_lut ( .A(A1), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40029 \detector/i3762_3_lut ( .A(A0), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  vmuxregsre0003 \detector/key_id_i11 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i10 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40028 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0088) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40029 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h4400) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_33 ( input D1, B1, A1, D0, B0, A0, DI1, DI0, CE, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40026 \detector/i3756_3_lut ( .A(A1), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40027 \detector/i3758_3_lut ( .A(A0), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+  vmuxregsre0003 \detector/key_id_i13 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i12 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_34 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI1, DI0, CE, 
+    LSR, CLK, output F0, Q0, F1, Q1 );
+  wire   VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40030 \detector/i3_4_lut_adj_29 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40031 \detector/i3754_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre0003 \detector/key_id_i15 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i14 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40030 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0080) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40031 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h4000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_35 ( input D1, C1, B1, A1, D0, C0, B0, DI1, DI0, CE, LSR, 
+    CLK, output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40032 \detector/i3752_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40033 \detector/i2_3_lut_adj_17 ( .A(GNDI), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0003 \detector/key_id_i17 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i16 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40032 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0800) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40033 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0C00) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_36 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI1, DI0, CE, 
+    LSR, CLK, output F0, Q0, F1, Q1 );
+  wire   VCCI, DI1_dly, CLK_dly, DI0_dly, CE_dly, LSR_dly;
+
+  lut40034 \detector/i4_4_lut_adj_25 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40035 \detector/i3750_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre0003 \detector/key_id_i19 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0003 \detector/key_id_i18 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(LSR_dly), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $setuphold (posedge CLK, LSR, 0:0:0, 0:0:0,,,, CLK_dly, LSR_dly);
+    $width (posedge LSR, 0:0:0);
+    $width (negedge LSR, 0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40034 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h4000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40035 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0800) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_37 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI0, CLK, output F0, 
+    Q0, F1 );
+  wire   VCCI, GNDI, DI0_dly, CLK_dly;
+
+  lut40036 \detector/i3737_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40037 \detector/i3738_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre0038 \decoder/seg1_6__I_0_i4 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40036 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC400) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40037 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module vmuxregsre0038 ( input D0, D1, SD, SP, CK, LSR, output Q );
+  wire   GATE;
+
+  AND2 INST50( .A(SP), .B(CK), .Z(GATE));
+  FL1S1D INST01( .D0(D0), .D1(D1), .CK(GATE), .SD(SD), .CD(LSR), .Q(Q));
+  defparam INST01.GSR = "DISABLED";
+endmodule
+
+module detector_SLICE_38 ( input C1, B1, A1, C0, B0, A0, DI1, DI0, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, CLK_NOTIN, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40039 \detector/i3732_3_lut ( .A(A1), .B(B1), .C(C1), .D(GNDI), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40040 \detector/i3734_2_lut_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  vmuxregsre \detector/row_i2 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), .SP(VCCI), 
+    .CK(CLK_NOTIN), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \detector/row_i1 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), .SP(VCCI), 
+    .CK(CLK_NOTIN), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+    $setuphold (negedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (negedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+  endspecify
+
+endmodule
+
+module lut40039 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFBFB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40040 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF7F7) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module inverter ( input I, output Z );
+
+  INV INST1( .A(I), .Z(Z));
+endmodule
+
+module detector_SLICE_39 ( input C1, B1, A1, C0, B0, A0, DI1, DI0, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, CLK_NOTIN, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40041 \detector/i2076_2_lut_3_lut ( .A(A1), .B(B1), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40042 \detector/i3730_2_lut_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  vmuxregsre \detector/row_i4 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), .SP(VCCI), 
+    .CK(CLK_NOTIN), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  inverter CLK_INVERTERIN( .I(CLK_dly), .Z(CLK_NOTIN));
+  vmuxregsre \detector/row_i3 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), .SP(VCCI), 
+    .CK(CLK_NOTIN), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+    $setuphold (negedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (negedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+  endspecify
+
+endmodule
+
+module lut40041 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFEFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40042 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hEFEF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_40 ( input D1, C1, B1, A1, D0, C0, B0, A0, DI0, CLK, output F0, 
+    Q0, F1 );
+  wire   VCCI, GNDI, DI0_dly, CLK_dly;
+
+  lut40043 \detector/i3_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40044 \decoder/i1_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+  vmuxregsre0038 \decoder/seg1_6__I_0_i3 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40043 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hE000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40044 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFF10) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_41 ( input D1, C1, B1, A1, D0, A0, DI1, DI0, CLK, output F0, Q0, 
+    F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40045 \detector/i6_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40046 \detector/n4262_bdd_2_lut ( .A(A0), .B(GNDI), .C(GNDI), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0038 \decoder/seg1_6__I_0_i2 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0038 \decoder/seg1_6__I_0_i1 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40045 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hBFFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40046 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h5500) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_42 ( input D1, C1, B1, A1, D0, C0, B0, DI1, DI0, CLK, output F0, 
+    Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40047 \detector/i3785_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40048 \detector/i1_2_lut_3_lut_adj_41 ( .A(GNDI), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i2 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i1 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40047 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF7FF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40048 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_43 ( input D1, C1, B1, D0, C0, B0, A0, DI1, DI0, CLK, output F0, 
+    Q0, F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40049 \detector/i1_2_lut_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40050 \detector/i3788_3_lut_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i4 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i3 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40049 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40050 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h7FFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_44 ( input D1, C1, B1, C0, B0, A0, DI1, DI0, CLK, output F0, Q0, 
+    F1, Q1 );
+  wire   GNDI, VCCI, DI1_dly, CLK_dly, DI0_dly;
+
+  lut40049 \detector/i2_3_lut_adj_22 ( .A(GNDI), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40051 \detector/i2_3_lut_adj_21 ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i6 ( .D0(VCCI), .D1(DI1_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i5 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI1, 0:0:0, 0:0:0,,,, CLK_dly, DI1_dly);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40051 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8080) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_45 ( input D1, C1, B1, A1, D0, C0, DI0, CLK, output F0, Q0, F1 );
+  wire   GNDI, VCCI, DI0_dly, CLK_dly;
+
+  lut40052 \detector/i2_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40053 \detector/i2104_2_lut ( .A(GNDI), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre0038 \decoder/seg2_6__I_0_i7 ( .D0(VCCI), .D1(DI0_dly), .SD(VCCI), 
+    .SP(VCCI), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+  vcc DRIVEVCC( .PWR1(VCCI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, DI0, 0:0:0, 0:0:0,,,, CLK_dly, DI0_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40052 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC800) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40053 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_i3796_SLICE_46 ( input D1, C1, B1, A1, D0, C0, B0, A0, M0, 
+    output OFX0 );
+  wire   \detector/i3796/SLICE_46/detector/i3796/SLICE_46_K1_H1 , 
+         \detector/i3796/SLICE_46/detector/i3796/GATE_H0 ;
+
+  lut40054 \detector/i3796/SLICE_46_K1 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(\detector/i3796/SLICE_46/detector/i3796/SLICE_46_K1_H1 ));
+  lut40055 \detector/i3796/GATE ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(\detector/i3796/SLICE_46/detector/i3796/GATE_H0 ));
+  selmux2 \detector/i3796/SLICE_46_K0K1MUX ( 
+    .D0(\detector/i3796/SLICE_46/detector/i3796/GATE_H0 ), 
+    .D1(\detector/i3796/SLICE_46/detector/i3796/SLICE_46_K1_H1 ), .SD(M0), 
+    .Z(OFX0));
+
+  specify
+    (D1 => OFX0) = (0:0:0,0:0:0);
+    (C1 => OFX0) = (0:0:0,0:0:0);
+    (B1 => OFX0) = (0:0:0,0:0:0);
+    (A1 => OFX0) = (0:0:0,0:0:0);
+    (D0 => OFX0) = (0:0:0,0:0:0);
+    (C0 => OFX0) = (0:0:0,0:0:0);
+    (B0 => OFX0) = (0:0:0,0:0:0);
+    (A0 => OFX0) = (0:0:0,0:0:0);
+    (M0 => OFX0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40054 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0001) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40055 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0114) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module selmux2 ( input D0, D1, SD, output Z );
+
+  MUX21 INST1( .D0(D0), .D1(D1), .SD(SD), .Z(Z));
+endmodule
+
+module detector_i3816_SLICE_47 ( input D1, C1, B1, A1, D0, C0, B0, A0, M0, 
+    output OFX0 );
+  wire   \detector/i3816/SLICE_47/detector/i3816/SLICE_47_K1_H1 , 
+         \detector/i3816/SLICE_47/detector/i3816/GATE_H0 ;
+
+  lut40056 \detector/i3816/SLICE_47_K1 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(\detector/i3816/SLICE_47/detector/i3816/SLICE_47_K1_H1 ));
+  lut40057 \detector/i3816/GATE ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(\detector/i3816/SLICE_47/detector/i3816/GATE_H0 ));
+  selmux2 \detector/i3816/SLICE_47_K0K1MUX ( 
+    .D0(\detector/i3816/SLICE_47/detector/i3816/GATE_H0 ), 
+    .D1(\detector/i3816/SLICE_47/detector/i3816/SLICE_47_K1_H1 ), .SD(M0), 
+    .Z(OFX0));
+
+  specify
+    (D1 => OFX0) = (0:0:0,0:0:0);
+    (C1 => OFX0) = (0:0:0,0:0:0);
+    (B1 => OFX0) = (0:0:0,0:0:0);
+    (A1 => OFX0) = (0:0:0,0:0:0);
+    (D0 => OFX0) = (0:0:0,0:0:0);
+    (C0 => OFX0) = (0:0:0,0:0:0);
+    (B0 => OFX0) = (0:0:0,0:0:0);
+    (A0 => OFX0) = (0:0:0,0:0:0);
+    (M0 => OFX0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40056 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h4880) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40057 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_i3818_SLICE_48 ( input D1, C1, B1, A1, D0, C0, B0, A0, M0, 
+    output OFX0 );
+  wire   \decoder/i3818/SLICE_48/decoder/i3818/SLICE_48_K1_H1 , 
+         \decoder/i3818/SLICE_48/decoder/i3818/GATE_H0 ;
+
+  lut40058 \decoder/i3818/SLICE_48_K1 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(\decoder/i3818/SLICE_48/decoder/i3818/SLICE_48_K1_H1 ));
+  lut40059 \decoder/i3818/GATE ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(\decoder/i3818/SLICE_48/decoder/i3818/GATE_H0 ));
+  selmux2 \decoder/i3818/SLICE_48_K0K1MUX ( 
+    .D0(\decoder/i3818/SLICE_48/decoder/i3818/GATE_H0 ), 
+    .D1(\decoder/i3818/SLICE_48/decoder/i3818/SLICE_48_K1_H1 ), .SD(M0), 
+    .Z(OFX0));
+
+  specify
+    (D1 => OFX0) = (0:0:0,0:0:0);
+    (C1 => OFX0) = (0:0:0,0:0:0);
+    (B1 => OFX0) = (0:0:0,0:0:0);
+    (A1 => OFX0) = (0:0:0,0:0:0);
+    (D0 => OFX0) = (0:0:0,0:0:0);
+    (C0 => OFX0) = (0:0:0,0:0:0);
+    (B0 => OFX0) = (0:0:0,0:0:0);
+    (A0 => OFX0) = (0:0:0,0:0:0);
+    (M0 => OFX0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40058 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0001) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40059 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0114) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_49 ( input D1, C1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40060 \detector/i1_2_lut_rep_91_3_lut ( .A(GNDI), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40061 \detector/i1_4_lut_rep_72 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40060 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFF3) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40061 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h2E22) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_50 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40062 \detector/i26_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40063 \detector/i27_4_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40062 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hAAAC) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40063 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6880) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_51 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40064 \decoder/i2_3_lut_4_lut_adj_9 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40065 \detector/i1_4_lut_rep_55 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40064 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFD) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40065 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF0D0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_52 ( input D1, C1, B1, A1, D0, C0, B0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40066 \detector/i3_4_lut_adj_31 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40067 \detector/i1188_2_lut_2_lut_3_lut ( .A(GNDI), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/BTN_cache_i0_i1 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \detector/BTN_cache_i0_i0 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40066 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFDFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40067 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0300) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_53 ( input D1, C1, B1, A1, D0, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40068 \decoder/i2_3_lut_4_lut_adj_16 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40049 \detector/i2_3_lut ( .A(GNDI), .B(B0), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40068 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_54 ( input D1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40069 \detector/i2_3_lut_adj_46 ( .A(A1), .B(B1), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40070 \detector/i3720_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40069 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8800) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40070 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_55 ( input D1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40071 \detector/i5_3_lut ( .A(A1), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40072 \detector/i3_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40071 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFEE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40072 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFEFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_56 ( input D1, C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40073 \detector/i3_4_lut_adj_20 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40074 \detector/i2_3_lut_adj_18 ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40073 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40074 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8080) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_57 ( input D1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40075 \detector/i1_rep_42_2_lut ( .A(A1), .B(GNDI), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40076 \detector/i2_3_lut_rep_76_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40075 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hAA00) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40076 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_58 ( input D1, C1, B1, A1, C0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   GNDI, VCCI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40077 \detector/i1_2_lut_rep_86_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40078 \detector/i1921_2_lut ( .A(A0), .B(GNDI), .C(C0), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/BTN_cache_i0_i3 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  vmuxregsre \detector/BTN_cache_i0_i2 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40077 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40078 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hA0A0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_59 ( input D1, C1, B1, A1, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40079 \detector/i1_4_lut_adj_30 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40080 \detector/i1_2_lut ( .A(GNDI), .B(B0), .C(C0), .D(GNDI), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40079 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hDFFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40080 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF3F3) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_60 ( input D1, C1, B1, A1, D0, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40081 \decoder/i2_3_lut_rep_52_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40082 \detector/i2_3_lut_adj_19 ( .A(GNDI), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40081 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFEF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40082 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_61 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40083 \detector/i1_4_lut_adj_35 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40084 \detector/key_out_15__bdd_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40083 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hC8C0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40084 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6880) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_62 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40085 \detector/n39_bdd_2_lut_3801_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40086 \detector/key_out_0__bdd_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40085 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40086 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6880) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_63 ( input D1, C1, B1, A1, D0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40087 \detector/i2_3_lut_4_lut_adj_40 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40088 \detector/i2_3_lut_adj_23 ( .A(A0), .B(B0), .C(GNDI), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40087 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40088 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8800) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_64 ( input D1, C1, B1, A1, D0, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40089 \decoder/i2_3_lut_4_lut_adj_10 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40090 \detector/i3706_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40089 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFEF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40090 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hA000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_65 ( input B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40091 \decoder/i1_2_lut_rep_102 ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40092 \detector/i2_4_lut_adj_24 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40091 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hEEEE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40092 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0F2F) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_66 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40077 \detector/i1_2_lut_3_lut_4_lut_adj_39 ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40093 \detector/i4_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40093 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_67 ( input D1, C1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40094 \detector/i3_3_lut_adj_26 ( .A(GNDI), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40095 \detector/i3742_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40094 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFC) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40095 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0100) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_68 ( input D1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40096 \detector/i3684_2_lut ( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40097 \detector/i3722_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40096 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hCC00) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40097 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_69 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40037 \detector/i1_2_lut_rep_94_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40098 \detector/i1_2_lut_rep_79_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40098 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_70 ( input D1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40099 \detector/i1_2_lut_3_lut_adj_43 ( .A(A1), .B(B1), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40100 \detector/i1_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40099 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8800) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40100 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h00AC) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_71 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40101 \detector/i1_3_lut_4_lut_adj_42 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40102 \detector/i38_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40101 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0008) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40102 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF0E2) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_72 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40103 \detector/BTN_cache_2__bdd_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40104 \detector/i41_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40103 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h6880) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40104 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hCCD8) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_73 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40105 \detector/i1_4_lut_adj_36 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40103 \detector/key_out_5__bdd_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40105 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF8F0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_74 ( input B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40012 \detector/i1_2_lut_rep_104 ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40106 \detector/i3_4_lut_adj_27 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40106 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_75 ( input D1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40011 \detector/i1_2_lut_rep_98 ( .A(A1), .B(GNDI), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40093 \detector/i2_3_lut_4_lut_adj_28 ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_76 ( input D1, C1, B1, A1, D0, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40107 \decoder/i2_3_lut_4_lut_adj_2 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40090 \detector/i3676_2_lut_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40107 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_77 ( input D1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40011 \detector/i2_2_lut_rep_100 ( .A(A1), .B(GNDI), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40108 \detector/i1_2_lut_rep_83_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40108 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_78 ( input B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40012 \detector/i4_rep_36_2_lut ( .A(A1), .B(B1), .C(GNDI), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40105 \detector/i1_4_lut_adj_32 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_79 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40076 \detector/i1_4_lut_adj_44 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40037 \detector/i2_4_lut_adj_33 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_80 ( input D1, C1, A1, D0, C0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40090 \detector/i1_3_lut ( .A(A1), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40082 \detector/i1_2_lut_rep_93_3_lut ( .A(GNDI), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_81 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40109 \detector/i3778_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40110 \detector/i3728_2_lut_2_lut_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40109 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0100) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40110 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0400) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_82 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40009 \decoder/i2_3_lut_4_lut_adj_12 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40111 \decoder/i1_2_lut_rep_69_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40111 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_83 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40112 \decoder/i2_3_lut_rep_60_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40113 \decoder/i2_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40112 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40113 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFEFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_84 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40114 \decoder/i1_2_lut_rep_62_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40115 \decoder/i1_2_lut_rep_68_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40114 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40115 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_85 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40116 \decoder/i1_2_lut_3_lut_4_lut_adj_14 ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40117 \decoder/i1_2_lut_rep_70_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40116 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFB) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40117 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_86 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40115 \decoder/i1_2_lut_rep_66_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40118 \decoder/i1_2_lut_rep_71_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40118 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_87 ( input D1, C1, B1, A1, D0, C0, B0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40119 \decoder/i1_2_lut_rep_61_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40112 \decoder/i1_2_lut_rep_67_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  vmuxregsre \detector/key_out_i9 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i8 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40119 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_88 ( input D1, C1, B1, A1, D0, C0, B0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40107 \decoder/i2_3_lut_4_lut_adj_11 ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40120 \decoder/i1_2_lut_rep_56_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  vmuxregsre \detector/key_out_i3 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i2 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40120 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_89 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40119 \decoder/i1_2_lut_rep_65_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40120 \decoder/i1_2_lut_rep_73_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module SLICE_90 ( input D1, C1, B1, A1, D0, C0, B0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40121 \decoder/i3783_2_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40112 \decoder/i1_2_lut_rep_53_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  vmuxregsre \detector/key_out_i11 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i10 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40121 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h02FF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_91 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40122 \decoder/i1_2_lut_rep_64_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40123 \decoder/i2_3_lut_rep_59_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40122 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40123 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFEFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_92 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40122 \decoder/i3696_2_lut_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40124 \decoder/i1_2_lut_rep_74_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40124 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_93 ( input D1, C1, B1, A1, D0, C0, B0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40115 \decoder/i1_2_lut_rep_84_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40118 \decoder/i1_2_lut_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+  vmuxregsre \detector/key_out_i1 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i0 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module decoder_SLICE_94 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40117 \decoder/i1_2_lut_rep_85_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40117 \decoder/i1_2_lut_rep_75_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module decoder_SLICE_95 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40125 \decoder/i1_2_lut_rep_81_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40068 \decoder/i2_3_lut_4_lut_adj_3 ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40125 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_96 ( input C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40126 \decoder/i1_2_lut_rep_92_3_lut ( .A(A1), .B(B1), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40127 \decoder/i1_2_lut_rep_77_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40126 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFEFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40127 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_97 ( input D1, C1, B1, A1, D0, C0, B0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40064 \decoder/i2_3_lut_rep_51_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40128 \decoder/i1_2_lut_rep_58_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  vmuxregsre \detector/key_out_i5 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i4 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40128 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_98 ( input D1, A1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40129 \decoder/i1_2_lut_rep_96 ( .A(A1), .B(GNDI), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40130 \decoder/i1_2_lut_rep_78_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40129 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFAA) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40130 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_99 ( input D1, C1, B1, A1, D0, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40119 \decoder/i2009_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40131 \decoder/i2_3_lut ( .A(A0), .B(GNDI), .C(C0), .D(D0), .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40131 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0500) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_100 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40132 \decoder/key_id_12__bdd_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40133 \decoder/i1_4_lut_adj_4 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40132 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0116) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40133 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0CAE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_101 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40120 \decoder/i2072_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40134 \decoder/i1_4_lut_adj_5 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40134 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF5F4) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_102 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40010 \decoder/i2001_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40135 \decoder/i1_4_lut_adj_6 ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40135 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h3130) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_103 ( input C1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40136 \decoder/i1_2_lut_rep_95 ( .A(GNDI), .B(B1), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40009 \decoder/i2_3_lut_4_lut_adj_8 ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40136 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFCFC) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_104 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40137 \decoder/i1_2_lut_rep_54_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40138 \decoder/i2_2_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40137 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40138 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hF0B0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_105 ( input C1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40139 \decoder/i1_2_lut_adj_15 ( .A(GNDI), .B(B1), .C(C1), .D(GNDI), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40125 \decoder/i1_2_lut_rep_80_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+
+  specify
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40139 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFCFC) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_106 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40140 \decoder/i2_4_lut_adj_7 ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40141 \decoder/i2_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40140 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0102) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40141 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0014) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_107 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40142 \decoder/i2005_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40143 \decoder/key_id_0__bdd_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40142 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40143 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0116) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_108 ( input D1, B1, A1, D0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40144 \detector/i3748_2_lut_3_lut ( .A(A1), .B(B1), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40145 \detector/i3740_3_lut ( .A(A0), .B(B0), .C(GNDI), .D(D0), .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40144 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0011) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40145 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0022) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_109 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40146 \detector/i1_2_lut_rep_89_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40147 \detector/i2_3_lut_4_lut_adj_37 ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40146 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40147 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_110 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, 
+    F1 );
+
+  lut40097 \detector/i1_2_lut_3_lut_4_lut_adj_38 ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40070 \detector/i1_2_lut_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module detector_SLICE_111 ( input D1, B1, A1, D0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40148 \detector/i3745_2_lut_3_lut ( .A(A1), .B(B1), .C(GNDI), .D(D1), 
+    .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40149 \detector/i3736_2_lut_3_lut ( .A(A0), .B(B0), .C(GNDI), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40148 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0022) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40149 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h2200) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module SLICE_112 ( input D1, C1, B1, A1, D0, C0, B0, A0, M1, M0, CE, CLK, 
+    output F0, Q0, F1, Q1 );
+  wire   VCCI, GNDI, M1_dly, CLK_dly, M0_dly, CE_dly;
+
+  lut40150 \decoder/n4261_bdd_2_lut_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), 
+    .D(D1), .Z(F1));
+  lut40120 \decoder/i1_2_lut_rep_63_3_lut_4_lut ( .A(A0), .B(B0), .C(C0), 
+    .D(D0), .Z(F0));
+  vmuxregsre \detector/key_out_i7 ( .D0(M1_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q1));
+  vcc DRIVEVCC( .PWR1(VCCI));
+  gnd DRIVEGND( .PWR0(GNDI));
+  vmuxregsre \detector/key_out_i6 ( .D0(M0_dly), .D1(VCCI), .SD(GNDI), 
+    .SP(CE_dly), .CK(CLK_dly), .LSR(GNDI), .Q(Q0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+    (CLK => Q0) = (0:0:0,0:0:0);
+    (CLK => Q1) = (0:0:0,0:0:0);
+    $setuphold (posedge CLK, M1, 0:0:0, 0:0:0,,,, CLK_dly, M1_dly);
+    $setuphold (posedge CLK, M0, 0:0:0, 0:0:0,,,, CLK_dly, M0_dly);
+    $setuphold (posedge CLK, CE, 0:0:0, 0:0:0,,,, CLK_dly, CE_dly);
+    $width (posedge CLK, 0:0:0);
+    $width (negedge CLK, 0:0:0);
+  endspecify
+
+endmodule
+
+module lut40150 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0004) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_113 ( input D1, C1, B1, A1, D0, B0, output F0, F1 );
+  wire   GNDI;
+
+  lut40151 \detector/i1_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40020 \detector/i1_2_lut_rep_99 ( .A(GNDI), .B(B0), .C(GNDI), .D(D0), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40151 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_114 ( input D1, C1, B1, A1, C0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40147 \detector/i1_3_lut_rep_90_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40078 \detector/i1_2_lut_rep_101 ( .A(A0), .B(GNDI), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module decoder_SLICE_115 ( input D1, C1, B1, A1, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40122 \decoder/i2007_3_lut_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40152 \decoder/i1_2_lut_rep_88_3_lut ( .A(A0), .B(B0), .C(C0), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40152 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFEFE) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_116 ( input D1, C1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40153 \decoder/i1873_2_lut ( .A(GNDI), .B(GNDI), .C(C1), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40112 \decoder/i2003_rep_11_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40153 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFF0) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module detector_SLICE_117 ( input D1, C1, B1, A1, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40154 \detector/i1_rep_29_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), .Z(F1));
+  lut40012 \detector/i1_2_lut_rep_97 ( .A(A0), .B(B0), .C(GNDI), .D(GNDI), 
+    .Z(F0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40154 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h8000) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_118 ( input D1, C1, B1, A1, D0, C0, B0, A0, output F0, F1 );
+
+  lut40155 \decoder/i1953_2_lut_rep_57_4_lut ( .A(A1), .B(B1), .C(C1), .D(D1), 
+    .Z(F1));
+  lut40156 \decoder/key_id_8__bdd_4_lut ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (C1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (A1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40155 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFB00) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40156 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'h0116) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module decoder_SLICE_119 ( input D1, B1, D0, C0, B0, A0, output F0, F1 );
+  wire   GNDI;
+
+  lut40157 \decoder/i1_2_lut ( .A(GNDI), .B(B1), .C(GNDI), .D(D1), .Z(F1));
+  gnd DRIVEGND( .PWR0(GNDI));
+  lut40158 \decoder/i2_3_lut_4_lut_adj_13 ( .A(A0), .B(B0), .C(C0), .D(D0), 
+    .Z(F0));
+
+  specify
+    (D1 => F1) = (0:0:0,0:0:0);
+    (B1 => F1) = (0:0:0,0:0:0);
+    (D0 => F0) = (0:0:0,0:0:0);
+    (C0 => F0) = (0:0:0,0:0:0);
+    (B0 => F0) = (0:0:0,0:0:0);
+    (A0 => F0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module lut40157 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hCCFF) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module lut40158 ( input A, B, C, D, output Z );
+
+  ROM16X1A #(16'hFFFD) INST10( .AD0(A), .AD1(B), .AD2(C), .AD3(D), .DO0(Z));
+endmodule
+
+module row_2_ ( input PADDO, output row2 );
+  wire   GNDI;
+
+  xo2iobuf row_pad_2( .I(PADDO), .T(GNDI), .PAD(row2));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => row2) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module xo2iobuf ( input I, T, output PAD );
+
+  OBZPD INST5( .I(I), .T(T), .O(PAD));
+endmodule
+
+module row_3_ ( input PADDO, output row3 );
+  wire   GNDI;
+
+  xo2iobuf row_pad_3( .I(PADDO), .T(GNDI), .PAD(row3));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => row3) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module row_1_ ( input PADDO, output row1 );
+  wire   GNDI;
+
+  xo2iobuf row_pad_1( .I(PADDO), .T(GNDI), .PAD(row1));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => row1) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module row_0_ ( input PADDO, output row0 );
+  wire   GNDI;
+
+  xo2iobuf row_pad_0( .I(PADDO), .T(GNDI), .PAD(row0));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => row0) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_6_ ( input PADDO, output seg16 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_6( .I(PADDO), .T(GNDI), .PAD(seg16));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg16) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_5_ ( input PADDO, output seg15 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_5( .I(PADDO), .T(GNDI), .PAD(seg15));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg15) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_4_ ( input PADDO, output seg14 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_4( .I(PADDO), .T(GNDI), .PAD(seg14));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg14) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_3_ ( input PADDO, output seg13 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_3( .I(PADDO), .T(GNDI), .PAD(seg13));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg13) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_2_ ( input PADDO, output seg12 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_2( .I(PADDO), .T(GNDI), .PAD(seg12));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg12) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_1_ ( input PADDO, output seg11 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_1( .I(PADDO), .T(GNDI), .PAD(seg11));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg11) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg1_0_ ( input PADDO, output seg10 );
+  wire   GNDI;
+
+  xo2iobuf seg1_pad_0( .I(PADDO), .T(GNDI), .PAD(seg10));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg10) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_6_ ( input PADDO, output seg26 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_6( .I(PADDO), .T(GNDI), .PAD(seg26));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg26) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_5_ ( input PADDO, output seg25 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_5( .I(PADDO), .T(GNDI), .PAD(seg25));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg25) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_4_ ( input PADDO, output seg24 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_4( .I(PADDO), .T(GNDI), .PAD(seg24));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg24) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_3_ ( input PADDO, output seg23 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_3( .I(PADDO), .T(GNDI), .PAD(seg23));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg23) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_2_ ( input PADDO, output seg22 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_2( .I(PADDO), .T(GNDI), .PAD(seg22));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg22) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_1_ ( input PADDO, output seg21 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_1( .I(PADDO), .T(GNDI), .PAD(seg21));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg21) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module seg2_0_ ( input PADDO, output seg20 );
+  wire   GNDI;
+
+  xo2iobuf seg2_pad_0( .I(PADDO), .T(GNDI), .PAD(seg20));
+  gnd DRIVEGND( .PWR0(GNDI));
+
+  specify
+    (PADDO => seg20) = (0:0:0,0:0:0);
+  endspecify
+
+endmodule
+
+module col_3_ ( output PADDI, input col3 );
+
+  xo2iobuf0159 col_pad_3( .Z(PADDI), .PAD(col3));
+
+  specify
+    (col3 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge col3, 0:0:0);
+    $width (negedge col3, 0:0:0);
+  endspecify
+
+endmodule
+
+module xo2iobuf0159 ( output Z, input PAD );
+
+  IBPD INST1( .I(PAD), .O(Z));
+endmodule
+
+module col_2_ ( output PADDI, input col2 );
+
+  xo2iobuf0159 col_pad_2( .Z(PADDI), .PAD(col2));
+
+  specify
+    (col2 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge col2, 0:0:0);
+    $width (negedge col2, 0:0:0);
+  endspecify
+
+endmodule
+
+module col_1_ ( output PADDI, input col1 );
+
+  xo2iobuf0159 col_pad_1( .Z(PADDI), .PAD(col1));
+
+  specify
+    (col1 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge col1, 0:0:0);
+    $width (negedge col1, 0:0:0);
+  endspecify
+
+endmodule
+
+module col_0_ ( output PADDI, input col0 );
+
+  xo2iobuf0159 col_pad_0( .Z(PADDI), .PAD(col0));
+
+  specify
+    (col0 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge col0, 0:0:0);
+    $width (negedge col0, 0:0:0);
+  endspecify
+
+endmodule
+
+module independent_keys_3_ ( output PADDI, input independentkeys3 );
+
+  xo2iobuf0159 independent_keys_pad_3( .Z(PADDI), .PAD(independentkeys3));
+
+  specify
+    (independentkeys3 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge independentkeys3, 0:0:0);
+    $width (negedge independentkeys3, 0:0:0);
+  endspecify
+
+endmodule
+
+module independent_keys_2_ ( output PADDI, input independentkeys2 );
+
+  xo2iobuf0159 independent_keys_pad_2( .Z(PADDI), .PAD(independentkeys2));
+
+  specify
+    (independentkeys2 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge independentkeys2, 0:0:0);
+    $width (negedge independentkeys2, 0:0:0);
+  endspecify
+
+endmodule
+
+module independent_keys_1_ ( output PADDI, input independentkeys1 );
+
+  xo2iobuf0159 independent_keys_pad_1( .Z(PADDI), .PAD(independentkeys1));
+
+  specify
+    (independentkeys1 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge independentkeys1, 0:0:0);
+    $width (negedge independentkeys1, 0:0:0);
+  endspecify
+
+endmodule
+
+module independent_keys_0_ ( output PADDI, input independentkeys0 );
+
+  xo2iobuf0159 independent_keys_pad_0( .Z(PADDI), .PAD(independentkeys0));
+
+  specify
+    (independentkeys0 => PADDI) = (0:0:0,0:0:0);
+    $width (posedge independentkeys0, 0:0:0);
+    $width (negedge independentkeys0, 0:0:0);
+  endspecify
+
+endmodule
+
+module clk ( output PADDI, input clk );
+
+  xo2iobuf0159 clk_pad( .Z(PADDI), .PAD(clk));
+
+  specify
+    (clk => PADDI) = (0:0:0,0:0:0);
+    $width (posedge clk, 0:0:0);
+    $width (negedge clk, 0:0:0);
+  endspecify
+
+endmodule

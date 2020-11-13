@@ -8,7 +8,7 @@ set ::bali::Para(PRIMITIVEFILE) {"C:/lscc/diamond/3.11_x64/cae_library/synthesis
 set ::bali::Para(TFT) {"C:/lscc/diamond/3.11_x64/data/templates/tstbch_f.tft"}
 set ::bali::Para(OUTNAME) Key_Input_tb
 set ::bali::Para(EXT) .vhd
-set ::bali::Para(FILELIST) {"C:/Users/10352/vhdl-labs/lab1_button_input/key_input.vhd=work" }
+set ::bali::Para(FILELIST) {"C:/Users/10352/vhdl-labs/lab1_button_input/key_input.vhd=work" "C:/Users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd=work" "C:/Users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd=work" }
 set ::bali::Para(INCLUDEPATH) {}
 puts "set parameters done"
 ::bali::GenerateTbTemplate

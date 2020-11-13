@@ -1,0 +1,59 @@
+timestamp=1604465316437
+
+[~A]
+ModifyID=4
+Version=74
+
+[key_input]
+A/key_input_arch=A/Key_Input_arch 21|./../key_input.vhd|16|1*6045
+I=0*7332
+I/key_input_arch=I/Key_Input_arch 0*8418
+M=11|0|vde|1604465316202|./../key_input.vhd|0*6867*0xab7a93f2ac8817be41b796170bc90ab353a18718|0*7251*0x23b75c12e3e89f2ef000564498faa8c2
+M/key_input_arch=M/Key_Input_arch 21|0|vde|1604465316204|./../key_input.vhd|0*7535*0x2c61a7e8182b9aaf9158edb7794629f997fcd949|0*8319*0x9065d32a2e40e13794b29a2731812845
+R=./../key_input.vhd|4
+Version=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|d9eb1ccd674b4c427a7ab018a7fa14e4e711739d3258eb7291525b46820d6d99235d8bd336c63f7ccc8bc5019dac5137
+Version/key_input_arch=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|6adde012fb28ec786b9acbf1a9c9f75b84b71c758ee00cee1be25c0b2e449cea50e9ea16ce6d9ecb833a41128cda42a7
+
+[key_pressing_detector]
+A/key_pressing_detector_arch=21|./../key_pressing_detector.vhd|16|1*2159
+BinI32/key_pressing_detector_arch=3*1200
+I=0*3588
+I/key_pressing_detector_arch=0*6390
+M=11|0|vde|1604465316000|./../key_pressing_detector.vhd|0*3087*0x82b630423c45dea49b774a2c215967fe1cfd4981|0*3483*0x23b75c12e3e89f2ef000564498faa8c2
+M/key_pressing_detector_arch=21|0|vde|1604465316002|./../key_pressing_detector.vhd|0*3803*0xaa5f54c2aff344a537e8db64f47d82c837e90776|0*6255*0x9065d32a2e40e13794b29a2731812845
+R=./../key_pressing_detector.vhd|4
+Version=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|11b1fdcd69bf687631d72746c8429a6c4fb17d12f64c27584439d818ffce7f9e8c94308996b29d0b9ceae3f9dca55c27
+Version/key_pressing_detector_arch=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|11b1fdcd69bf687631d72746c8429a6c7723243a8e97f233d8a66580cf11ab0d95e1c8e881b8524720cc55b6f4f39e32bdc33e665f62edc8524e32c1c0d6946a
+
+[segment_led_decoder]
+A/seg_led_decoder_arch=21|./../segment_led_decoder.vhd|12|1*0
+BinI32/seg_led_decoder_arch=3*0
+I=0*651
+I/seg_led_decoder_arch=0*2597
+M=11|0|vde|1604465315739|./../segment_led_decoder.vhd|0*229*0xc978e77863bd6a2232fda2af48b2298a57f47b69|0*550*0x23b75c12e3e89f2ef000564498faa8c2
+M/seg_led_decoder_arch=21|0|vde|1604465315741|./../segment_led_decoder.vhd|0*864*0x27786ffb541718b55dba83a74932026ad05c73e9|0*2472*0x9065d32a2e40e13794b29a2731812845
+R=./../segment_led_decoder.vhd|4
+Version=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|3c31b60450aee5a1838c2197ccbc34c4d204015a0cee0e4556b1f3abcb07e26bd260c5f4ccf81a73dd6d00129fba5a01
+Version/seg_led_decoder_arch=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|6d845df04a133c0ace4fff4b91c6d20d71266d1cb10be88e22c7c679bdb60cf2e16cd40fa89ad602f8c83db13ca4a4cc
+
+[testbench]
+A/behavior=21|./../Key_Input_tb.vhd|28|1*8262
+BinI32/behavior=3*3680
+I=0*9121
+I/behavior=0*10337
+M=11|0|vde|1604465316411|./../Key_Input_tb.vhd|0*8844*0x3a87c1fd61fa3f2f556277b4118cd885034e290d|0*9037*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavior=21|0|vde|1604465316413|./../Key_Input_tb.vhd|0*9363*0x08f80c00df54140772f87719d6abe205a464c012|0*10241*0x9065d32a2e40e13794b29a2731812845
+R=./../Key_Input_tb.vhd|25
+Version=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|9c08cd30fe0f9550ac0d051aa32c9ba5030c5f4de3ffa3c97f58c5528f1d79131b3db8589d44d0733e7f9b68f0cccd5b
+Version/behavior=10.5.216.6767 (Windows)|00000004789cd34d494a0700030f015b|f9bccf16e2dce5a640f0ad5e8eaa0283e08d679eaf1bc9de9439630905b37e5f84c5bf0852a2b04a82699471cfd5bf35
+
+[~MFT]
+0=7|0work.mgf|10337|0
+1=1|1work.mgf|8262|0
+3=1|3work.mgf|3680|0
+
+[~U]
+key_input=Key_Input 11|0*6632|
+key_pressing_detector=11|0*2831|
+segment_led_decoder=11|0*0|
+testbench=11|0*8720|

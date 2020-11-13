@@ -1,0 +1,308 @@
+
+synthesis -f "digital_clock_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Nov 04 15:19:20 2020
+
+
+Command Line:  synthesis -f digital_clock_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab4_digital_clock/promote.xml 
+
+    <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+    <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
+Optimization goal = Balanced
+Top-level module name = electricalClock.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1 (searchpath added)
+-p C:/Users/10352/vhdl-labs/lab4_digital_clock (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/ClockDivider.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/CycleSampler.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/DataTo595.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/digital_clock.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/ModeCtrler.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/RotaryEncoder.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/Timer.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/Timer1.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/TopDesign.vhd
+NGD file = digital_clock_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+    <postMsg mid="35921504" type="Info"    dynamic="2" navigation="0" arg0="" arg1="C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1"  />
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(8): " arg1="clockdivider" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd" arg3="8"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(16): " arg1="secgen" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd" arg3="16"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(7): " arg1="cyclesampler" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd" arg3="7"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(16): " arg1="cyclesample" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd" arg3="16"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(7): " arg1="datato595" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd" arg3="7"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(24): " arg1="series2parallel" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd" arg3="24"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/digital_clock.vhd. VHDL-1481
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(7): " arg1="modectrler" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd" arg3="7"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(17): " arg1="modectrl" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd" arg3="17"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(5): " arg1="rotaryencoder" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd" arg3="5"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(15): " arg1="behavior" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd" arg3="15"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd(5): " arg1="timeencoder" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd" arg3="5"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd(22): " arg1="encoder" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd" arg3="22"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd(7): " arg1="timer" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd" arg3="7"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd(27): " arg1="maintimer" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd" arg3="27"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(7): " arg1="timer" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd" arg3="7"  />
+    <postMsg mid="35921177" type="Warning" dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(7): " arg1="timer" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd" arg3="7"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(29): " arg1="maintimer" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd" arg3="29"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd. VHDL-1481
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(9): " arg1="electricalclock" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd" arg3="9"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(33): " arg1="behavior" arg2="c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd" arg3="33"  />
+unit electricalClock is not yet analyzed. VHDL-1485
+unit electricalClock is not yet analyzed. VHDL-1485
+c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(9): executing electricalClock(behavior)
+
+    <postMsg mid="35921205" type="Warning" dynamic="3" navigation="2" arg0="c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(29): " arg1="electricalClock" arg2="behavior" arg3="c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd" arg4="29"  />
+Top module name (VHDL): electricalClock
+Last elaborated design is electricalClock(behavior)
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = electricalClock.
+    <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\dt/shift_cnt" arg1="one-hot"  />
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+
+
+
+GSR instance connected to net n612.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in electricalClock_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+DRC complete with no errors or warnings
+
+Design Results:
+    826 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file digital_clock_impl1.ngd.
+
+################### Begin Area Report (electricalClock)######################
+Number of register bits => 293 of 4635 (6 % )
+CCU2D => 102
+FD1P3AX => 55
+FD1P3AY => 1
+FD1P3IX => 20
+FD1S3AX => 23
+FD1S3AY => 1
+FD1S3IX => 193
+GSR => 1
+IB => 7
+L6MUX21 => 1
+LUT4 => 382
+OB => 8
+PFUMX => 29
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 293
+Clock Enable Nets
+Number of Clock Enables: 22
+Top 10 highest fanout Clock Enables:
+  Net : dt/clk_c_enable_28, loads : 16
+  Net : tm/clk_c_enable_40, loads : 4
+  Net : tm/clk_c_enable_48, loads : 4
+  Net : tm/clk_c_enable_45, loads : 4
+  Net : dt/clk_c_enable_57, loads : 4
+  Net : tm/clk_c_enable_41, loads : 4
+  Net : tm/clk_c_enable_39, loads : 3
+  Net : upkey/keystore_2__N_139, loads : 3
+  Net : downkey/keystore_2__N_139, loads : 3
+  Net : tm/clk_c_enable_42, loads : 3
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : controller/mode_1, loads : 37
+  Net : dt/n3123, loads : 33
+  Net : rstkey/n3118, loads : 33
+  Net : secondGen/n3117, loads : 33
+  Net : modekey/n3119, loads : 33
+  Net : downkey/n3122, loads : 33
+  Net : upkey/n3121, loads : 33
+  Net : controller/mode_0, loads : 29
+  Net : tm/n7623, loads : 21
+  Net : tm/hL_0, loads : 20
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   71.715 MHz|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 86.535  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.188  secs
+--------------------------------------------------------------

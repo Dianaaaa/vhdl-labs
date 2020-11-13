@@ -1,0 +1,89 @@
+Loading design for application iotiming from file buttoninput_impl1.ncd.
+Design name: Key_Input
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 5
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file buttoninput_impl1.ncd.
+Design name: Key_Input
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 6
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file buttoninput_impl1.ncd.
+Design name: Key_Input
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: Key_Input
+// Package: CSBGA132
+// ncd File: buttoninput_impl1.ncd
+// Version: Diamond (64-bit) 3.11.0.396.4
+// Written on Wed Nov 04 15:20:18 2020
+// M: Minimum Performance Grade
+// iotiming buttonInput_impl1.ncd buttonInput_impl1.prf -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+(no input setup/hold data)
+
+
+// Clock to Output Delay
+
+Port  Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+(no clock to output min/max data)
+
+
+// Internal_Clock to Input
+
+Port  Internal_Clock       
+--------------------------------------------------------
+col[0 detector/apa         
+col[1 detector/apa         
+col[2 detector/apa         
+col[3 detector/apa         
+indep detector/apa         
+indep detector/apa         
+indep detector/apa         
+indep detector/apa         
+
+
+// Internal_Clock to Output
+
+Port    Internal_Clock       
+--------------------------------------------------------
+row[0]  detector/apa         
+row[1]  detector/apa         
+row[2]  detector/apa         
+row[3]  detector/apa         
+seg1[0] decoder/seg1_6__N_154
+seg1[1] decoder/seg1_6__N_154
+seg1[2] decoder/seg1_6__N_154
+seg1[3] decoder/seg1_6__N_154
+seg1[4] decoder/seg1_6__N_154
+seg1[5] decoder/seg1_6__N_154
+seg1[6] decoder/seg1_6__N_154
+seg2[0] decoder/seg1_6__N_154
+seg2[1] decoder/seg1_6__N_154
+seg2[2] decoder/seg1_6__N_154
+seg2[3] decoder/seg1_6__N_154
+seg2[4] decoder/seg1_6__N_154
+seg2[5] decoder/seg1_6__N_154
+seg2[6] decoder/seg1_6__N_154

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVHDLSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="IBIS">
+        <Message>
+            <ID>1191031</ID>
+            <Severity>Info</Severity>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -32,135 +52,83 @@
             <Navigation>16</Navigation>
         </Message>
         <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd(4): </Dynamic>
+            <Dynamic>key_pressing_detector</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd(16): </Dynamic>
+            <Dynamic>key_pressing_detector_arch</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd</Navigation>
+            <Navigation>16</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd(4): </Dynamic>
+            <Dynamic>segment_led_decoder</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd(12): </Dynamic>
+            <Dynamic>seg_led_decoder_arch</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd</Navigation>
+            <Navigation>12</Navigation>
+        </Message>
+        <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(14): </Dynamic>
             <Dynamic>Key_Input</Dynamic>
-            <Dynamic>Key_Input_Arch</Dynamic>
+            <Dynamic>Key_Input_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
             <Navigation>14</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[3]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[3]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>COL[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935014</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(104): </Dynamic>
-            <Dynamic>seg2_i7</Dynamic>
-            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>104</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(104): </Dynamic>
-            <Dynamic>seg1_i1</Dynamic>
-            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>104</Navigation>
-        </Message>
-        <Message>
             <ID>35001779</ID>
             <Severity>Warning</Severity>
-            <Dynamic>clk_200hz_75</Dynamic>
+            <Dynamic>\detector/apa_75</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
         </Message>
+    </Task>
+    <Task name="PAR">
         <Message>
-            <ID>1166052</ID>
+            <ID>61001101</ID>
             <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>COL[3]</Dynamic>
-            <Navigation>COL[3]</Navigation>
         </Message>
         <Message>
-            <ID>1166064</ID>
+            <ID>61061008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>COL[3]</Dynamic>
+            <Dynamic>clk_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk</Dynamic>
+            <Dynamic>C1</Dynamic>
+            <Dynamic>Primary</Dynamic>
         </Message>
+    </Task>
+    <Task name="TimingSimFileVHD">
         <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>COL[2]</Dynamic>
-            <Navigation>COL[2]</Navigation>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
         </Message>
+    </Task>
+    <Task name="TimingSimFileVlg">
         <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>COL[2]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>COL[1]</Dynamic>
-            <Navigation>COL[1]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>COL[1]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>COL[0]</Dynamic>
-            <Navigation>COL[0]</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>COL[0]</Dynamic>
-        </Message>
-        <Message>
-            <ID>1163101</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>8</Dynamic>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

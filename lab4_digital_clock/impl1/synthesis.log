@@ -1,0 +1,295 @@
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Wed Nov 04 15:19:20 2020
+
+
+Command Line:  synthesis -f digital_clock_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab4_digital_clock/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is CSBGA132.
+The -d option is LCMXO2-4000HC.
+Using package CSBGA132.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-4000HC
+
+### Package : CSBGA132
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = electricalClock.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1 (searchpath added)
+-p C:/Users/10352/vhdl-labs/lab4_digital_clock (searchpath added)
+VHDL library = work
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/ClockDivider.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/CycleSampler.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/DataTo595.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/digital_clock.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/ModeCtrler.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/RotaryEncoder.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/Timer.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/Timer1.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab4_digital_clock/TopDesign.vhd
+NGD file = digital_clock_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+INFO - synthesis: The default VHDL library search path is now "C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1". VHDL-1504
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(8): analyzing entity clockdivider. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(16): analyzing architecture secgen. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(7): analyzing entity cyclesampler. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(16): analyzing architecture cyclesample. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(7): analyzing entity datato595. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(24): analyzing architecture series2parallel. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/digital_clock.vhd. VHDL-1481
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(7): analyzing entity modectrler. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(17): analyzing architecture modectrl. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(5): analyzing entity rotaryencoder. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(15): analyzing architecture behavior. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd(5): analyzing entity timeencoder. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd(22): analyzing architecture encoder. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd(7): analyzing entity timer. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd(27): analyzing architecture maintimer. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(7): analyzing entity timer. VHDL-1012
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(7): duplicate entity name timer. VHDL-1177
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(29): analyzing architecture maintimer. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(9): analyzing entity electricalclock. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(33): analyzing architecture behavior. VHDL-1010
+unit electricalClock is not yet analyzed. VHDL-1485
+unit electricalClock is not yet analyzed. VHDL-1485
+c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(9): executing electricalClock(behavior)
+
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(29): replacing existing netlist electricalClock(behavior). VHDL-1205
+Top module name (VHDL): electricalClock
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Top-level module name = electricalClock.
+INFO - synthesis: Extracted state machine for register '\dt/shift_cnt' with one-hot encoding
+State machine has 16 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+ 1101 
+
+ 1110 
+
+ 1111 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000000001
+
+ 0001 -> 0000000000000010
+
+ 0010 -> 0000000000000100
+
+ 0011 -> 0000000000001000
+
+ 0100 -> 0000000000010000
+
+ 0101 -> 0000000000100000
+
+ 0110 -> 0000000001000000
+
+ 0111 -> 0000000010000000
+
+ 1000 -> 0000000100000000
+
+ 1001 -> 0000001000000000
+
+ 1010 -> 0000010000000000
+
+ 1011 -> 0000100000000000
+
+ 1100 -> 0001000000000000
+
+ 1101 -> 0010000000000000
+
+ 1110 -> 0100000000000000
+
+ 1111 -> 1000000000000000
+
+
+
+
+GSR instance connected to net n612.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in electricalClock_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file digital_clock_impl1.ngd.
+
+################### Begin Area Report (electricalClock)######################
+Number of register bits => 293 of 4635 (6 % )
+CCU2D => 102
+FD1P3AX => 55
+FD1P3AY => 1
+FD1P3IX => 20
+FD1S3AX => 23
+FD1S3AY => 1
+FD1S3IX => 193
+GSR => 1
+IB => 7
+L6MUX21 => 1
+LUT4 => 382
+OB => 8
+PFUMX => 29
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : clk_c, loads : 293
+Clock Enable Nets
+Number of Clock Enables: 22
+Top 10 highest fanout Clock Enables:
+  Net : dt/clk_c_enable_28, loads : 16
+  Net : tm/clk_c_enable_40, loads : 4
+  Net : tm/clk_c_enable_48, loads : 4
+  Net : tm/clk_c_enable_45, loads : 4
+  Net : dt/clk_c_enable_57, loads : 4
+  Net : tm/clk_c_enable_41, loads : 4
+  Net : tm/clk_c_enable_39, loads : 3
+  Net : upkey/keystore_2__N_139, loads : 3
+  Net : downkey/keystore_2__N_139, loads : 3
+  Net : tm/clk_c_enable_42, loads : 3
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : controller/mode_1, loads : 37
+  Net : dt/n3123, loads : 33
+  Net : rstkey/n3118, loads : 33
+  Net : secondGen/n3117, loads : 33
+  Net : modekey/n3119, loads : 33
+  Net : downkey/n3122, loads : 33
+  Net : upkey/n3121, loads : 33
+  Net : controller/mode_0, loads : 29
+  Net : tm/n7623, loads : 21
+  Net : tm/hL_0, loads : 20
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_c]                   |  200.000 MHz|   71.715 MHz|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 86.535  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.188  secs
+--------------------------------------------------------------

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35921504</ID>
+            <Severity>Info</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(8): </Dynamic>
+            <Dynamic>clockdivider</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(16): </Dynamic>
+            <Dynamic>secgen</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd</Navigation>
+            <Navigation>16</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(7): </Dynamic>
+            <Dynamic>cyclesampler</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(16): </Dynamic>
+            <Dynamic>cyclesample</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd</Navigation>
+            <Navigation>16</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(7): </Dynamic>
+            <Dynamic>datato595</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(24): </Dynamic>
+            <Dynamic>series2parallel</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd</Navigation>
+            <Navigation>24</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(7): </Dynamic>
+            <Dynamic>modectrler</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(17): </Dynamic>
+            <Dynamic>modectrl</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(5): </Dynamic>
+            <Dynamic>rotaryencoder</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(15): </Dynamic>
+            <Dynamic>behavior</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd(5): </Dynamic>
+            <Dynamic>timeencoder</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd(22): </Dynamic>
+            <Dynamic>encoder</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd(7): </Dynamic>
+            <Dynamic>timer</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd(27): </Dynamic>
+            <Dynamic>maintimer</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timer.vhd</Navigation>
+            <Navigation>27</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(7): </Dynamic>
+            <Dynamic>timer</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921177</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(7): </Dynamic>
+            <Dynamic>timer</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(29): </Dynamic>
+            <Dynamic>maintimer</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd</Navigation>
+            <Navigation>29</Navigation>
+        </Message>
+        <Message>
+            <ID>35921012</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(9): </Dynamic>
+            <Dynamic>electricalclock</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>35921010</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(33): </Dynamic>
+            <Dynamic>behavior</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd</Navigation>
+            <Navigation>33</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd(29): </Dynamic>
+            <Dynamic>electricalClock</Dynamic>
+            <Dynamic>behavior</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab4_digital_clock/topdesign.vhd</Navigation>
+            <Navigation>29</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\dt/shift_cnt</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+</BaliMessageLog>

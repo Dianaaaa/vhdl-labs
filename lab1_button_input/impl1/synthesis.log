@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Nov 02 19:53:56 2020
+Wed Nov 04 15:15:47 2020
 
 
 Command Line:  synthesis -f buttonInput_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml 
@@ -66,6 +66,8 @@ The -syn option is FALSE.
 -p C:/Users/10352/vhdl-labs/lab1_button_input (searchpath added)
 VHDL library = work
 VHDL design file = C:/Users/10352/vhdl-labs/lab1_button_input/key_input.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd
+VHDL design file = C:/Users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd
 NGD file = buttonInput_impl1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -81,10 +83,18 @@ Analyzing VHDL file c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd. VH
 INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(4): analyzing entity key_input. VHDL-1012
 INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(16): analyzing architecture key_input_arch. VHDL-1010
 unit Key_Input is not yet analyzed. VHDL-1485
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd(4): analyzing entity key_pressing_detector. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd(16): analyzing architecture key_pressing_detector_arch. VHDL-1010
 unit Key_Input is not yet analyzed. VHDL-1485
-c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(4): executing Key_Input(Key_Input_Arch)
+Analyzing VHDL file c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd. VHDL-1481
+INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd(4): analyzing entity segment_led_decoder. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd(12): analyzing architecture seg_led_decoder_arch. VHDL-1010
+unit Key_Input is not yet analyzed. VHDL-1485
+unit Key_Input is not yet analyzed. VHDL-1485
+c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(4): executing Key_Input(Key_Input_arch)
 
-WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(14): replacing existing netlist Key_Input(Key_Input_Arch). VHDL-1205
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(14): replacing existing netlist Key_Input(Key_Input_arch). VHDL-1205
 Top module name (VHDL): Key_Input
 Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -93,10 +103,6 @@ Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'.
 Loading device for application map from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
 Package Status:                     Final          Version 1.44.
 Top-level module name = Key_Input.
-WARNING - synthesis: I/O Port COL[3] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port COL[2] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port COL[1] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port COL[0] 's net has no driver and is unused.
 ######## Converting I/O port seg1[6] to output.
 ######## Converting I/O port seg1[5] to output.
 ######## Converting I/O port seg1[4] to output.
@@ -104,7 +110,6 @@ WARNING - synthesis: I/O Port COL[0] 's net has no driver and is unused.
 ######## Converting I/O port seg1[2] to output.
 ######## Converting I/O port seg1[1] to output.
 ######## Converting I/O port seg1[0] to output.
-######## Converting I/O port seg2[7] to output.
 ######## Converting I/O port seg2[6] to output.
 ######## Converting I/O port seg2[5] to output.
 ######## Converting I/O port seg2[4] to output.
@@ -115,15 +120,8 @@ WARNING - synthesis: I/O Port COL[0] 's net has no driver and is unused.
 
 
 
-WARNING - synthesis: I/O Port COL[3] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port COL[2] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port COL[1] 's net has no driver and is unused.
-WARNING - synthesis: I/O Port COL[0] 's net has no driver and is unused.
-WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(104): Register seg2_i7 is stuck at One. VDB-5014
-WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(104): Register seg1_i1 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
-WARNING - synthesis: Initial value found on instance clk_200hz_75 will be ignored.
-Duplicate register/latch removal. seg2_i8 is a one-to-one match with seg2_i5.
+WARNING - synthesis: Initial value found on instance \detector/apa_75 will be ignored.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -132,30 +130,23 @@ Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'.
 Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'COL[3]' has no load.
-WARNING - synthesis: input pad net 'COL[3]' has no legal load.
-WARNING - synthesis: logical net 'COL[2]' has no load.
-WARNING - synthesis: input pad net 'COL[2]' has no legal load.
-WARNING - synthesis: logical net 'COL[1]' has no load.
-WARNING - synthesis: input pad net 'COL[1]' has no legal load.
-WARNING - synthesis: logical net 'COL[0]' has no load.
-WARNING - synthesis: input pad net 'COL[0]' has no legal load.
-WARNING - synthesis: DRC complete with 8 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file buttonInput_impl1.ngd.
 
 ################### Begin Area Report (Key_Input)######################
-Number of register bits => 41 of 4635 (0 % )
+Number of register bits => 81 of 4635 (1 % )
 CCU2D => 9
-FD1P3AX => 5
-FD1P3IX => 1
-FD1S3AX => 31
-FD1S3JX => 4
+FD1P3AX => 23
+FD1P3IX => 20
+FD1S1A => 11
+FD1S3AX => 21
+FD1S3IX => 6
 GSR => 1
-IB => 5
+IB => 9
 INV => 1
-LUT4 => 27
-OB => 19
+LUT4 => 204
+OB => 18
+PFUMX => 3
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -164,29 +155,35 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : clk_c, loads : 23
-  Net : clk_200hz, loads : 11
+Number of Clocks: 3
+  Net : detector/apa, loads : 46
+  Net : clk_c, loads : 21
+  Net : decoder/seg1_6__N_154, loads : 16
 Clock Enable Nets
-Number of Clock Enables: 5
-Top 5 highest fanout Clock Enables:
-  Net : clk_c_enable_4, loads : 2
-  Net : clk_c_enable_3, loads : 1
-  Net : clk_c_enable_5, loads : 1
-  Net : clk_c_enable_1, loads : 1
-  Net : clk_c_enable_6, loads : 1
+Number of Clock Enables: 11
+Top 10 highest fanout Clock Enables:
+  Net : detector/apa_enable_19, loads : 16
+  Net : detector/BTN_cache_3__N_83, loads : 13
+  Net : detector/apa_N_10, loads : 5
+  Net : detector/key_out_15__N_72, loads : 4
+  Net : detector/key_out_15__N_67, loads : 4
+  Net : detector/key_out_15__N_62, loads : 4
+  Net : detector/key_out_15__N_57, loads : 4
+  Net : detector/apa_enable_15, loads : 2
+  Net : detector/clk_c_enable_1, loads : 1
+  Net : detector/apa_enable_1, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : key_pulse2_3, loads : 9
-  Net : key_pulse2_2, loads : 8
-  Net : clk_200hz_N_44, loads : 8
-  Net : key_pulse2_1, loads : 6
-  Net : state_1, loads : 4
-  Net : state_0, loads : 4
-  Net : key_pulse2_0, loads : 4
-  Net : clk_cnt_16, loads : 3
-  Net : clk_cnt_13, loads : 3
-  Net : clk_cnt_12, loads : 3
+  Net : detector/apa_enable_19, loads : 16
+  Net : detector/n1598, loads : 16
+  Net : detector/key_id_5, loads : 14
+  Net : detector/num_cnt_0, loads : 14
+  Net : detector/key_id_6, loads : 13
+  Net : detector/BTN_cache_3__N_83, loads : 13
+  Net : detector/num_cnt_1, loads : 13
+  Net : detector/key_id_7, loads : 12
+  Net : detector/num_cnt_2, loads : 12
+  Net : detector/key_out_5, loads : 11
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -196,10 +193,13 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets clk_c]                   |  200.000 MHz|  129.232 MHz|     5 *
+clk2 [get_nets clk_c]                   |  200.000 MHz|  100.472 MHz|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets clk_200hz]               |  200.000 MHz|  167.842 MHz|     2 *
+clk1 [get_nets \detector/apa]           |  200.000 MHz|   74.471 MHz|     8 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets seg1_6__N_154]           |            -|            -|     0  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -207,8 +207,8 @@ clk0 [get_nets clk_200hz]               |  200.000 MHz|  167.842 MHz|     2 *
 2 constraints not met.
 
 
-Peak Memory Usage: 73.383  MB
+Peak Memory Usage: 83.535  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.078  secs
+Elapsed CPU time for LSE flow : 1.453  secs
 --------------------------------------------------------------
