@@ -39,63 +39,53 @@
             <ID>35921012</ID>
             <Severity>Info</Severity>
             <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(4): </Dynamic>
-            <Dynamic>key_input</Dynamic>
+            <Dynamic>key_table</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
             <Navigation>4</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(16): </Dynamic>
-            <Dynamic>key_input_arch</Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(17): </Dynamic>
+            <Dynamic>key_table_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>16</Navigation>
+            <Navigation>17</Navigation>
         </Message>
         <Message>
-            <ID>35921012</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd(4): </Dynamic>
-            <Dynamic>key_pressing_detector</Dynamic>
-            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd</Navigation>
-            <Navigation>4</Navigation>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(48): </Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
+            <Navigation>48</Navigation>
         </Message>
         <Message>
-            <ID>35921010</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd(16): </Dynamic>
-            <Dynamic>key_pressing_detector_arch</Dynamic>
-            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd</Navigation>
-            <Navigation>16</Navigation>
-        </Message>
-        <Message>
-            <ID>35921012</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd(4): </Dynamic>
-            <Dynamic>segment_led_decoder</Dynamic>
-            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd</Navigation>
-            <Navigation>4</Navigation>
-        </Message>
-        <Message>
-            <ID>35921010</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd(12): </Dynamic>
-            <Dynamic>seg_led_decoder_arch</Dynamic>
-            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd</Navigation>
-            <Navigation>12</Navigation>
+            <ID>35928037</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(48): </Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
+            <Navigation>48</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(14): </Dynamic>
-            <Dynamic>Key_Input</Dynamic>
-            <Dynamic>Key_Input_arch</Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(15): </Dynamic>
+            <Dynamic>Key_Table</Dynamic>
+            <Dynamic>Key_Table_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>14</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(103): </Dynamic>
+            <Dynamic>seg_82</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
+            <Navigation>103</Navigation>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>Warning</Severity>
-            <Dynamic>\detector/apa_75</Dynamic>
+            <Dynamic>apa_77</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>

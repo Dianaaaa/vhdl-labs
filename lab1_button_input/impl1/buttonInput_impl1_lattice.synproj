@@ -31,9 +31,7 @@
 
 -lpf 1
 -lib "work" -vhd "C:/Users/10352/vhdl-labs/lab1_button_input/key_input.vhd"
-"C:/Users/10352/vhdl-labs/lab1_button_input/key_pressing_detector.vhd"
-"C:/Users/10352/vhdl-labs/lab1_button_input/segment_led_decoder.vhd"
--top Key_Input
+-top Key_Table
 
 
 -p "C:/lscc/diamond/3.11_x64/ispfpga/xo2c00/data" "C:/Users/10352/vhdl-labs/lab1_button_input/impl1" "C:/Users/10352/vhdl-labs/lab1_button_input"

@@ -1,45 +1,18 @@
 ----------------------------------------------------------------------
-Report for cell Key_Input.TECH
-Register bits:  81 of 4635 (1.748%)
-I/O cells:      27
+Report for cell Key_Table.TECH
+Register bits:  58 of 4635 (1.251%)
+I/O cells:      25
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         9          100.0
-                            FD1P3AX        23          100.0
-                            FD1P3IX        20          100.0
-                             FD1S1A        11          100.0
-                            FD1S3AX        21          100.0
-                            FD1S3IX         6          100.0
+                              CCU2D         8          100.0
+                            FD1P3AX        31          100.0
+                            FD1P3IX         3          100.0
+                            FD1S3AX        14          100.0
+                            FD1S3IX        10          100.0
                                 GSR         1          100.0
                                  IB         9          100.0
                                 INV         1          100.0
-                               LUT4       204          100.0
-                                 OB        18          100.0
-                              PFUMX         3          100.0
-SUB MODULES
-              key_pressing_detector         1
-                segment_led_decoder         1
-                              TOTAL       328
-----------------------------------------------------------------------
-Report for cell key_pressing_detector.v1
-Instance Path : detector
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D         9          100.0
-                            FD1P3AX        23          100.0
-                            FD1P3IX        20          100.0
-                            FD1S3AX        21          100.0
-                            FD1S3IX         6          100.0
-                                INV         1          100.0
-                               LUT4       130           63.7
-                              PFUMX         2           66.7
-                              TOTAL       212
-----------------------------------------------------------------------
-Report for cell segment_led_decoder.v1
-Instance Path : decoder
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                             FD1S1A        11          100.0
-                               LUT4        73           35.8
-                              PFUMX         1           33.3
-                              TOTAL        85
+                               LUT4       128          100.0
+                                 OB        16          100.0
+                              PFUMX         2          100.0
+                              TOTAL       223

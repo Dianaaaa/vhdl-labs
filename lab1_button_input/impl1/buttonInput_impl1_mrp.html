@@ -7,7 +7,7 @@
 </STYLE>
 </HEAD>
 <PRE><A name="Mrp"></A>
-          Lattice Mapping Report File for Design Module 'Key_Input'
+          Lattice Mapping Report File for Design Module 'Key_Table'
 
 
 
@@ -23,23 +23,23 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-4000HCCSBGA132
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  11/04/20  15:19:57
+Mapped on:  11/17/20  15:39:27
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:     81 out of  4635 (2%)
-      PFU registers:           81 out of  4320 (2%)
+   Number of registers:     58 out of  4635 (1%)
+      PFU registers:           58 out of  4320 (1%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       112 out of  2160 (5%)
-      SLICEs as Logic/ROM:    112 out of  2160 (5%)
+   Number of SLICEs:        73 out of  2160 (3%)
+      SLICEs as Logic/ROM:     73 out of  2160 (3%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:          9 out of  2160 (0%)
-   Number of LUT4s:        222 out of  4320 (5%)
-      Number used as logic LUTs:        204
+      SLICEs as Carry:          8 out of  2160 (0%)
+   Number of LUT4s:        145 out of  4320 (3%)
+      Number used as logic LUTs:        129
       Number used as distributed RAM:     0
-      Number used as ripple logic:       18
+      Number used as ripple logic:       16
       Number used as shift registers:     0
-   Number of PIO sites used: 27 + 4(JTAG) out of 105 (30%)
+   Number of PIO sites used: 25 + 4(JTAG) out of 105 (28%)
    Number of block RAMs:  0 out of 10 (0%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        No
@@ -64,43 +64,37 @@ Mapped on:  11/04/20  15:19:57
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  3
-     Net detector/apa: 27 loads, 25 rising, 2 falling (Driver: detector/apa_75 )
-     
+   Number of clocks:  2
+     Net apa: 21 loads, 19 rising, 2 falling (Driver: apa_77 )
+     Net clk_c: 11 loads, 11 rising, 0 falling (Driver: PIO clk )
 
-     Net clk_c: 12 loads, 12 rising, 0 falling (Driver: PIO clk )
-     Net decoder/seg1_6__N_154: 7 loads, 7 rising, 0 falling (Driver:
-     decoder/i1_4_lut )
-   Number of Clock Enables:  11
-     Net detector/key_out_15__N_72: 2 loads, 2 LSLICEs
-     Net detector/apa_enable_1: 1 loads, 1 LSLICEs
-     Net detector/BTN_cache_3__N_83: 2 loads, 2 LSLICEs
-     Net detector/apa_enable_19: 8 loads, 8 LSLICEs
-     Net detector/clk_c_enable_1: 1 loads, 1 LSLICEs
-     Net detector/apa_enable_15: 2 loads, 2 LSLICEs
-     Net detector/apa_enable_20: 1 loads, 1 LSLICEs
-     Net detector/key_out_15__N_67: 2 loads, 2 LSLICEs
-     Net detector/key_out_15__N_62: 2 loads, 2 LSLICEs
-     Net detector/key_out_15__N_57: 2 loads, 2 LSLICEs
-     Net detector/apa_N_10: 1 loads, 1 LSLICEs
-   Number of LSRs:  5
-     Net detector/n1598: 8 loads, 8 LSLICEs
-     Net detector/n567: 2 loads, 2 LSLICEs
-     Net detector/n89: 3 loads, 3 LSLICEs
-     Net detector/n3868: 1 loads, 1 LSLICEs
-     Net detector/apa_N_10: 1 loads, 1 LSLICEs
+   Number of Clock Enables:  9
+     Net apa_enable_8: 2 loads, 2 LSLICEs
+     Net a_to_g_6__N_78: 4 loads, 4 LSLICEs
+     Net apa_enable_5: 2 loads, 2 LSLICEs
+     Net apa_N_10: 1 loads, 1 LSLICEs
+     Net clk_c_enable_1: 1 loads, 1 LSLICEs
+     Net key_out_15__N_45: 2 loads, 2 LSLICEs
+     Net key_out_15__N_55: 2 loads, 2 LSLICEs
+     Net key_out_15__N_50: 2 loads, 2 LSLICEs
+     Net key_out_15__N_60: 2 loads, 2 LSLICEs
+   Number of LSRs:  4
+     Net n319: 3 loads, 3 LSLICEs
+     Net apa_N_10: 1 loads, 1 LSLICEs
+     Net num_cnt_2: 2 loads, 2 LSLICEs
+     Net n359: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net key_id_5: 15 loads
-     Net detector/num_cnt_0: 14 loads
-     Net key_id_6: 14 loads
-     Net detector/num_cnt_1: 13 loads
-     Net key_id_7: 13 loads
-     Net detector/num_cnt_2: 12 loads
-     Net detector/BTN_cache_3__N_83: 11 loads
-     Net detector/key_out_5: 11 loads
-     Net key_id_17: 11 loads
-     Net key_id_3: 11 loads
+     Net key_out_11: 15 loads
+     Net key_out_5: 13 loads
+     Net key_out_8: 13 loads
+     Net num_cnt_0: 13 loads
+     Net key_out_0: 12 loads
+     Net key_out_4: 12 loads
+     Net key_out_9: 12 loads
+     Net num_cnt_1: 12 loads
+     Net key_out_1: 11 loads
+     Net key_out_10: 11 loads
 
 
 
@@ -124,82 +118,74 @@ Mapped on:  11/04/20  15:19:57
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| row[2]              | OUTPUT    | LVCMOS25  |            |
+| ROW[2]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| row[3]              | OUTPUT    | LVCMOS25  |            |
+| ROW[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ROW[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ROW[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| a_to_g[6]           | OUTPUT    | LVCMOS33  |            |
 
 +---------------------+-----------+-----------+------------+
-| row[1]              | OUTPUT    | LVCMOS25  |            |
+| a_to_g[5]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| row[0]              | OUTPUT    | LVCMOS25  |            |
+| a_to_g[4]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[6]             | OUTPUT    | LVCMOS25  |            |
+| a_to_g[3]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[5]             | OUTPUT    | LVCMOS25  |            |
+| a_to_g[2]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[4]             | OUTPUT    | LVCMOS25  |            |
+| a_to_g[1]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[3]             | OUTPUT    | LVCMOS25  |            |
+| a_to_g[0]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[2]             | OUTPUT    | LVCMOS25  |            |
+| led_four[3]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[1]             | OUTPUT    | LVCMOS25  |            |
+| led_four[2]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg1[0]             | OUTPUT    | LVCMOS25  |            |
+| led_four[1]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[6]             | OUTPUT    | LVCMOS25  |            |
+| led_four[0]         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[5]             | OUTPUT    | LVCMOS25  |            |
+| seg                 | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[4]             | OUTPUT    | LVCMOS25  |            |
+| COL[3]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[3]             | OUTPUT    | LVCMOS25  |            |
+| COL[2]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[2]             | OUTPUT    | LVCMOS25  |            |
+| COL[1]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[1]             | OUTPUT    | LVCMOS25  |            |
+| COL[0]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| seg2[0]             | OUTPUT    | LVCMOS25  |            |
+| button_four[3]      | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| col[3]              | INPUT     | LVCMOS25  |            |
+| button_four[2]      | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| col[2]              | INPUT     | LVCMOS25  |            |
+| button_four[1]      | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| col[1]              | INPUT     | LVCMOS25  |            |
+| button_four[0]      | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| col[0]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| independent_keys[3] | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| independent_keys[2] | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| independent_keys[1] | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| independent_keys[0] | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| clk                 | INPUT     | LVCMOS25  |            |
+| clk                 | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i5 undriven or does not drive anything - clipped.
-
+Block i2 undriven or does not drive anything - clipped.
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal detector/apa_N_6 was merged into signal detector/apa
-Signal GND_net undriven or does not drive anything - clipped.
+Signal apa_N_6 was merged into signal apa
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal detector/clk_cnt_154_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal detector/clk_cnt_154_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal detector/clk_cnt_154_add_4_17/CO undriven or does not drive anything -
-     clipped.
-Block detector/i3854 was optimized away.
-Block i1 was optimized away.
+Signal clk_cnt_148_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal clk_cnt_148_add_4_15/CO undriven or does not drive anything - clipped.
+Signal clk_cnt_148_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal clk_cnt_148_add_4_1/CI undriven or does not drive anything - clipped.
+Block i2068 was optimized away.
 
      
+
 
 
 
@@ -208,8 +194,24 @@ Block i1 was optimized away.
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 50 MB
+   Peak Memory Usage: 49 MB
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

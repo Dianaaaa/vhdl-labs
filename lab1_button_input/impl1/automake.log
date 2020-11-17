@@ -33,19 +33,19 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:     81 out of  4635 (2%)
-      PFU registers:           81 out of  4320 (2%)
+   Number of registers:     58 out of  4635 (1%)
+      PFU registers:           58 out of  4320 (1%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       112 out of  2160 (5%)
-      SLICEs as Logic/ROM:    112 out of  2160 (5%)
+   Number of SLICEs:        73 out of  2160 (3%)
+      SLICEs as Logic/ROM:     73 out of  2160 (3%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:          9 out of  2160 (0%)
-   Number of LUT4s:        222 out of  4320 (5%)
-      Number used as logic LUTs:        204
+      SLICEs as Carry:          8 out of  2160 (0%)
+   Number of LUT4s:        145 out of  4320 (3%)
+      Number used as logic LUTs:        129
       Number used as distributed RAM:     0
-      Number used as ripple logic:       18
+      Number used as ripple logic:       16
       Number used as shift registers:     0
-   Number of PIO sites used: 27 + 4(JTAG) out of 105 (30%)
+   Number of PIO sites used: 25 + 4(JTAG) out of 105 (28%)
    Number of block RAMs:  0 out of 10 (0%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        No
@@ -68,40 +68,36 @@ Design Summary:
    Notes:-
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
-   Number of clocks:  3
-     Net detector/apa: 27 loads, 25 rising, 2 falling (Driver: detector/apa_75 )
-     Net clk_c: 12 loads, 12 rising, 0 falling (Driver: PIO clk )
-     Net decoder/seg1_6__N_154: 7 loads, 7 rising, 0 falling (Driver: decoder/i1_4_lut )
-   Number of Clock Enables:  11
-     Net detector/key_out_15__N_72: 2 loads, 2 LSLICEs
-     Net detector/apa_enable_1: 1 loads, 1 LSLICEs
-     Net detector/BTN_cache_3__N_83: 2 loads, 2 LSLICEs
-     Net detector/apa_enable_19: 8 loads, 8 LSLICEs
-     Net detector/clk_c_enable_1: 1 loads, 1 LSLICEs
-     Net detector/apa_enable_15: 2 loads, 2 LSLICEs
-     Net detector/apa_enable_20: 1 loads, 1 LSLICEs
-     Net detector/key_out_15__N_67: 2 loads, 2 LSLICEs
-     Net detector/key_out_15__N_62: 2 loads, 2 LSLICEs
-     Net detector/key_out_15__N_57: 2 loads, 2 LSLICEs
-     Net detector/apa_N_10: 1 loads, 1 LSLICEs
-   Number of LSRs:  5
-     Net detector/n1598: 8 loads, 8 LSLICEs
-     Net detector/n567: 2 loads, 2 LSLICEs
-     Net detector/n89: 3 loads, 3 LSLICEs
-     Net detector/n3868: 1 loads, 1 LSLICEs
-     Net detector/apa_N_10: 1 loads, 1 LSLICEs
+   Number of clocks:  2
+     Net apa: 21 loads, 19 rising, 2 falling (Driver: apa_77 )
+     Net clk_c: 11 loads, 11 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  9
+     Net apa_enable_8: 2 loads, 2 LSLICEs
+     Net a_to_g_6__N_78: 4 loads, 4 LSLICEs
+     Net apa_enable_5: 2 loads, 2 LSLICEs
+     Net apa_N_10: 1 loads, 1 LSLICEs
+     Net clk_c_enable_1: 1 loads, 1 LSLICEs
+     Net key_out_15__N_45: 2 loads, 2 LSLICEs
+     Net key_out_15__N_55: 2 loads, 2 LSLICEs
+     Net key_out_15__N_50: 2 loads, 2 LSLICEs
+     Net key_out_15__N_60: 2 loads, 2 LSLICEs
+   Number of LSRs:  4
+     Net n319: 3 loads, 3 LSLICEs
+     Net apa_N_10: 1 loads, 1 LSLICEs
+     Net num_cnt_2: 2 loads, 2 LSLICEs
+     Net n359: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net key_id_5: 15 loads
-     Net detector/num_cnt_0: 14 loads
-     Net key_id_6: 14 loads
-     Net detector/num_cnt_1: 13 loads
-     Net key_id_7: 13 loads
-     Net detector/num_cnt_2: 12 loads
-     Net detector/BTN_cache_3__N_83: 11 loads
-     Net detector/key_out_5: 11 loads
-     Net key_id_17: 11 loads
-     Net key_id_3: 11 loads
+     Net key_out_11: 15 loads
+     Net key_out_5: 13 loads
+     Net key_out_8: 13 loads
+     Net num_cnt_0: 13 loads
+     Net key_out_0: 12 loads
+     Net key_out_4: 12 loads
+     Net key_out_9: 12 loads
+     Net num_cnt_1: 12 loads
+     Net key_out_1: 11 loads
+     Net key_out_10: 11 loads
  
 
    Number of warnings:  0
@@ -111,7 +107,7 @@ Design Summary:
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 50 MB
+Peak Memory Usage: 49 MB
 
 Dumping design to file buttonInput_impl1_map.ncd.
 
@@ -129,7 +125,7 @@ Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
 
 Loading design for application trce from file buttoninput_impl1_map.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -142,7 +138,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Wed Nov 04 15:20:00 2020
+Tue Nov 17 15:39:30 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -169,14 +165,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 2791  Score: 1765308198
-Cumulative negative slack: 1765308198
+Timing errors: 942  Score: 21597396
+Cumulative negative slack: 21597396
 
-Constraints cover 3419 paths, 11 nets, and 879 connections (95.44% coverage)
+Constraints cover 1537 paths, 2 nets, and 535 connections (93.21% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Wed Nov 04 15:20:00 2020
+Tue Nov 17 15:39:30 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -205,23 +201,23 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 3419 paths, 11 nets, and 879 connections (95.44% coverage)
+Constraints cover 1537 paths, 2 nets, and 535 connections (93.21% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 2791 (setup), 0 (hold)
-Score: 1765308198 (setup), 0 (hold)
-Cumulative negative slack: 1765308198 (1765308198+0)
+Timing errors: 942 (setup), 0 (hold)
+Score: 21597396 (setup), 0 (hold)
+Cumulative negative slack: 21597396 (21597396+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
 Total CPU Time: 0 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 61 MB
+Total REAL Time: 2 secs 
+Peak Memory Usage: 59 MB
 
 
 ldbanno "buttonInput_impl1_map.ncd" -n Verilog -o "buttonInput_impl1_mapvo.vo" -w -neg
@@ -236,7 +232,7 @@ Writing a Verilog netlist using the orca library type based on the buttonInput_i
 
 
 Loading design for application ldbanno from file buttonInput_impl1_map.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -251,7 +247,7 @@ Writing SDF timing to file buttonInput_impl1_mapvo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 48 MB
+Peak Memory Usage: 47 MB
 
 ldbanno "buttonInput_impl1_map.ncd" -n VHDL -o "buttonInput_impl1_mapvho.vho" -w -neg
 ldbanno: version Diamond (64-bit) 3.11.0.396.4
@@ -265,7 +261,7 @@ Writing a VHDL netlist using the orca library type based on the buttonInput_impl
 
 
 Loading design for application ldbanno from file buttonInput_impl1_map.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -289,7 +285,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "buttonInput_impl1_map.ncd"
-Wed Nov 04 15:20:03 2020
+Tue Nov 17 15:39:33 2020
 
 PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF buttonInput_impl1_map.ncd buttonInput_impl1.dir/5_1.ncd buttonInput_impl1.prf
@@ -298,7 +294,7 @@ Placement level-cost: 5-1.
 Routing Iterations: 6
 
 Loading design for application par from file buttonInput_impl1_map.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -313,43 +309,42 @@ License checked out.
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)   27+4(JTAG)/280     11% used
-                  27+4(JTAG)/105     30% bonded
+   PIO (prelim)   25+4(JTAG)/280     10% used
+                  25+4(JTAG)/105     28% bonded
 
-   SLICE            112/2160          5% used
+   SLICE             73/2160          3% used
 
 
 
-Number of Signals: 316
-Number of Connections: 921
+Number of Signals: 215
+Number of Connections: 574
     <postMsg mid="61001101" type="Warning" dynamic="0" navigation="0"  />
 
 Pin Constraint Summary:
-   27 out of 27 pins locked (100% locked).
+   25 out of 25 pins locked (100% locked).
 
 The following 2 signals are selected to use the primary clock routing resources:
-    detector/apa (driver: SLICE_14, clk load #: 27)
-    clk_c (driver: clk, clk load #: 12)
+    apa (driver: SLICE_19, clk load #: 21)
+    clk_c (driver: clk, clk load #: 11)
 
     <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="clk_c" arg1="Primary" arg2="clk" arg3="C1" arg4="Primary"  />
 
-The following 1 signal is selected to use the secondary clock routing resources:
-    decoder/seg1_6__N_154 (driver: SLICE_40, clk load #: 7, sr load #: 0, ce load #: 0)
+No signal is selected as secondary clock.
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-.........
+........
 Finished Placer Phase 0.  REAL time: 2 secs 
 
 Starting Placer Phase 1.
-...
-Placer score = 35125791.
-Finished Placer Phase 1.  REAL time: 3 secs 
+.................
+Placer score = 418576.
+Finished Placer Phase 1.  REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  34507319
-Finished Placer Phase 2.  REAL time: 3 secs 
+Placer score =  418953
+Finished Placer Phase 2.  REAL time: 4 secs 
 
 
 ------------------ Clock Report ------------------
@@ -362,12 +357,11 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "detector/apa" from Q0 on comp "SLICE_14" on site "R3C16A", clk load = 27
-  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 12
-  SECONDARY "decoder/seg1_6__N_154" from F0 on comp "SLICE_40" on site "R12C18C", clk load = 7, ce load = 0, sr load = 0
+  PRIMARY "apa" from Q0 on comp "SLICE_19" on site "R2C16B", clk load = 21
+  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 11
 
   PRIMARY  : 2 out of 8 (25%)
-  SECONDARY: 1 out of 8 (12%)
+  SECONDARY: 0 out of 8 (0%)
 
 Edge Clocks:
   No edge clock selected.
@@ -376,33 +370,33 @@ Edge Clocks:
 
 
 I/O Usage Summary (final):
-   27 + 4(JTAG) out of 280 (11.1%) PIO sites used.
-   27 + 4(JTAG) out of 105 (29.5%) bonded PIO sites used.
-   Number of PIO comps: 27; differential: 0.
+   25 + 4(JTAG) out of 280 (10.4%) PIO sites used.
+   25 + 4(JTAG) out of 105 (27.6%) bonded PIO sites used.
+   Number of PIO comps: 25; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
 +----------+---------------+------------+-----------+
 | I/O Bank | Usage         | Bank Vccio | Bank Vref |
 +----------+---------------+------------+-----------+
-| 0        | 7 / 26 ( 26%) | 2.5V       | -         |
-| 1        | 5 / 26 ( 19%) | 2.5V       | -         |
-| 2        | 7 / 28 ( 25%) | 2.5V       | -         |
-| 3        | 1 / 7 ( 14%)  | 2.5V       | -         |
-| 4        | 3 / 8 ( 37%)  | 2.5V       | -         |
-| 5        | 4 / 10 ( 40%) | 2.5V       | -         |
+| 0        | 5 / 26 ( 19%) | 3.3V       | -         |
+| 1        | 6 / 26 ( 23%) | 3.3V       | -         |
+| 2        | 9 / 28 ( 32%) | 3.3V       | -         |
+| 3        | 1 / 7 ( 14%)  | 3.3V       | -         |
+| 4        | 0 / 8 (  0%)  | -          | -         |
+| 5        | 4 / 10 ( 40%) | 3.3V       | -         |
 +----------+---------------+------------+-----------+
 
 Total placer CPU time: 2 secs 
 
 Dumping design to file buttonInput_impl1.dir/5_1.ncd.
 
-0 connections routed; 921 unrouted.
+0 connections routed; 574 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 5 secs 
+Completed router resource preassignment. Real time: 6 secs 
 
-Start NBR router at 15:20:08 11/04/20
+Start NBR router at 15:39:39 11/17/20
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -417,154 +411,182 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 15:20:08 11/04/20
+Start NBR special constraint process at 15:39:39 11/17/20
 
-Start NBR section for initial routing at 15:20:08 11/04/20
+Start NBR section for initial routing at 15:39:39 11/17/20
 Level 1, iteration 1
-5(0.00%) conflicts; 730(79.26%) untouched conns; 509091672 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1484.448ns/-509091.673ns; real time: 5 secs 
+5(0.00%) conflicts; 467(81.36%) untouched conns; 561597 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.174ns/-561.597ns; real time: 6 secs 
 Level 2, iteration 1
-21(0.01%) conflicts; 625(67.86%) untouched conns; 480640668 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1458.729ns/-480640.668ns; real time: 5 secs 
+47(0.02%) conflicts; 368(64.11%) untouched conns; 400463 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.886ns/-400.464ns; real time: 6 secs 
 Level 3, iteration 1
-5(0.00%) conflicts; 621(67.43%) untouched conns; 480297816 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1437.072ns/-480297.817ns; real time: 6 secs 
+66(0.03%) conflicts; 84(14.63%) untouched conns; 2486359 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -93.745ns/-2486.359ns; real time: 6 secs 
 Level 4, iteration 1
-45(0.02%) conflicts; 0(0.00%) untouched conn; 275343371 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -881.306ns/-275343.371ns; real time: 6 secs 
+12(0.00%) conflicts; 0(0.00%) untouched conn; 3366638 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -95.117ns/-3366.638ns; real time: 6 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 15:20:09 11/04/20
+Start NBR section for normal routing at 15:39:39 11/17/20
 Level 4, iteration 1
-38(0.02%) conflicts; 0(0.00%) untouched conn; 290733926 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -959.928ns/-290733.926ns; real time: 6 secs 
+13(0.01%) conflicts; 0(0.00%) untouched conn; 2796867 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -90.430ns/-2796.867ns; real time: 6 secs 
 Level 4, iteration 2
-30(0.01%) conflicts; 0(0.00%) untouched conn; 273026309 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -859.648ns/-273026.309ns; real time: 7 secs 
+10(0.00%) conflicts; 0(0.00%) untouched conn; 1841150 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -47.101ns/-1841.150ns; real time: 6 secs 
 Level 4, iteration 3
-26(0.01%) conflicts; 0(0.00%) untouched conn; 275382798 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -910.296ns/-275382.798ns; real time: 7 secs 
+6(0.00%) conflicts; 0(0.00%) untouched conn; 1555175 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -33.154ns/-1555.175ns; real time: 6 secs 
 Level 4, iteration 4
-22(0.01%) conflicts; 0(0.00%) untouched conn; 275382798 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -910.296ns/-275382.798ns; real time: 7 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 1555175 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -33.154ns/-1555.175ns; real time: 6 secs 
 Level 4, iteration 5
-18(0.01%) conflicts; 0(0.00%) untouched conn; 264370187 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -792.645ns/-264370.187ns; real time: 7 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 920689 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -7.001ns/-920.689ns; real time: 6 secs 
 Level 4, iteration 6
-20(0.01%) conflicts; 0(0.00%) untouched conn; 264370187 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -792.645ns/-264370.187ns; real time: 7 secs 
+11(0.00%) conflicts; 0(0.00%) untouched conn; 920689 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -7.001ns/-920.689ns; real time: 7 secs 
 Level 4, iteration 7
-19(0.01%) conflicts; 0(0.00%) untouched conn; 284695655 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -990.158ns/-284695.656ns; real time: 7 secs 
+9(0.00%) conflicts; 0(0.00%) untouched conn; 836223 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.483ns/-836.224ns; real time: 7 secs 
 Level 4, iteration 8
-17(0.01%) conflicts; 0(0.00%) untouched conn; 284695655 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -990.158ns/-284695.656ns; real time: 7 secs 
+13(0.01%) conflicts; 0(0.00%) untouched conn; 836223 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.483ns/-836.224ns; real time: 7 secs 
 Level 4, iteration 9
-12(0.00%) conflicts; 0(0.00%) untouched conn; 276632779 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-276632.780ns; real time: 8 secs 
+9(0.00%) conflicts; 0(0.00%) untouched conn; 727763 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-727.763ns; real time: 7 secs 
 Level 4, iteration 10
-10(0.00%) conflicts; 0(0.00%) untouched conn; 276632779 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-276632.780ns; real time: 8 secs 
+8(0.00%) conflicts; 0(0.00%) untouched conn; 727763 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-727.763ns; real time: 7 secs 
 Level 4, iteration 11
-10(0.00%) conflicts; 0(0.00%) untouched conn; 276225132 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-276225.132ns; real time: 8 secs 
+8(0.00%) conflicts; 0(0.00%) untouched conn; 624984 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.066ns/-624.984ns; real time: 7 secs 
 Level 4, iteration 12
-6(0.00%) conflicts; 0(0.00%) untouched conn; 276225132 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-276225.132ns; real time: 8 secs 
+5(0.00%) conflicts; 0(0.00%) untouched conn; 624984 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.066ns/-624.984ns; real time: 7 secs 
 Level 4, iteration 13
-5(0.00%) conflicts; 0(0.00%) untouched conn; 280034704 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-280034.704ns; real time: 8 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 3050061 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -92.374ns/-3050.061ns; real time: 7 secs 
 Level 4, iteration 14
-2(0.00%) conflicts; 0(0.00%) untouched conn; 280034704 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-280034.704ns; real time: 8 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 3050061 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -92.374ns/-3050.061ns; real time: 7 secs 
 Level 4, iteration 15
-1(0.00%) conflict; 0(0.00%) untouched conn; 280036791 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-280036.791ns; real time: 8 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 16
-2(0.00%) conflicts; 0(0.00%) untouched conn; 280036791 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -871.605ns/-280036.791ns; real time: 8 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 17
-1(0.00%) conflict; 0(0.00%) untouched conn; 279148743 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -869.124ns/-279148.744ns; real time: 8 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 18
-1(0.00%) conflict; 0(0.00%) untouched conn; 279148743 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -869.124ns/-279148.744ns; real time: 8 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 19
-1(0.00%) conflict; 0(0.00%) untouched conn; 279350300 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -869.688ns/-279350.300ns; real time: 9 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 20
-1(0.00%) conflict; 0(0.00%) untouched conn; 279350300 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -869.688ns/-279350.300ns; real time: 9 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 21
-1(0.00%) conflict; 0(0.00%) untouched conn; 264971194 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -829.531ns/-264971.194ns; real time: 9 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 Level 4, iteration 22
-0(0.00%) conflict; 0(0.00%) untouched conn; 264971194 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -829.531ns/-264971.194ns; real time: 9 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 23
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 24
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 25
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 26
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 27
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 28
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 29
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 30
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 31
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 32
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 33
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 34
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 35
+1(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
+Level 4, iteration 36
+0(0.00%) conflict; 0(0.00%) untouched conn; 709550 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -4.230ns/-709.550ns; real time: 7 secs 
 
-Start NBR section for performance tuning (iteration 1) at 15:20:12 11/04/20
+Start NBR section for performance tuning (iteration 1) at 15:39:40 11/17/20
 Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 257257530 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -772.116ns/-257257.531ns; real time: 9 secs 
-Level 4, iteration 2
-2(0.00%) conflicts; 0(0.00%) untouched conn; 251875403 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -766.701ns/-251875.404ns; real time: 9 secs 
-Level 4, iteration 3
-0(0.00%) conflict; 0(0.00%) untouched conn; 251877360 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -766.701ns/-251877.361ns; real time: 9 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 2766477 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -81.741ns/-2766.477ns; real time: 7 secs 
 
-Start NBR section for performance tuning (iteration 2) at 15:20:12 11/04/20
+Start NBR section for re-routing at 15:39:40 11/17/20
 Level 4, iteration 1
-3(0.00%) conflicts; 0(0.00%) untouched conn; 242575735 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -720.453ns/-242575.735ns; real time: 9 secs 
-Level 4, iteration 2
-0(0.00%) conflict; 0(0.00%) untouched conn; 256744044 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -798.511ns/-256744.045ns; real time: 9 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 2760574 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -81.741ns/-2760.574ns; real time: 7 secs 
 
-Start NBR section for re-routing at 15:20:12 11/04/20
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 243571056 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -720.453ns/-243571.056ns; real time: 10 secs 
-
-Start NBR section for post-routing at 15:20:13 11/04/20
+Start NBR section for post-routing at 15:39:40 11/17/20
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 641 (69.60%)
-  Estimated worst slack<setup> : -720.453ns
-  Timing score<setup> : 328524190
+  Number of connections with timing violations : 308 (53.66%)
+  Estimated worst slack<setup> : -81.741ns
+  Timing score<setup> : 1304822
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 11 secs 
-Total REAL time: 11 secs 
+Total CPU time 4 secs 
+Total REAL time: 8 secs 
 Completely routed.
-End of route.  921 routed (100.00%); 0 unrouted.
+End of route.  574 routed (100.00%); 0 unrouted.
 
-Hold time timing score: 3990, hold timing errors: 1796
+Hold time timing score: 21, hold timing errors: 36
 
-Timing score: 328524190 
+Timing score: 1304822 
 
 Dumping design to file buttonInput_impl1.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = -720.454
-PAR_SUMMARY::Timing score<setup/<ns>> = 328524.190
-PAR_SUMMARY::Worst  slack<hold /<ns>> = -3.215
-PAR_SUMMARY::Timing score<hold /<ns>> = 3990.282
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -81.742
+PAR_SUMMARY::Timing score<setup/<ns>> = 1304.822
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.702
+PAR_SUMMARY::Timing score<hold /<ns>> = 21.328
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 11 secs 
-Total REAL time to completion: 12 secs 
+Total CPU  time to completion: 4 secs 
+Total REAL time to completion: 8 secs 
 
 par done!
 
@@ -588,7 +610,7 @@ Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
 
 Loading design for application trce from file buttoninput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -601,7 +623,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Wed Nov 04 15:20:15 2020
+Tue Nov 17 15:39:42 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -628,14 +650,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 2445  Score: 328524190
-Cumulative negative slack: 328524190
+Timing errors: 804  Score: 1304822
+Cumulative negative slack: 1304822
 
-Constraints cover 3419 paths, 11 nets, and 879 connections (95.44% coverage)
+Constraints cover 1537 paths, 2 nets, and 535 connections (93.21% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Wed Nov 04 15:20:15 2020
+Tue Nov 17 15:39:42 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -661,19 +683,19 @@ BLOCK RESETPATHS
 Timing summary (Hold):
 ---------------
 
-Timing errors: 1796  Score: 3990282
-Cumulative negative slack: 3990282
+Timing errors: 36  Score: 21328
+Cumulative negative slack: 21328
 
-Constraints cover 3419 paths, 11 nets, and 879 connections (95.44% coverage)
+Constraints cover 1537 paths, 2 nets, and 535 connections (93.21% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 2445 (setup), 1796 (hold)
-Score: 328524190 (setup), 3990282 (hold)
-Cumulative negative slack: 332514472 (328524190+3990282)
+Timing errors: 804 (setup), 36 (hold)
+Score: 1304822 (setup), 21328 (hold)
+Cumulative negative slack: 1326150 (1304822+21328)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
@@ -694,7 +716,7 @@ Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
 
 Loading design for application iotiming from file buttoninput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -710,7 +732,7 @@ Computing Hold Time ...
 Computing Min Clock to Output Delay ...
 
 Loading design for application iotiming from file buttoninput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -725,7 +747,7 @@ Computing Hold Time ...
 Computing Min Clock to Output Delay ...
 
 Loading design for application iotiming from file buttoninput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -740,7 +762,7 @@ Computing Hold Time ...
 Computing Min Clock to Output Delay ...
 
 Loading design for application iotiming from file buttoninput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -758,220 +780,204 @@ Done.
 ibisgen "buttonInput_impl1.pad" "C:/lscc/diamond/3.11_x64/cae_library/ibis/machxo2.ibs"   
 IBIS Models Generator: Lattice Diamond (64-bit) 3.11.0.396.4
 
-Wed Nov 04 15:20:18 2020
+Tue Nov 17 15:39:44 2020
 
+Comp: COL[0]
+ Site: N6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: COL[1]
+ Site: P6
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: COL[2]
+ Site: N5
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: COL[3]
+ Site: L3
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: ROW[0]
+ Site: P7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: ROW[1]
+ Site: N7
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: ROW[2]
+ Site: P8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: ROW[3]
+ Site: N8
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[0]
+ Site: B9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[1]
+ Site: A9
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[2]
+ Site: E2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[3]
+ Site: E1
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[4]
+ Site: F2
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[5]
+ Site: C11
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: a_to_g[6]
+ Site: A10
+ Type: OUT
+ IO_TYPE=LVCMOS33 
+ DRIVE=8mA 
+ PULL=DOWN 
+ SLEW=SLOW 
+-----------------------
+Comp: button_four[0]
+ Site: L14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: button_four[1]
+ Site: M13
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: button_four[2]
+ Site: M14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: button_four[3]
+ Site: N14
+ Type: IN
+ IO_TYPE=LVCMOS33 
+ PULL=DOWN 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
 Comp: clk
  Site: C1
  Type: IN
- IO_TYPE=LVCMOS25 
+ IO_TYPE=LVCMOS33 
  PULL=DOWN 
  CLAMP=ON 
  HYSTERESIS=SMALL 
 -----------------------
-Comp: col[0]
- Site: L3
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: col[1]
- Site: N5
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: col[2]
- Site: P6
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: col[3]
- Site: N6
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: independent_keys[0]
- Site: L14
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: independent_keys[1]
- Site: M13
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: independent_keys[2]
- Site: M14
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: independent_keys[3]
- Site: N14
- Type: IN
- IO_TYPE=LVCMOS25 
- PULL=DOWN 
- CLAMP=ON 
- HYSTERESIS=SMALL 
------------------------
-Comp: row[0]
- Site: N8
+Comp: led_four[0]
+ Site: N13
  Type: OUT
- IO_TYPE=LVCMOS25 
+ IO_TYPE=LVCMOS33 
  DRIVE=8mA 
  PULL=DOWN 
  SLEW=SLOW 
 -----------------------
-Comp: row[1]
- Site: P8
+Comp: led_four[1]
+ Site: M12
  Type: OUT
- IO_TYPE=LVCMOS25 
+ IO_TYPE=LVCMOS33 
  DRIVE=8mA 
  PULL=DOWN 
  SLEW=SLOW 
 -----------------------
-Comp: row[2]
- Site: N7
+Comp: led_four[2]
+ Site: P12
  Type: OUT
- IO_TYPE=LVCMOS25 
+ IO_TYPE=LVCMOS33 
  DRIVE=8mA 
  PULL=DOWN 
  SLEW=SLOW 
 -----------------------
-Comp: row[3]
- Site: P7
+Comp: led_four[3]
+ Site: M11
  Type: OUT
- IO_TYPE=LVCMOS25 
+ IO_TYPE=LVCMOS33 
  DRIVE=8mA 
  PULL=DOWN 
  SLEW=SLOW 
 -----------------------
-Comp: seg1[0]
- Site: A10
+Comp: seg
+ Site: C9
  Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg1[1]
- Site: C11
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg1[2]
- Site: F2
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg1[3]
- Site: E1
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg1[4]
- Site: E2
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg1[5]
- Site: A9
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg1[6]
- Site: B9
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[0]
- Site: C12
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[1]
- Site: B14
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[2]
- Site: J1
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[3]
- Site: H1
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[4]
- Site: H2
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[5]
- Site: B12
- Type: OUT
- IO_TYPE=LVCMOS25 
- DRIVE=8mA 
- PULL=DOWN 
- SLEW=SLOW 
------------------------
-Comp: seg2[6]
- Site: A11
- Type: OUT
- IO_TYPE=LVCMOS25 
+ IO_TYPE=LVCMOS33 
  DRIVE=8mA 
  PULL=DOWN 
  SLEW=SLOW 
@@ -996,7 +1002,7 @@ Writing a Verilog netlist using the orca library type based on the buttonInput_i
 
 
 Loading design for application ldbanno from file buttonInput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -1010,9 +1016,9 @@ Loading preferences from buttoninput_impl1.prf.
 Writing Verilog netlist to file buttonInput_impl1_vo.vo
 Writing SDF timing to file buttonInput_impl1_vo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 51 MB
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 50 MB
 
 ldbanno "buttonInput_impl1.ncd" -n VHDL -o "buttonInput_impl1_vho.vho"         -w -neg 
 ldbanno: version Diamond (64-bit) 3.11.0.396.4
@@ -1026,7 +1032,7 @@ Writing a VHDL netlist using the orca library type based on the buttonInput_impl
 
 
 Loading design for application ldbanno from file buttonInput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -1040,9 +1046,9 @@ Loading preferences from buttoninput_impl1.prf.
 Writing VHDL netlist to file buttonInput_impl1_vho.vho
 Writing SDF timing to file buttonInput_impl1_vho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
+Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 51 MB
+Peak Memory Usage: 50 MB
 
 tmcheck -par "buttonInput_impl1.par" 
 
@@ -1058,7 +1064,7 @@ Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
 
 
 Loading design for application Bitgen from file buttonInput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -1120,8 +1126,8 @@ Bitstream Status: Final           Version 1.95.
  
 Saving bit stream in "buttonInput_impl1.bit".
 Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
-Peak Memory Usage: 273 MB
+Total REAL Time: 4 secs 
+Peak Memory Usage: 272 MB
 
 tmcheck -par "buttonInput_impl1.par" 
 
@@ -1137,7 +1143,7 @@ Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
 
 
 Loading design for application Bitgen from file buttonInput_impl1.ncd.
-Design name: Key_Input
+Design name: Key_Table
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-4000HC
@@ -1209,5 +1215,5 @@ Available General Purpose Flash Memory:  767 Pages (Page 0 to Page 766).
 Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
+Total REAL Time: 3 secs 
 Peak Memory Usage: 272 MB
