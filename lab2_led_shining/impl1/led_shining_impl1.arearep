@@ -1,0 +1,54 @@
+----------------------------------------------------------------------
+Report for cell PWM.TECH
+Register bits:  155 of 4635 (3.344%)
+I/O cells:      8
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       157          100.0
+                            FD1P3AX        27          100.0
+                            FD1P3IX         9          100.0
+                            FD1S3AX        15          100.0
+                            FD1S3DX        96          100.0
+                            FD1S3IX         8          100.0
+                                GSR         1          100.0
+                                 IB         5          100.0
+                                INV         1          100.0
+                            L6MUX21         1          100.0
+                               LUT4       103          100.0
+                                 OB         3          100.0
+                              PFUMX         3          100.0
+SUB MODULES
+                       CycleSampler         1
+                    CycleSampler_U0         1
+                    CycleSampler_U1         1
+                              TOTAL       432
+----------------------------------------------------------------------
+Report for cell CycleSampler.v1
+Instance Path : P3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        30           19.1
+                            FD1S3AX         3           20.0
+                            FD1S3DX        32           33.3
+                               LUT4         3            2.9
+                              TOTAL        68
+----------------------------------------------------------------------
+Report for cell CycleSampler_U1.v1
+Instance Path : P1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        30           19.1
+                            FD1S3AX         3           20.0
+                            FD1S3DX        32           33.3
+                               LUT4         2            1.9
+                              TOTAL        67
+----------------------------------------------------------------------
+Report for cell CycleSampler_U0.v1
+Instance Path : P2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        30           19.1
+                            FD1S3AX         3           20.0
+                            FD1S3DX        32           33.3
+                               LUT4         3            2.9
+                              TOTAL        68

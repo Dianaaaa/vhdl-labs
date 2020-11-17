@@ -1,0 +1,131 @@
+[ START MERGED ]
+n1174 k0/rst_state
+[ END MERGED ]
+[ START CLIPPED ]
+VCC_net
+k0/keysamplerpulsecnt_276_add_4_33/S1
+k0/keysamplerpulsecnt_276_add_4_33/CO
+k0/keysamplerpulsecnt_276_add_4_1/S0
+k0/keysamplerpulsecnt_276_add_4_1/CI
+delaycnt_275_add_4_33/S1
+delaycnt_275_add_4_33/CO
+seccnt_274_add_4_1/S0
+seccnt_274_add_4_1/CI
+add_37_33/S1
+add_37_33/CO
+delaycnt_275_add_4_1/S0
+delaycnt_275_add_4_1/CI
+sub_223_add_2_1/S1
+sub_223_add_2_1/S0
+sub_223_add_2_1/CI
+sub_223_add_2_3/S1
+sub_223_add_2_3/S0
+sub_223_add_2_5/S1
+sub_223_add_2_5/S0
+sub_223_add_2_7/S1
+sub_223_add_2_7/S0
+sub_223_add_2_9/S1
+sub_223_add_2_9/S0
+sub_223_add_2_11/S1
+sub_223_add_2_11/S0
+sub_223_add_2_13/S1
+sub_223_add_2_13/S0
+sub_223_add_2_15/S1
+sub_223_add_2_15/S0
+sub_223_add_2_17/S1
+sub_223_add_2_17/S0
+seccnt_274_add_4_33/S1
+seccnt_274_add_4_33/CO
+add_936_2/S1
+add_936_2/S0
+add_936_2/CI
+k1/keysamplerpulsecnt_277_add_4_33/S1
+k1/keysamplerpulsecnt_277_add_4_33/CO
+k1/keysamplerpulsecnt_277_add_4_1/S0
+k1/keysamplerpulsecnt_277_add_4_1/CI
+sub_223_add_2_19/S1
+sub_223_add_2_19/S0
+sub_223_add_2_21/S1
+sub_223_add_2_21/S0
+sub_223_add_2_23/S1
+sub_223_add_2_23/S0
+sub_223_add_2_25/S1
+sub_223_add_2_25/S0
+sub_223_add_2_27/S1
+sub_223_add_2_27/S0
+sub_223_add_2_29/S1
+sub_223_add_2_29/S0
+sub_223_add_2_31/S1
+sub_223_add_2_31/S0
+add_936_4/S1
+add_936_4/S0
+add_936_6/S1
+add_936_6/S0
+add_936_8/S1
+add_936_8/S0
+sub_223_add_2_33/S0
+sub_223_add_2_33/CO
+add_936_10/S1
+add_936_10/S0
+add_936_12/S1
+add_936_12/S0
+add_936_14/S1
+add_936_14/S0
+add_936_16/S1
+add_936_16/S0
+add_936_18/S1
+add_936_18/S0
+add_936_20/S1
+add_936_20/S0
+add_936_22/S1
+add_936_22/S0
+add_936_24/S1
+add_936_24/S0
+add_936_26/S1
+add_936_26/S0
+add_936_28/S1
+add_936_28/S0
+add_936_30/S0
+add_936_30/CO
+add_37_1/S0
+add_37_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Tue Nov 17 21:11:10 2020
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "modedisplay[1]" SITE "P12" ;
+LOCATE COMP "modedisplay[2]" SITE "M12" ;
+LOCATE COMP "modedisplay[3]" SITE "N13" ;
+LOCATE COMP "secdisplay" SITE "P9" ;
+LOCATE COMP "modedisplay[0]" SITE "M11" ;
+LOCATE COMP "trafficLights[5]" SITE "M2" ;
+LOCATE COMP "trafficLights[4]" SITE "P2" ;
+LOCATE COMP "trafficLights[3]" SITE "N2" ;
+LOCATE COMP "trafficLights[2]" SITE "M3" ;
+LOCATE COMP "trafficLights[1]" SITE "P4" ;
+LOCATE COMP "trafficLights[0]" SITE "N3" ;
+LOCATE COMP "digitdisplay[17]" SITE "A10" ;
+LOCATE COMP "digitdisplay[16]" SITE "C11" ;
+LOCATE COMP "digitdisplay[15]" SITE "F2" ;
+LOCATE COMP "digitdisplay[14]" SITE "E1" ;
+LOCATE COMP "digitdisplay[13]" SITE "E2" ;
+LOCATE COMP "digitdisplay[12]" SITE "A9" ;
+LOCATE COMP "digitdisplay[11]" SITE "B9" ;
+LOCATE COMP "digitdisplay[10]" SITE "F1" ;
+LOCATE COMP "digitdisplay[9]" SITE "C9" ;
+LOCATE COMP "digitdisplay[8]" SITE "C12" ;
+LOCATE COMP "digitdisplay[7]" SITE "B14" ;
+LOCATE COMP "digitdisplay[6]" SITE "J1" ;
+LOCATE COMP "digitdisplay[5]" SITE "H1" ;
+LOCATE COMP "digitdisplay[4]" SITE "H2" ;
+LOCATE COMP "digitdisplay[3]" SITE "B12" ;
+LOCATE COMP "digitdisplay[2]" SITE "A11" ;
+LOCATE COMP "digitdisplay[1]" SITE "K1" ;
+LOCATE COMP "digitdisplay[0]" SITE "A12" ;
+LOCATE COMP "clk" SITE "C1" ;
+LOCATE COMP "rst" SITE "L14" ;
+LOCATE COMP "modekey" SITE "N14" ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

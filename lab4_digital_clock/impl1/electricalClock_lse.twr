@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Wed Nov 04 15:19:23 2020
+Tue Nov 17 21:14:41 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -51,9 +51,9 @@ LUT4        ---     0.493              C to Z              \tm/i1_2_lut_rep_114_
 Route         1   e 0.941                                  \tm/n7617
 LUT4        ---     0.493              D to Z              \tm/i1_4_lut_adj_18
 Route         8   e 1.540                                  \tm/n1022
-LUT4        ---     0.493              A to Z              \tm/n1022_bdd_4_lut
-Route         2   e 1.141                                  \tm/n4_adj_394
-LUT4        ---     0.493              D to Z              \tm/i5144_4_lut_3_lut_4_lut
+LUT4        ---     0.493              C to Z              \tm/i4980_4_lut
+Route         2   e 1.141                                  \tm/n5667
+LUT4        ---     0.493              C to Z              \tm/i5144_4_lut_3_lut_4_lut
 Route         1   e 0.941                                  \tm/n6_adj_379
 LUT4        ---     0.493              D to Z              \tm/i2_4_lut_adj_17
 Route         1   e 0.941                                  \tm/n6119
@@ -89,9 +89,9 @@ LUT4        ---     0.493              C to Z              \tm/i1_2_lut_rep_114_
 Route         1   e 0.941                                  \tm/n7617
 LUT4        ---     0.493              D to Z              \tm/i1_4_lut_adj_18
 Route         8   e 1.540                                  \tm/n1022
-LUT4        ---     0.493              C to Z              \tm/i4980_4_lut
-Route         2   e 1.141                                  \tm/n5667
-LUT4        ---     0.493              C to Z              \tm/i5144_4_lut_3_lut_4_lut
+LUT4        ---     0.493              A to Z              \tm/n1022_bdd_4_lut
+Route         2   e 1.141                                  \tm/n4_adj_394
+LUT4        ---     0.493              D to Z              \tm/i5144_4_lut_3_lut_4_lut
 Route         1   e 0.941                                  \tm/n6_adj_379
 LUT4        ---     0.493              D to Z              \tm/i2_4_lut_adj_17
 Route         1   e 0.941                                  \tm/n6119
@@ -199,5 +199,5 @@ Timing errors: 836  Score: 5211233
 Constraints cover  12567 paths, 982 nets, and 2507 connections (98.6% coverage)
 
 
-Peak memory: 90038272 bytes, TRCE: 2998272 bytes, DLYMAN: 327680 bytes
+Peak memory: 90300416 bytes, TRCE: 3313664 bytes, DLYMAN: 327680 bytes
 CPU_TIME_REPORT: 0 secs 

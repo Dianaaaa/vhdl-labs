@@ -1,0 +1,600 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+        Lattice Mapping Report File for Design Module 'TrafficLights'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     trafic_light_impl1.ngd -o trafic_light_impl1_map.ncd -pr
+     trafic_light_impl1.prf -mp trafic_light_impl1.mrp -lpf
+     C:/Users/10352/vhdl-labs/lab3_traffic_light/impl1/trafic_light_impl1.lpf
+     -lpf C:/Users/10352/vhdl-labs/lab3_traffic_light/trafic_light.lpf -c 0 -gui
+     -msgset C:/Users/10352/vhdl-labs/lab3_traffic_light/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  11/17/20  21:11:10
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    187 out of  4635 (4%)
+      PFU registers:          187 out of  4320 (4%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       167 out of  2160 (8%)
+      SLICEs as Logic/ROM:    167 out of  2160 (8%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        117 out of  2160 (5%)
+   Number of LUT4s:        333 out of  4320 (8%)
+      Number used as logic LUTs:         99
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      234
+      Number used as shift registers:     0
+   Number of PIO sites used: 32 + 4(JTAG) out of 105 (34%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net clk_c: 102 loads, 102 rising, 0 falling (Driver: PIO clk )
+     Net delay_3__N_105: 2 loads, 2 rising, 0 falling (Driver: i2_3_lut_4_lut )
+
+   Number of Clock Enables:  5
+     Net clk_c_enable_67: 2 loads, 2 LSLICEs
+     Net clk_c_enable_34: 17 loads, 17 LSLICEs
+     Net clk_c_enable_66: 17 loads, 17 LSLICEs
+     Net k1/keystore_2__N_332: 2 loads, 2 LSLICEs
+     Net k0/keystore_2__N_332: 2 loads, 2 LSLICEs
+   Number of LSRs:  7
+     Net n1886: 1 loads, 1 LSLICEs
+     Net n2082: 1 loads, 1 LSLICEs
+     Net clk_c_enable_67: 17 loads, 17 LSLICEs
+     Net n1179: 17 loads, 17 LSLICEs
+     Net mode_31__N_210: 17 loads, 17 LSLICEs
+     Net k1/n1178: 17 loads, 17 LSLICEs
+     Net k0/n1201: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net clk_c_enable_67: 19 loads
+     Net k0/n1201: 18 loads
+     Net k1/n1178: 18 loads
+     Net mode_31__N_210: 18 loads
+     Net n1179: 18 loads
+     Net clk_c_enable_34: 17 loads
+     Net clk_c_enable_66: 17 loads
+     Net mode_1: 13 loads
+     Net prstate_1: 12 loads
+     Net mode_0: 11 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+   No errors or warnings present.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| modedisplay[1]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| modedisplay[2]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| modedisplay[3]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| secdisplay          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| modedisplay[0]      | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+| trafficLights[5]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| trafficLights[4]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| trafficLights[3]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| trafficLights[2]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| trafficLights[1]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| trafficLights[0]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[17]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[16]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[15]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[14]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[13]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[12]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[11]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[10]    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[9]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[8]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[7]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[6]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[5]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[4]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[3]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[2]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[1]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| digitdisplay[0]     | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| modekey             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i1154 undriven or does not drive anything - clipped.
+Signal n1174 was merged into signal k0/rst_state
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal k0/keysamplerpulsecnt_276_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal k0/keysamplerpulsecnt_276_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal k0/keysamplerpulsecnt_276_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal k0/keysamplerpulsecnt_276_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal delaycnt_275_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal delaycnt_275_add_4_33/CO undriven or does not drive anything - clipped.
+Signal seccnt_274_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal seccnt_274_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_37_33/S1 undriven or does not drive anything - clipped.
+Signal add_37_33/CO undriven or does not drive anything - clipped.
+Signal delaycnt_275_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal delaycnt_275_add_4_1/CI undriven or does not drive anything - clipped.
+Signal sub_223_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_223_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal seccnt_274_add_4_33/S1 undriven or does not drive anything - clipped.
+Signal seccnt_274_add_4_33/CO undriven or does not drive anything - clipped.
+Signal add_936_2/S1 undriven or does not drive anything - clipped.
+Signal add_936_2/S0 undriven or does not drive anything - clipped.
+Signal add_936_2/CI undriven or does not drive anything - clipped.
+Signal k1/keysamplerpulsecnt_277_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal k1/keysamplerpulsecnt_277_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal k1/keysamplerpulsecnt_277_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal k1/keysamplerpulsecnt_277_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal sub_223_add_2_19/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_19/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_21/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_21/S0 undriven or does not drive anything - clipped.
+
+Signal sub_223_add_2_23/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_23/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_25/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_25/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_27/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_27/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_29/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_29/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_31/S1 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_31/S0 undriven or does not drive anything - clipped.
+Signal add_936_4/S1 undriven or does not drive anything - clipped.
+Signal add_936_4/S0 undriven or does not drive anything - clipped.
+Signal add_936_6/S1 undriven or does not drive anything - clipped.
+Signal add_936_6/S0 undriven or does not drive anything - clipped.
+Signal add_936_8/S1 undriven or does not drive anything - clipped.
+Signal add_936_8/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_33/S0 undriven or does not drive anything - clipped.
+Signal sub_223_add_2_33/CO undriven or does not drive anything - clipped.
+Signal add_936_10/S1 undriven or does not drive anything - clipped.
+Signal add_936_10/S0 undriven or does not drive anything - clipped.
+Signal add_936_12/S1 undriven or does not drive anything - clipped.
+Signal add_936_12/S0 undriven or does not drive anything - clipped.
+Signal add_936_14/S1 undriven or does not drive anything - clipped.
+Signal add_936_14/S0 undriven or does not drive anything - clipped.
+Signal add_936_16/S1 undriven or does not drive anything - clipped.
+Signal add_936_16/S0 undriven or does not drive anything - clipped.
+Signal add_936_18/S1 undriven or does not drive anything - clipped.
+Signal add_936_18/S0 undriven or does not drive anything - clipped.
+Signal add_936_20/S1 undriven or does not drive anything - clipped.
+Signal add_936_20/S0 undriven or does not drive anything - clipped.
+Signal add_936_22/S1 undriven or does not drive anything - clipped.
+Signal add_936_22/S0 undriven or does not drive anything - clipped.
+Signal add_936_24/S1 undriven or does not drive anything - clipped.
+Signal add_936_24/S0 undriven or does not drive anything - clipped.
+Signal add_936_26/S1 undriven or does not drive anything - clipped.
+Signal add_936_26/S0 undriven or does not drive anything - clipped.
+Signal add_936_28/S1 undriven or does not drive anything - clipped.
+Signal add_936_28/S0 undriven or does not drive anything - clipped.
+Signal add_936_30/S0 undriven or does not drive anything - clipped.
+Signal add_936_30/CO undriven or does not drive anything - clipped.
+Signal add_37_1/S0 undriven or does not drive anything - clipped.
+Signal add_37_1/CI undriven or does not drive anything - clipped.
+Block k0/i472_1_lut was optimized away.
+
+     
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'k0/rst_state'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'k0/rst_state' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 120 
+
+     Type and instance name of component: 
+   Register : secdisplay_127
+   Register : modedisplay_i1
+   Register : sec_130
+   Register : sec_ls_125
+   Register : delay_3__I_0_153_i2
+   Register : modedisplay_i3
+   Register : seccnt_274__i31
+   Register : modedisplay_i4
+   Register : modedisplay_i2
+   Register : delay_3__I_0_153_i3
+   Register : seccnt_274__i30
+   Register : seccnt_274__i29
+   Register : seccnt_274__i28
+   Register : seccnt_274__i27
+   Register : seccnt_274__i26
+   Register : seccnt_274__i25
+   Register : seccnt_274__i24
+   Register : seccnt_274__i23
+   Register : seccnt_274__i22
+   Register : seccnt_274__i21
+   Register : seccnt_274__i20
+   Register : seccnt_274__i19
+   Register : seccnt_274__i18
+   Register : seccnt_274__i17
+   Register : seccnt_274__i16
+   Register : seccnt_274__i15
+   Register : seccnt_274__i14
+   Register : seccnt_274__i13
+   Register : seccnt_274__i12
+   Register : seccnt_274__i11
+   Register : seccnt_274__i10
+   Register : seccnt_274__i9
+   Register : seccnt_274__i8
+   Register : seccnt_274__i7
+   Register : seccnt_274__i6
+   Register : seccnt_274__i5
+   Register : seccnt_274__i4
+   Register : seccnt_274__i3
+   Register : seccnt_274__i2
+   Register : seccnt_274__i1
+   Register : seccnt_274__i0
+   Register : k1/keystore_i0_i0
+
+   Register : k1/keysamplerpulse_31
+   Register : k1/keysamplerpulse_ls_32
+   Register : k1/keystate_34
+   Register : k1/keysamplerpulsecnt_277__i0
+   Register : k1/keysamplerpulsecnt_277__i31
+   Register : k1/keysamplerpulsecnt_277__i30
+   Register : k1/keysamplerpulsecnt_277__i29
+   Register : k1/keysamplerpulsecnt_277__i28
+   Register : k1/keysamplerpulsecnt_277__i27
+   Register : k1/keysamplerpulsecnt_277__i26
+   Register : k1/keysamplerpulsecnt_277__i25
+   Register : k1/keysamplerpulsecnt_277__i24
+   Register : k1/keysamplerpulsecnt_277__i23
+   Register : k1/keysamplerpulsecnt_277__i22
+   Register : k1/keysamplerpulsecnt_277__i21
+   Register : k1/keysamplerpulsecnt_277__i20
+   Register : k1/keysamplerpulsecnt_277__i19
+   Register : k1/keysamplerpulsecnt_277__i18
+   Register : k1/keysamplerpulsecnt_277__i17
+   Register : k1/keysamplerpulsecnt_277__i16
+   Register : k1/keysamplerpulsecnt_277__i15
+   Register : k1/keysamplerpulsecnt_277__i14
+   Register : k1/keysamplerpulsecnt_277__i13
+   Register : k1/keysamplerpulsecnt_277__i12
+   Register : k1/keysamplerpulsecnt_277__i11
+   Register : k1/keysamplerpulsecnt_277__i10
+   Register : k1/keysamplerpulsecnt_277__i9
+   Register : k1/keysamplerpulsecnt_277__i8
+   Register : k1/keysamplerpulsecnt_277__i7
+   Register : k1/keysamplerpulsecnt_277__i6
+   Register : k1/keysamplerpulsecnt_277__i5
+   Register : k1/keysamplerpulsecnt_277__i4
+   Register : k1/keysamplerpulsecnt_277__i3
+   Register : k1/keysamplerpulsecnt_277__i2
+   Register : k1/keysamplerpulsecnt_277__i1
+   Register : k1/keystore_i0_i2
+   Register : k1/keystore_i0_i1
+   Register : delay_3__I_0_153_i1
+   Register : modekey_state_ls_126
+   Register : k0/keystore_i0_i0
+   Register : k0/keysamplerpulse_31
+   Register : k0/keysamplerpulse_ls_32
+   Register : k0/keystate_34
+   Register : k0/keysamplerpulsecnt_276__i0
+   Register : k0/keysamplerpulsecnt_276__i31
+   Register : k0/keysamplerpulsecnt_276__i30
+   Register : k0/keysamplerpulsecnt_276__i29
+   Register : k0/keysamplerpulsecnt_276__i28
+   Register : k0/keysamplerpulsecnt_276__i27
+   Register : k0/keysamplerpulsecnt_276__i26
+   Register : k0/keysamplerpulsecnt_276__i25
+   Register : k0/keysamplerpulsecnt_276__i24
+   Register : k0/keysamplerpulsecnt_276__i23
+   Register : k0/keysamplerpulsecnt_276__i22
+   Register : k0/keysamplerpulsecnt_276__i21
+   Register : k0/keysamplerpulsecnt_276__i20
+
+   Register : k0/keysamplerpulsecnt_276__i19
+   Register : k0/keysamplerpulsecnt_276__i18
+   Register : k0/keysamplerpulsecnt_276__i17
+   Register : k0/keysamplerpulsecnt_276__i16
+   Register : k0/keysamplerpulsecnt_276__i15
+   Register : k0/keysamplerpulsecnt_276__i14
+   Register : k0/keysamplerpulsecnt_276__i13
+   Register : k0/keysamplerpulsecnt_276__i12
+   Register : k0/keysamplerpulsecnt_276__i11
+   Register : k0/keysamplerpulsecnt_276__i10
+   Register : k0/keysamplerpulsecnt_276__i9
+   Register : k0/keysamplerpulsecnt_276__i8
+   Register : k0/keysamplerpulsecnt_276__i7
+   Register : k0/keysamplerpulsecnt_276__i6
+   Register : k0/keysamplerpulsecnt_276__i5
+   Register : k0/keysamplerpulsecnt_276__i4
+   Register : k0/keysamplerpulsecnt_276__i3
+   Register : k0/keysamplerpulsecnt_276__i2
+   Register : k0/keysamplerpulsecnt_276__i1
+   Register : k0/keystore_i0_i2
+   Register : k0/keystore_i0_i1
+   Register : delay_3__I_0_153_i4
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'k0/rst_state' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 64 
+
+     Type and instance name of component: 
+   Register : delaycnt_275__i1
+   Register : delaycnt_275__i2
+   Register : delaycnt_275__i3
+   Register : delaycnt_275__i4
+   Register : delaycnt_275__i8
+   Register : delaycnt_275__i17
+   Register : delaycnt_275__i27
+   Register : delaycnt_275__i28
+   Register : delaycnt_275__i18
+   Register : delaycnt_275__i29
+   Register : delaycnt_275__i19
+   Register : delaycnt_275__i9
+   Register : delaycnt_275__i20
+   Register : delaycnt_275__i30
+   Register : delaycnt_275__i21
+   Register : delaycnt_275__i10
+   Register : delaycnt_275__i22
+   Register : delaycnt_275__i5
+   Register : delaycnt_275__i11
+   Register : delaycnt_275__i23
+   Register : delaycnt_275__i31
+
+   Register : delaycnt_275__i24
+   Register : delaycnt_275__i12
+   Register : delaycnt_275__i25
+   Register : delaycnt_275__i13
+   Register : delaycnt_275__i0
+   Register : delaycnt_275__i14
+   Register : delaycnt_275__i26
+   Register : delaycnt_275__i15
+   Register : delaycnt_275__i6
+   Register : delaycnt_275__i16
+   Register : delaycnt_275__i7
+   Register : mode__i0
+   Register : mode__i31
+   Register : mode__i30
+   Register : mode__i29
+   Register : mode__i28
+   Register : mode__i27
+   Register : mode__i26
+   Register : mode__i25
+   Register : mode__i24
+   Register : mode__i23
+   Register : mode__i22
+   Register : mode__i21
+   Register : mode__i20
+   Register : mode__i19
+   Register : mode__i18
+   Register : mode__i17
+   Register : mode__i16
+   Register : mode__i15
+   Register : mode__i14
+   Register : mode__i13
+   Register : mode__i12
+   Register : mode__i11
+   Register : mode__i10
+   Register : mode__i9
+   Register : mode__i8
+   Register : mode__i7
+   Register : mode__i6
+   Register : mode__i5
+   Register : mode__i4
+   Register : mode__i3
+   Register : mode__i2
+   Register : mode__i1
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 51 MB
+        
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

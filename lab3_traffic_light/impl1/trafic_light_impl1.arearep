@@ -1,0 +1,43 @@
+----------------------------------------------------------------------
+Report for cell TrafficLights.TECH
+Register bits:  187 of 4635 (4.035%)
+I/O cells:      32
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       117          100.0
+                            FD1P3AX         9          100.0
+                            FD1P3IX        64          100.0
+                             FD1S1I         4          100.0
+                            FD1S3AX        14          100.0
+                            FD1S3IX        96          100.0
+                                GSR         1          100.0
+                                 IB         3          100.0
+                               LUT4        99          100.0
+                                 OB        29          100.0
+                        VERIFIC_PWR         1          100.0
+SUB MODULES
+                       CycleSampler         1
+                    CycleSampler_U0         1
+                              TOTAL       439
+----------------------------------------------------------------------
+Report for cell CycleSampler.v1
+Instance Path : k1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17           14.5
+                            FD1P3AX         3           33.3
+                            FD1S3AX         3           21.4
+                            FD1S3IX        32           33.3
+                               LUT4        16           16.2
+                              TOTAL        71
+----------------------------------------------------------------------
+Report for cell CycleSampler_U0.v1
+Instance Path : k0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        17           14.5
+                            FD1P3AX         3           33.3
+                            FD1S3AX         3           21.4
+                            FD1S3IX        32           33.3
+                               LUT4        18           18.2
+                              TOTAL        73

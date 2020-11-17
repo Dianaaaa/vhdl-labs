@@ -2,8 +2,8 @@
 // Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
 
 // ldbanno -n Verilog -o buttonInput_impl1_mapvo.vo -w -neg -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml buttonInput_impl1_map.ncd 
-// Netlist created on Tue Nov 17 15:39:27 2020
-// Netlist written on Tue Nov 17 15:39:32 2020
+// Netlist created on Tue Nov 17 20:59:36 2020
+// Netlist written on Tue Nov 17 20:59:38 2020
 // Design is for device LCMXO2-4000HC
 // Design is for package CSBGA132
 // Design is for performance grade 4

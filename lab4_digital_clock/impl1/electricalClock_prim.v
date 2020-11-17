@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.11.0.396.4
-// Netlist written on Wed Nov 04 15:19:23 2020
+// Netlist written on Tue Nov 17 21:14:41 2020
 //
 // Verilog Description of module electricalClock
 //
@@ -329,12 +329,12 @@ module Timer (mH, \mode[1] , n7616, clk_c, \mode[0] , mLRec0, clk_c_enable_60,
     LUT4 i6151_2_lut (.A(mH[1]), .B(mH[0]), .Z(n6963)) /* synthesis lut_function=(A (B)) */ ;
     defparam i6151_2_lut.init = 16'h8888;
     FD1P3AX hHRec0_i0_i0 (.D(n1392[0]), .SP(clk_c_enable_61), .CK(clk_c), 
-            .Q(hHRec0[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(hHRec0[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam hHRec0_i0_i0.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_146 (.A(\mode[1] ), .B(\mode[0] ), .Z(n7649)) /* synthesis lut_function=(!((B)+!A)) */ ;
     defparam i1_2_lut_rep_146.init = 16'h2222;
     FD1P3AX mLRec0_i0_i0 (.D(n1208), .SP(clk_c_enable_60), .CK(clk_c), 
-            .Q(mLRec0[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(mLRec0[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mLRec0_i0_i0.GSR = "ENABLED";
     LUT4 i2_2_lut_3_lut_4_lut (.A(\mode[1] ), .B(\mode[0] ), .C(n7624), 
          .D(n2989), .Z(n6)) /* synthesis lut_function=(!((B+!(C (D)))+!A)) */ ;
@@ -343,28 +343,28 @@ module Timer (mH, \mode[1] , n7616, clk_c, \mode[0] , mLRec0, clk_c_enable_60,
          .Z(n7617)) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;
     defparam i1_2_lut_rep_114_3_lut.init = 16'h2020;
     FD1P3AX mHRec0_i0_i0 (.D(n1840), .SP(clk_c_enable_55), .CK(clk_c), 
-            .Q(\mHRec0[0] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(\mHRec0[0] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mHRec0_i0_i0.GSR = "ENABLED";
     LUT4 n6_bdd_3_lut_6480_3_lut (.A(hL[1]), .B(hL[0]), .C(hL[2]), .Z(n7367)) /* synthesis lut_function=((B+(C))+!A) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(115[4] 192[13])
     defparam n6_bdd_3_lut_6480_3_lut.init = 16'hfdfd;
     LUT4 i1_4_lut_adj_15 (.A(n8077), .B(mH[1]), .C(n6), .D(n4642), .Z(n6937)) /* synthesis lut_function=(!(A (B+((D)+!C)))) */ ;
     defparam i1_4_lut_adj_15.init = 16'h5575;
     FD1P3AX sLRec0_i0_i0 (.D(n1773), .SP(clk_c_enable_53), .CK(clk_c), 
-            .Q(sLRec0[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(sLRec0[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sLRec0_i0_i0.GSR = "ENABLED";
     FD1P3AX sHRec0_i0_i0 (.D(n1452[0]), .SP(clk_c_enable_50), .CK(clk_c), 
-            .Q(sHRec0[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(sHRec0[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sHRec0_i0_i0.GSR = "ENABLED";
     FD1P3AX hLRec0_i0_i0 (.D(n1323[0]), .SP(clk_c_enable_48), .CK(clk_c), 
-            .Q(hLRec0[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(hLRec0[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam hLRec0_i0_i0.GSR = "ENABLED";
     LUT4 i3_4_lut (.A(n257), .B(mL[0]), .C(mL[3]), .D(n7648), .Z(n2989)) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;
     defparam i3_4_lut.init = 16'h0002;
-    FD1S3AX upkey_ls_186 (.D(up_key_state), .CK(clk_c), .Q(upkey_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(199[3] 203[10])
+    FD1S3AX upkey_ls_186 (.D(up_key_state), .CK(clk_c), .Q(upkey_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(199[3] 203[10])
     defparam upkey_ls_186.GSR = "DISABLED";
-    FD1S3AX downkey_ls_187 (.D(down_key_state), .CK(clk_c), .Q(downkey_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(199[3] 203[10])
+    FD1S3AX downkey_ls_187 (.D(down_key_state), .CK(clk_c), .Q(downkey_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(199[3] 203[10])
     defparam downkey_ls_187.GSR = "DISABLED";
-    FD1S3AX sec_ls_188 (.D(sec), .CK(clk_c), .Q(sec_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(199[3] 203[10])
+    FD1S3AX sec_ls_188 (.D(sec), .CK(clk_c), .Q(sec_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(199[3] 203[10])
     defparam sec_ls_188.GSR = "DISABLED";
     LUT4 i1_3_lut_4_lut_4_lut (.A(\mode[0] ), .B(\mode[1] ), .C(n7606), 
          .D(n7650), .Z(n6952)) /* synthesis lut_function=(!(A ((D)+!C)+!A (B ((D)+!C)))) */ ;
@@ -653,49 +653,49 @@ module Timer (mH, \mode[1] , n7616, clk_c, \mode[0] , mLRec0, clk_c_enable_60,
          .D(n10_adj_389), .Z(n7603)) /* synthesis lut_function=(A (B (C (D)))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam i1_2_lut_rep_100_3_lut_4_lut.init = 16'h8000;
     FD1P3AX hLRec0_i0_i3 (.D(n6518), .SP(clk_c_enable_48), .CK(clk_c), 
-            .Q(\hLRec0[3] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(\hLRec0[3] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam hLRec0_i0_i3.GSR = "ENABLED";
     LUT4 i4950_4_lut (.A(n7623), .B(sLRec0_c[2]), .C(n1039), .D(\mode[1] ), 
          .Z(n5637)) /* synthesis lut_function=(!(A (((D)+!C)+!B)+!A (B (C (D))+!B (C)))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(115[4] 192[13])
     defparam i4950_4_lut.init = 16'h05c5;
     FD1P3AX hLRec0_i0_i2 (.D(n1323[2]), .SP(clk_c_enable_48), .CK(clk_c), 
-            .Q(\hLRec0[2] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(\hLRec0[2] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam hLRec0_i0_i2.GSR = "ENABLED";
     FD1P3AX hLRec0_i0_i1 (.D(n1323[1]), .SP(clk_c_enable_48), .CK(clk_c), 
-            .Q(\hLRec0[1] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(\hLRec0[1] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam hLRec0_i0_i1.GSR = "ENABLED";
     FD1P3AX sHRec0_i0_i2 (.D(n1452[2]), .SP(clk_c_enable_50), .CK(clk_c), 
-            .Q(\sHRec0[2] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(\sHRec0[2] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sHRec0_i0_i2.GSR = "ENABLED";
     FD1P3AX sHRec0_i0_i1 (.D(n1452[1]), .SP(clk_c_enable_50), .CK(clk_c), 
-            .Q(sHRec0_c[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(sHRec0_c[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sHRec0_i0_i1.GSR = "ENABLED";
     FD1P3AX sLRec0_i0_i3 (.D(n7675), .SP(clk_c_enable_53), .CK(clk_c), 
-            .Q(sLRec0_c[3])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(sLRec0_c[3])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sLRec0_i0_i3.GSR = "ENABLED";
     FD1P3AX sLRec0_i0_i2 (.D(n7669), .SP(clk_c_enable_53), .CK(clk_c), 
-            .Q(sLRec0_c[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(sLRec0_c[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sLRec0_i0_i2.GSR = "ENABLED";
     FD1P3AX sLRec0_i0_i1 (.D(n1769[1]), .SP(clk_c_enable_53), .CK(clk_c), 
-            .Q(sLRec0_c[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(sLRec0_c[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam sLRec0_i0_i1.GSR = "ENABLED";
     FD1P3AX mHRec0_i0_i2 (.D(n6684), .SP(clk_c_enable_55), .CK(clk_c), 
-            .Q(mHRec0[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(mHRec0[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mHRec0_i0_i2.GSR = "ENABLED";
     FD1P3AX mHRec0_i0_i1 (.D(n7666), .SP(clk_c_enable_55), .CK(clk_c), 
-            .Q(mHRec0[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(mHRec0[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mHRec0_i0_i1.GSR = "ENABLED";
     FD1P3AX mLRec0_i0_i3 (.D(n7663), .SP(clk_c_enable_60), .CK(clk_c), 
-            .Q(mLRec0_c[3])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(mLRec0_c[3])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mLRec0_i0_i3.GSR = "ENABLED";
     FD1P3AX mLRec0_i0_i2 (.D(n7660), .SP(clk_c_enable_60), .CK(clk_c), 
-            .Q(mLRec0_c[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(mLRec0_c[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mLRec0_i0_i2.GSR = "ENABLED";
     FD1P3AX mLRec0_i0_i1 (.D(n1204[1]), .SP(clk_c_enable_60), .CK(clk_c), 
-            .Q(mLRec0_c[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(mLRec0_c[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam mLRec0_i0_i1.GSR = "ENABLED";
     FD1P3AX hHRec0_i0_i1 (.D(n1392[1]), .SP(clk_c_enable_61), .CK(clk_c), 
-            .Q(hHRec0[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
+            .Q(hHRec0[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=10, LSE_LLINE=170, LSE_RLINE=170 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
     defparam hHRec0_i0_i1.GSR = "ENABLED";
     PFUMX i6527 (.BLUT(n7658), .ALUT(n7659), .C0(mLRec0_c[1]), .Z(n7660));
     LUT4 i2_3_lut (.A(mHRec0[2]), .B(mHRec0[1]), .C(\mHRec0[0] ), .Z(n10_adj_389)) /* synthesis lut_function=(!((B+!(C))+!A)) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/timer1.vhd(61[3] 104[10])
@@ -978,9 +978,9 @@ module ModeCtrler (\mode[0] , clk_c, mode_key_state, n9, \hLRec0[3] ,
     wire modekey_ls, moderec_1__N_149, n7638, n7;
     wire [1:0]n13;
     
-    FD1S3AX mode_i1 (.D(moderec[0]), .CK(clk_c), .Q(\mode[0] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=14, LSE_RCOL=24, LSE_LLINE=167, LSE_RLINE=167 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(43[3] 46[10])
+    FD1S3AX mode_i1 (.D(moderec[0]), .CK(clk_c), .Q(\mode[0] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=14, LSE_RCOL=24, LSE_LLINE=167, LSE_RLINE=167 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(43[3] 46[10])
     defparam mode_i1.GSR = "DISABLED";
-    FD1S3AX modekey_ls_21 (.D(mode_key_state), .CK(clk_c), .Q(modekey_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=14, LSE_RCOL=24, LSE_LLINE=167, LSE_RLINE=167 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(43[3] 46[10])
+    FD1S3AX modekey_ls_21 (.D(mode_key_state), .CK(clk_c), .Q(modekey_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=14, LSE_RCOL=24, LSE_LLINE=167, LSE_RLINE=167 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(43[3] 46[10])
     defparam modekey_ls_21.GSR = "DISABLED";
     FD1P3AX moderec_1583__i0 (.D(n7638), .SP(moderec_1__N_149), .CK(clk_c), 
             .Q(moderec[0]));   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(34[15:22])
@@ -998,7 +998,7 @@ module ModeCtrler (\mode[0] , clk_c, mode_key_state, n9, \hLRec0[3] ,
     FD1P3AX moderec_1583__i1 (.D(n13[1]), .SP(moderec_1__N_149), .CK(clk_c), 
             .Q(moderec[1]));   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(34[15:22])
     defparam moderec_1583__i1.GSR = "ENABLED";
-    FD1S3AX mode_i2 (.D(moderec[1]), .CK(clk_c), .Q(\mode[1] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=14, LSE_RCOL=24, LSE_LLINE=167, LSE_RLINE=167 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(43[3] 46[10])
+    FD1S3AX mode_i2 (.D(moderec[1]), .CK(clk_c), .Q(\mode[1] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=14, LSE_RCOL=24, LSE_LLINE=167, LSE_RLINE=167 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(43[3] 46[10])
     defparam mode_i2.GSR = "DISABLED";
     LUT4 i5002_2_lut (.A(moderec[1]), .B(moderec[0]), .Z(n13[1])) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/modectrler.vhd(34[15:22])
     defparam i5002_2_lut.init = 16'h6666;
@@ -1030,18 +1030,18 @@ module RotaryEncoder (clk_c, PortA_c, \act_of_re[0] , PortB_c, \act_of_re[31] );
     wire int_times, n3115, PA_ls, clk_c_enable_14, n4541, n6772, 
         act_cache_tmp, clk_c_enable_10, n17;
     
-    FD1S3AX int_times_33 (.D(n3115), .CK(clk_c), .Q(int_times)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
+    FD1S3AX int_times_33 (.D(n3115), .CK(clk_c), .Q(int_times)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
     defparam int_times_33.GSR = "DISABLED";
-    FD1S3AX PA_ls_31 (.D(PortA_c), .CK(clk_c), .Q(PA_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(28[2] 30[9])
+    FD1S3AX PA_ls_31 (.D(PortA_c), .CK(clk_c), .Q(PA_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(28[2] 30[9])
     defparam PA_ls_31.GSR = "DISABLED";
     FD1P3IX act_cache__i1 (.D(n6772), .SP(clk_c_enable_14), .CD(n4541), 
-            .CK(clk_c), .Q(\act_of_re[0] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
+            .CK(clk_c), .Q(\act_of_re[0] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
     defparam act_cache__i1.GSR = "DISABLED";
     FD1P3AX act_cache_tmp_32 (.D(PortB_c), .SP(clk_c_enable_10), .CK(clk_c), 
-            .Q(act_cache_tmp)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
+            .Q(act_cache_tmp)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
     defparam act_cache_tmp_32.GSR = "DISABLED";
     FD1P3IX act_cache__i2 (.D(n17), .SP(clk_c_enable_14), .CD(n4541), 
-            .CK(clk_c), .Q(\act_of_re[31] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
+            .CK(clk_c), .Q(\act_of_re[31] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=18, LSE_LLINE=173, LSE_RLINE=173 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(35[2] 55[9])
     defparam act_cache__i2.GSR = "DISABLED";
     LUT4 i15_2_lut (.A(PortB_c), .B(act_cache_tmp), .Z(n6772)) /* synthesis lut_function=(!(A (B)+!A !(B))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/rotaryencoder.vhd(44[4] 50[11])
     defparam i15_2_lut.init = 16'h6666;
@@ -1147,7 +1147,7 @@ module dataTo595 (GND_net, clk_c, sck_c, \ctrlcode595[17] , \hH[0] ,
     defparam shift_clock_cnt_1589_add_4_9.INIT1 = 16'hfaaa;
     defparam shift_clock_cnt_1589_add_4_9.INJECT1_0 = "NO";
     defparam shift_clock_cnt_1589_add_4_9.INJECT1_1 = "NO";
-    FD1S3IX codeP__i0 (.D(n12[0]), .CK(clk_c), .CD(n2337), .Q(codeP[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
+    FD1S3IX codeP__i0 (.D(n12[0]), .CK(clk_c), .CD(n2337), .Q(codeP[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
     defparam codeP__i0.GSR = "DISABLED";
     LUT4 n7328_bdd_2_lut_3_lut_4_lut (.A(n369[13]), .B(n7631), .C(n7328), 
          .D(n7632), .Z(n7329)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(117[27:36])
@@ -1183,9 +1183,9 @@ module dataTo595 (GND_net, clk_c, sck_c, \ctrlcode595[17] , \hH[0] ,
     defparam shift_clock_cnt_1589_add_4_1.INIT1 = 16'h0555;
     defparam shift_clock_cnt_1589_add_4_1.INJECT1_0 = "NO";
     defparam shift_clock_cnt_1589_add_4_1.INJECT1_1 = "NO";
-    FD1S3AX shift_clock_ls_56 (.D(sck_c), .CK(clk_c), .Q(shift_clock_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(70[3] 72[10])
+    FD1S3AX shift_clock_ls_56 (.D(sck_c), .CK(clk_c), .Q(shift_clock_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(70[3] 72[10])
     defparam shift_clock_ls_56.GSR = "DISABLED";
-    FD1S3AY shift_clock_55 (.D(sck_N_375), .CK(clk_c), .Q(sck_c)) /* synthesis lse_init_val=1, LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(54[3] 63[10])
+    FD1S3AY shift_clock_55 (.D(sck_N_375), .CK(clk_c), .Q(sck_c)) /* synthesis lse_init_val=1, LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(54[3] 63[10])
     defparam shift_clock_55.GSR = "ENABLED";
     FD1P3AY shift_cnt_FSM__i0 (.D(n369[15]), .SP(clk_c_enable_28), .CK(clk_c), 
             .Q(n33[0]));   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(86[17:26])
@@ -1198,7 +1198,7 @@ module dataTo595 (GND_net, clk_c, sck_c, \ctrlcode595[17] , \hH[0] ,
     defparam sH_1__bdd_3_lut.init = 16'hebeb;
     LUT4 i2_3_lut (.A(n369[6]), .B(n369[7]), .C(n369[5]), .Z(n2687)) /* synthesis lut_function=(A+(B+(C))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(86[17:26])
     defparam i2_3_lut.init = 16'hfefe;
-    FD1P3AX din_58 (.D(din_N_365), .SP(din_N_372), .CK(clk_c), .Q(din_c)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
+    FD1P3AX din_58 (.D(din_N_365), .SP(din_N_372), .CK(clk_c), .Q(din_c)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
     defparam din_58.GSR = "ENABLED";
     LUT4 sH_1__bdd_4_lut_6464 (.A(sH[1]), .B(sH[2]), .C(sH[0]), .D(n369[6]), 
          .Z(n7474)) /* synthesis lut_function=(A (B (C+!(D))+!B (C+(D)))+!A !(B (C (D)))) */ ;
@@ -1393,10 +1393,10 @@ module dataTo595 (GND_net, clk_c, sck_c, \ctrlcode595[17] , \hH[0] ,
             .Q(shift_clock_cnt[0])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(58[21:36])
     defparam shift_clock_cnt_1589__i0.GSR = "ENABLED";
     FD1P3IX codeP__i2 (.D(n6782), .SP(clk_c_enable_57), .CD(n2337), .CK(clk_c), 
-            .Q(codeP[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
+            .Q(codeP[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
     defparam codeP__i2.GSR = "DISABLED";
     FD1P3IX codeP__i1 (.D(n3), .SP(clk_c_enable_57), .CD(n2337), .CK(clk_c), 
-            .Q(codeP[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
+            .Q(codeP[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=14, LSE_LLINE=179, LSE_RLINE=179 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/datato595.vhd(112[3] 133[10])
     defparam codeP__i1.GSR = "DISABLED";
     CCU2D shift_clock_cnt_1589_add_4_33 (.A0(shift_clock_cnt[31]), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
@@ -1681,14 +1681,14 @@ module CycleSampler_U0 (clk_c, rst_key_state, GND_net, rst_key_c, n612);
         n5904, n49, n50, n45, n40, n7031, n29, n48, n42, n30, 
         n7003, n44, n34;
     
-    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
+    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
     defparam keysamplerpulse_31.GSR = "DISABLED";
-    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
+    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
     defparam keysamplerpulse_ls_32.GSR = "DISABLED";
-    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(rst_key_state)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(rst_key_state)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystate_34.GSR = "DISABLED";
     FD1P3AX keystore_i0_i0 (.D(btnstate_N_138), .SP(keystore_2__N_139), 
-            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i0.GSR = "DISABLED";
     CCU2D keysamplerpulsecnt_1579_add_4_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(keysamplerpulsecnt[0]), .B1(GND_net), .C1(GND_net), 
@@ -1794,10 +1794,10 @@ module CycleSampler_U0 (clk_c, rst_key_state, GND_net, rst_key_c, n612);
             .Q(keysamplerpulsecnt[1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(29[24:42])
     defparam keysamplerpulsecnt_1579__i1.GSR = "DISABLED";
     FD1P3AX keystore_i0_i2 (.D(keystore[1]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i2.GSR = "DISABLED";
     FD1P3AX keystore_i0_i1 (.D(keystore[0]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=9, LSE_RCOL=21, LSE_LLINE=161, LSE_RLINE=161 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i1.GSR = "DISABLED";
     CCU2D keysamplerpulsecnt_1579_add_4_33 (.A0(keysamplerpulsecnt[31]), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
@@ -2006,7 +2006,7 @@ module ClockDivider (sec, clk_c, GND_net, sec_ls, clk_c_enable_53,
         n36, n5888, n5897, n24, n5896, n5887, n5895, n5894, 
         n5893, n43, n44;
     
-    FD1S3AX sec_16 (.D(clk_out_N_68), .CK(clk_c), .Q(sec)) /* synthesis lse_init_val=0, LSE_LINE_FILE_ID=29, LSE_LCOL=12, LSE_RCOL=24, LSE_LLINE=158, LSE_RLINE=158 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(22[3] 31[10])
+    FD1S3AX sec_16 (.D(clk_out_N_68), .CK(clk_c), .Q(sec)) /* synthesis lse_init_val=0, LSE_LINE_FILE_ID=28, LSE_LCOL=12, LSE_RCOL=24, LSE_LLINE=158, LSE_RLINE=158 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/clockdivider.vhd(22[3] 31[10])
     defparam sec_16.GSR = "ENABLED";
     CCU2D seccnt_1578_add_4_11 (.A0(seccnt[9]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(seccnt[10]), .B1(GND_net), .C1(GND_net), 
@@ -2264,23 +2264,23 @@ module CycleSampler_U1 (clk_c, mode_key_state, GND_net, mode_key_c);
         n5926, n5925, n42, n32, n5924, n5923, n5922, n5921, 
         n5920, n5919;
     
-    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
+    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
     defparam keysamplerpulse_31.GSR = "DISABLED";
-    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
+    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
     defparam keysamplerpulse_ls_32.GSR = "DISABLED";
-    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(mode_key_state)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(mode_key_state)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystate_34.GSR = "DISABLED";
     LUT4 i6355_4_lut (.A(n9), .B(n7029), .C(keysamplerpulsecnt[10]), .D(keysamplerpulsecnt[16]), 
          .Z(n3119)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(30[8:33])
     defparam i6355_4_lut.init = 16'h4000;
     FD1P3AX keystore_i0_i0 (.D(btnstate_N_138), .SP(keystore_2__N_139), 
-            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i0.GSR = "DISABLED";
     FD1P3AX keystore_i0_i2 (.D(keystore[1]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i2.GSR = "DISABLED";
     FD1P3AX keystore_i0_i1 (.D(keystore[0]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=162, LSE_RLINE=162 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i1.GSR = "DISABLED";
     LUT4 i1_4_lut (.A(n47), .B(keysamplerpulsecnt[15]), .C(n45), .D(n46), 
          .Z(n9)) /* synthesis lut_function=(A+((C+(D))+!B)) */ ;
@@ -2581,13 +2581,13 @@ module CycleSampler_U2 (clk_c, down_key_state, GND_net, down_key_c);
         n32;
     
     FD1P3AX keystore_i0_i0 (.D(btnstate_N_138), .SP(keystore_2__N_139), 
-            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i0.GSR = "DISABLED";
-    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
+    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
     defparam keysamplerpulse_31.GSR = "DISABLED";
-    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
+    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
     defparam keysamplerpulse_ls_32.GSR = "DISABLED";
-    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(down_key_state)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(down_key_state)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystate_34.GSR = "DISABLED";
     CCU2D keysamplerpulsecnt_1582_add_4_5 (.A0(keysamplerpulsecnt[3]), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(keysamplerpulsecnt[4]), .B1(GND_net), 
@@ -2812,10 +2812,10 @@ module CycleSampler_U2 (clk_c, down_key_state, GND_net, down_key_c);
             .Q(keysamplerpulsecnt[1])) /* synthesis syn_use_carry_chain=1 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(29[24:42])
     defparam keysamplerpulsecnt_1582__i1.GSR = "DISABLED";
     FD1P3AX keystore_i0_i2 (.D(keystore[1]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i2.GSR = "DISABLED";
     FD1P3AX keystore_i0_i1 (.D(keystore[0]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=10, LSE_RCOL=22, LSE_LLINE=164, LSE_RLINE=164 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i1.GSR = "DISABLED";
     CCU2D keysamplerpulsecnt_1582_add_4_7 (.A0(keysamplerpulsecnt[5]), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(keysamplerpulsecnt[6]), .B1(GND_net), 
@@ -2897,16 +2897,16 @@ module CycleSampler (clk_c, up_key_state, GND_net, up_key_c);
         n32;
     
     FD1P3AX keystore_i0_i0 (.D(btnstate_N_138), .SP(keystore_2__N_139), 
-            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .CK(clk_c), .Q(keystore[0])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i0.GSR = "DISABLED";
-    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
+    FD1S3AX keysamplerpulse_31 (.D(keysamplerpulse_N_144), .CK(clk_c), .Q(keysamplerpulse)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(28[3] 34[10])
     defparam keysamplerpulse_31.GSR = "DISABLED";
-    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
+    FD1S3AX keysamplerpulse_ls_32 (.D(keysamplerpulse), .CK(clk_c), .Q(keysamplerpulse_ls)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(40[3] 42[10])
     defparam keysamplerpulse_ls_32.GSR = "DISABLED";
-    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(up_key_state)) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+    FD1S3AX keystate_34 (.D(keystate_N_142), .CK(clk_c), .Q(up_key_state)) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystate_34.GSR = "DISABLED";
     FD1P3AX keystore_i0_i2 (.D(keystore[1]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[2])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i2.GSR = "DISABLED";
     CCU2D keysamplerpulsecnt_1581_add_4_33 (.A0(keysamplerpulsecnt[31]), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), 
@@ -2916,7 +2916,7 @@ module CycleSampler (clk_c, up_key_state, GND_net, up_key_c);
     defparam keysamplerpulsecnt_1581_add_4_33.INJECT1_0 = "NO";
     defparam keysamplerpulsecnt_1581_add_4_33.INJECT1_1 = "NO";
     FD1P3AX keystore_i0_i1 (.D(keystore[0]), .SP(keystore_2__N_139), .CK(clk_c), 
-            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
+            .Q(keystore[1])) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=8, LSE_RCOL=20, LSE_LLINE=163, LSE_RLINE=163 */ ;   // c:/users/10352/vhdl-labs/lab4_digital_clock/cyclesampler.vhd(48[3] 55[10])
     defparam keystore_i0_i1.GSR = "DISABLED";
     CCU2D keysamplerpulsecnt_1581_add_4_31 (.A0(keysamplerpulsecnt[29]), .B0(GND_net), 
           .C0(GND_net), .D0(GND_net), .A1(keysamplerpulsecnt[30]), .B1(GND_net), 
@@ -3242,7 +3242,7 @@ module TimeEncoder (\mH[0] , \mH[2] , n4642, \hH[0] , \ctrlcode595[17] ,
     LUT4 mL_2__bdd_4_lut (.A(mL[2]), .B(mL[3]), .C(mL[1]), .D(mL[0]), 
          .Z(\ctrlcode595[37] )) /* synthesis lut_function=(!(A (B (C+!(D)))+!A !(B+((D)+!C)))) */ ;
     defparam mL_2__bdd_4_lut.init = 16'h7f67;
-    PFUMX hL_3__I_0_Mux_4_i15 (.BLUT(n7), .ALUT(n2603), .C0(hL[3]), .Z(\ctrlcode595[4] )) /* synthesis LSE_LINE_FILE_ID=29, LSE_LCOL=5, LSE_RCOL=16, LSE_LLINE=176, LSE_RLINE=176 */ ;
+    PFUMX hL_3__I_0_Mux_4_i15 (.BLUT(n7), .ALUT(n2603), .C0(hL[3]), .Z(\ctrlcode595[4] )) /* synthesis LSE_LINE_FILE_ID=28, LSE_LCOL=5, LSE_RCOL=16, LSE_LLINE=176, LSE_RLINE=176 */ ;
     LUT4 i3845_2_lut (.A(\sH[0] ), .B(\sH[2] ), .Z(n4547)) /* synthesis lut_function=(A+(B)) */ ;
     defparam i3845_2_lut.init = 16'heeee;
     LUT4 sL_0__bdd_4_lut_6624 (.A(sL[0]), .B(sL[3]), .C(sL[1]), .D(sL[2]), 

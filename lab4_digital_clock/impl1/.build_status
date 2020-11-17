@@ -2,35 +2,51 @@
 <BuildStatus>
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
-            <Task name="IBIS" build_result="0" update_result="2" update_time="0"/>
-            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="0"/>
-            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="0"/>
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="0"/>
-            <Task name="Jedecgen" build_result="0" update_result="2" update_time="0"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1605618952"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1605618954"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1605618955"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1605618958"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1605618964"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="0">
-            <Task name="Map" build_result="0" update_result="2" update_time="0"/>
-            <Task name="MapTrace" build_result="0" update_result="2" update_time="0"/>
-            <Task name="MapVerilogSimFile" build_result="0" update_result="2" update_time="0"/>
-            <Task name="MapVHDLSimFile" build_result="0" update_result="2" update_time="0"/>
+        <Milestone name="Map" build_result="2" build_time="1605618938">
+            <Task name="Map" build_result="2" update_result="0" update_time="1605618938"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1605618939"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1605618940"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1605618942"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="0">
-            <Task name="PAR" build_result="0" update_result="2" update_time="0"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="0"/>
-            <Task name="IOTiming" build_result="0" update_result="2" update_time="0"/>
+        <Milestone name="PAR" build_result="2" build_time="1605618949">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1605618949"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1605618950"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1605618952"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="1604474363">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1604474363"/>
-            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1604474363"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1605618882">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1605618882"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1605618882"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1604477809"/>
-            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
-            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
-            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
-            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1605618870"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name="digital_clock_impl1.lsedata" last_build_time="1604474361" last_build_size="522644"/>
-        <Report name="digital_clock_impl1.ngd" last_build_time="1604474363" last_build_size="474319"/>
+        <Report name=".vdbs/digital_clock_impl1_map.vdb" last_build_time="1605618938" last_build_size="167994"/>
+        <Report name="IBIS/digital_clock_impl1.ibs" last_build_time="1605618952" last_build_size="65892"/>
+        <Report name="digital_clock_impl1.bgn" last_build_time="1605618964" last_build_size="4327"/>
+        <Report name="digital_clock_impl1.bit" last_build_time="1605618958" last_build_size="21315"/>
+        <Report name="digital_clock_impl1.ior" last_build_time="1605618952" last_build_size="2692"/>
+        <Report name="digital_clock_impl1.jed" last_build_time="1605618964" last_build_size="849471"/>
+        <Report name="digital_clock_impl1.lsedata" last_build_time="1605618879" last_build_size="522644"/>
+        <Report name="digital_clock_impl1.ncd" last_build_time="1605618949" last_build_size="556691"/>
+        <Report name="digital_clock_impl1.ngd" last_build_time="1605618881" last_build_size="474319"/>
+        <Report name="digital_clock_impl1.tw1" last_build_time="1605618939" last_build_size="8450"/>
+        <Report name="digital_clock_impl1.twr" last_build_time="1605618950" last_build_size="47298"/>
+        <Report name="digital_clock_impl1_map.ncd" last_build_time="1605618938" last_build_size="398814"/>
+        <Report name="digital_clock_impl1_mapvho.sdf" last_build_time="1605618942" last_build_size="392314"/>
+        <Report name="digital_clock_impl1_mapvho.vho" last_build_time="1605618941" last_build_size="2907764"/>
+        <Report name="digital_clock_impl1_mapvo.sdf" last_build_time="1605618940" last_build_size="391764"/>
+        <Report name="digital_clock_impl1_mapvo.vo" last_build_time="1605618940" last_build_size="422558"/>
+        <Report name="digital_clock_impl1_vho.sdf" last_build_time="1605618955" last_build_size="447695"/>
+        <Report name="digital_clock_impl1_vho.vho" last_build_time="1605618955" last_build_size="2992079"/>
+        <Report name="digital_clock_impl1_vo.sdf" last_build_time="1605618954" last_build_size="447391"/>
+        <Report name="digital_clock_impl1_vo.vo" last_build_time="1605618953" last_build_size="443641"/>
     </Strategy>
 </BuildStatus>

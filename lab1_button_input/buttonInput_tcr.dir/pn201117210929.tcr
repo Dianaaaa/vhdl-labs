@@ -1,0 +1,5 @@
+#Start recording tcl command: 11/17/2020 21:09:13
+#Project Location: C:/Users/10352/vhdl-labs/lab1_button_input; Project name: buttonInput
+prj_project open "C:/Users/10352/vhdl-labs/lab1_button_input/buttonInput.ldf"
+prj_project close
+#Stop recording: 11/17/2020 21:09:29

@@ -1,0 +1,55 @@
+[ START MERGED ]
+n612 rst_key_state
+tm/n7662 mL_3
+tm/n7674 sL_3
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+upkey/keysamplerpulsecnt_1581_add_4_1/S0
+upkey/keysamplerpulsecnt_1581_add_4_1/CI
+upkey/keysamplerpulsecnt_1581_add_4_33/S1
+upkey/keysamplerpulsecnt_1581_add_4_33/CO
+downkey/keysamplerpulsecnt_1582_add_4_33/S1
+downkey/keysamplerpulsecnt_1582_add_4_33/CO
+downkey/keysamplerpulsecnt_1582_add_4_1/S0
+downkey/keysamplerpulsecnt_1582_add_4_1/CI
+modekey/keysamplerpulsecnt_1580_add_4_1/S0
+modekey/keysamplerpulsecnt_1580_add_4_1/CI
+modekey/keysamplerpulsecnt_1580_add_4_33/S1
+modekey/keysamplerpulsecnt_1580_add_4_33/CO
+secondGen/seccnt_1578_add_4_1/S0
+secondGen/seccnt_1578_add_4_1/CI
+secondGen/seccnt_1578_add_4_33/S1
+secondGen/seccnt_1578_add_4_33/CO
+rstkey/keysamplerpulsecnt_1579_add_4_33/S1
+rstkey/keysamplerpulsecnt_1579_add_4_33/CO
+rstkey/keysamplerpulsecnt_1579_add_4_1/S0
+rstkey/keysamplerpulsecnt_1579_add_4_1/CI
+dt/shift_clock_cnt_1589_add_4_33/S1
+dt/shift_clock_cnt_1589_add_4_33/CO
+dt/shift_clock_cnt_1589_add_4_1/S0
+dt/shift_clock_cnt_1589_add_4_1/CI
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Tue Nov 17 21:15:38 2020
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "down_key" SITE "N14" ;
+LOCATE COMP "up_key" SITE "M14" ;
+LOCATE COMP "mode_key" SITE "M13" ;
+LOCATE COMP "rst_key" SITE "L14" ;
+LOCATE COMP "clk" SITE "C1" ;
+LOCATE COMP "rck" SITE "H3" ;
+LOCATE COMP "sck" SITE "J2" ;
+LOCATE COMP "din" SITE "G3" ;
+LOCATE COMP "secDisp" SITE "P9" ;
+LOCATE COMP "modedisplay[0]" SITE "N13" ;
+LOCATE COMP "modedisplay[1]" SITE "M12" ;
+LOCATE COMP "modedisplay[2]" SITE "P12" ;
+LOCATE COMP "modedisplay[3]" SITE "M11" ;
+LOCATE COMP "PortA" SITE "J3" ;
+LOCATE COMP "PortB" SITE "K2" ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

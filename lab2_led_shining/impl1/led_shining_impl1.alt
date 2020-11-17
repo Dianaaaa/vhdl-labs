@@ -1,0 +1,16 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Nov 17 21:10:23 2020 *
+NOTE DESIGN NAME: PWM *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS key_up : M14 : in *
+NOTE PINS key_menu : L14 : in *
+NOTE PINS key_down : N14 : in *
+NOTE PINS clk : C1 : in *
+NOTE PINS rst_n : M13 : in *
+NOTE PINS display : G3 : out *
+NOTE PINS pulse_out : P9 : out *
+NOTE PINS menu_state : N13 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

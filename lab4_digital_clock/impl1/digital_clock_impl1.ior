@@ -1,0 +1,64 @@
+Loading design for application iotiming from file digital_clock_impl1.ncd.
+Design name: electricalClock
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 5
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file digital_clock_impl1.ncd.
+Design name: electricalClock
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 6
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file digital_clock_impl1.ncd.
+Design name: electricalClock
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: M
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: electricalClock
+// Package: CSBGA132
+// ncd File: digital_clock_impl1.ncd
+// Version: Diamond (64-bit) 3.11.0.396.4
+// Written on Tue Nov 17 21:15:52 2020
+// M: Minimum Performance Grade
+// iotiming digital_clock_impl1.ncd digital_clock_impl1.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port     Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+PortA    clk   R     3.434      4       0.286     6
+PortB    clk   R     2.633      4      -0.059     M
+down_key clk   R     1.150      4       0.331     6
+mode_key clk   R     1.150      4       0.331     6
+rst_key  clk   R     1.577      4       0.084     M
+up_key   clk   R     0.821      4       0.573     6
+
+
+// Clock to Output Delay
+
+Port           Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+din            clk   R    11.178         4        3.460          M
+modedisplay[0] clk   R    11.919         4        3.494          M
+modedisplay[1] clk   R    12.346         4        3.599          M
+modedisplay[2] clk   R    12.296         4        3.612          M
+modedisplay[3] clk   R    11.899         4        3.501          M
+rck            clk   R    13.103         4        3.557          M
+sck            clk   R    11.022         4        3.386          M
+secDisp        clk   R    10.154         4        3.171          M
+WARNING: you must also run trce with hold speed: 6

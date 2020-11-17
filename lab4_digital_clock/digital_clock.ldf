@@ -9,9 +9,6 @@
         <Source name="CycleSampler.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>
-        <Source name="D595_tb.vhd" type="VHDL" type_short="VHDL" syn_sim="SimOnly">
-            <Options/>
-        </Source>
         <Source name="DataTo595.vhd" type="VHDL" type_short="VHDL">
             <Options/>
         </Source>

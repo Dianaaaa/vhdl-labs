@@ -1,0 +1,9 @@
+#Start recording tcl command: 11/17/2020 20:53:15
+#Project Location: C:/Users/10352/vhdl-labs/lab2_led_shining; Project name: led_shining
+prj_project new -name "led_shining" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+prj_project save
+prj_src add "C:/Users/10352/vhdl-labs/lab2_led_shining/key.vhd" "C:/Users/10352/vhdl-labs/lab2_led_shining/lab2.vhd"
+prj_run Synthesis -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+#Stop recording: 11/17/2020 20:58:45

@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
 
 -- ldbanno -n VHDL -o buttonInput_impl1_vho.vho -w -neg -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml buttonInput_impl1.ncd 
--- Netlist created on Tue Nov 17 15:39:27 2020
--- Netlist written on Tue Nov 17 15:39:47 2020
+-- Netlist created on Tue Nov 17 20:59:36 2020
+-- Netlist written on Tue Nov 17 20:59:51 2020
 -- Design is for device LCMXO2-4000HC
 -- Design is for package CSBGA132
 -- Design is for performance grade 4
@@ -2043,7 +2043,7 @@
   architecture Structure of lut4 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"5A5A")
+      generic map (initval => X"55AA")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -2104,14 +2104,14 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_10";
 
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -2133,7 +2133,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (C1: in Std_logic; A1: in Std_logic; A0: in Std_logic; 
+    port (D1: in Std_logic; A1: in Std_logic; A0: in Std_logic; 
           DI1: in Std_logic; DI0: in Std_logic; LSR: in Std_logic; 
           CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
           F1: out Std_logic; Q1: out Std_logic);
@@ -2145,7 +2145,7 @@
   architecture Structure of SLICE_10 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal C1_ipd 	: std_logic := 'X';
+    signal D1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal DI1_ipd 	: std_logic := 'X';
@@ -2184,7 +2184,7 @@
     end component;
   begin
     i1530_2_lut: lut4
-      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>GNDI, Z=>F1_out);
+      port map (A=>A1_ipd, B=>GNDI, C=>GNDI, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i1528_1_lut: lut40003
@@ -2201,7 +2201,7 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
@@ -2219,7 +2219,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (C1_ipd, A1_ipd, A0_ipd, DI1_dly, DI0_dly, LSR_dly, 
+    VitalBehavior : PROCESS (D1_ipd, A1_ipd, A0_ipd, DI1_dly, DI0_dly, LSR_dly, 
       CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -2346,8 +2346,8 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
                            PathCondition => TRUE),
                      1 => (InputChangeTime => A1_ipd'last_event,
                            PathDelay => tpd_A1_F1,
@@ -2383,7 +2383,7 @@
   architecture Structure of lut40005 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"6AAA")
+      generic map (initval => X"6CCC")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -2404,7 +2404,7 @@
   architecture Structure of lut40006 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"66AA")
+      generic map (initval => X"5AF0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -2427,7 +2427,7 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -2438,7 +2438,7 @@
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -2460,7 +2460,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
           A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
           LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
           Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
@@ -2477,7 +2477,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal DI1_ipd 	: std_logic := 'X';
     signal DI1_dly 	: std_logic := 'X';
@@ -2517,7 +2517,7 @@
     i1544_2_lut_3_lut_4_lut: lut40005
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     i1537_2_lut_3_lut: lut40006
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     LED_get_149_i3: vmuxregsre0004
@@ -2537,7 +2537,7 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
       VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
@@ -2554,7 +2554,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
       A0_ipd, DI1_dly, DI0_dly, LSR_dly, CLK_dly, F0_out, Q0_out, F1_out, 
       Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
@@ -2671,8 +2671,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -2731,7 +2731,7 @@
   architecture Structure of lut40007 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"CC00")
+      generic map (initval => X"AA00")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -2771,7 +2771,7 @@
       InstancePath  	: string := "SLICE_12";
 
       tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -2780,7 +2780,7 @@
       tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -2800,7 +2800,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (D1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+    port (D1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
           C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
           DI0: in Std_logic; LSR: in Std_logic; CLK: in Std_logic; 
           F0: out Std_logic; Q0: out Std_logic; F1: out Std_logic);
@@ -2813,7 +2813,7 @@
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
     signal D1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
     signal B0_ipd 	: std_logic := 'X';
@@ -2851,7 +2851,7 @@
     end component;
   begin
     i1533_2_lut_rep_49: lut40007
-      port map (A=>GNDI, B=>B1_ipd, C=>GNDI, D=>D1_ipd, Z=>F1_out);
+      port map (A=>A1_ipd, B=>GNDI, C=>GNDI, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i1551_3_lut_4_lut: lut40008
@@ -2866,7 +2866,7 @@
     WireDelay : BLOCK
     BEGIN
       VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(B0_ipd, B0, tipd_B0);
@@ -2884,7 +2884,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, B1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
       DI0_dly, LSR_dly, CLK_dly, F0_out, Q0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -3000,8 +3000,8 @@
       Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
                            PathDelay => tpd_D1_F1,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
+                     1 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -3027,7 +3027,7 @@
   architecture Structure of lut40009 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"DDDD")
+      generic map (initval => X"FF33")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -3048,7 +3048,7 @@
   architecture Structure of lut40010 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"7777")
+      generic map (initval => X"33FF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -3085,18 +3085,18 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_13";
 
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
       tperiod_LSR 	: VitalDelayType := 0 ns;
@@ -3116,8 +3116,8 @@
       tsetup_LSR_CLK_noedge_negedge	: VitalDelayType := 0 ns;
       thold_LSR_CLK_noedge_negedge	: VitalDelayType := 0 ns);
 
-    port (B1: in Std_logic; A1: in Std_logic; B0: in Std_logic; 
-          A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
+    port (D1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+          B0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
           LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
           Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
 
@@ -3128,10 +3128,10 @@
   architecture Structure of SLICE_13 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
+    signal D1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
     signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
     signal DI1_ipd 	: std_logic := 'X';
     signal DI1_dly 	: std_logic := 'X';
     signal DI0_ipd 	: std_logic := 'X';
@@ -3172,11 +3172,11 @@
     end component;
   begin
     i1901_2_lut_rep_47: lut40009
-      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>GNDI, Z=>F1_out);
+      port map (A=>GNDI, B=>B1_ipd, C=>GNDI, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i1892_2_lut_rep_50: lut40010
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>GNDI, Z=>F0_out);
+      port map (A=>GNDI, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
     ROW_i2: vmuxregsre0004
       port map (D0=>VCCI, D1=>DI1_dly, SD=>VCCI, SP=>VCCI, CK=>CLK_NOTIN, 
                 LSR=>LSR_dly, Q=>Q1_out);
@@ -3191,341 +3191,10 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
-      VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
-      VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
-      VitalWireDelay(LSR_ipd, LSR, tipd_LSR);
-      VitalWireDelay(CLK_ipd, CLK, tipd_CLK);
-    END BLOCK;
-
-    --  Setup and Hold DELAYs
-    SignalDelay : BLOCK
-    BEGIN
-      VitalSignalDelay(DI1_dly, DI1_ipd, tisd_DI1_CLK);
-      VitalSignalDelay(DI0_dly, DI0_ipd, tisd_DI0_CLK);
-      VitalSignalDelay(LSR_dly, LSR_ipd, tisd_LSR_CLK);
-      VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (B1_ipd, A1_ipd, B0_ipd, A0_ipd, DI1_dly, DI0_dly, 
-      LSR_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE Q0_zd         	: std_logic := 'X';
-    VARIABLE Q0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-    VARIABLE Q1_zd         	: std_logic := 'X';
-    VARIABLE Q1_GlitchData 	: VitalGlitchDataType;
-
-    VARIABLE tviol_DI1_CLK       	: x01 := '0';
-    VARIABLE DI1_CLK_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_DI0_CLK       	: x01 := '0';
-    VARIABLE DI0_CLK_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_LSR_CLK       	: x01 := '0';
-    VARIABLE LSR_CLK_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_LSR_LSR          	: x01 := '0';
-    VARIABLE periodcheckinfo_LSR	: VitalPeriodDataType;
-    VARIABLE tviol_CLK_CLK          	: x01 := '0';
-    VARIABLE periodcheckinfo_CLK	: VitalPeriodDataType;
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-      VitalSetupHoldCheck (
-        TestSignal => DI1_dly,
-        TestSignalName => "DI1",
-        TestDelay => tisd_DI1_CLK,
-        RefSignal => CLK_dly,
-        RefSignalName => "CLK",
-        RefDelay => ticd_CLK,
-        SetupHigh => tsetup_DI1_CLK_noedge_negedge,
-        SetupLow => tsetup_DI1_CLK_noedge_negedge,
-        HoldHigh => thold_DI1_CLK_noedge_negedge,
-        HoldLow => thold_DI1_CLK_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => DI1_CLK_TimingDatash,
-        Violation => tviol_DI1_CLK,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => DI0_dly,
-        TestSignalName => "DI0",
-        TestDelay => tisd_DI0_CLK,
-        RefSignal => CLK_dly,
-        RefSignalName => "CLK",
-        RefDelay => ticd_CLK,
-        SetupHigh => tsetup_DI0_CLK_noedge_negedge,
-        SetupLow => tsetup_DI0_CLK_noedge_negedge,
-        HoldHigh => thold_DI0_CLK_noedge_negedge,
-        HoldLow => thold_DI0_CLK_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => DI0_CLK_TimingDatash,
-        Violation => tviol_DI0_CLK,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => LSR_dly,
-        TestSignalName => "LSR",
-        TestDelay => tisd_LSR_CLK,
-        RefSignal => CLK_dly,
-        RefSignalName => "CLK",
-        RefDelay => ticd_CLK,
-        SetupHigh => tsetup_LSR_CLK_noedge_negedge,
-        SetupLow => tsetup_LSR_CLK_noedge_negedge,
-        HoldHigh => thold_LSR_CLK_noedge_negedge,
-        HoldLow => thold_LSR_CLK_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => LSR_CLK_TimingDatash,
-        Violation => tviol_LSR_CLK,
-        MsgSeverity => warning);
-      VitalPeriodPulseCheck (
-        TestSignal => LSR_ipd,
-        TestSignalName => "LSR",
-        Period => tperiod_LSR,
-        PulseWidthHigh => tpw_LSR_posedge,
-        PulseWidthLow => tpw_LSR_negedge,
-        PeriodData => periodcheckinfo_LSR,
-        Violation => tviol_LSR_LSR,
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        CheckEnabled => TRUE,
-        MsgSeverity => warning);
-      VitalPeriodPulseCheck (
-        TestSignal => CLK_ipd,
-        TestSignalName => "CLK",
-        Period => tperiod_CLK,
-        PulseWidthHigh => tpw_CLK_posedge,
-        PulseWidthLow => tpw_CLK_negedge,
-        PeriodData => periodcheckinfo_CLK,
-        Violation => tviol_CLK_CLK,
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        CheckEnabled => TRUE,
-        MsgSeverity => warning);
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    Q0_zd 	:= Q0_out;
-    F1_zd 	:= F1_out;
-    Q1_zd 	:= Q1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => Q0, OutSignalName => "Q0", OutTemp => Q0_zd,
-      Paths      => (0 => (InputChangeTime => CLK_dly'last_event,
-                           PathDelay => tpd_CLK_Q0,
-                           PathCondition => TRUE)),
-      GlitchData => Q0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => Q1, OutSignalName => "Q1", OutTemp => Q1_zd,
-      Paths      => (0 => (InputChangeTime => CLK_dly'last_event,
-                           PathDelay => tpd_CLK_Q1,
-                           PathCondition => TRUE)),
-      GlitchData => Q1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40011
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40011 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40011 : ENTITY IS TRUE;
-
-  end lut40011;
-
-  architecture Structure of lut40011 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"FFAA")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40012
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40012 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40012 : ENTITY IS TRUE;
-
-  end lut40012;
-
-  architecture Structure of lut40012 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"AAFF")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_14
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_14 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_14";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tperiod_LSR 	: VitalDelayType := 0 ns;
-      tpw_LSR_posedge	: VitalDelayType := 0 ns;
-      tpw_LSR_negedge	: VitalDelayType := 0 ns;
-      tperiod_CLK 	: VitalDelayType := 0 ns;
-      tpw_CLK_posedge	: VitalDelayType := 0 ns;
-      tpw_CLK_negedge	: VitalDelayType := 0 ns;
-      ticd_CLK	: VitalDelayType := 0 ns;
-      tisd_DI1_CLK	: VitalDelayType := 0 ns;
-      tsetup_DI1_CLK_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_DI1_CLK_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_DI0_CLK	: VitalDelayType := 0 ns;
-      tsetup_DI0_CLK_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_DI0_CLK_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_LSR_CLK	: VitalDelayType := 0 ns;
-      tsetup_LSR_CLK_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_LSR_CLK_noedge_negedge	: VitalDelayType := 0 ns);
-
-    port (D1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
-          A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
-          LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
-          Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_14 : ENTITY IS TRUE;
-
-  end SLICE_14;
-
-  architecture Structure of SLICE_14 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
-    signal DI1_ipd 	: std_logic := 'X';
-    signal DI1_dly 	: std_logic := 'X';
-    signal DI0_ipd 	: std_logic := 'X';
-    signal DI0_dly 	: std_logic := 'X';
-    signal LSR_ipd 	: std_logic := 'X';
-    signal LSR_dly 	: std_logic := 'X';
-    signal CLK_ipd 	: std_logic := 'X';
-    signal CLK_dly 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal Q0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-    signal Q1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    signal VCCI: Std_logic;
-    signal CLK_NOTIN: Std_logic;
-    component vcc
-      port (PWR1: out Std_logic);
-    end component;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component vmuxregsre0004
-      port (D0: in Std_logic; D1: in Std_logic; SD: in Std_logic; 
-            SP: in Std_logic; CK: in Std_logic; LSR: in Std_logic; 
-            Q: out Std_logic);
-    end component;
-    component inverter
-      port (I: in Std_logic; Z: out Std_logic);
-    end component;
-    component lut40011
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40012
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i1_2_lut_rep_45: lut40011
-      port map (A=>A1_ipd, B=>GNDI, C=>GNDI, D=>D1_ipd, Z=>F1_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-    i1898_2_lut_rep_48: lut40012
-      port map (A=>A0_ipd, B=>GNDI, C=>GNDI, D=>D0_ipd, Z=>F0_out);
-    ROW_i4: vmuxregsre0004
-      port map (D0=>VCCI, D1=>DI1_dly, SD=>VCCI, SP=>VCCI, CK=>CLK_NOTIN, 
-                LSR=>LSR_dly, Q=>Q1_out);
-    DRIVEVCC: vcc
-      port map (PWR1=>VCCI);
-    CLK_INVERTERIN: inverter
-      port map (I=>CLK_dly, Z=>CLK_NOTIN);
-    ROW_i3: vmuxregsre0004
-      port map (D0=>VCCI, D1=>DI0_dly, SD=>VCCI, SP=>VCCI, CK=>CLK_NOTIN, 
-                LSR=>LSR_dly, Q=>Q0_out);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
       VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
       VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
       VitalWireDelay(LSR_ipd, LSR, tipd_LSR);
@@ -3541,7 +3210,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, A1_ipd, D0_ipd, A0_ipd, DI1_dly, DI0_dly, 
+    VitalBehavior : PROCESS (D1_ipd, B1_ipd, D0_ipd, B0_ipd, DI1_dly, DI0_dly, 
       LSR_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -3657,8 +3326,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -3673,6 +3342,337 @@
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
       Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
                            PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => Q1, OutSignalName => "Q1", OutTemp => Q1_zd,
+      Paths      => (0 => (InputChangeTime => CLK_dly'last_event,
+                           PathDelay => tpd_CLK_Q1,
+                           PathCondition => TRUE)),
+      GlitchData => Q1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40011
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40011 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40011 : ENTITY IS TRUE;
+
+  end lut40011;
+
+  architecture Structure of lut40011 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"FAFA")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40012
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40012 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40012 : ENTITY IS TRUE;
+
+  end lut40012;
+
+  architecture Structure of lut40012 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"F5F5")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_14
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_14 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_14";
+
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_LSR 	: VitalDelayType := 0 ns;
+      tpw_LSR_posedge	: VitalDelayType := 0 ns;
+      tpw_LSR_negedge	: VitalDelayType := 0 ns;
+      tperiod_CLK 	: VitalDelayType := 0 ns;
+      tpw_CLK_posedge	: VitalDelayType := 0 ns;
+      tpw_CLK_negedge	: VitalDelayType := 0 ns;
+      ticd_CLK	: VitalDelayType := 0 ns;
+      tisd_DI1_CLK	: VitalDelayType := 0 ns;
+      tsetup_DI1_CLK_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_DI1_CLK_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_DI0_CLK	: VitalDelayType := 0 ns;
+      tsetup_DI0_CLK_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_DI0_CLK_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_LSR_CLK	: VitalDelayType := 0 ns;
+      tsetup_LSR_CLK_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_LSR_CLK_noedge_negedge	: VitalDelayType := 0 ns);
+
+    port (C1: in Std_logic; A1: in Std_logic; C0: in Std_logic; 
+          A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
+          LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
+          Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_14 : ENTITY IS TRUE;
+
+  end SLICE_14;
+
+  architecture Structure of SLICE_14 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal C1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
+    signal DI1_ipd 	: std_logic := 'X';
+    signal DI1_dly 	: std_logic := 'X';
+    signal DI0_ipd 	: std_logic := 'X';
+    signal DI0_dly 	: std_logic := 'X';
+    signal LSR_ipd 	: std_logic := 'X';
+    signal LSR_dly 	: std_logic := 'X';
+    signal CLK_ipd 	: std_logic := 'X';
+    signal CLK_dly 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal Q0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+    signal Q1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    signal VCCI: Std_logic;
+    signal CLK_NOTIN: Std_logic;
+    component vcc
+      port (PWR1: out Std_logic);
+    end component;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component vmuxregsre0004
+      port (D0: in Std_logic; D1: in Std_logic; SD: in Std_logic; 
+            SP: in Std_logic; CK: in Std_logic; LSR: in Std_logic; 
+            Q: out Std_logic);
+    end component;
+    component inverter
+      port (I: in Std_logic; Z: out Std_logic);
+    end component;
+    component lut40011
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40012
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i1_2_lut_rep_45: lut40011
+      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>GNDI, Z=>F1_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+    i1898_2_lut_rep_48: lut40012
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>GNDI, Z=>F0_out);
+    ROW_i4: vmuxregsre0004
+      port map (D0=>VCCI, D1=>DI1_dly, SD=>VCCI, SP=>VCCI, CK=>CLK_NOTIN, 
+                LSR=>LSR_dly, Q=>Q1_out);
+    DRIVEVCC: vcc
+      port map (PWR1=>VCCI);
+    CLK_INVERTERIN: inverter
+      port map (I=>CLK_dly, Z=>CLK_NOTIN);
+    ROW_i3: vmuxregsre0004
+      port map (D0=>VCCI, D1=>DI0_dly, SD=>VCCI, SP=>VCCI, CK=>CLK_NOTIN, 
+                LSR=>LSR_dly, Q=>Q0_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
+      VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
+      VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
+      VitalWireDelay(LSR_ipd, LSR, tipd_LSR);
+      VitalWireDelay(CLK_ipd, CLK, tipd_CLK);
+    END BLOCK;
+
+    --  Setup and Hold DELAYs
+    SignalDelay : BLOCK
+    BEGIN
+      VitalSignalDelay(DI1_dly, DI1_ipd, tisd_DI1_CLK);
+      VitalSignalDelay(DI0_dly, DI0_ipd, tisd_DI0_CLK);
+      VitalSignalDelay(LSR_dly, LSR_ipd, tisd_LSR_CLK);
+      VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (C1_ipd, A1_ipd, C0_ipd, A0_ipd, DI1_dly, DI0_dly, 
+      LSR_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE Q0_zd         	: std_logic := 'X';
+    VARIABLE Q0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+    VARIABLE Q1_zd         	: std_logic := 'X';
+    VARIABLE Q1_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_DI1_CLK       	: x01 := '0';
+    VARIABLE DI1_CLK_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_DI0_CLK       	: x01 := '0';
+    VARIABLE DI0_CLK_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_LSR_CLK       	: x01 := '0';
+    VARIABLE LSR_CLK_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_LSR_LSR          	: x01 := '0';
+    VARIABLE periodcheckinfo_LSR	: VitalPeriodDataType;
+    VARIABLE tviol_CLK_CLK          	: x01 := '0';
+    VARIABLE periodcheckinfo_CLK	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalSetupHoldCheck (
+        TestSignal => DI1_dly,
+        TestSignalName => "DI1",
+        TestDelay => tisd_DI1_CLK,
+        RefSignal => CLK_dly,
+        RefSignalName => "CLK",
+        RefDelay => ticd_CLK,
+        SetupHigh => tsetup_DI1_CLK_noedge_negedge,
+        SetupLow => tsetup_DI1_CLK_noedge_negedge,
+        HoldHigh => thold_DI1_CLK_noedge_negedge,
+        HoldLow => thold_DI1_CLK_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DI1_CLK_TimingDatash,
+        Violation => tviol_DI1_CLK,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => DI0_dly,
+        TestSignalName => "DI0",
+        TestDelay => tisd_DI0_CLK,
+        RefSignal => CLK_dly,
+        RefSignalName => "CLK",
+        RefDelay => ticd_CLK,
+        SetupHigh => tsetup_DI0_CLK_noedge_negedge,
+        SetupLow => tsetup_DI0_CLK_noedge_negedge,
+        HoldHigh => thold_DI0_CLK_noedge_negedge,
+        HoldLow => thold_DI0_CLK_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DI0_CLK_TimingDatash,
+        Violation => tviol_DI0_CLK,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => LSR_dly,
+        TestSignalName => "LSR",
+        TestDelay => tisd_LSR_CLK,
+        RefSignal => CLK_dly,
+        RefSignalName => "CLK",
+        RefDelay => ticd_CLK,
+        SetupHigh => tsetup_LSR_CLK_noedge_negedge,
+        SetupLow => tsetup_LSR_CLK_noedge_negedge,
+        HoldHigh => thold_LSR_CLK_noedge_negedge,
+        HoldLow => thold_LSR_CLK_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => LSR_CLK_TimingDatash,
+        Violation => tviol_LSR_CLK,
+        MsgSeverity => warning);
+      VitalPeriodPulseCheck (
+        TestSignal => LSR_ipd,
+        TestSignalName => "LSR",
+        Period => tperiod_LSR,
+        PulseWidthHigh => tpw_LSR_posedge,
+        PulseWidthLow => tpw_LSR_negedge,
+        PeriodData => periodcheckinfo_LSR,
+        Violation => tviol_LSR_LSR,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+      VitalPeriodPulseCheck (
+        TestSignal => CLK_ipd,
+        TestSignalName => "CLK",
+        Period => tperiod_CLK,
+        PulseWidthHigh => tpw_CLK_posedge,
+        PulseWidthLow => tpw_CLK_negedge,
+        PeriodData => periodcheckinfo_CLK,
+        Violation => tviol_CLK_CLK,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    Q0_zd 	:= Q0_out;
+    F1_zd 	:= F1_out;
+    Q1_zd 	:= Q1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => Q0, OutSignalName => "Q0", OutTemp => Q0_zd,
+      Paths      => (0 => (InputChangeTime => CLK_dly'last_event,
+                           PathDelay => tpd_CLK_Q0,
+                           PathCondition => TRUE)),
+      GlitchData => Q0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
                            PathCondition => TRUE),
                      1 => (InputChangeTime => A1_ipd'last_event,
                            PathDelay => tpd_A1_F1,
@@ -3708,7 +3708,7 @@
   architecture Structure of lut40013 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FF3F")
+      generic map (initval => X"F5FF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -3729,7 +3729,7 @@
   architecture Structure of lut40014 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FF7F")
+      generic map (initval => X"F7FF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -3749,7 +3749,7 @@
 
       tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -3760,7 +3760,7 @@
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -3781,7 +3781,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+    port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
           D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
           A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
           CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
@@ -3796,7 +3796,7 @@
 
     signal D1_ipd 	: std_logic := 'X';
     signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
     signal B0_ipd 	: std_logic := 'X';
@@ -3837,7 +3837,7 @@
     end component;
   begin
     i1907_2_lut_2_lut_3_lut: lut40013
-      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i1914_4_lut: lut40014
@@ -3856,7 +3856,7 @@
     BEGIN
       VitalWireDelay(D1_ipd, D1, tipd_D1);
       VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(B0_ipd, B0, tipd_B0);
@@ -3876,7 +3876,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, D0_ipd, C0_ipd, B0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, 
       A0_ipd, DI1_dly, DI0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, 
       Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
@@ -4005,8 +4005,8 @@
                      1 => (InputChangeTime => C1_ipd'last_event,
                            PathDelay => tpd_C1_F1,
                            PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
+                     2 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -4039,7 +4039,7 @@
   architecture Structure of lut40015 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"80FF")
+      generic map (initval => X"B333")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -4060,7 +4060,7 @@
   architecture Structure of lut40016 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"BFFF")
+      generic map (initval => X"FF7F")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -4378,7 +4378,7 @@
   architecture Structure of lut40017 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"F7F3")
+      generic map (initval => X"FF5D")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -4399,7 +4399,7 @@
   architecture Structure of lut40018 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FAFF")
+      generic map (initval => X"FFDD")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -4422,7 +4422,7 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -4433,7 +4433,7 @@
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -4452,7 +4452,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
           A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
           CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
           Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
@@ -4469,7 +4469,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal DI1_ipd 	: std_logic := 'X';
     signal DI1_dly 	: std_logic := 'X';
@@ -4509,7 +4509,7 @@
     i1_4_lut_adj_2: lut40017
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     i2_3_lut_adj_11: lut40018
-      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     a_to_g_i0_i6: vmuxregsre
@@ -4529,7 +4529,7 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
       VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
@@ -4546,7 +4546,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, 
       A0_ipd, DI1_dly, DI0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, 
       Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
@@ -4649,8 +4649,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -4709,7 +4709,7 @@
   architecture Structure of lut40019 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"A5FF")
+      generic map (initval => X"B7B7")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -4730,7 +4730,7 @@
   architecture Structure of lut40020 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FFBB")
+      generic map (initval => X"FFF3")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -4748,21 +4748,21 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_18";
 
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       ticd_CLK	: VitalDelayType := 0 ns;
       tisd_DI0_CLK	: VitalDelayType := 0 ns;
@@ -4775,8 +4775,8 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
-          D0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
+    port (C1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
+          D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
           DI0: in Std_logic; CE: in Std_logic; CLK: in Std_logic; 
           F0: out Std_logic; Q0: out Std_logic; F1: out Std_logic);
 
@@ -4787,12 +4787,12 @@
   architecture Structure of SLICE_18 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal D1_ipd 	: std_logic := 'X';
     signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
     signal DI0_ipd 	: std_logic := 'X';
     signal DI0_dly 	: std_logic := 'X';
     signal CE_ipd 	: std_logic := 'X';
@@ -4826,11 +4826,11 @@
     end component;
   begin
     i1014_3_lut_rep_30_4_lut_3_lut: lut40019
-      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i1911_3_lut: lut40020
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     a_to_g_i0_i7: vmuxregsre
       port map (D0=>VCCI, D1=>DI0_dly, SD=>VCCI, SP=>CE_dly, CK=>CLK_dly, 
                 LSR=>GNDI, Q=>Q0_out);
@@ -4840,12 +4840,12 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
       VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
       VitalWireDelay(CE_ipd, CE, tipd_CE);
       VitalWireDelay(CLK_ipd, CLK, tipd_CLK);
@@ -4859,7 +4859,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, A1_ipd, D0_ipd, B0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, 
       DI0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -4938,11 +4938,11 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
-                     2 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -4955,11 +4955,11 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
                            PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A1_ipd'last_event,
                            PathDelay => tpd_A1_F1,
@@ -5247,7 +5247,7 @@
   architecture Structure of lut40023 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0FF0")
+      generic map (initval => X"6666")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -5265,14 +5265,14 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_28";
 
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
       ticd_CLK	: VitalDelayType := 0 ns;
@@ -5289,7 +5289,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (D0: in Std_logic; C0: in Std_logic; M1: in Std_logic; 
+    port (B0: in Std_logic; A0: in Std_logic; M1: in Std_logic; 
           M0: in Std_logic; CE: in Std_logic; CLK: in Std_logic; 
           F0: out Std_logic; Q0: out Std_logic; F1: out Std_logic; 
           Q1: out Std_logic);
@@ -5301,8 +5301,8 @@
   architecture Structure of SLICE_28 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
     signal M1_dly 	: std_logic := 'X';
     signal M0_ipd 	: std_logic := 'X';
@@ -5343,7 +5343,7 @@
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i41_2_lut: lut40023
-      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>GNDI, Z=>F0_out);
     led_four_i0_i2: vmuxregsre
       port map (D0=>M1_dly, D1=>VCCI, SD=>GNDI, SP=>CE_dly, CK=>CLK_dly, 
                 LSR=>GNDI, Q=>Q1_out);
@@ -5356,8 +5356,8 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
       VitalWireDelay(M0_ipd, M0, tipd_M0);
       VitalWireDelay(CE_ipd, CE, tipd_CE);
@@ -5373,7 +5373,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D0_ipd, C0_ipd, M1_dly, M0_dly, CE_dly, CLK_dly, 
+    VitalBehavior : PROCESS (B0_ipd, A0_ipd, M1_dly, M0_dly, CE_dly, CLK_dly, 
       F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -5470,11 +5470,11 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
+      Paths      => (0 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+                     1 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -5514,28 +5514,7 @@
   architecture Structure of lut40024 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"C0C0")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40025
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40025 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40025 : ENTITY IS TRUE;
-
-  end lut40025;
-
-  architecture Structure of lut40025 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"55AA")
+      generic map (initval => X"8888")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -5553,16 +5532,16 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_29";
 
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -5581,7 +5560,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (C1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+    port (B1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
           A0: in Std_logic; M1: in Std_logic; M0: in Std_logic; 
           CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
           Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
@@ -5593,8 +5572,8 @@
   architecture Structure of SLICE_29 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
@@ -5623,20 +5602,20 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40024
+    component lut4
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40025
+    component lut40024
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
     i1854_2_lut: lut40024
-      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>GNDI, Z=>F1_out);
+      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i28_2_lut: lut40025
+    i28_2_lut: lut4
       port map (A=>A0_ipd, B=>GNDI, C=>GNDI, D=>D0_ipd, Z=>F0_out);
     led_four_i0_i4: vmuxregsre
       port map (D0=>M1_dly, D1=>VCCI, SD=>GNDI, SP=>CE_dly, CK=>CLK_dly, 
@@ -5650,8 +5629,8 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
@@ -5669,7 +5648,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (C1_ipd, B1_ipd, D0_ipd, A0_ipd, M1_dly, M0_dly, 
+    VitalBehavior : PROCESS (B1_ipd, A1_ipd, D0_ipd, A0_ipd, M1_dly, M0_dly, 
       CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -5785,11 +5764,11 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => B1_ipd'last_event,
+      Paths      => (0 => (InputChangeTime => B1_ipd'last_event,
                            PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -5803,6 +5782,27 @@
 
     END PROCESS;
 
+  end Structure;
+
+-- entity lut40025
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40025 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40025 : ENTITY IS TRUE;
+
+  end lut40025;
+
+  architecture Structure of lut40025 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"0044")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
 -- entity lut40026
@@ -5822,7 +5822,7 @@
   architecture Structure of lut40026 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0022")
+      generic map (initval => X"5A5A")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -5843,7 +5843,7 @@
       tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -5851,7 +5851,7 @@
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       ticd_CLK	: VitalDelayType := 0 ns;
@@ -5869,7 +5869,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
-          D0: in Std_logic; A0: in Std_logic; DI0: in Std_logic; 
+          C0: in Std_logic; A0: in Std_logic; DI0: in Std_logic; 
           LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
           Q0: out Std_logic; F1: out Std_logic);
 
@@ -5883,7 +5883,7 @@
     signal D1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal DI0_ipd 	: std_logic := 'X';
     signal DI0_dly 	: std_logic := 'X';
@@ -5917,12 +5917,12 @@
             Z: out Std_logic);
     end component;
   begin
-    i1_2_lut_3_lut_adj_9: lut40026
+    i1_2_lut_3_lut_adj_9: lut40025
       port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i1878_2_lut: lut40025
-      port map (A=>A0_ipd, B=>GNDI, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+    i1878_2_lut: lut40026
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>GNDI, Z=>F0_out);
     num_cnt_i0: vmuxregsre0004
       port map (D0=>VCCI, D1=>DI0_dly, SD=>VCCI, SP=>VCCI, CK=>CLK_dly, 
                 LSR=>LSR_dly, Q=>Q0_out);
@@ -5935,7 +5935,7 @@
       VitalWireDelay(D1_ipd, D1, tipd_D1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
       VitalWireDelay(LSR_ipd, LSR, tipd_LSR);
@@ -5950,7 +5950,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, B1_ipd, A1_ipd, D0_ipd, A0_ipd, DI0_dly, 
+    VitalBehavior : PROCESS (D1_ipd, B1_ipd, A1_ipd, C0_ipd, A0_ipd, DI0_dly, 
       LSR_dly, CLK_dly, F0_out, Q0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -6040,8 +6040,8 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
                      1 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -6090,7 +6090,7 @@
   architecture Structure of lut40027 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"7788")
+      generic map (initval => X"5AAA")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -6111,7 +6111,7 @@
   architecture Structure of lut40028 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"6666")
+      generic map (initval => X"5A5A")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -6130,9 +6130,9 @@
       InstancePath  	: string := "SLICE_31";
 
       tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_DI0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -6140,9 +6140,9 @@
       tipd_LSR  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -6166,8 +6166,8 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (D1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
-          B0: in Std_logic; A0: in Std_logic; DI1: in Std_logic; 
+    port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
+          C0: in Std_logic; A0: in Std_logic; DI1: in Std_logic; 
           DI0: in Std_logic; CE: in Std_logic; LSR: in Std_logic; 
           CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
           F1: out Std_logic; Q1: out Std_logic);
@@ -6180,9 +6180,9 @@
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
     signal D1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal DI1_ipd 	: std_logic := 'X';
     signal DI1_dly 	: std_logic := 'X';
@@ -6222,11 +6222,11 @@
     end component;
   begin
     i15_2_lut_3_lut: lut40027
-      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>D1_ipd, Z=>F1_out);
+      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     i15_2_lut: lut40028
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>GNDI, Z=>F0_out);
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>GNDI, Z=>F0_out);
     num_cnt_i2: vmuxregsre0004
       port map (D0=>VCCI, D1=>DI1_dly, SD=>VCCI, SP=>CE_dly, CK=>CLK_dly, 
                 LSR=>LSR_dly, Q=>Q1_out);
@@ -6240,9 +6240,9 @@
     WireDelay : BLOCK
     BEGIN
       VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(DI1_ipd, DI1, tipd_DI1);
       VitalWireDelay(DI0_ipd, DI0, tipd_DI0);
@@ -6261,7 +6261,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, B1_ipd, A1_ipd, B0_ipd, A0_ipd, DI1_dly, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, A1_ipd, C0_ipd, A0_ipd, DI1_dly, 
       DI0_dly, CE_dly, LSR_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -6394,8 +6394,8 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
                      1 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -6414,8 +6414,8 @@
       Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
                            PathDelay => tpd_D1_F1,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A1_ipd'last_event,
                            PathDelay => tpd_A1_F1,
@@ -6451,7 +6451,7 @@
   architecture Structure of lut40029 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"2000")
+      generic map (initval => X"0080")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -6846,7 +6846,7 @@
   architecture Structure of lut40033 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"8F0F")
+      generic map (initval => X"D555")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -7185,7 +7185,7 @@
   architecture Structure of lut40035 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"A8A0")
+      generic map (initval => X"E0C0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -7366,27 +7366,6 @@
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
--- entity lut40038
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40038 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40038 : ENTITY IS TRUE;
-
-  end lut40038;
-
-  architecture Structure of lut40038 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
 -- entity SLICE_36
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -7441,18 +7420,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40037
+    component lut40036
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40038
+    component lut40037
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
     i1_2_lut_rep_33_3_lut_4_lut: lut40037
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i3_4_lut: lut40038
+    i3_4_lut: lut40036
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -7522,6 +7501,27 @@
 
   end Structure;
 
+-- entity lut40038
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40038 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40038 : ENTITY IS TRUE;
+
+  end lut40038;
+
+  architecture Structure of lut40038 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"FFDE")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
 -- entity lut40039
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -7539,28 +7539,7 @@
   architecture Structure of lut40039 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FFDE")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40040
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40040 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40040 : ENTITY IS TRUE;
-
-  end lut40040;
-
-  architecture Structure of lut40040 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"F5F5")
+      generic map (initval => X"F0FF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -7582,17 +7561,17 @@
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; C0: in Std_logic; A0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_37 : ENTITY IS TRUE;
@@ -7606,8 +7585,8 @@
     signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
@@ -7615,19 +7594,19 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
+    component lut40038
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
     component lut40039
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40040
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
   begin
-    i3_4_lut_rep_39: lut40039
+    i3_4_lut_rep_39: lut40038
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut: lut40040
-      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>GNDI, Z=>F0_out);
+    i1_2_lut: lut40039
+      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -7638,11 +7617,11 @@
       VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, C0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -7661,11 +7640,11 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -7690,6 +7669,27 @@
 
   end Structure;
 
+-- entity lut40040
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40040 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40040 : ENTITY IS TRUE;
+
+  end lut40040;
+
+  architecture Structure of lut40040 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
 -- entity lut40041
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -7707,7 +7707,7 @@
   architecture Structure of lut40041 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"8000")
+      generic map (initval => X"F000")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -7730,16 +7730,16 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_38 : ENTITY IS TRUE;
@@ -7754,7 +7754,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
@@ -7762,7 +7762,7 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40007
+    component lut40040
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
@@ -7771,10 +7771,10 @@
             Z: out Std_logic);
     end component;
   begin
-    i1_2_lut_3_lut_4_lut_adj_50: lut40041
+    i1_2_lut_3_lut_4_lut_adj_50: lut40040
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_rep_43: lut40007
-      port map (A=>GNDI, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+    i1_2_lut_rep_43: lut40041
+      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -7786,10 +7786,10 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -7811,8 +7811,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -7854,7 +7854,7 @@
   architecture Structure of lut40042 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"80A0")
+      generic map (initval => X"8808")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -7875,7 +7875,7 @@
   architecture Structure of lut40043 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FF5F")
+      generic map (initval => X"BFBF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -7897,19 +7897,19 @@
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
           A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_39 : ENTITY IS TRUE;
@@ -7923,8 +7923,8 @@
     signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
@@ -7945,7 +7945,7 @@
     i2_4_lut_adj_47: lut40042
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     i2_3_lut: lut40043
-      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>GNDI, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -7956,12 +7956,12 @@
       VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, C0_ipd, B0_ipd, 
       A0_ipd, F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -7980,11 +7980,11 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
                            PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -8225,7 +8225,7 @@
   architecture Structure of lut40047 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"F000")
+      generic map (initval => X"A0A0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -8247,17 +8247,17 @@
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          A1: in Std_logic; C0: in Std_logic; A0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_41 : ENTITY IS TRUE;
@@ -8271,8 +8271,8 @@
     signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
@@ -8292,7 +8292,7 @@
     i1_4_lut_adj_48: lut40046
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     i1_2_lut_rep_44: lut40047
-      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>GNDI, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -8303,11 +8303,11 @@
       VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, C0_ipd, A0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -8326,11 +8326,11 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
                            PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -8372,7 +8372,7 @@
   architecture Structure of lut40048 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"88F8")
+      generic map (initval => X"F222")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -8395,7 +8395,7 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -8405,7 +8405,7 @@
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
       ticd_CLK	: VitalDelayType := 0 ns;
@@ -8423,7 +8423,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
           M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
           CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
           F1: out Std_logic; Q1: out Std_logic);
@@ -8440,7 +8440,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
     signal M1_dly 	: std_logic := 'X';
     signal M0_ipd 	: std_logic := 'X';
@@ -8467,7 +8467,7 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40007
+    component lut40041
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
@@ -8478,8 +8478,8 @@
   begin
     i1_4_lut_adj_40: lut40048
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1852_2_lut_rep_28: lut40007
-      port map (A=>GNDI, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+    i1852_2_lut_rep_28: lut40041
+      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     key_out_i13: vmuxregsre
@@ -8499,7 +8499,7 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
       VitalWireDelay(M0_ipd, M0, tipd_M0);
       VitalWireDelay(CE_ipd, CE, tipd_CE);
@@ -8515,7 +8515,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
       M1_dly, M0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -8617,8 +8617,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -8674,7 +8674,7 @@
   architecture Structure of lut40049 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"C8C0")
+      generic map (initval => X"E0A0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -8695,7 +8695,7 @@
   architecture Structure of lut40050 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"A000")
+      generic map (initval => X"C000")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -8719,18 +8719,18 @@
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
           A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-          A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+          B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_43 : ENTITY IS TRUE;
 
@@ -8745,7 +8745,7 @@
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
@@ -8765,7 +8765,7 @@
     i1_4_lut_adj_16: lut40049
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     i1_2_lut_3_lut_adj_1: lut40050
-      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -8778,11 +8778,11 @@
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
     END BLOCK;
 
     VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
-      A0_ipd, F0_out, F1_out)
+      B0_ipd, F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
     VARIABLE F1_zd         	: std_logic := 'X';
@@ -8806,8 +8806,8 @@
                      1 => (InputChangeTime => C0_ipd'last_event,
                            PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
-                     2 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -8849,7 +8849,28 @@
   architecture Structure of lut40051 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"DF00")
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40052
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40052 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40052 : ENTITY IS TRUE;
+
+  end lut40052;
+
+  architecture Structure of lut40052 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"CC4C")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -8907,18 +8928,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40038
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
     component lut40051
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
+    component lut40052
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
   begin
-    i3_4_lut_adj_31: lut40038
+    i3_4_lut_adj_31: lut40051
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i956_3_lut_4_lut: lut40051
+    i956_3_lut_4_lut: lut40052
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -8988,27 +9009,6 @@
 
   end Structure;
 
--- entity lut40052
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40052 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40052 : ENTITY IS TRUE;
-
-  end lut40052;
-
-  architecture Structure of lut40052 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
 -- entity lut40053
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -9026,7 +9026,7 @@
   architecture Structure of lut40053 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"AA00")
+      generic map (initval => X"C0C0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -9048,8 +9048,8 @@
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -9058,8 +9058,8 @@
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
       ticd_CLK	: VitalDelayType := 0 ns;
@@ -9077,7 +9077,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; A0: in Std_logic; 
+          A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
           M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
           CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
           F1: out Std_logic; Q1: out Std_logic);
@@ -9093,8 +9093,8 @@
     signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
     signal M1_dly 	: std_logic := 'X';
     signal M0_ipd 	: std_logic := 'X';
@@ -9121,7 +9121,7 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40052
+    component lut40040
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
@@ -9130,10 +9130,10 @@
             Z: out Std_logic);
     end component;
   begin
-    i3_4_lut_adj_18: lut40052
+    i3_4_lut_adj_18: lut40040
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     seg_c_bdd_2_lut_1946: lut40053
-      port map (A=>A0_ipd, B=>GNDI, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>GNDI, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     key_out_i11: vmuxregsre
@@ -9152,8 +9152,8 @@
       VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
       VitalWireDelay(M0_ipd, M0, tipd_M0);
       VitalWireDelay(CE_ipd, CE, tipd_CE);
@@ -9169,7 +9169,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, C0_ipd, B0_ipd, 
       M1_dly, M0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -9268,11 +9268,11 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -9328,7 +9328,7 @@
   architecture Structure of lut40054 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"A000")
+      generic map (initval => X"8080")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -9349,7 +9349,7 @@
   architecture Structure of lut40055 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"4A40")
+      generic map (initval => X"6240")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -9367,8 +9367,8 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_46";
 
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -9378,8 +9378,8 @@
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -9401,7 +9401,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
+    port (C1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
           D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
           A0: in Std_logic; M1: in Std_logic; M0: in Std_logic; 
           CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
@@ -9414,8 +9414,8 @@
   architecture Structure of SLICE_46 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal D1_ipd 	: std_logic := 'X';
     signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
@@ -9457,7 +9457,7 @@
     end component;
   begin
     i1_2_lut_rep_37_3_lut: lut40054
-      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     n2036_bdd_4_lut_1945: lut40055
@@ -9474,8 +9474,8 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
       VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
@@ -9496,7 +9496,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, 
+    VitalBehavior : PROCESS (C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, 
       A0_ipd, M1_dly, M0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -9618,11 +9618,11 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
                            PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A1_ipd'last_event,
                            PathDelay => tpd_A1_F1,
@@ -9658,7 +9658,7 @@
   architecture Structure of lut40056 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0080")
+      generic map (initval => X"4000")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -9679,7 +9679,7 @@
   architecture Structure of lut40057 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"1000")
+      generic map (initval => X"0020")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -9856,7 +9856,7 @@
   architecture Structure of lut40059 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0020")
+      generic map (initval => X"0400")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -10179,7 +10179,7 @@
   architecture Structure of lut40061 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FFF7")
+      generic map (initval => X"FFBF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -10658,7 +10658,7 @@
   architecture Structure of lut40064 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"EC00")
+      generic map (initval => X"F800")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -10679,7 +10679,7 @@
   architecture Structure of lut40065 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FFBF")
+      generic map (initval => X"FBFF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -10835,28 +10835,7 @@
   architecture Structure of lut40066 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40067
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40067 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40067 : ENTITY IS TRUE;
-
-  end lut40067;
-
-  architecture Structure of lut40067 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"00A0")
+      generic map (initval => X"00C0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -10880,6 +10859,687 @@
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_52 : ENTITY IS TRUE;
+
+  end SLICE_52;
+
+  architecture Structure of SLICE_52 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40044
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40066
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i2_3_lut_4_lut_adj_13: lut40044
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    i2_3_lut_adj_7: lut40066
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+      B0_ipd, F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40067
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40067 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40067 : ENTITY IS TRUE;
+
+  end lut40067;
+
+  architecture Structure of lut40067 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40068
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40068 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40068 : ENTITY IS TRUE;
+
+  end lut40068;
+
+  architecture Structure of lut40068 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_53
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_53 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_53";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          B0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
+          F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_53 : ENTITY IS TRUE;
+
+  end SLICE_53;
+
+  architecture Structure of SLICE_53 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    component lut40067
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40068
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i2_3_lut_4_lut_adj_24: lut40067
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    i1_2_lut_rep_34_3_lut_4_lut: lut40068
+      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+      B0_ipd, A0_ipd, F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40069
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40069 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40069 : ENTITY IS TRUE;
+
+  end lut40069;
+
+  architecture Structure of lut40069 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"C000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_54
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_54 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_54";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_54 : ENTITY IS TRUE;
+
+  end SLICE_54;
+
+  architecture Structure of SLICE_54 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40046
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40069
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i2_4_lut_adj_39: lut40046
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    i1_2_lut_rep_36_3_lut: lut40069
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+      B0_ipd, F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40070
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40070 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40070 : ENTITY IS TRUE;
+
+  end lut40070;
+
+  architecture Structure of lut40070 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"B0F0")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40071
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40071 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40071 : ENTITY IS TRUE;
+
+  end lut40071;
+
+  architecture Structure of lut40071 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"F3FF")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_55
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_55 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_55";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_55 : ENTITY IS TRUE;
+
+  end SLICE_55;
+
+  architecture Structure of SLICE_55 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40070
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40071
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i958_3_lut_4_lut: lut40070
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    i2_3_lut_adj_8: lut40071
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+      B0_ipd, F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40072
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40072 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40072 : ENTITY IS TRUE;
+
+  end lut40072;
+
+  architecture Structure of lut40072 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"080A")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40073
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40073 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40073 : ENTITY IS TRUE;
+
+  end lut40073;
+
+  architecture Structure of lut40073 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"0AA0")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_56
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_56 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_56";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -10893,11 +11553,11 @@
           A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
           A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF SLICE_52 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF SLICE_56 : ENTITY IS TRUE;
 
-  end SLICE_52;
+  end SLICE_56;
 
-  architecture Structure of SLICE_52 is
+  architecture Structure of SLICE_56 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
     signal D1_ipd 	: std_logic := 'X';
@@ -10914,18 +11574,18 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40066
+    component lut40072
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40067
+    component lut40073
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i2_3_lut_4_lut_adj_13: lut40066
+    i2_4_lut_adj_23: lut40072
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i2_3_lut_adj_7: lut40067
+    i1_3_lut: lut40073
       port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
@@ -10993,533 +11653,6 @@
 
   end Structure;
 
--- entity lut40068
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40068 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40068 : ENTITY IS TRUE;
-
-  end lut40068;
-
-  architecture Structure of lut40068 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40069
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40069 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40069 : ENTITY IS TRUE;
-
-  end lut40069;
-
-  architecture Structure of lut40069 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_53
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_53 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_53";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-          B0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
-          F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_53 : ENTITY IS TRUE;
-
-  end SLICE_53;
-
-  architecture Structure of SLICE_53 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    component lut40068
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40069
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i2_3_lut_4_lut_adj_24: lut40068
-      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_rep_34_3_lut_4_lut: lut40069
-      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
-      B0_ipd, A0_ipd, F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40070
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40070 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40070 : ENTITY IS TRUE;
-
-  end lut40070;
-
-  architecture Structure of lut40070 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40071
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40071 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40071 : ENTITY IS TRUE;
-
-  end lut40071;
-
-  architecture Structure of lut40071 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8080")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_54
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_54 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_54";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
-          A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_54 : ENTITY IS TRUE;
-
-  end SLICE_54;
-
-  architecture Structure of SLICE_54 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40070
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40071
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i2_4_lut_adj_39: lut40070
-      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_rep_36_3_lut: lut40071
-      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>GNDI, Z=>F0_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, C0_ipd, B0_ipd, 
-      A0_ipd, F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40072
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40072 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40072 : ENTITY IS TRUE;
-
-  end lut40072;
-
-  architecture Structure of lut40072 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"F070")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40073
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40073 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40073 : ENTITY IS TRUE;
-
-  end lut40073;
-
-  architecture Structure of lut40073 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"CFFF")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_55
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_55 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_55";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-          B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_55 : ENTITY IS TRUE;
-
-  end SLICE_55;
-
-  architecture Structure of SLICE_55 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40072
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40073
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i958_3_lut_4_lut: lut40072
-      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i2_3_lut_adj_8: lut40073
-      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
-      B0_ipd, F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
 -- entity lut40074
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -11537,7 +11670,7 @@
   architecture Structure of lut40074 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0B00")
+      generic map (initval => X"C800")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -11556,181 +11689,6 @@
   end lut40075;
 
   architecture Structure of lut40075 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"3C00")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_56
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_56 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_56";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-          B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_56 : ENTITY IS TRUE;
-
-  end SLICE_56;
-
-  architecture Structure of SLICE_56 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40074
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40075
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i2_4_lut_adj_23: lut40074
-      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_3_lut: lut40075
-      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
-      B0_ipd, F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40076
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40076 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40076 : ENTITY IS TRUE;
-
-  end lut40076;
-
-  architecture Structure of lut40076 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"E000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40077
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40077 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40077 : ENTITY IS TRUE;
-
-  end lut40077;
-
-  architecture Structure of lut40077 is
   begin
     INST10: ROM16X1A
       generic map (initval => X"FF80")
@@ -11791,18 +11749,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40076
+    component lut40074
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40077
+    component lut40075
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i3_4_lut_adj_17: lut40076
+    i3_4_lut_adj_17: lut40074
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_4_lut_adj_15: lut40077
+    i1_4_lut_adj_15: lut40075
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -11872,6 +11830,48 @@
 
   end Structure;
 
+-- entity lut40076
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40076 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40076 : ENTITY IS TRUE;
+
+  end lut40076;
+
+  architecture Structure of lut40076 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40077
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40077 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40077 : ENTITY IS TRUE;
+
+  end lut40077;
+
+  architecture Structure of lut40077 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
 -- entity SLICE_58
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -11926,18 +11926,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40037
+    component lut40076
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40044
+    component lut40077
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i4_4_lut: lut40044
+    i4_4_lut: lut40076
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_3_lut_4_lut: lut40037
+    i1_2_lut_3_lut_4_lut: lut40077
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -12024,7 +12024,7 @@
   architecture Structure of lut40078 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"F000")
+      generic map (initval => X"8000")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -12047,16 +12047,16 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_59 : ENTITY IS TRUE;
@@ -12071,7 +12071,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
@@ -12079,7 +12079,7 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40062
+    component lut40063
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
@@ -12088,10 +12088,10 @@
             Z: out Std_logic);
     end component;
   begin
-    i1860_2_lut_4_lut: lut40062
+    i1860_2_lut_4_lut: lut40078
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_rep_52: lut40078
-      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+    i1_2_lut_rep_52: lut40063
+      port map (A=>GNDI, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -12103,10 +12103,10 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -12128,8 +12128,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -12152,6 +12152,27 @@
 
     END PROCESS;
 
+  end Structure;
+
+-- entity lut40079
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40079 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40079 : ENTITY IS TRUE;
+
+  end lut40079;
+
+  architecture Structure of lut40079 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
 -- entity SLICE_60
@@ -12208,14 +12229,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40038
+    component lut40037
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40079
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i3_4_lut_adj_30: lut40038
+    i3_4_lut_adj_30: lut40079
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i2_3_lut_rep_31_4_lut: lut40038
+    i2_3_lut_rep_31_4_lut: lut40037
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -12285,27 +12310,6 @@
 
   end Structure;
 
--- entity lut40079
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40079 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40079 : ENTITY IS TRUE;
-
-  end lut40079;
-
-  architecture Structure of lut40079 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"FFFD")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
 -- entity lut40080
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -12323,7 +12327,28 @@
   architecture Structure of lut40080 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FFF0")
+      generic map (initval => X"FFEF")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40081
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40081 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40081 : ENTITY IS TRUE;
+
+  end lut40081;
+
+  architecture Structure of lut40081 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"FFCC")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -12346,16 +12371,16 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_61 : ENTITY IS TRUE;
@@ -12370,7 +12395,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
@@ -12378,19 +12403,19 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40079
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
     component lut40080
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
+    component lut40081
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
   begin
-    i7_4_lut_adj_51: lut40079
+    i7_4_lut_adj_51: lut40080
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_adj_19: lut40080
-      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+    i1_2_lut_adj_19: lut40081
+      port map (A=>GNDI, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
 
@@ -12402,10 +12427,10 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -12427,8 +12452,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -12453,27 +12478,6 @@
 
   end Structure;
 
--- entity lut40081
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40081 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40081 : ENTITY IS TRUE;
-
-  end lut40081;
-
-  architecture Structure of lut40081 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"6666")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
 -- entity lut40082
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -12491,7 +12495,7 @@
   architecture Structure of lut40082 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"8000")
+      generic map (initval => X"3C3C")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -12509,20 +12513,20 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_62";
 
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
-    port (B1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
+    port (C1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
           C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
@@ -12533,8 +12537,8 @@
   architecture Structure of SLICE_62 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
+    signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
     signal B0_ipd 	: std_logic := 'X';
@@ -12546,7 +12550,7 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40081
+    component lut40078
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
@@ -12555,25 +12559,25 @@
             Z: out Std_logic);
     end component;
   begin
-    i1875_2_lut: lut40081
-      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>GNDI, Z=>F1_out);
+    i1875_2_lut: lut40082
+      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i2_4_lut: lut40082
+    i2_4_lut: lut40078
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (B1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (C1_ipd, B1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -12608,11 +12612,11 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
+                     1 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -12638,7 +12642,7 @@
   architecture Structure of lut40083 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"6000")
+      generic map (initval => X"2800")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -12659,7 +12663,7 @@
   architecture Structure of lut40084 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"88A0")
+      generic map (initval => X"C088")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -12815,7 +12819,7 @@
   architecture Structure of lut40085 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"FF80")
+      generic map (initval => X"ECCC")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -12992,7 +12996,7 @@
   architecture Structure of lut40087 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"B7FF")
+      generic map (initval => X"DF7F")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -13050,7 +13054,7 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40069
+    component lut40079
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
@@ -13059,7 +13063,7 @@
             Z: out Std_logic);
     end component;
   begin
-    i1_2_lut_3_lut_4_lut_adj_38: lut40069
+    i1_2_lut_3_lut_4_lut_adj_38: lut40079
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     i1_4_lut_adj_22: lut40087
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
@@ -13152,27 +13156,6 @@
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
--- entity lut40089
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40089 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40089 : ENTITY IS TRUE;
-
-  end lut40089;
-
-  architecture Structure of lut40089 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
 -- entity SLICE_66
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -13227,18 +13210,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
+    component lut40044
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
     component lut40088
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40089
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
   begin
-    i1_2_lut_3_lut_4_lut_adj_35: lut40088
+    i1_2_lut_3_lut_4_lut_adj_35: lut40044
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i3_4_lut_adj_27: lut40089
+    i3_4_lut_adj_27: lut40088
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -13308,6 +13291,27 @@
 
   end Structure;
 
+-- entity lut40089
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40089 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40089 : ENTITY IS TRUE;
+
+  end lut40089;
+
+  architecture Structure of lut40089 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"0505")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
 -- entity lut40090
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
@@ -13325,7 +13329,7 @@
   architecture Structure of lut40090 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"000F")
+      generic map (initval => X"DFFF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -13342,328 +13346,6 @@
       XOn           	: boolean := FALSE;
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_67";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; D0: in Std_logic; 
-          C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
-          F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_67 : ENTITY IS TRUE;
-
-  end SLICE_67;
-
-  architecture Structure of SLICE_67 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40014
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40090
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i1887_2_lut_2_lut: lut40090
-      port map (A=>GNDI, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-    i1_4_lut_adj_29: lut40014
-      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
-      F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40091
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40091 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40091 : ENTITY IS TRUE;
-
-  end lut40091;
-
-  architecture Structure of lut40091 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"C000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40092
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40092 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40092 : ENTITY IS TRUE;
-
-  end lut40092;
-
-  architecture Structure of lut40092 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"F080")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_68
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_68 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_68";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
-          A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_68 : ENTITY IS TRUE;
-
-  end SLICE_68;
-
-  architecture Structure of SLICE_68 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40091
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40092
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i1_2_lut_3_lut_adj_42: lut40091
-      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-    i2_4_lut_adj_37: lut40092
-      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, D0_ipd, C0_ipd, B0_ipd, 
-      A0_ipd, F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40093
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40093 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40093 : ENTITY IS TRUE;
-
-  end lut40093;
-
-  architecture Structure of lut40093 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"A0A0")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_69
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_69 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_69";
 
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -13682,11 +13364,11 @@
           C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF SLICE_69 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF SLICE_67 : ENTITY IS TRUE;
 
-  end SLICE_69;
+  end SLICE_67;
 
-  architecture Structure of SLICE_69 is
+  architecture Structure of SLICE_67 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
     signal C1_ipd 	: std_logic := 'X';
@@ -13702,20 +13384,20 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40069
+    component lut40089
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40093
+    component lut40090
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1_rep_15_2_lut: lut40093
+    i1887_2_lut_2_lut: lut40089
       port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i2_4_lut_adj_43: lut40069
+    i1_4_lut_adj_29: lut40090
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -13777,21 +13459,322 @@
 
   end Structure;
 
--- entity lut40094
+-- entity lut40091
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40094 is
+  entity lut40091 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40094 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40091 : ENTITY IS TRUE;
 
-  end lut40094;
+  end lut40091;
 
-  architecture Structure of lut40094 is
+  architecture Structure of lut40091 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"8080")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40092
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40092 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40092 : ENTITY IS TRUE;
+
+  end lut40092;
+
+  architecture Structure of lut40092 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"E0C0")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_68
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_68 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_68";
+
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (C1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
+          D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
+          A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_68 : ENTITY IS TRUE;
+
+  end SLICE_68;
+
+  architecture Structure of SLICE_68 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40091
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40092
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i1_2_lut_3_lut_adj_42: lut40091
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>GNDI, Z=>F1_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+    i2_4_lut_adj_37: lut40092
+      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, 
+      A0_ipd, F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity SLICE_69
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_69 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_69";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
+          C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
+          F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_69 : ENTITY IS TRUE;
+
+  end SLICE_69;
+
+  architecture Structure of SLICE_69 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40007
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40088
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i1_rep_15_2_lut: lut40007
+      port map (A=>A1_ipd, B=>GNDI, C=>GNDI, D=>D1_ipd, Z=>F1_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+    i2_4_lut_adj_43: lut40088
+      port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
+      F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40093
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40093 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40093 : ENTITY IS TRUE;
+
+  end lut40093;
+
+  architecture Structure of lut40093 is
   begin
     INST10: ROM16X1A
       generic map (initval => X"6880")
@@ -13852,18 +13835,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40062
+    component lut40060
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40094
+    component lut40093
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    key_out_7_bdd_4_lut_1917: lut40094
+    key_out_7_bdd_4_lut_1917: lut40093
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_rep_38_3_lut_4_lut: lut40062
+    i1_2_lut_rep_38_3_lut_4_lut: lut40060
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -13933,45 +13916,24 @@
 
   end Structure;
 
--- entity lut40095
+-- entity lut40094
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40095 is
+  entity lut40094 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40095 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40094 : ENTITY IS TRUE;
 
-  end lut40095;
+  end lut40094;
 
-  architecture Structure of lut40095 is
+  architecture Structure of lut40094 is
   begin
     INST10: ROM16X1A
       generic map (initval => X"FFFE")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40096
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40096 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40096 : ENTITY IS TRUE;
-
-  end lut40096;
-
-  architecture Structure of lut40096 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -14073,18 +14035,18 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40095
+    component lut40079
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40096
+    component lut40094
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i6_4_lut: lut40095
+    i6_4_lut: lut40094
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1872_4_lut: lut40096
+    i1872_4_lut: lut40079
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     key_out_i15: vmuxregsre
       port map (D0=>M1_dly, D1=>VCCI, SD=>GNDI, SP=>CE_dly, CK=>CLK_dly, 
@@ -14272,45 +14234,45 @@
 
   end Structure;
 
--- entity lut40097
+-- entity lut40095
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40097 is
+  entity lut40095 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40097 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40095 : ENTITY IS TRUE;
 
-  end lut40097;
+  end lut40095;
 
-  architecture Structure of lut40097 is
+  architecture Structure of lut40095 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0A00")
+      generic map (initval => X"00A0")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
--- entity lut40098
+-- entity lut40096
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40098 is
+  entity lut40096 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40098 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40096 : ENTITY IS TRUE;
 
-  end lut40098;
+  end lut40096;
 
-  architecture Structure of lut40098 is
+  architecture Structure of lut40096 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0050")
+      generic map (initval => X"0500")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -14365,20 +14327,20 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40097
+    component lut40095
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40098
+    component lut40096
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1_2_lut_3_lut_adj_14: lut40097
+    i1_2_lut_3_lut_adj_14: lut40095
       port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i1_2_lut_3_lut_adj_5: lut40098
+    i1_2_lut_3_lut_adj_5: lut40096
       port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -14440,45 +14402,45 @@
 
   end Structure;
 
--- entity lut40099
+-- entity lut40097
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40099 is
+  entity lut40097 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40099 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40097 : ENTITY IS TRUE;
 
-  end lut40099;
+  end lut40097;
 
-  architecture Structure of lut40099 is
+  architecture Structure of lut40097 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0022")
+      generic map (initval => X"1100")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
--- entity lut40100
+-- entity lut40098
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40100 is
+  entity lut40098 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40100 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40098 : ENTITY IS TRUE;
 
-  end lut40100;
+  end lut40098;
 
-  architecture Structure of lut40100 is
+  architecture Structure of lut40098 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"0011")
+      generic map (initval => X"0005")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -14500,7 +14462,7 @@
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -14510,7 +14472,7 @@
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -14529,7 +14491,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
-          D0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
+          D0: in Std_logic; C0: in Std_logic; A0: in Std_logic; 
           M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
           CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
           F1: out Std_logic; Q1: out Std_logic);
@@ -14545,7 +14507,7 @@
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
     signal M1_dly 	: std_logic := 'X';
@@ -14573,21 +14535,21 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40099
+    component lut40097
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40100
+    component lut40098
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1_2_lut_3_lut_adj_10: lut40099
+    i1_2_lut_3_lut_adj_10: lut40097
       port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i1895_2_lut_3_lut: lut40100
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+    i1895_2_lut_3_lut: lut40098
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
     key_out_i7: vmuxregsre
       port map (D0=>M1_dly, D1=>VCCI, SD=>GNDI, SP=>CE_dly, CK=>CLK_dly, 
                 LSR=>GNDI, Q=>Q1_out);
@@ -14604,7 +14566,7 @@
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
       VitalWireDelay(M0_ipd, M0, tipd_M0);
@@ -14621,7 +14583,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, B1_ipd, A1_ipd, D0_ipd, B0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, A0_ipd, 
       M1_dly, M0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -14723,8 +14685,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -14763,45 +14725,45 @@
 
   end Structure;
 
--- entity lut40101
+-- entity lut40099
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40101 is
+  entity lut40099 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40101 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40099 : ENTITY IS TRUE;
 
-  end lut40101;
+  end lut40099;
 
-  architecture Structure of lut40101 is
+  architecture Structure of lut40099 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"48FF")
+      generic map (initval => X"3BB3")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
--- entity lut40102
+-- entity lut40100
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40102 is
+  entity lut40100 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40102 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40100 : ENTITY IS TRUE;
 
-  end lut40102;
+  end lut40100;
 
-  architecture Structure of lut40102 is
+  architecture Structure of lut40100 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"AA2A")
+      generic map (initval => X"C4CC")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -14859,18 +14821,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40101
+    component lut40099
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40102
+    component lut40100
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1912_2_lut_4_lut_4_lut: lut40101
+    i1912_2_lut_4_lut_4_lut: lut40099
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i970_3_lut_rep_27_4_lut: lut40102
+    i970_3_lut_rep_27_4_lut: lut40100
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -14954,20 +14916,20 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_75";
 
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
-    port (D1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+    port (C1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
           C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
           F0: out Std_logic; F1: out Std_logic);
 
@@ -14978,8 +14940,8 @@
   architecture Structure of SLICE_75 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal D1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal C0_ipd 	: std_logic := 'X';
     signal B0_ipd 	: std_logic := 'X';
@@ -14991,34 +14953,34 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40007
+    component lut40047
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40096
+    component lut40067
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1_2_lut_rep_42: lut40007
-      port map (A=>GNDI, B=>B1_ipd, C=>GNDI, D=>D1_ipd, Z=>F1_out);
+    i1_2_lut_rep_42: lut40047
+      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i1_2_lut_rep_35_3_lut_4_lut: lut40096
+    i1_2_lut_rep_35_3_lut_4_lut: lut40067
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, B1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
+    VitalBehavior : PROCESS (C1_ipd, A1_ipd, D0_ipd, C0_ipd, B0_ipd, A0_ipd, 
       F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -15053,11 +15015,11 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
+                     1 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -15066,42 +15028,21 @@
 
   end Structure;
 
--- entity lut40103
+-- entity lut40101
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40103 is
+  entity lut40101 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40103 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40101 : ENTITY IS TRUE;
 
-  end lut40103;
+  end lut40101;
 
-  architecture Structure of lut40103 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"8000")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40104
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40104 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40104 : ENTITY IS TRUE;
-
-  end lut40104;
-
-  architecture Structure of lut40104 is
+  architecture Structure of lut40101 is
   begin
     INST10: ROM16X1A
       generic map (initval => X"6880")
@@ -15162,18 +15103,18 @@
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
 
-    component lut40103
+    component lut40040
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40104
+    component lut40101
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1_4_lut_adj_44: lut40103
+    i1_4_lut_adj_44: lut40040
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_4_lut_4_lut: lut40104
+    i1_4_lut_4_lut: lut40101
       port map (A=>A0_ipd, B=>B0_ipd, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -15243,24 +15184,45 @@
 
   end Structure;
 
--- entity lut40105
+-- entity lut40102
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40105 is
+  entity lut40102 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40105 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40102 : ENTITY IS TRUE;
 
-  end lut40105;
+  end lut40102;
 
-  architecture Structure of lut40105 is
+  architecture Structure of lut40102 is
   begin
     INST10: ROM16X1A
       generic map (initval => X"FF3F")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity lut40103
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40103 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40103 : ENTITY IS TRUE;
+
+  end lut40103;
+
+  architecture Structure of lut40103 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"CCFF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -15282,15 +15244,15 @@
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          D0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
+          D0: in Std_logic; B0: in Std_logic; F0: out Std_logic; 
           F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_77 : ENTITY IS TRUE;
@@ -15303,6 +15265,289 @@
     signal D1_ipd 	: std_logic := 'X';
     signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
+    signal D0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40102
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40103
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i2_3_lut_adj_33: lut40102
+      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+    i1_2_lut_adj_32: lut40103
+      port map (A=>GNDI, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(D0_ipd, D0, tipd_D0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, D0_ipd, B0_ipd, F0_out, 
+      F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
+                           PathDelay => tpd_D0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40104
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40104 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40104 : ENTITY IS TRUE;
+
+  end lut40104;
+
+  architecture Structure of lut40104 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"C0C0")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_78
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_78 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_78";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+          A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
+          F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_78 : ENTITY IS TRUE;
+
+  end SLICE_78;
+
+  architecture Structure of SLICE_78 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
+    signal A1_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal F0_out 	: std_logic := 'X';
+    signal F1_out 	: std_logic := 'X';
+
+    signal GNDI: Std_logic;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component lut40068
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+    component lut40104
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
+  begin
+    i1_2_lut_rep_32_3_lut_4_lut: lut40068
+      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    i1_2_lut_rep_40: lut40104
+      port map (A=>GNDI, B=>B0_ipd, C=>C0_ipd, D=>GNDI, Z=>F0_out);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(D1_ipd, D1, tipd_D1);
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
+      VitalWireDelay(A1_ipd, A1, tipd_A1);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, C0_ipd, B0_ipd, 
+      F0_out, F1_out)
+    VARIABLE F0_zd         	: std_logic := 'X';
+    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
+    VARIABLE F1_zd         	: std_logic := 'X';
+    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
+
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+
+    END IF;
+
+    F0_zd 	:= F0_out;
+    F1_zd 	:= F1_out;
+
+    VitalPathDelay01 (
+      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
+      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
+                           PathCondition => TRUE)),
+      GlitchData => F0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
+      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
+                           PathDelay => tpd_D1_F1,
+                           PathCondition => TRUE),
+                     1 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
+                           PathCondition => TRUE),
+                     2 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
+                           PathCondition => TRUE),
+                     3 => (InputChangeTime => A1_ipd'last_event,
+                           PathDelay => tpd_A1_F1,
+                           PathCondition => TRUE)),
+      GlitchData => F1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity lut40105
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity lut40105 is
+    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+          Z: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF lut40105 : ENTITY IS TRUE;
+
+  end lut40105;
+
+  architecture Structure of lut40105 is
+  begin
+    INST10: ROM16X1A
+      generic map (initval => X"F000")
+      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
+  end Structure;
+
+-- entity SLICE_79
+  library IEEE, vital2000, MACHXO2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use MACHXO2.COMPONENTS.ALL;
+
+  entity SLICE_79 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "SLICE_79";
+
+      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
+
+    port (D1: in Std_logic; C1: in Std_logic; D0: in Std_logic; 
+          A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF SLICE_79 : ENTITY IS TRUE;
+
+  end SLICE_79;
+
+  architecture Structure of SLICE_79 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal D1_ipd 	: std_logic := 'X';
+    signal C1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
@@ -15321,11 +15566,11 @@
             Z: out Std_logic);
     end component;
   begin
-    i2_3_lut_adj_33: lut40105
-      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
+    i1_2_lut_rep_41: lut40105
+      port map (A=>GNDI, B=>GNDI, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i1_2_lut_adj_32: lut40058
+    i1_2_lut_adj_3: lut40058
       port map (A=>A0_ipd, B=>GNDI, C=>GNDI, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
@@ -15333,13 +15578,11 @@
     BEGIN
       VitalWireDelay(D1_ipd, D1, tipd_D1);
       VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, D0_ipd, A0_ipd, F0_out, 
-      F1_out)
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, D0_ipd, A0_ipd, F0_out, F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
     VARIABLE F1_zd         	: std_logic := 'X';
@@ -15372,135 +15615,6 @@
                            PathCondition => TRUE),
                      1 => (InputChangeTime => C1_ipd'last_event,
                            PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity SLICE_78
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_78 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_78";
-
-      tipd_D1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-          F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_78 : ENTITY IS TRUE;
-
-  end SLICE_78;
-
-  architecture Structure of SLICE_78 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal D1_ipd 	: std_logic := 'X';
-    signal C1_ipd 	: std_logic := 'X';
-    signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40047
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40060
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i1_2_lut_rep_32_3_lut_4_lut: lut40060
-      port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    i1_2_lut_rep_40: lut40047
-      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(D1_ipd, D1, tipd_D1);
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
-      F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => D1_ipd'last_event,
-                           PathDelay => tpd_D1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
-                           PathCondition => TRUE),
-                     2 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     3 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -15526,159 +15640,7 @@
   architecture Structure of lut40106 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"8888")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40107
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40107 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40107 : ENTITY IS TRUE;
-
-  end lut40107;
-
-  architecture Structure of lut40107 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"BBBB")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity SLICE_79
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity SLICE_79 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "SLICE_79";
-
-      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
-
-    port (B1: in Std_logic; A1: in Std_logic; B0: in Std_logic; 
-          A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF SLICE_79 : ENTITY IS TRUE;
-
-  end SLICE_79;
-
-  architecture Structure of SLICE_79 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
-    signal A0_ipd 	: std_logic := 'X';
-    signal F0_out 	: std_logic := 'X';
-    signal F1_out 	: std_logic := 'X';
-
-    signal GNDI: Std_logic;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component lut40106
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-    component lut40107
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
-  begin
-    i1_2_lut_rep_41: lut40106
-      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>GNDI, Z=>F1_out);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-    i1_2_lut_adj_3: lut40107
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>GNDI, Z=>F0_out);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
-      VitalWireDelay(A0_ipd, A0, tipd_A0);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (B1_ipd, A1_ipd, B0_ipd, A0_ipd, F0_out, F1_out)
-    VARIABLE F0_zd         	: std_logic := 'X';
-    VARIABLE F0_GlitchData 	: VitalGlitchDataType;
-    VARIABLE F1_zd         	: std_logic := 'X';
-    VARIABLE F1_GlitchData 	: VitalGlitchDataType;
-
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-
-    END IF;
-
-    F0_zd 	:= F0_out;
-    F1_zd 	:= F1_out;
-
-    VitalPathDelay01 (
-      OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => A0_ipd'last_event,
-                           PathDelay => tpd_A0_F0,
-                           PathCondition => TRUE)),
-      GlitchData => F0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
-                           PathCondition => TRUE),
-                     1 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
-                           PathCondition => TRUE)),
-      GlitchData => F1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity lut40108
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40108 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40108 : ENTITY IS TRUE;
-
-  end lut40108;
-
-  architecture Structure of lut40108 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"FF77")
+      generic map (initval => X"F5FF")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -15696,19 +15658,19 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_80";
 
+      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns));
 
-    port (B1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
-          B0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
+    port (C1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+          C0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
           F1: out Std_logic);
 
     ATTRIBUTE Vital_Level0 OF SLICE_80 : ENTITY IS TRUE;
@@ -15718,10 +15680,10 @@
   architecture Structure of SLICE_80 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
+    signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
-    signal A1_ipd 	: std_logic := 'X';
     signal D0_ipd 	: std_logic := 'X';
-    signal B0_ipd 	: std_logic := 'X';
+    signal C0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal F0_out 	: std_logic := 'X';
     signal F1_out 	: std_logic := 'X';
@@ -15730,33 +15692,33 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
+    component lut40053
+      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
+            Z: out Std_logic);
+    end component;
     component lut40106
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40108
-      port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-            Z: out Std_logic);
-    end component;
   begin
-    i1_2_lut_rep_51: lut40106
-      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>GNDI, Z=>F1_out);
+    i1_2_lut_rep_51: lut40053
+      port map (A=>GNDI, B=>B1_ipd, C=>C1_ipd, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i2_3_lut_rep_29: lut40108
-      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>D0_ipd, Z=>F0_out);
+    i2_3_lut_rep_29: lut40106
+      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
 
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
+      VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
-      VitalWireDelay(A1_ipd, A1, tipd_A1);
       VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(C0_ipd, C0, tipd_C0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
     END BLOCK;
 
-    VitalBehavior : PROCESS (B1_ipd, A1_ipd, D0_ipd, B0_ipd, A0_ipd, F0_out, 
+    VitalBehavior : PROCESS (C1_ipd, B1_ipd, D0_ipd, C0_ipd, A0_ipd, F0_out, 
       F1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -15778,8 +15740,8 @@
       Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
                            PathDelay => tpd_D0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => B0_ipd'last_event,
-                           PathDelay => tpd_B0_F0,
+                     1 => (InputChangeTime => C0_ipd'last_event,
+                           PathDelay => tpd_C0_F0,
                            PathCondition => TRUE),
                      2 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -15788,11 +15750,11 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => B1_ipd'last_event,
-                           PathDelay => tpd_B1_F1,
+      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
+                           PathDelay => tpd_C1_F1,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => A1_ipd'last_event,
-                           PathDelay => tpd_A1_F1,
+                     1 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
                            PathCondition => TRUE)),
       GlitchData => F1_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -15815,17 +15777,17 @@
       MsgOn         	: boolean := TRUE;
       InstancePath  	: string := "SLICE_81";
 
-      tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CLK  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
@@ -15843,7 +15805,7 @@
       tpw_CLK_posedge	: VitalDelayType := 0 ns;
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
-    port (C1: in Std_logic; A1: in Std_logic; C0: in Std_logic; 
+    port (B1: in Std_logic; A1: in Std_logic; B0: in Std_logic; 
           A0: in Std_logic; M1: in Std_logic; M0: in Std_logic; 
           CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
           Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
@@ -15855,9 +15817,9 @@
   architecture Structure of SLICE_81 is
     ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
 
-    signal C1_ipd 	: std_logic := 'X';
+    signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
     signal A0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
     signal M1_dly 	: std_logic := 'X';
@@ -15885,21 +15847,21 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut4
+    component lut40023
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40093
+    component lut40024
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i1_rep_22_2_lut: lut40093
-      port map (A=>A1_ipd, B=>GNDI, C=>C1_ipd, D=>GNDI, Z=>F1_out);
+    i1_rep_22_2_lut: lut40024
+      port map (A=>A1_ipd, B=>B1_ipd, C=>GNDI, D=>GNDI, Z=>F1_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
-    i1874_2_lut: lut4
-      port map (A=>A0_ipd, B=>GNDI, C=>C0_ipd, D=>GNDI, Z=>F0_out);
+    i1874_2_lut: lut40023
+      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>GNDI, Z=>F0_out);
     key_out_i3: vmuxregsre
       port map (D0=>M1_dly, D1=>VCCI, SD=>GNDI, SP=>CE_dly, CK=>CLK_dly, 
                 LSR=>GNDI, Q=>Q1_out);
@@ -15912,9 +15874,9 @@
     --  INPUT PATH DELAYs
     WireDelay : BLOCK
     BEGIN
-      VitalWireDelay(C1_ipd, C1, tipd_C1);
+      VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
       VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
       VitalWireDelay(M0_ipd, M0, tipd_M0);
@@ -15931,7 +15893,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (C1_ipd, A1_ipd, C0_ipd, A0_ipd, M1_dly, M0_dly, 
+    VitalBehavior : PROCESS (B1_ipd, A1_ipd, B0_ipd, A0_ipd, M1_dly, M0_dly, 
       CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -16030,8 +15992,8 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+      Paths      => (0 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE),
                      1 => (InputChangeTime => A0_ipd'last_event,
                            PathDelay => tpd_A0_F0,
@@ -16047,8 +16009,8 @@
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
     VitalPathDelay01 (
       OutSignal => F1, OutSignalName => "F1", OutTemp => F1_zd,
-      Paths      => (0 => (InputChangeTime => C1_ipd'last_event,
-                           PathDelay => tpd_C1_F1,
+      Paths      => (0 => (InputChangeTime => B1_ipd'last_event,
+                           PathDelay => tpd_B1_F1,
                            PathCondition => TRUE),
                      1 => (InputChangeTime => A1_ipd'last_event,
                            PathDelay => tpd_A1_F1,
@@ -16067,45 +16029,24 @@
 
   end Structure;
 
--- entity lut40109
+-- entity lut40107
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity lut40109 is
+  entity lut40107 is
     port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
           Z: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF lut40109 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF lut40107 : ENTITY IS TRUE;
 
-  end lut40109;
+  end lut40107;
 
-  architecture Structure of lut40109 is
+  architecture Structure of lut40107 is
   begin
     INST10: ROM16X1A
-      generic map (initval => X"7BDE")
-      port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
-  end Structure;
-
--- entity lut40110
-  library IEEE, vital2000, MACHXO2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use MACHXO2.COMPONENTS.ALL;
-
-  entity lut40110 is
-    port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
-          Z: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF lut40110 : ENTITY IS TRUE;
-
-  end lut40110;
-
-  architecture Structure of lut40110 is
-  begin
-    INST10: ROM16X1A
-      generic map (initval => X"0FF0")
+      generic map (initval => X"6FF6")
       port map (AD0=>A, AD1=>B, AD2=>C, AD3=>D, DO0=>Z);
   end Structure;
 
@@ -16127,8 +16068,8 @@
       tipd_C1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_B1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_A1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_D0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_C0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_B0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_A0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M1  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_M0  	: VitalDelayType01 := (0 ns, 0 ns);
       tipd_CE  	: VitalDelayType01 := (0 ns, 0 ns);
@@ -16137,8 +16078,8 @@
       tpd_C1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_B1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_A1_F1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_D0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_C0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_B0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_A0_F0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q0	 : VitalDelayType01 := (0 ns, 0 ns);
       tpd_CLK_Q1	 : VitalDelayType01 := (0 ns, 0 ns);
       ticd_CLK	: VitalDelayType := 0 ns;
@@ -16156,7 +16097,7 @@
       tpw_CLK_negedge	: VitalDelayType := 0 ns);
 
     port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-          A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+          A1: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
           M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
           CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
           F1: out Std_logic; Q1: out Std_logic);
@@ -16172,8 +16113,8 @@
     signal C1_ipd 	: std_logic := 'X';
     signal B1_ipd 	: std_logic := 'X';
     signal A1_ipd 	: std_logic := 'X';
-    signal D0_ipd 	: std_logic := 'X';
-    signal C0_ipd 	: std_logic := 'X';
+    signal B0_ipd 	: std_logic := 'X';
+    signal A0_ipd 	: std_logic := 'X';
     signal M1_ipd 	: std_logic := 'X';
     signal M1_dly 	: std_logic := 'X';
     signal M0_ipd 	: std_logic := 'X';
@@ -16200,19 +16141,19 @@
     component gnd
       port (PWR0: out Std_logic);
     end component;
-    component lut40109
+    component lut40023
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
-    component lut40110
+    component lut40107
       port (A: in Std_logic; B: in Std_logic; C: in Std_logic; D: in Std_logic; 
             Z: out Std_logic);
     end component;
   begin
-    i2_4_lut_adj_28: lut40109
+    i2_4_lut_adj_28: lut40107
       port map (A=>A1_ipd, B=>B1_ipd, C=>C1_ipd, D=>D1_ipd, Z=>F1_out);
-    button_four_3_I_0_i2_2_lut: lut40110
-      port map (A=>GNDI, B=>GNDI, C=>C0_ipd, D=>D0_ipd, Z=>F0_out);
+    button_four_3_I_0_i2_2_lut: lut40023
+      port map (A=>A0_ipd, B=>B0_ipd, C=>GNDI, D=>GNDI, Z=>F0_out);
     DRIVEGND: gnd
       port map (PWR0=>GNDI);
     BTN_cache_i0_i1: vmuxregsre
@@ -16231,8 +16172,8 @@
       VitalWireDelay(C1_ipd, C1, tipd_C1);
       VitalWireDelay(B1_ipd, B1, tipd_B1);
       VitalWireDelay(A1_ipd, A1, tipd_A1);
-      VitalWireDelay(D0_ipd, D0, tipd_D0);
-      VitalWireDelay(C0_ipd, C0, tipd_C0);
+      VitalWireDelay(B0_ipd, B0, tipd_B0);
+      VitalWireDelay(A0_ipd, A0, tipd_A0);
       VitalWireDelay(M1_ipd, M1, tipd_M1);
       VitalWireDelay(M0_ipd, M0, tipd_M0);
       VitalWireDelay(CE_ipd, CE, tipd_CE);
@@ -16248,7 +16189,7 @@
       VitalSignalDelay(CLK_dly, CLK_ipd, ticd_CLK);
     END BLOCK;
 
-    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, D0_ipd, C0_ipd, 
+    VitalBehavior : PROCESS (D1_ipd, C1_ipd, B1_ipd, A1_ipd, B0_ipd, A0_ipd, 
       M1_dly, M0_dly, CE_dly, CLK_dly, F0_out, Q0_out, F1_out, Q1_out)
     VARIABLE F0_zd         	: std_logic := 'X';
     VARIABLE F0_GlitchData 	: VitalGlitchDataType;
@@ -16347,11 +16288,11 @@
 
     VitalPathDelay01 (
       OutSignal => F0, OutSignalName => "F0", OutTemp => F0_zd,
-      Paths      => (0 => (InputChangeTime => D0_ipd'last_event,
-                           PathDelay => tpd_D0_F0,
+      Paths      => (0 => (InputChangeTime => B0_ipd'last_event,
+                           PathDelay => tpd_B0_F0,
                            PathCondition => TRUE),
-                     1 => (InputChangeTime => C0_ipd'last_event,
-                           PathDelay => tpd_C0_F0,
+                     1 => (InputChangeTime => A0_ipd'last_event,
+                           PathDelay => tpd_A0_F0,
                            PathCondition => TRUE)),
       GlitchData => F0_GlitchData,
       Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
@@ -17577,20 +17518,20 @@
 
   end Structure;
 
--- entity xo2iobuf0111
+-- entity xo2iobuf0108
   library IEEE, vital2000, MACHXO2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use MACHXO2.COMPONENTS.ALL;
 
-  entity xo2iobuf0111 is
+  entity xo2iobuf0108 is
     port (Z: out Std_logic; PAD: in Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF xo2iobuf0111 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF xo2iobuf0108 : ENTITY IS TRUE;
 
-  end xo2iobuf0111;
+  end xo2iobuf0108;
 
-  architecture Structure of xo2iobuf0111 is
+  architecture Structure of xo2iobuf0108 is
   begin
     INST1: IBPD
       port map (I=>PAD, O=>Z);
@@ -17628,11 +17569,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal COL3_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    COL_pad_3: xo2iobuf0111
+    COL_pad_3: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>COL3_ipd);
 
     --  INPUT PATH DELAYs
@@ -17712,11 +17653,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal COL2_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    COL_pad_2: xo2iobuf0111
+    COL_pad_2: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>COL2_ipd);
 
     --  INPUT PATH DELAYs
@@ -17796,11 +17737,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal COL1_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    COL_pad_1: xo2iobuf0111
+    COL_pad_1: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>COL1_ipd);
 
     --  INPUT PATH DELAYs
@@ -17880,11 +17821,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal COL0_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    COL_pad_0: xo2iobuf0111
+    COL_pad_0: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>COL0_ipd);
 
     --  INPUT PATH DELAYs
@@ -17964,11 +17905,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal buttonfour3_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    button_four_pad_3: xo2iobuf0111
+    button_four_pad_3: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>buttonfour3_ipd);
 
     --  INPUT PATH DELAYs
@@ -18048,11 +17989,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal buttonfour2_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    button_four_pad_2: xo2iobuf0111
+    button_four_pad_2: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>buttonfour2_ipd);
 
     --  INPUT PATH DELAYs
@@ -18132,11 +18073,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal buttonfour1_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    button_four_pad_1: xo2iobuf0111
+    button_four_pad_1: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>buttonfour1_ipd);
 
     --  INPUT PATH DELAYs
@@ -18216,11 +18157,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal buttonfour0_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    button_four_pad_0: xo2iobuf0111
+    button_four_pad_0: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>buttonfour0_ipd);
 
     --  INPUT PATH DELAYs
@@ -18300,11 +18241,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal clkS_ipd 	: std_logic := 'X';
 
-    component xo2iobuf0111
+    component xo2iobuf0108
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    clk_pad: xo2iobuf0111
+    clk_pad: xo2iobuf0108
       port map (Z=>PADDI_out, PAD=>clkS_ipd);
 
     --  INPUT PATH DELAYs
@@ -18431,42 +18372,42 @@
     signal n2276: Std_logic;
     signal ROW_c_2: Std_logic;
     signal ROW_c_3: Std_logic;
-    signal n10: Std_logic;
     signal n1959: Std_logic;
+    signal n10: Std_logic;
     signal n2257: Std_logic;
-    signal n2123: Std_logic;
     signal n2061: Std_logic;
-    signal n1198: Std_logic;
+    signal n2123: Std_logic;
     signal n718: Std_logic;
+    signal n1198: Std_logic;
     signal a_to_g_6_N_71_1: Std_logic;
     signal a_to_g_6_N_71_0: Std_logic;
     signal a_to_g_6_N_78: Std_logic;
     signal a_to_g_c_0: Std_logic;
     signal a_to_g_c_1: Std_logic;
-    signal n1188: Std_logic;
-    signal n34: Std_logic;
-    signal key_out_1: Std_logic;
     signal n2269: Std_logic;
-    signal n1160: Std_logic;
+    signal n34: Std_logic;
+    signal n1188: Std_logic;
+    signal key_out_1: Std_logic;
     signal n2255: Std_logic;
+    signal n1160: Std_logic;
     signal a_to_g_6_N_71_3: Std_logic;
     signal a_to_g_6_N_71_2: Std_logic;
     signal a_to_g_c_2: Std_logic;
     signal a_to_g_c_3: Std_logic;
-    signal n2056: Std_logic;
     signal n1947: Std_logic;
     signal n4_adj_1: Std_logic;
+    signal n2056: Std_logic;
     signal n2057: Std_logic;
     signal a_to_g_6_N_71_5: Std_logic;
     signal a_to_g_6_N_71_4: Std_logic;
     signal a_to_g_c_4: Std_logic;
     signal a_to_g_c_5: Std_logic;
-    signal n2042: Std_logic;
     signal key_out_14: Std_logic;
+    signal n2042: Std_logic;
     signal key_out_13: Std_logic;
     signal n2120: Std_logic;
-    signal n2258: Std_logic;
     signal n10_adj_10: Std_logic;
+    signal n2258: Std_logic;
     signal a_to_g_6_N_71_6: Std_logic;
     signal a_to_g_c_6: Std_logic;
     signal n2438: Std_logic;
@@ -18493,59 +18434,59 @@
     signal key_out_15_N_55: Std_logic;
     signal n1941: Std_logic;
     signal n1945: Std_logic;
-    signal key_out_6: Std_logic;
     signal key_out_5: Std_logic;
+    signal key_out_6: Std_logic;
     signal n2262: Std_logic;
-    signal n2270: Std_logic;
-    signal n2279: Std_logic;
     signal n2280: Std_logic;
+    signal n2279: Std_logic;
+    signal n2270: Std_logic;
     signal key_out_10: Std_logic;
     signal n40: Std_logic;
-    signal n2006: Std_logic;
     signal key_out_11: Std_logic;
+    signal n2006: Std_logic;
     signal key_out_8: Std_logic;
     signal n2285: Std_logic;
-    signal n6: Std_logic;
     signal n2263: Std_logic;
+    signal n6: Std_logic;
     signal key_out_12: Std_logic;
     signal COL_c_1: Std_logic;
     signal COL_c_0: Std_logic;
     signal key_out_15_N_50: Std_logic;
-    signal n2266: Std_logic;
-    signal n1998: Std_logic;
     signal n68: Std_logic;
+    signal n1998: Std_logic;
+    signal n2266: Std_logic;
     signal key_out_15: Std_logic;
     signal n4_adj_2: Std_logic;
+    signal n2147: Std_logic;
     signal n2040: Std_logic;
     signal n2261: Std_logic;
-    signal n2147: Std_logic;
-    signal n6_adj_7: Std_logic;
     signal n2: Std_logic;
+    signal n6_adj_7: Std_logic;
     signal button_four_c_0: Std_logic;
-    signal apa_enable_5: Std_logic;
     signal n689: Std_logic;
-    signal n2274: Std_logic;
-    signal key_out_4: Std_logic;
+    signal apa_enable_5: Std_logic;
     signal n2271: Std_logic;
+    signal key_out_4: Std_logic;
+    signal n2274: Std_logic;
     signal key_out_3: Std_logic;
     signal n2050: Std_logic;
-    signal n2014: Std_logic;
     signal n4_adj_3: Std_logic;
+    signal n2014: Std_logic;
     signal n727: Std_logic;
     signal n2023: Std_logic;
-    signal n1990: Std_logic;
     signal n2053: Std_logic;
+    signal n1990: Std_logic;
     signal n2016: Std_logic;
+    signal key_out_0: Std_logic;
     signal n2162: Std_logic;
     signal n2272: Std_logic;
-    signal key_out_0: Std_logic;
-    signal n2256: Std_logic;
     signal n2259: Std_logic;
+    signal n2256: Std_logic;
     signal n2041: Std_logic;
     signal key_out_15_N_45: Std_logic;
+    signal n2268: Std_logic;
     signal n4_adj_5: Std_logic;
     signal n2054: Std_logic;
-    signal n2268: Std_logic;
     signal n1994: Std_logic;
     signal n1984: Std_logic;
     signal n706: Std_logic;
@@ -18556,15 +18497,15 @@
     signal n2264: Std_logic;
     signal n2265: Std_logic;
     signal key_out_15_N_60: Std_logic;
-    signal n1844: Std_logic;
     signal n1791: Std_logic;
-    signal n18: Std_logic;
-    signal n12: Std_logic;
+    signal n1844: Std_logic;
     signal n2084: Std_logic;
+    signal n12: Std_logic;
+    signal n18: Std_logic;
     signal button_four_c_3: Std_logic;
     signal button_four_c_2: Std_logic;
-    signal n4: Std_logic;
     signal n2026: Std_logic;
+    signal n4: Std_logic;
     signal n1162: Std_logic;
     signal n1771: Std_logic;
     signal n1999: Std_logic;
@@ -18572,11 +18513,11 @@
     signal n2072: Std_logic;
     signal n2022: Std_logic;
     signal n2070: Std_logic;
-    signal n23: Std_logic;
     signal n26: Std_logic;
+    signal n23: Std_logic;
     signal n8: Std_logic;
-    signal n6_adj_6: Std_logic;
     signal n2260: Std_logic;
+    signal n6_adj_6: Std_logic;
     signal n9: Std_logic;
     signal n14: Std_logic;
     signal n2076: Std_logic;
@@ -18632,38 +18573,38 @@
             Q1: out Std_logic; FCO: out Std_logic);
     end component;
     component SLICE_10
-      port (C1: in Std_logic; A1: in Std_logic; A0: in Std_logic; 
+      port (D1: in Std_logic; A1: in Std_logic; A0: in Std_logic; 
             DI1: in Std_logic; DI0: in Std_logic; LSR: in Std_logic; 
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
             F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_11
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
             A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
             LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_12
-      port (D1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+      port (D1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
             C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
             DI0: in Std_logic; LSR: in Std_logic; CLK: in Std_logic; 
             F0: out Std_logic; Q0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_13
-      port (B1: in Std_logic; A1: in Std_logic; B0: in Std_logic; 
-            A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
+      port (D1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+            B0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
             LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_14
-      port (D1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
+      port (C1: in Std_logic; A1: in Std_logic; C0: in Std_logic; 
             A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
             LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_15
-      port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+      port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
             D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
             CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
@@ -18679,14 +18620,14 @@
     end component;
     component SLICE_17
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
             A0: in Std_logic; DI1: in Std_logic; DI0: in Std_logic; 
             CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_18
-      port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
-            D0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
+      port (C1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
+            D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             DI0: in Std_logic; CE: in Std_logic; CLK: in Std_logic; 
             F0: out Std_logic; Q0: out Std_logic; F1: out Std_logic);
     end component;
@@ -18695,26 +18636,26 @@
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic);
     end component;
     component SLICE_28
-      port (D0: in Std_logic; C0: in Std_logic; M1: in Std_logic; 
+      port (B0: in Std_logic; A0: in Std_logic; M1: in Std_logic; 
             M0: in Std_logic; CE: in Std_logic; CLK: in Std_logic; 
             F0: out Std_logic; Q0: out Std_logic; F1: out Std_logic; 
             Q1: out Std_logic);
     end component;
     component SLICE_29
-      port (C1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+      port (B1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
             A0: in Std_logic; M1: in Std_logic; M0: in Std_logic; 
             CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_30
       port (D1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
-            D0: in Std_logic; A0: in Std_logic; DI0: in Std_logic; 
+            C0: in Std_logic; A0: in Std_logic; DI0: in Std_logic; 
             LSR: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_31
-      port (D1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
-            B0: in Std_logic; A0: in Std_logic; DI1: in Std_logic; 
+      port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
+            C0: in Std_logic; A0: in Std_logic; DI1: in Std_logic; 
             DI0: in Std_logic; CE: in Std_logic; LSR: in Std_logic; 
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
             F1: out Std_logic; Q1: out Std_logic);
@@ -18753,17 +18694,17 @@
     end component;
     component SLICE_37
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; C0: in Std_logic; A0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_38
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_39
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_40
@@ -18773,12 +18714,12 @@
     end component;
     component SLICE_41
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; C0: in Std_logic; A0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_42
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
             M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
             F1: out Std_logic; Q1: out Std_logic);
@@ -18786,7 +18727,7 @@
     component SLICE_43
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
             A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-            A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+            B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_44
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
@@ -18796,13 +18737,13 @@
     end component;
     component SLICE_45
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; A0: in Std_logic; 
+            A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
             F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_46
-      port (D1: in Std_logic; C1: in Std_logic; A1: in Std_logic; 
+      port (C1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
             D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             A0: in Std_logic; M1: in Std_logic; M0: in Std_logic; 
             CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
@@ -18843,7 +18784,7 @@
     component SLICE_52
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
             A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-            A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+            B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_53
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
@@ -18853,8 +18794,8 @@
     end component;
     component SLICE_54
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
-            A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_55
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
@@ -18864,7 +18805,7 @@
     component SLICE_56
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
             A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
-            B0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
+            A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_57
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
@@ -18880,7 +18821,7 @@
     end component;
     component SLICE_59
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_60
@@ -18891,11 +18832,11 @@
     end component;
     component SLICE_61
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; D0: in Std_logic; B0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_62
-      port (B1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
+      port (C1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
             C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
@@ -18924,17 +18865,17 @@
             F1: out Std_logic);
     end component;
     component SLICE_67
-      port (D1: in Std_logic; C1: in Std_logic; D0: in Std_logic; 
+      port (C1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
             C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_68
-      port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
+      port (C1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
             D0: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_69
-      port (C1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
+      port (D1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
             C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
@@ -18959,7 +18900,7 @@
     end component;
     component SLICE_73
       port (D1: in Std_logic; B1: in Std_logic; A1: in Std_logic; 
-            D0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
+            D0: in Std_logic; C0: in Std_logic; A0: in Std_logic; 
             M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
             F1: out Std_logic; Q1: out Std_logic);
@@ -18971,7 +18912,7 @@
             F1: out Std_logic);
     end component;
     component SLICE_75
-      port (D1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+      port (C1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
             C0: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
@@ -18983,32 +18924,32 @@
     end component;
     component SLICE_77
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            D0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
+            D0: in Std_logic; B0: in Std_logic; F0: out Std_logic; 
             F1: out Std_logic);
     end component;
     component SLICE_78
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; C0: in Std_logic; B0: in Std_logic; 
             F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_79
-      port (B1: in Std_logic; A1: in Std_logic; B0: in Std_logic; 
+      port (D1: in Std_logic; C1: in Std_logic; D0: in Std_logic; 
             A0: in Std_logic; F0: out Std_logic; F1: out Std_logic);
     end component;
     component SLICE_80
-      port (B1: in Std_logic; A1: in Std_logic; D0: in Std_logic; 
-            B0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
+      port (C1: in Std_logic; B1: in Std_logic; D0: in Std_logic; 
+            C0: in Std_logic; A0: in Std_logic; F0: out Std_logic; 
             F1: out Std_logic);
     end component;
     component SLICE_81
-      port (C1: in Std_logic; A1: in Std_logic; C0: in Std_logic; 
+      port (B1: in Std_logic; A1: in Std_logic; B0: in Std_logic; 
             A0: in Std_logic; M1: in Std_logic; M0: in Std_logic; 
             CE: in Std_logic; CLK: in Std_logic; F0: out Std_logic; 
             Q0: out Std_logic; F1: out Std_logic; Q1: out Std_logic);
     end component;
     component SLICE_82
       port (D1: in Std_logic; C1: in Std_logic; B1: in Std_logic; 
-            A1: in Std_logic; D0: in Std_logic; C0: in Std_logic; 
+            A1: in Std_logic; B0: in Std_logic; A0: in Std_logic; 
             M1: in Std_logic; M0: in Std_logic; CE: in Std_logic; 
             CLK: in Std_logic; F0: out Std_logic; Q0: out Std_logic; 
             F1: out Std_logic; Q1: out Std_logic);
@@ -19120,254 +19061,254 @@
                 CLK=>clk_c, FCI=>n1760, F0=>n72, Q0=>clk_cnt_3, F1=>n71_adj_13, 
                 Q1=>clk_cnt_4, FCO=>n1761);
     SLICE_10I: SLICE_10
-      port map (C1=>LED_get_0, A1=>LED_get_1, A0=>LED_get_0, DI1=>n29, 
+      port map (D1=>LED_get_0, A1=>LED_get_1, A0=>LED_get_0, DI1=>n29, 
                 DI0=>n30, LSR=>n319, CLK=>apa, F0=>n30, Q0=>LED_get_0, F1=>n29, 
                 Q1=>LED_get_1);
     SLICE_11I: SLICE_11
-      port map (D1=>LED_get_1, C1=>LED_get_2, B1=>LED_get_0, A1=>LED_get_3, 
-                D0=>LED_get_1, B0=>LED_get_0, A0=>LED_get_2, DI1=>n27, 
+      port map (D1=>LED_get_0, C1=>LED_get_2, B1=>LED_get_3, A1=>LED_get_1, 
+                D0=>LED_get_0, C0=>LED_get_2, A0=>LED_get_1, DI1=>n27, 
                 DI0=>n28, LSR=>n319, CLK=>apa, F0=>n28, Q0=>LED_get_2, F1=>n27, 
                 Q1=>LED_get_3);
     SLICE_12I: SLICE_12
-      port map (D1=>LED_get_1, B1=>LED_get_0, D0=>LED_get_2, C0=>n2277, 
-                B0=>LED_get_3, A0=>LED_get_4, DI0=>n26_adj_8, LSR=>n319, 
+      port map (D1=>LED_get_0, A1=>LED_get_1, D0=>LED_get_3, C0=>n2277, 
+                B0=>LED_get_2, A0=>LED_get_4, DI0=>n26_adj_8, LSR=>n319, 
                 CLK=>apa, F0=>n26_adj_8, Q0=>LED_get_4, F1=>n2277);
     SLICE_13I: SLICE_13
-      port map (B1=>num_cnt_0, A1=>num_cnt_1, B0=>num_cnt_0, A0=>num_cnt_1, 
+      port map (D1=>num_cnt_0, B1=>num_cnt_1, D0=>num_cnt_0, B0=>num_cnt_1, 
                 DI1=>n2275, DI0=>n2278, LSR=>num_cnt_2, CLK=>apa, F0=>n2278, 
                 Q0=>ROW_c_0, F1=>n2275, Q1=>ROW_c_1);
     SLICE_14I: SLICE_14
-      port map (D1=>num_cnt_0, A1=>num_cnt_1, D0=>num_cnt_0, A0=>num_cnt_1, 
+      port map (C1=>num_cnt_1, A1=>num_cnt_0, C0=>num_cnt_1, A0=>num_cnt_0, 
                 DI1=>n2273, DI0=>n2276, LSR=>num_cnt_2, CLK=>apa, F0=>n2276, 
                 Q0=>ROW_c_2, F1=>n2273, Q1=>ROW_c_3);
     SLICE_15I: SLICE_15
-      port map (D1=>n10, C1=>n1959, B1=>n2257, D0=>n2123, C0=>n2061, B0=>n1198, 
-                A0=>n718, DI1=>a_to_g_6_N_71_1, DI0=>a_to_g_6_N_71_0, 
+      port map (D1=>n1959, C1=>n10, A1=>n2257, D0=>n2061, C0=>n2123, B0=>n718, 
+                A0=>n1198, DI1=>a_to_g_6_N_71_1, DI0=>a_to_g_6_N_71_0, 
                 CE=>a_to_g_6_N_78, CLK=>apa, F0=>a_to_g_6_N_71_0, 
                 Q0=>a_to_g_c_0, F1=>a_to_g_6_N_71_1, Q1=>a_to_g_c_1);
     SLICE_16I: SLICE_16
-      port map (D1=>n1188, C1=>n34, B1=>key_out_1, A1=>n2269, D0=>n2257, 
-                C0=>n1160, B0=>n2255, A0=>n10, DI1=>a_to_g_6_N_71_3, 
+      port map (D1=>n2269, C1=>n34, B1=>n1188, A1=>key_out_1, D0=>n10, 
+                C0=>n2257, B0=>n2255, A0=>n1160, DI1=>a_to_g_6_N_71_3, 
                 DI0=>a_to_g_6_N_71_2, CE=>a_to_g_6_N_78, CLK=>apa, 
                 F0=>a_to_g_6_N_71_2, Q0=>a_to_g_c_2, F1=>a_to_g_6_N_71_3, 
                 Q1=>a_to_g_c_3);
     SLICE_17I: SLICE_17
-      port map (D1=>n2056, C1=>n1947, B1=>n2255, A1=>n4_adj_1, D0=>n1198, 
-                C0=>n1947, A0=>n2057, DI1=>a_to_g_6_N_71_5, 
+      port map (D1=>n1947, C1=>n4_adj_1, B1=>n2056, A1=>n2255, D0=>n1947, 
+                B0=>n2057, A0=>n1198, DI1=>a_to_g_6_N_71_5, 
                 DI0=>a_to_g_6_N_71_4, CE=>a_to_g_6_N_78, CLK=>apa, 
                 F0=>a_to_g_6_N_71_4, Q0=>a_to_g_c_4, F1=>a_to_g_6_N_71_5, 
                 Q1=>a_to_g_c_5);
     SLICE_18I: SLICE_18
-      port map (D1=>n2042, C1=>key_out_14, A1=>key_out_13, D0=>n2120, 
-                B0=>n2258, A0=>n10_adj_10, DI0=>a_to_g_6_N_71_6, 
+      port map (C1=>key_out_14, B1=>n2042, A1=>key_out_13, D0=>n2120, 
+                C0=>n10_adj_10, B0=>n2258, DI0=>a_to_g_6_N_71_6, 
                 CE=>a_to_g_6_N_78, CLK=>apa, F0=>a_to_g_6_N_71_6, 
                 Q0=>a_to_g_c_6, F1=>n2258);
     SLICE_19I: SLICE_19
       port map (DI0=>n2438, CE=>clk_c_enable_1, LSR=>apa_N_10, CLK=>clk_c, 
                 F0=>n2438, Q0=>apa);
     SLICE_28I: SLICE_28
-      port map (D0=>key_out_2, C0=>key_out_1, M1=>BTN_cache_1, M0=>BTN_cache_0, 
+      port map (B0=>key_out_1, A0=>key_out_2, M1=>BTN_cache_1, M0=>BTN_cache_0, 
                 CE=>apa_enable_8, CLK=>apa, F0=>n12_adj_4, Q0=>led_four_c_0, 
                 F1=>GND_net, Q1=>led_four_c_1);
     SLICE_29I: SLICE_29
-      port map (C1=>LED_get_1, B1=>LED_get_4, D0=>key_out_9, A0=>key_out_7, 
+      port map (B1=>LED_get_4, A1=>LED_get_1, D0=>key_out_9, A0=>key_out_7, 
                 M1=>BTN_cache_3, M0=>BTN_cache_2, CE=>apa_enable_8, CLK=>apa, 
                 F0=>n12_adj_9, Q0=>led_four_c_2, F1=>n2064, Q1=>led_four_c_3);
     SLICE_30I: SLICE_30
-      port map (D1=>num_cnt_2, B1=>num_cnt_0, A1=>num_cnt_1, D0=>apa_N_10, 
+      port map (D1=>num_cnt_2, B1=>num_cnt_1, A1=>num_cnt_0, C0=>apa_N_10, 
                 A0=>num_cnt_0, DI0=>n2089, LSR=>n359, CLK=>clk_c, F0=>n2089, 
                 Q0=>num_cnt_0, F1=>key_out_15_N_55);
     SLICE_31I: SLICE_31
-      port map (D1=>num_cnt_2, B1=>num_cnt_0, A1=>num_cnt_1, B0=>num_cnt_0, 
+      port map (D1=>num_cnt_1, C1=>num_cnt_0, A1=>num_cnt_2, C0=>num_cnt_0, 
                 A0=>num_cnt_1, DI1=>n1941, DI0=>n1945, CE=>apa_N_10, LSR=>n359, 
                 CLK=>clk_c, F0=>n1945, Q0=>num_cnt_1, F1=>n1941, Q1=>num_cnt_2);
     i69_SLICE_32I: i69_SLICE_32
-      port map (D1=>key_out_6, C1=>key_out_7, B1=>key_out_5, A1=>n2262, 
-                D0=>n2270, C0=>n2279, B0=>n2280, A0=>key_out_9, M0=>key_out_10, 
+      port map (D1=>key_out_5, C1=>key_out_7, B1=>key_out_6, A1=>n2262, 
+                D0=>n2280, C0=>key_out_9, B0=>n2279, A0=>n2270, M0=>key_out_10, 
                 OFX0=>n40);
     i1974_SLICE_33I: i1974_SLICE_33
-      port map (D1=>key_out_9, C1=>n2006, B1=>key_out_11, A1=>key_out_8, 
-                D0=>n2006, C0=>key_out_9, B0=>key_out_11, A0=>key_out_8, 
+      port map (D1=>key_out_11, C1=>n2006, B1=>key_out_8, A1=>key_out_9, 
+                D0=>key_out_11, C0=>n2006, B0=>key_out_8, A0=>key_out_9, 
                 M0=>key_out_10, OFX0=>n2285);
     SLICE_34I: SLICE_34
-      port map (D1=>n6, C1=>n1188, B1=>n2263, A1=>key_out_11, D0=>n2056, 
-                C0=>n10, B0=>key_out_12, A0=>key_out_11, M1=>COL_c_1, 
-                M0=>COL_c_0, CE=>key_out_15_N_50, CLK=>apa, F0=>n2120, 
-                Q0=>key_out_8, F1=>n10, Q1=>key_out_9);
+      port map (D1=>n2263, C1=>key_out_11, B1=>n6, A1=>n1188, D0=>key_out_12, 
+                C0=>n10, B0=>n2056, A0=>key_out_11, M1=>COL_c_1, M0=>COL_c_0, 
+                CE=>key_out_15_N_50, CLK=>apa, F0=>n2120, Q0=>key_out_8, 
+                F1=>n10, Q1=>key_out_9);
     SLICE_35I: SLICE_35
-      port map (D1=>n2266, C1=>n1998, B1=>n68, A1=>n2006, D0=>key_out_15, 
+      port map (D1=>n68, C1=>n2006, B1=>n1998, A1=>n2266, D0=>key_out_15, 
                 C0=>key_out_14, B0=>key_out_12, A0=>key_out_13, F0=>n2006, 
                 F1=>n4_adj_2);
     SLICE_36I: SLICE_36
-      port map (D1=>key_out_12, C1=>key_out_5, B1=>n2270, A1=>key_out_15, 
-                D0=>n2040, C0=>key_out_1, B0=>n2261, A0=>n2147, F0=>n2042, 
+      port map (D1=>key_out_15, C1=>key_out_5, B1=>key_out_12, A1=>n2270, 
+                D0=>n2147, C0=>key_out_1, B0=>n2040, A0=>n2261, F0=>n2042, 
                 F1=>n2261);
     SLICE_37I: SLICE_37
-      port map (D1=>n6_adj_7, C1=>BTN_cache_0, B1=>n2, A1=>button_four_c_0, 
-                C0=>apa_enable_5, A0=>n689, F0=>n319, F1=>apa_enable_5);
+      port map (D1=>n2, C1=>BTN_cache_0, B1=>n6_adj_7, A1=>button_four_c_0, 
+                D0=>n689, C0=>apa_enable_5, F0=>n319, F1=>apa_enable_5);
     SLICE_38I: SLICE_38
-      port map (D1=>key_out_8, C1=>n2274, B1=>key_out_4, A1=>n2271, 
-                D0=>key_out_10, B0=>key_out_3, F0=>n2271, F1=>n2050);
+      port map (D1=>n2271, C1=>key_out_4, B1=>n2274, A1=>key_out_8, 
+                D0=>key_out_10, C0=>key_out_3, F0=>n2271, F1=>n2050);
     SLICE_39I: SLICE_39
-      port map (D1=>n2014, C1=>n2257, B1=>n4_adj_3, A1=>n727, D0=>key_out_3, 
-                C0=>key_out_4, A0=>n2023, F0=>n727, F1=>n1198);
+      port map (D1=>n4_adj_3, C1=>n2014, B1=>n727, A1=>n2257, C0=>key_out_4, 
+                B0=>n2023, A0=>key_out_3, F0=>n727, F1=>n1198);
     SLICE_40I: SLICE_40
-      port map (D1=>key_out_1, C1=>n1990, B1=>key_out_2, A1=>n2053, 
-                D0=>key_out_3, C0=>key_out_10, A0=>key_out_6, F0=>n2053, 
+      port map (D1=>key_out_1, C1=>n2053, B1=>key_out_2, A1=>n1990, 
+                D0=>key_out_3, C0=>key_out_6, A0=>key_out_10, F0=>n2053, 
                 F1=>n2016);
     SLICE_41I: SLICE_41
-      port map (D1=>n2162, C1=>n2272, B1=>key_out_1, A1=>key_out_0, 
-                D0=>key_out_3, C0=>key_out_2, F0=>n2272, F1=>n1998);
+      port map (D1=>key_out_0, C1=>n2162, B1=>key_out_1, A1=>n2272, 
+                C0=>key_out_3, A0=>key_out_2, F0=>n2272, F1=>n1998);
     SLICE_42I: SLICE_42
-      port map (D1=>key_out_6, C1=>n2256, B1=>n12_adj_9, A1=>n2259, D0=>n2041, 
-                B0=>key_out_5, M1=>COL_c_1, M0=>COL_c_0, CE=>key_out_15_N_45, 
+      port map (D1=>n2259, C1=>n12_adj_9, B1=>key_out_6, A1=>n2256, D0=>n2041, 
+                C0=>key_out_5, M1=>COL_c_1, M0=>COL_c_0, CE=>key_out_15_N_45, 
                 CLK=>apa, F0=>n2256, Q0=>key_out_12, F1=>n10_adj_10, 
                 Q1=>key_out_13);
     SLICE_43I: SLICE_43
-      port map (D1=>n4_adj_5, C1=>n2054, B1=>n2268, A1=>n40, D0=>key_out_3, 
-                C0=>key_out_11, A0=>key_out_2, F0=>n4_adj_5, F1=>n1994);
+      port map (D1=>n40, C1=>n2268, B1=>n4_adj_5, A1=>n2054, D0=>key_out_2, 
+                C0=>key_out_3, B0=>key_out_11, F0=>n4_adj_5, F1=>n1994);
     SLICE_44I: SLICE_44
-      port map (D1=>n2040, C1=>n1984, B1=>n2269, A1=>key_out_7, D0=>n706, 
-                C0=>n2041, B0=>key_out_6, A0=>key_out_5, F0=>n1160, F1=>n2041);
+      port map (D1=>key_out_7, C1=>n2040, B1=>n1984, A1=>n2269, D0=>key_out_6, 
+                C0=>n2041, B0=>n706, A0=>key_out_5, F0=>n1160, F1=>n2041);
     SLICE_45I: SLICE_45
-      port map (D1=>n2204, C1=>n2053, B1=>key_out_5, A1=>key_out_2, D0=>n2203, 
-                A0=>key_out_4, M1=>COL_c_3, M0=>COL_c_2, CE=>key_out_15_N_50, 
+      port map (D1=>key_out_5, C1=>n2053, B1=>n2204, A1=>key_out_2, C0=>n2203, 
+                B0=>key_out_4, M1=>COL_c_3, M0=>COL_c_2, CE=>key_out_15_N_50, 
                 CLK=>apa, F0=>n2204, Q0=>key_out_10, F1=>n2054, Q1=>key_out_11);
     SLICE_46I: SLICE_46
-      port map (D1=>key_out_9, C1=>key_out_0, A1=>key_out_8, D0=>n2264, 
-                C0=>key_out_11, B0=>n2265, A0=>key_out_7, M1=>COL_c_1, 
+      port map (C1=>key_out_0, B1=>key_out_8, A1=>key_out_9, D0=>n2264, 
+                C0=>n2265, B0=>key_out_11, A0=>key_out_7, M1=>COL_c_1, 
                 M0=>COL_c_0, CE=>key_out_15_N_60, CLK=>apa, F0=>n2203, 
                 Q0=>key_out_0, F1=>n2265, Q1=>key_out_1);
     SLICE_47I: SLICE_47
-      port map (D1=>n1844, C1=>n1791, B1=>clk_cnt_8, A1=>clk_cnt_5, 
-                D0=>num_cnt_2, C0=>apa_N_10, B0=>num_cnt_0, A0=>num_cnt_1, 
+      port map (D1=>clk_cnt_5, C1=>n1791, B1=>clk_cnt_8, A1=>n1844, 
+                D0=>num_cnt_1, C0=>apa_N_10, B0=>num_cnt_0, A0=>num_cnt_2, 
                 F0=>n359, F1=>apa_N_10);
     SLICE_48I: SLICE_48
-      port map (D1=>clk_cnt_12, A1=>clk_cnt_13, D0=>n18, C0=>clk_cnt_11, 
-                B0=>n12, A0=>n2084, M1=>COL_c_1, M0=>COL_c_0, 
+      port map (D1=>clk_cnt_12, A1=>clk_cnt_13, D0=>n2084, C0=>n12, 
+                B0=>clk_cnt_11, A0=>n18, M1=>COL_c_1, M0=>COL_c_0, 
                 CE=>key_out_15_N_55, CLK=>apa, F0=>clk_c_enable_1, 
                 Q0=>key_out_4, F1=>n12, Q1=>key_out_5);
     SLICE_49I: SLICE_49
-      port map (D1=>clk_cnt_6, C1=>clk_cnt_4, B1=>clk_cnt_9, A1=>clk_cnt_10, 
-                D0=>clk_cnt_8, C0=>clk_cnt_5, B0=>clk_cnt_3, A0=>n1791, 
+      port map (D1=>clk_cnt_6, C1=>clk_cnt_10, B1=>clk_cnt_4, A1=>clk_cnt_9, 
+                D0=>clk_cnt_8, C0=>n1791, B0=>clk_cnt_3, A0=>clk_cnt_5, 
                 F0=>n18, F1=>n1791);
     SLICE_50I: SLICE_50
-      port map (D1=>n2272, C1=>key_out_4, B1=>n2274, A1=>key_out_8, 
-                D0=>key_out_0, B0=>key_out_9, M1=>button_four_c_3, 
+      port map (D1=>key_out_4, C1=>n2274, B1=>key_out_8, A1=>n2272, 
+                D0=>key_out_9, B0=>key_out_0, M1=>button_four_c_3, 
                 M0=>button_four_c_2, CE=>apa_enable_5, CLK=>apa, F0=>n2274, 
                 Q0=>BTN_cache_2, F1=>n2040, Q1=>BTN_cache_3);
     SLICE_51I: SLICE_51
-      port map (D1=>n718, C1=>n4, B1=>n2026, A1=>n2266, D0=>n10_adj_10, 
-                C0=>n1188, B0=>n1162, A0=>n1771, F0=>n1947, F1=>n1188);
+      port map (D1=>n718, C1=>n2026, B1=>n4, A1=>n2266, D0=>n1162, 
+                C0=>n10_adj_10, B0=>n1188, A0=>n1771, F0=>n1947, F1=>n1188);
     SLICE_52I: SLICE_52
-      port map (D1=>n1999, C1=>key_out_8, B1=>key_out_9, A1=>key_out_7, 
-                D0=>key_out_15, C0=>n1306, A0=>key_out_0, F0=>n1771, F1=>n1306);
+      port map (D1=>key_out_7, C1=>key_out_9, B1=>key_out_8, A1=>n1999, 
+                D0=>key_out_15, C0=>n1306, B0=>key_out_0, F0=>n1771, F1=>n1306);
     SLICE_53I: SLICE_53
-      port map (D1=>key_out_7, C1=>n2016, B1=>n2262, A1=>key_out_15, 
-                D0=>key_out_0, C0=>key_out_9, B0=>key_out_8, A0=>key_out_4, 
+      port map (D1=>n2262, C1=>key_out_7, B1=>key_out_15, A1=>n2016, 
+                D0=>key_out_0, C0=>key_out_4, B0=>key_out_9, A0=>key_out_8, 
                 F0=>n2262, F1=>n2056);
     SLICE_54I: SLICE_54
-      port map (D1=>n2072, C1=>n2264, B1=>n2272, A1=>key_out_1, C0=>key_out_0, 
-                B0=>key_out_9, A0=>key_out_8, F0=>n2264, F1=>n2022);
+      port map (D1=>n2072, C1=>n2264, B1=>n2272, A1=>key_out_1, D0=>key_out_9, 
+                C0=>key_out_8, B0=>key_out_0, F0=>n2264, F1=>n2022);
     SLICE_55I: SLICE_55
-      port map (D1=>key_out_13, C1=>n706, B1=>key_out_14, A1=>n2042, 
-                D0=>key_out_15, C0=>n1306, B0=>key_out_0, F0=>n706, F1=>n1162);
+      port map (D1=>key_out_14, C1=>n706, B1=>n2042, A1=>key_out_13, 
+                D0=>key_out_15, C0=>key_out_0, B0=>n1306, F0=>n706, F1=>n1162);
     SLICE_56I: SLICE_56
-      port map (D1=>n1160, C1=>n2057, B1=>n2070, A1=>key_out_7, D0=>n2056, 
-                C0=>key_out_12, B0=>key_out_11, F0=>n2057, F1=>n1959);
+      port map (D1=>n2070, C1=>n2057, B1=>key_out_7, A1=>n1160, D0=>key_out_11, 
+                C0=>key_out_12, A0=>n2056, F0=>n2057, F1=>n1959);
     SLICE_57I: SLICE_57
-      port map (D1=>key_out_10, C1=>n2270, B1=>n23, A1=>n26, D0=>n1994, 
-                C0=>key_out_11, B0=>key_out_5, A0=>n8, F0=>n34, F1=>n8);
+      port map (D1=>key_out_10, C1=>n26, B1=>n2270, A1=>n23, D0=>n1994, 
+                C0=>key_out_5, B0=>key_out_11, A0=>n8, F0=>n34, F1=>n8);
     SLICE_58I: SLICE_58
-      port map (D1=>n2263, C1=>n6_adj_6, B1=>n2272, A1=>n2260, D0=>key_out_4, 
-                C0=>key_out_0, B0=>key_out_9, A0=>key_out_5, F0=>n6_adj_6, 
+      port map (D1=>n2272, C1=>n2260, B1=>n2263, A1=>n6_adj_6, D0=>key_out_4, 
+                C0=>key_out_5, B0=>key_out_0, A0=>key_out_9, F0=>n6_adj_6, 
                 F1=>n2014);
     SLICE_59I: SLICE_59
-      port map (D1=>n1999, C1=>key_out_9, B1=>key_out_15, A1=>n2280, 
-                D0=>key_out_0, C0=>key_out_8, F0=>n2280, F1=>n2070);
+      port map (D1=>n1999, C1=>n2280, B1=>key_out_15, A1=>key_out_9, 
+                D0=>key_out_8, B0=>key_out_0, F0=>n2280, F1=>n2070);
     SLICE_60I: SLICE_60
-      port map (D1=>n2016, C1=>key_out_12, B1=>key_out_4, A1=>key_out_11, 
-                D0=>key_out_15, C0=>n1999, B0=>key_out_0, A0=>key_out_8, 
+      port map (D1=>key_out_12, C1=>n2016, B1=>key_out_11, A1=>key_out_4, 
+                D0=>key_out_8, C0=>n1999, B0=>key_out_0, A0=>key_out_15, 
                 F0=>n2259, F1=>n1999);
     SLICE_61I: SLICE_61
-      port map (D1=>clk_cnt_11, C1=>n9, B1=>n14, A1=>clk_cnt_12, D0=>clk_cnt_2, 
-                C0=>clk_cnt_13, F0=>n9, F1=>n1844);
+      port map (D1=>clk_cnt_11, C1=>clk_cnt_12, B1=>n9, A1=>n14, 
+                D0=>clk_cnt_13, B0=>clk_cnt_2, F0=>n9, F1=>n1844);
     SLICE_62I: SLICE_62
-      port map (B1=>key_out_13, A1=>key_out_2, D0=>key_out_14, C0=>n2262, 
-                B0=>key_out_3, A0=>n2076, F0=>n23, F1=>n2076);
+      port map (C1=>key_out_13, B1=>key_out_2, D0=>n2076, C0=>key_out_3, 
+                B0=>n2262, A0=>key_out_14, F0=>n23, F1=>n2076);
     SLICE_63I: SLICE_63
-      port map (D1=>key_out_2, C1=>n2265, B1=>key_out_4, A1=>key_out_3, 
-                D0=>key_out_14, C0=>n2040, B0=>n2037, A0=>key_out_13, F0=>n26, 
+      port map (D1=>key_out_2, C1=>key_out_3, B1=>key_out_4, A1=>n2265, 
+                D0=>key_out_14, C0=>n2037, B0=>key_out_13, A0=>n2040, F0=>n26, 
                 F1=>n2037);
     SLICE_64I: SLICE_64
-      port map (D1=>n2285, C1=>n2147, B1=>n2161, A1=>n2140, D0=>key_out_15, 
-                C0=>key_out_14, B0=>key_out_13, A0=>key_out_12, F0=>n2161, 
+      port map (D1=>n2161, C1=>n2147, B1=>n2285, A1=>n2140, D0=>key_out_15, 
+                C0=>key_out_14, B0=>key_out_12, A0=>key_out_13, F0=>n2161, 
                 F1=>n71);
     SLICE_65I: SLICE_65
-      port map (D1=>n2268, C1=>key_out_11, B1=>key_out_5, A1=>n2263, D0=>n2050, 
-                C0=>key_out_1, B0=>n4_adj_11, A0=>key_out_2, F0=>n2061, 
-                F1=>n4_adj_11);
+      port map (D1=>n2263, C1=>key_out_5, B1=>key_out_11, A1=>n2268, 
+                D0=>key_out_2, C0=>n2050, B0=>key_out_1, A0=>n4_adj_11, 
+                F0=>n2061, F1=>n4_adj_11);
     SLICE_66I: SLICE_66
-      port map (D1=>n2268, C1=>key_out_11, B1=>key_out_10, A1=>key_out_1, 
-                D0=>n1984, C0=>n2261, B0=>n2264, A0=>key_out_2, F0=>n2023, 
+      port map (D1=>key_out_10, C1=>n2268, B1=>key_out_11, A1=>key_out_1, 
+                D0=>n2264, C0=>n2261, B0=>n1984, A0=>key_out_2, F0=>n2023, 
                 F1=>n1984);
     SLICE_67I: SLICE_67
-      port map (D1=>apa_enable_5, C1=>n689, D0=>LED_get_0, C0=>LED_get_2, 
-                B0=>n2064, A0=>LED_get_3, F0=>n689, F1=>apa_enable_8);
+      port map (C1=>n689, A1=>apa_enable_5, D0=>n2064, C0=>LED_get_2, 
+                B0=>LED_get_0, A0=>LED_get_3, F0=>n689, F1=>apa_enable_8);
     SLICE_68I: SLICE_68
-      port map (D1=>key_out_14, C1=>key_out_5, B1=>key_out_13, D0=>n2022, 
-                C0=>n1990, B0=>n12_adj_4, A0=>n2050, F0=>n6, F1=>n1990);
+      port map (C1=>key_out_14, B1=>key_out_5, A1=>key_out_13, D0=>n12_adj_4, 
+                C0=>n1990, B0=>n2022, A0=>n2050, F0=>n6, F1=>n1990);
     SLICE_69I: SLICE_69
-      port map (C1=>key_out_9, A1=>key_out_8, D0=>n4_adj_2, C0=>key_out_10, 
-                B0=>key_out_11, A0=>n2140, F0=>n2026, F1=>n2140);
+      port map (D1=>key_out_9, A1=>key_out_8, D0=>key_out_11, C0=>n4_adj_2, 
+                B0=>n2140, A0=>key_out_10, F0=>n2026, F1=>n2140);
     SLICE_70I: SLICE_70
-      port map (D1=>key_out_6, C1=>key_out_7, B1=>key_out_4, A1=>key_out_5, 
-                D0=>key_out_6, C0=>key_out_7, B0=>key_out_4, A0=>key_out_5, 
+      port map (D1=>key_out_7, C1=>key_out_5, B1=>key_out_4, A1=>key_out_6, 
+                D0=>key_out_7, C0=>key_out_5, B0=>key_out_4, A0=>key_out_6, 
                 F0=>n2266, F1=>n2162);
     SLICE_71I: SLICE_71
       port map (D1=>clk_cnt_3, C1=>clk_cnt_7, B1=>clk_cnt_0, A1=>clk_cnt_1, 
-                D0=>clk_cnt_1, C0=>clk_cnt_7, B0=>clk_cnt_0, A0=>clk_cnt_2, 
+                D0=>clk_cnt_2, C0=>clk_cnt_7, B0=>clk_cnt_0, A0=>clk_cnt_1, 
                 M1=>COL_c_3, M0=>COL_c_2, CE=>key_out_15_N_45, CLK=>apa, 
                 F0=>n2084, Q0=>key_out_14, F1=>n14, Q1=>key_out_15);
     SLICE_72I: SLICE_72
-      port map (D1=>num_cnt_1, C1=>num_cnt_2, A1=>num_cnt_0, D0=>num_cnt_1, 
-                C0=>num_cnt_2, A0=>num_cnt_0, F0=>a_to_g_6_N_78, 
+      port map (D1=>num_cnt_2, C1=>num_cnt_1, A1=>num_cnt_0, D0=>num_cnt_2, 
+                C0=>num_cnt_1, A0=>num_cnt_0, F0=>a_to_g_6_N_78, 
                 F1=>key_out_15_N_60);
     SLICE_73I: SLICE_73
-      port map (D1=>num_cnt_1, B1=>num_cnt_2, A1=>num_cnt_0, D0=>num_cnt_1, 
-                B0=>num_cnt_2, A0=>num_cnt_0, M1=>COL_c_3, M0=>COL_c_2, 
+      port map (D1=>num_cnt_0, B1=>num_cnt_2, A1=>num_cnt_1, D0=>num_cnt_0, 
+                C0=>num_cnt_2, A0=>num_cnt_1, M1=>COL_c_3, M0=>COL_c_2, 
                 CE=>key_out_15_N_55, CLK=>apa, F0=>key_out_15_N_45, 
                 Q0=>key_out_6, F1=>key_out_15_N_50, Q1=>key_out_7);
     SLICE_74I: SLICE_74
-      port map (D1=>n1959, C1=>key_out_13, B1=>n2042, A1=>key_out_14, 
-                D0=>key_out_14, C0=>key_out_13, B0=>n2042, A0=>n727, F0=>n2255, 
+      port map (D1=>key_out_13, C1=>key_out_14, B1=>n1959, A1=>n2042, 
+                D0=>key_out_13, C0=>key_out_14, B0=>n727, A0=>n2042, F0=>n2255, 
                 F1=>n2123);
     SLICE_75I: SLICE_75
-      port map (D1=>key_out_7, B1=>key_out_6, D0=>key_out_6, C0=>key_out_15, 
-                B0=>key_out_7, A0=>key_out_12, F0=>n2263, F1=>n2270);
+      port map (C1=>key_out_7, A1=>key_out_6, D0=>key_out_7, C0=>key_out_6, 
+                B0=>key_out_15, A0=>key_out_12, F0=>n2263, F1=>n2270);
     SLICE_76I: SLICE_76
-      port map (D1=>key_out_1, C1=>n71, B1=>n2272, A1=>key_out_0, 
-                D0=>key_out_2, C0=>key_out_1, B0=>key_out_0, A0=>key_out_3, 
+      port map (D1=>key_out_1, C1=>key_out_0, B1=>n2272, A1=>n71, 
+                D0=>key_out_1, C0=>key_out_3, B0=>key_out_0, A0=>key_out_2, 
                 F0=>n68, F1=>n4);
     SLICE_77I: SLICE_77
-      port map (D1=>key_out_8, C1=>n2014, B1=>key_out_10, D0=>key_out_10, 
-                A0=>key_out_8, F0=>n4_adj_3, F1=>n718);
+      port map (D1=>key_out_8, C1=>n2014, B1=>key_out_10, D0=>key_out_8, 
+                B0=>key_out_10, F0=>n4_adj_3, F1=>n718);
     SLICE_78I: SLICE_78
-      port map (D1=>key_out_11, C1=>key_out_13, B1=>key_out_1, A1=>key_out_14, 
-                D0=>key_out_14, C0=>key_out_13, F0=>n2268, F1=>n2260);
+      port map (D1=>key_out_13, C1=>key_out_1, B1=>key_out_14, A1=>key_out_11, 
+                C0=>key_out_13, B0=>key_out_14, F0=>n2268, F1=>n2260);
     SLICE_79I: SLICE_79
-      port map (B1=>key_out_15, A1=>key_out_12, B0=>key_out_11, A0=>key_out_12, 
+      port map (D1=>key_out_12, C1=>key_out_15, D0=>key_out_12, A0=>key_out_11, 
                 F0=>n4_adj_1, F1=>n2269);
     SLICE_80I: SLICE_80
-      port map (B1=>key_out_5, A1=>key_out_4, D0=>key_out_5, B0=>n2041, 
-                A0=>key_out_6, F0=>n2257, F1=>n2279);
+      port map (C1=>key_out_5, B1=>key_out_4, D0=>key_out_6, C0=>key_out_5, 
+                A0=>n2041, F0=>n2257, F1=>n2279);
     SLICE_81I: SLICE_81
-      port map (C1=>key_out_11, A1=>key_out_10, C0=>key_out_10, A0=>key_out_4, 
+      port map (B1=>key_out_11, A1=>key_out_10, B0=>key_out_4, A0=>key_out_10, 
                 M1=>COL_c_3, M0=>COL_c_2, CE=>key_out_15_N_60, CLK=>apa, 
                 F0=>n2072, Q0=>key_out_2, F1=>n2147, Q1=>key_out_3);
     SLICE_82I: SLICE_82
-      port map (D1=>BTN_cache_3, C1=>BTN_cache_2, B1=>button_four_c_3, 
-                A1=>button_four_c_2, D0=>button_four_c_1, C0=>BTN_cache_1, 
+      port map (D1=>BTN_cache_2, C1=>button_four_c_2, B1=>BTN_cache_3, 
+                A1=>button_four_c_3, B0=>button_four_c_1, A0=>BTN_cache_1, 
                 M1=>button_four_c_1, M0=>button_four_c_0, CE=>apa_enable_5, 
                 CLK=>apa, F0=>n2, Q0=>BTN_cache_0, F1=>n6_adj_7, 
                 Q1=>BTN_cache_1);

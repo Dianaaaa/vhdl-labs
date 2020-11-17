@@ -1,0 +1,353 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file led_shining_impl1_map.ncd.
+Design name: PWM
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Nov 17 21:10:01 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o led_shining_impl1.tw1 -gui -msgset C:/Users/10352/vhdl-labs/lab2_led_shining/promote.xml led_shining_impl1_map.ncd led_shining_impl1.prf 
+Design file:     led_shining_impl1_map.ncd
+Preference file: led_shining_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY 12.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+Report:   39.673MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY 12.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 29.063ns (weighted slack = 58.126ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              cnt1_i0_i6  (from clk_c +)
+   Destination:    FF         Data in        pulse_out_96  (to clk0 -)
+
+   Delay:              12.437ns  (30.5% logic, 69.5% route), 8 logic levels.
+
+ Constraint Details:
+
+     12.437ns physical path delay SLICE_165 to SLICE_187 meets
+     41.666ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 41.500ns) by 29.063ns
+
+ Physical Path Details:
+
+      Data path SLICE_165 to SLICE_187:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_165.CLK to   SLICE_165.Q1 SLICE_165 (from clk_c)
+ROUTE         5   e 1.234   SLICE_165.Q1 to   SLICE_208.B1 cnt1_6
+CTOF_DEL    ---     0.495   SLICE_208.B1 to   SLICE_208.F1 SLICE_208
+ROUTE         1   e 1.234   SLICE_208.F1 to   SLICE_199.B1 n2550
+CTOF_DEL    ---     0.495   SLICE_199.B1 to   SLICE_199.F1 SLICE_199
+ROUTE         1   e 1.234   SLICE_199.F1 to   SLICE_200.D1 n2438
+CTOF_DEL    ---     0.495   SLICE_200.D1 to   SLICE_200.F1 SLICE_200
+ROUTE         1   e 1.234   SLICE_200.F1 to   SLICE_190.D1 n2449
+CTOF_DEL    ---     0.495   SLICE_190.D1 to   SLICE_190.F1 SLICE_190
+ROUTE         1   e 1.234   SLICE_190.F1 to   SLICE_195.D1 n2462
+CTOF_DEL    ---     0.495   SLICE_195.D1 to   SLICE_195.F1 SLICE_195
+ROUTE         1   e 1.234   SLICE_195.F1 to */SLICE_189.M1 n2483
+MTOOFX_DEL  ---     0.376 */SLICE_189.M1 to *LICE_189.OFX1 cnt2_16__I_0_111_i32/SLICE_189
+ROUTE         1   e 1.234 *LICE_189.OFX1 to   SLICE_187.A0 pulse_out_N_174
+CTOF_DEL    ---     0.495   SLICE_187.A0 to   SLICE_187.F0 SLICE_187
+ROUTE         1   e 0.001   SLICE_187.F0 to  SLICE_187.DI0 pulse_out_N_173 (to clk0)
+                  --------
+                   12.437   (30.5% logic, 69.5% route), 8 logic levels.
+
+Report:   39.673MHz is the maximum frequency for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY 12.000000 MHz ;               |   12.000 MHz|   39.673 MHz|   8  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 6 clocks:
+
+Clock Domain: key_menu1   Source: SLICE_182.F0   Loads: 1
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 80
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: key_menu1   Source: SLICE_182.F0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk0   Source: SLICE_163.Q0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
+
+   Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
+
+   Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
+
+Clock Domain: clk0   Source: SLICE_163.Q0   Loads: 5
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 47
+
+Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0   Loads: 19
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0   Loads: 19
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+Clock Domain: P1/keysamplerpulse   Source: P1/SLICE_107.F0   Loads: 19
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 51417 paths, 6 nets, and 1134 connections (93.49% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
+Tue Nov 17 21:10:01 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o led_shining_impl1.tw1 -gui -msgset C:/Users/10352/vhdl-labs/lab2_led_shining/promote.xml led_shining_impl1_map.ncd led_shining_impl1.prf 
+Design file:     led_shining_impl1_map.ncd
+Preference file: led_shining_impl1.prf
+Device,speed:    LCMXO2-4000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY 12.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY 12.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              P1/keystore_i0  (from P1/keysamplerpulse +)
+   Destination:    FF         Data in        P1/keystore_i1  (to P1/keysamplerpulse +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay P1/SLICE_157 to P1/SLICE_157 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path P1/SLICE_157 to P1/SLICE_157:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_157.CLK to */SLICE_157.Q0 P1/SLICE_157 (from P1/keysamplerpulse)
+ROUTE         2   e 0.199 */SLICE_157.Q0 to */SLICE_157.M1 P1/keystore_0 (to P1/keysamplerpulse)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY 12.000000 MHz ;               |            -|            -|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 6 clocks:
+
+Clock Domain: key_menu1   Source: SLICE_182.F0   Loads: 1
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+Clock Domain: clk_c   Source: clk.PAD   Loads: 80
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: key_menu1   Source: SLICE_182.F0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
+
+   Clock Domain: clk0   Source: SLICE_163.Q0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
+
+   Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
+
+   Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
+
+Clock Domain: clk0   Source: SLICE_163.Q0   Loads: 5
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_c   Source: clk.PAD
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 47
+
+Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0   Loads: 19
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0   Loads: 19
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+Clock Domain: P1/keysamplerpulse   Source: P1/SLICE_107.F0   Loads: 19
+   Covered under: FREQUENCY 12.000000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 51417 paths, 6 nets, and 1200 connections (98.93% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

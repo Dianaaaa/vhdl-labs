@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "trafic_light_impl1.log"
+-o "trafic_light_impl1.csv"
+-pr "trafic_light_impl1.prf"

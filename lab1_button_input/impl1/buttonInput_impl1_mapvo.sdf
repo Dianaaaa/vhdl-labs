@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION "3.0")
   (DESIGN "Key_Table")
-  (DATE "Tue Nov 17 15:39:32 2020")
+  (DATE "Tue Nov 17 20:59:38 2020")
   (VENDOR "Lattice")
   (PROGRAM "ldbanno")
   (VERSION "Diamond (64-bit) 3.11.0.396.4")

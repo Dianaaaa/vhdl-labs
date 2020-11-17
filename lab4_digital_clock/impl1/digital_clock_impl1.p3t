@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "digital_clock_impl1.log"
+-o "digital_clock_impl1.csv"
+-pr "digital_clock_impl1.prf"

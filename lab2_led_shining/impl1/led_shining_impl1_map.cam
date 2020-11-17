@@ -1,0 +1,179 @@
+[ START MERGED ]
+clk0__inv clk0
+[ END MERGED ]
+[ START CLIPPED ]
+GND_net
+VCC_net
+add_113_15/S1
+add_113_15/CO
+add_219_1/S0
+add_219_1/CI
+P2/keysamplerpulsecnt_273_add_4_1/S0
+P2/keysamplerpulsecnt_273_add_4_1/CI
+P2/keysamplerpulsecnt_273_add_4_33/S1
+P2/keysamplerpulsecnt_273_add_4_33/CO
+P2/add_870_2/S1
+P2/add_870_2/S0
+P2/add_870_2/CI
+P2/add_870_4/S1
+P2/add_870_4/S0
+P2/add_870_6/S1
+P2/add_870_6/S0
+P2/add_870_8/S1
+P2/add_870_8/S0
+P2/add_870_10/S1
+P2/add_870_10/S0
+P2/add_870_12/S1
+P2/add_870_12/S0
+P2/add_870_14/S1
+P2/add_870_14/S0
+P2/add_870_16/S1
+P2/add_870_16/S0
+P2/add_870_18/S1
+P2/add_870_18/S0
+P2/add_870_20/S1
+P2/add_870_20/S0
+P2/add_870_22/S1
+P2/add_870_22/S0
+P2/add_870_24/S1
+P2/add_870_24/S0
+P2/add_870_cout/S1
+P2/add_870_cout/CO
+P1/add_869_8/S1
+P1/add_869_8/S0
+P1/add_869_18/S1
+P1/add_869_18/S0
+P1/add_869_20/S1
+P1/add_869_20/S0
+P1/add_869_22/S1
+P1/add_869_22/S0
+P1/add_869_24/S1
+P1/add_869_24/S0
+P1/add_869_cout/S1
+P1/add_869_cout/CO
+P1/add_869_10/S1
+P1/add_869_10/S0
+P1/add_869_12/S1
+P1/add_869_12/S0
+P1/add_869_14/S1
+P1/add_869_14/S0
+P1/keysamplerpulsecnt_274_add_4_1/S0
+P1/keysamplerpulsecnt_274_add_4_1/CI
+P1/keysamplerpulsecnt_274_add_4_33/S1
+P1/keysamplerpulsecnt_274_add_4_33/CO
+P1/add_869_16/S1
+P1/add_869_16/S0
+P1/add_869_2/S1
+P1/add_869_2/S0
+P1/add_869_2/CI
+P1/add_869_4/S1
+P1/add_869_4/S0
+P1/add_869_6/S1
+P1/add_869_6/S0
+add_219_cout/S1
+add_219_cout/CO
+sub_117_add_2_1/S0
+sub_117_add_2_1/CI
+P3/add_868_6/S1
+P3/add_868_6/S0
+P3/add_868_8/S1
+P3/add_868_8/S0
+P3/add_868_10/S1
+P3/add_868_10/S0
+P3/add_868_12/S1
+P3/add_868_12/S0
+P3/add_868_14/S1
+P3/add_868_14/S0
+P3/add_868_16/S1
+P3/add_868_16/S0
+P3/add_868_18/S1
+P3/add_868_18/S0
+P3/add_868_20/S1
+P3/add_868_20/S0
+P3/add_868_22/S1
+P3/add_868_22/S0
+P3/add_868_24/S1
+P3/add_868_24/S0
+P3/add_868_cout/S1
+P3/add_868_cout/CO
+P3/keysamplerpulsecnt_272_add_4_1/S0
+P3/keysamplerpulsecnt_272_add_4_1/CI
+P3/keysamplerpulsecnt_272_add_4_33/S1
+P3/keysamplerpulsecnt_272_add_4_33/CO
+P3/add_868_2/S1
+P3/add_868_2/S0
+P3/add_868_2/CI
+P3/add_868_4/S1
+P3/add_868_4/S0
+add_267_1/S0
+add_267_1/CI
+add_267_15/CO
+sub_233_add_2_2/S1
+sub_233_add_2_2/S0
+sub_233_add_2_2/CI
+sub_233_add_2_4/S1
+sub_233_add_2_4/S0
+sub_233_add_2_6/S1
+sub_233_add_2_6/S0
+sub_232_add_2_1/S1
+sub_232_add_2_1/S0
+sub_232_add_2_1/CI
+sub_232_add_2_3/S1
+sub_232_add_2_3/S0
+sub_233_add_2_8/S1
+sub_233_add_2_8/S0
+sub_117_add_2_17/S1
+sub_117_add_2_17/CO
+sub_233_add_2_10/S1
+sub_233_add_2_10/S0
+sub_232_add_2_5/S1
+sub_232_add_2_5/S0
+sub_232_add_2_7/S1
+sub_232_add_2_7/S0
+sub_233_add_2_12/S1
+sub_233_add_2_12/S0
+sub_232_add_2_9/S1
+sub_232_add_2_9/S0
+sub_232_add_2_11/S1
+sub_232_add_2_11/S0
+sub_232_add_2_13/S1
+sub_232_add_2_13/S0
+sub_232_add_2_15/S1
+sub_232_add_2_15/S0
+sub_233_add_2_14/S1
+sub_233_add_2_14/S0
+sub_233_add_2_16/S1
+sub_233_add_2_16/S0
+sub_232_add_2_17/S1
+sub_232_add_2_17/S0
+sub_232_add_2_19/S0
+sub_232_add_2_19/CO
+cnt2_270_add_4_1/S0
+cnt2_270_add_4_1/CI
+add_113_1/S0
+add_113_1/CI
+sub_233_add_2_18/S1
+sub_233_add_2_18/S0
+cnt2_270_add_4_17/CO
+count0_268_add_4_1/S0
+count0_268_add_4_1/CI
+count0_268_add_4_9/S1
+count0_268_add_4_9/CO
+sub_233_add_2_20/S0
+sub_233_add_2_20/CO
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Tue Nov 17 21:10:00 2020
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "key_up" SITE "M14" ;
+LOCATE COMP "key_menu" SITE "L14" ;
+LOCATE COMP "key_down" SITE "N14" ;
+LOCATE COMP "clk" SITE "C1" ;
+LOCATE COMP "rst_n" SITE "M13" ;
+LOCATE COMP "display" SITE "G3" ;
+LOCATE COMP "pulse_out" SITE "P9" ;
+LOCATE COMP "menu_state" SITE "N13" ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

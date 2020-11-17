@@ -1,0 +1,600 @@
+
+             Lattice Mapping Report File for Design Module 'PWM'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     led_shining_impl1.ngd -o led_shining_impl1_map.ncd -pr
+     led_shining_impl1.prf -mp led_shining_impl1.mrp -lpf
+     C:/Users/10352/vhdl-labs/lab2_led_shining/impl1/led_shining_impl1.lpf -lpf
+     C:/Users/10352/vhdl-labs/lab2_led_shining/led_shining.lpf -c 0 -gui -msgset
+     C:/Users/10352/vhdl-labs/lab2_led_shining/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  11/17/20  21:10:00
+
+Design Summary
+--------------
+
+   Number of registers:    155 out of  4635 (3%)
+      PFU registers:          155 out of  4320 (4%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       211 out of  2160 (10%)
+      SLICEs as Logic/ROM:    211 out of  2160 (10%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:        157 out of  2160 (7%)
+   Number of LUT4s:        417 out of  4320 (10%)
+      Number used as logic LUTs:        103
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      314
+      Number used as shift registers:     0
+   Number of PIO sites used: 8 + 4(JTAG) out of 105 (11%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  6
+     Net clk_c: 80 loads, 80 rising, 0 falling (Driver: PIO clk )
+     Net key_menu1: 1 loads, 1 rising, 0 falling (Driver: P1/i2_3_lut )
+
+                                    Page 1
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+Design Summary (cont)
+---------------------
+     Net clk0: 3 loads, 1 rising, 2 falling (Driver: clk0_89 )
+     Net P3/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
+     P3/add_868_cout )
+     Net P1/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
+     P1/add_869_cout )
+     Net P2/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
+     P2/add_870_cout )
+   Number of Clock Enables:  4
+     Net clk_c_enable_35: 18 loads, 18 LSLICEs
+     Net clk_c_enable_8: 1 loads, 1 LSLICEs
+     Net rst_n_c: 1 loads, 1 LSLICEs
+     Net clk_c_enable_6: 2 loads, 2 LSLICEs
+   Number of LSRs:  6
+     Net n1235: 1 loads, 1 LSLICEs
+     Net n1904: 3 loads, 3 LSLICEs
+     Net n1579: 5 loads, 5 LSLICEs
+     Net P3/keysamplerpulse: 17 loads, 17 LSLICEs
+     Net P1/keysamplerpulse: 17 loads, 17 LSLICEs
+     Net P2/keysamplerpulse: 17 loads, 17 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net cycle_12: 47 loads
+     Net cycle_pulse_0: 40 loads
+     Net clk_c_enable_35: 32 loads
+     Net cnt2_16__N_146: 20 loads
+     Net direction: 20 loads
+     Net duty_pulse_0: 16 loads
+     Net n2420: 15 loads
+     Net n908: 14 loads
+     Net n2535: 13 loads
+     Net n2536: 13 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| key_up              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key_menu            | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| key_down            | INPUT     | LVCMOS25  |            |
+
+                                    Page 2
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rst_n               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| display             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| pulse_out           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| menu_state          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i1145 undriven or does not drive anything - clipped.
+Signal clk0__inv was merged into signal clk0
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal add_113_15/S1 undriven or does not drive anything - clipped.
+Signal add_113_15/CO undriven or does not drive anything - clipped.
+Signal add_219_1/S0 undriven or does not drive anything - clipped.
+Signal add_219_1/CI undriven or does not drive anything - clipped.
+Signal P2/keysamplerpulsecnt_273_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal P2/keysamplerpulsecnt_273_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal P2/keysamplerpulsecnt_273_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal P2/keysamplerpulsecnt_273_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal P2/add_870_2/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_2/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_2/CI undriven or does not drive anything - clipped.
+Signal P2/add_870_4/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_4/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_6/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_6/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_8/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_8/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_10/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_10/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_12/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_12/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_14/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_14/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_16/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_16/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_18/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_18/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_20/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_20/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_22/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_22/S0 undriven or does not drive anything - clipped.
+Signal P2/add_870_24/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_24/S0 undriven or does not drive anything - clipped.
+
+                                    Page 3
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+Removed logic (cont)
+--------------------
+Signal P2/add_870_cout/S1 undriven or does not drive anything - clipped.
+Signal P2/add_870_cout/CO undriven or does not drive anything - clipped.
+Signal P1/add_869_8/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_8/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_18/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_18/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_20/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_20/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_22/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_22/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_24/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_24/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_cout/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_cout/CO undriven or does not drive anything - clipped.
+Signal P1/add_869_10/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_10/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_12/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_12/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_14/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_14/S0 undriven or does not drive anything - clipped.
+Signal P1/keysamplerpulsecnt_274_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal P1/keysamplerpulsecnt_274_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal P1/keysamplerpulsecnt_274_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal P1/keysamplerpulsecnt_274_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal P1/add_869_16/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_16/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_2/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_2/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_2/CI undriven or does not drive anything - clipped.
+Signal P1/add_869_4/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_4/S0 undriven or does not drive anything - clipped.
+Signal P1/add_869_6/S1 undriven or does not drive anything - clipped.
+Signal P1/add_869_6/S0 undriven or does not drive anything - clipped.
+Signal add_219_cout/S1 undriven or does not drive anything - clipped.
+Signal add_219_cout/CO undriven or does not drive anything - clipped.
+Signal sub_117_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_117_add_2_1/CI undriven or does not drive anything - clipped.
+Signal P3/add_868_6/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_6/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_8/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_8/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_10/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_10/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_12/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_12/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_14/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_14/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_16/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_16/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_18/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_18/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_20/S1 undriven or does not drive anything - clipped.
+
+                                    Page 4
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+Removed logic (cont)
+--------------------
+Signal P3/add_868_20/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_22/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_22/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_24/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_24/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_cout/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_cout/CO undriven or does not drive anything - clipped.
+Signal P3/keysamplerpulsecnt_272_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal P3/keysamplerpulsecnt_272_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal P3/keysamplerpulsecnt_272_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal P3/keysamplerpulsecnt_272_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal P3/add_868_2/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_2/S0 undriven or does not drive anything - clipped.
+Signal P3/add_868_2/CI undriven or does not drive anything - clipped.
+Signal P3/add_868_4/S1 undriven or does not drive anything - clipped.
+Signal P3/add_868_4/S0 undriven or does not drive anything - clipped.
+Signal add_267_1/S0 undriven or does not drive anything - clipped.
+Signal add_267_1/CI undriven or does not drive anything - clipped.
+Signal add_267_15/CO undriven or does not drive anything - clipped.
+Signal sub_233_add_2_2/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_2/CI undriven or does not drive anything - clipped.
+Signal sub_233_add_2_4/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_4/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_6/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_6/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_1/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_1/CI undriven or does not drive anything - clipped.
+Signal sub_232_add_2_3/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_3/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_8/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal sub_117_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_117_add_2_17/CO undriven or does not drive anything - clipped.
+Signal sub_233_add_2_10/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_10/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_5/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_5/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_7/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_7/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_12/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_12/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_9/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_9/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_11/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_11/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_13/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_15/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_15/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_14/S1 undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+Removed logic (cont)
+--------------------
+Signal sub_233_add_2_14/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_16/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_16/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_17/S1 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_17/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_19/S0 undriven or does not drive anything - clipped.
+Signal sub_232_add_2_19/CO undriven or does not drive anything - clipped.
+Signal cnt2_270_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cnt2_270_add_4_1/CI undriven or does not drive anything - clipped.
+Signal add_113_1/S0 undriven or does not drive anything - clipped.
+Signal add_113_1/CI undriven or does not drive anything - clipped.
+Signal sub_233_add_2_18/S1 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_18/S0 undriven or does not drive anything - clipped.
+Signal cnt2_270_add_4_17/CO undriven or does not drive anything - clipped.
+Signal count0_268_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal count0_268_add_4_1/CI undriven or does not drive anything - clipped.
+Signal count0_268_add_4_9/S1 undriven or does not drive anything - clipped.
+Signal count0_268_add_4_9/CO undriven or does not drive anything - clipped.
+Signal sub_233_add_2_20/S0 undriven or does not drive anything - clipped.
+Signal sub_233_add_2_20/CO undriven or does not drive anything - clipped.
+Block i1147 was optimized away.
+Block i1 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'rst_n_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'rst_n_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 119 
+
+     Type and instance name of component: 
+   Register : key_down1_ls_92
+   Register : pulse_out_96
+   Register : display_97
+   Register : clk0_89
+   Register : direction_95
+   Register : key_up1_ls_91
+   Register : count0_268__i0
+
+                                    Page 6
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+GSR Usage (cont)
+----------------
+   Register : count0_268__i7
+   Register : count0_268__i6
+   Register : count0_268__i5
+   Register : count0_268__i4
+   Register : count0_268__i3
+   Register : count0_268__i2
+   Register : count0_268__i1
+   Register : P3/keystore_i0
+   Register : P3/keysamplerpulsecnt_272__i0
+   Register : P3/keysamplerpulsecnt_272__i31
+   Register : P3/keysamplerpulsecnt_272__i30
+   Register : P3/keysamplerpulsecnt_272__i29
+   Register : P3/keysamplerpulsecnt_272__i28
+   Register : P3/keysamplerpulsecnt_272__i27
+   Register : P3/keysamplerpulsecnt_272__i26
+   Register : P3/keysamplerpulsecnt_272__i25
+   Register : P3/keysamplerpulsecnt_272__i24
+   Register : P3/keysamplerpulsecnt_272__i23
+   Register : P3/keysamplerpulsecnt_272__i22
+   Register : P3/keysamplerpulsecnt_272__i21
+   Register : P3/keysamplerpulsecnt_272__i20
+   Register : P3/keysamplerpulsecnt_272__i19
+   Register : P3/keysamplerpulsecnt_272__i18
+   Register : P3/keysamplerpulsecnt_272__i17
+   Register : P3/keysamplerpulsecnt_272__i16
+   Register : P3/keysamplerpulsecnt_272__i15
+   Register : P3/keysamplerpulsecnt_272__i14
+   Register : P3/keysamplerpulsecnt_272__i13
+   Register : P3/keysamplerpulsecnt_272__i12
+   Register : P3/keysamplerpulsecnt_272__i11
+   Register : P3/keysamplerpulsecnt_272__i10
+   Register : P3/keysamplerpulsecnt_272__i9
+   Register : P3/keysamplerpulsecnt_272__i8
+   Register : P3/keysamplerpulsecnt_272__i7
+   Register : P3/keysamplerpulsecnt_272__i6
+   Register : P3/keysamplerpulsecnt_272__i5
+   Register : P3/keysamplerpulsecnt_272__i4
+   Register : P3/keysamplerpulsecnt_272__i3
+   Register : P3/keysamplerpulsecnt_272__i2
+   Register : P3/keysamplerpulsecnt_272__i1
+   Register : P3/keystore_i2
+   Register : P3/keystore_i1
+   Register : P1/keysamplerpulsecnt_274__i0
+   Register : P1/keystore_i0
+   Register : P1/keystore_i2
+   Register : P1/keystore_i1
+   Register : P1/keysamplerpulsecnt_274__i31
+   Register : P1/keysamplerpulsecnt_274__i30
+   Register : P1/keysamplerpulsecnt_274__i29
+   Register : P1/keysamplerpulsecnt_274__i28
+   Register : P1/keysamplerpulsecnt_274__i27
+   Register : P1/keysamplerpulsecnt_274__i26
+   Register : P1/keysamplerpulsecnt_274__i25
+   Register : P1/keysamplerpulsecnt_274__i24
+   Register : P1/keysamplerpulsecnt_274__i23
+   Register : P1/keysamplerpulsecnt_274__i22
+
+                                    Page 7
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+GSR Usage (cont)
+----------------
+   Register : P1/keysamplerpulsecnt_274__i21
+   Register : P1/keysamplerpulsecnt_274__i20
+   Register : P1/keysamplerpulsecnt_274__i19
+   Register : P1/keysamplerpulsecnt_274__i18
+   Register : P1/keysamplerpulsecnt_274__i17
+   Register : P1/keysamplerpulsecnt_274__i16
+   Register : P1/keysamplerpulsecnt_274__i15
+   Register : P1/keysamplerpulsecnt_274__i14
+   Register : P1/keysamplerpulsecnt_274__i13
+   Register : P1/keysamplerpulsecnt_274__i12
+   Register : P1/keysamplerpulsecnt_274__i11
+   Register : P1/keysamplerpulsecnt_274__i10
+   Register : P1/keysamplerpulsecnt_274__i9
+   Register : P1/keysamplerpulsecnt_274__i8
+   Register : P1/keysamplerpulsecnt_274__i7
+   Register : P1/keysamplerpulsecnt_274__i6
+   Register : P1/keysamplerpulsecnt_274__i5
+   Register : P1/keysamplerpulsecnt_274__i4
+   Register : P1/keysamplerpulsecnt_274__i3
+   Register : P1/keysamplerpulsecnt_274__i2
+   Register : P1/keysamplerpulsecnt_274__i1
+   Register : P2/keystore_i0
+   Register : P2/keysamplerpulsecnt_273__i0
+   Register : P2/keysamplerpulsecnt_273__i31
+   Register : P2/keysamplerpulsecnt_273__i30
+   Register : P2/keysamplerpulsecnt_273__i29
+   Register : P2/keysamplerpulsecnt_273__i28
+   Register : P2/keysamplerpulsecnt_273__i27
+   Register : P2/keysamplerpulsecnt_273__i26
+   Register : P2/keysamplerpulsecnt_273__i25
+   Register : P2/keysamplerpulsecnt_273__i24
+   Register : P2/keysamplerpulsecnt_273__i23
+   Register : P2/keysamplerpulsecnt_273__i22
+   Register : P2/keysamplerpulsecnt_273__i21
+   Register : P2/keysamplerpulsecnt_273__i20
+   Register : P2/keysamplerpulsecnt_273__i19
+   Register : P2/keysamplerpulsecnt_273__i18
+   Register : P2/keysamplerpulsecnt_273__i17
+   Register : P2/keysamplerpulsecnt_273__i16
+   Register : P2/keysamplerpulsecnt_273__i15
+   Register : P2/keysamplerpulsecnt_273__i14
+   Register : P2/keysamplerpulsecnt_273__i13
+   Register : P2/keysamplerpulsecnt_273__i12
+   Register : P2/keysamplerpulsecnt_273__i11
+   Register : P2/keysamplerpulsecnt_273__i10
+   Register : P2/keysamplerpulsecnt_273__i9
+   Register : P2/keysamplerpulsecnt_273__i8
+   Register : P2/keysamplerpulsecnt_273__i7
+   Register : P2/keysamplerpulsecnt_273__i6
+   Register : P2/keysamplerpulsecnt_273__i5
+   Register : P2/keysamplerpulsecnt_273__i4
+   Register : P2/keysamplerpulsecnt_273__i3
+   Register : P2/keysamplerpulsecnt_273__i2
+   Register : P2/keysamplerpulsecnt_273__i1
+   Register : P2/keystore_i2
+   Register : P2/keystore_i1
+
+                                    Page 8
+
+
+
+
+Design:  PWM                                           Date:  11/17/20  21:10:00
+
+GSR Usage (cont)
+----------------
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'rst_n_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 8 
+
+     Type and instance name of component: 
+   Register : duty_pulse_269__i1
+   Register : cycle_pulse_271__i1
+   Register : cnt2_270__i3
+   Register : cnt2_270__i1
+   Register : cycle_pulse_271__i0
+   Register : cnt2_270__i2
+   Register : duty_pulse_269__i0
+   Register : cnt2_270__i0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 51 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 9
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

@@ -1,0 +1,23 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Nov 17 21:16:04 2020 *
+NOTE DESIGN NAME: electricalClock *
+NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS down_key : N14 : in *
+NOTE PINS up_key : M14 : in *
+NOTE PINS mode_key : M13 : in *
+NOTE PINS rst_key : L14 : in *
+NOTE PINS clk : C1 : in *
+NOTE PINS rck : H3 : out *
+NOTE PINS sck : J2 : out *
+NOTE PINS din : G3 : out *
+NOTE PINS secDisp : P9 : out *
+NOTE PINS modedisplay[0] : N13 : out *
+NOTE PINS modedisplay[1] : M12 : out *
+NOTE PINS modedisplay[2] : P12 : out *
+NOTE PINS modedisplay[3] : M11 : out *
+NOTE PINS PortA : J3 : in *
+NOTE PINS PortB : K2 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

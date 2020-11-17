@@ -29,7 +29,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: CSBGA132
 // ncd File: buttoninput_impl1.ncd
 // Version: Diamond (64-bit) 3.11.0.396.4
-// Written on Tue Nov 17 15:39:44 2020
+// Written on Tue Nov 17 20:59:48 2020
 // M: Minimum Performance Grade
 // iotiming buttonInput_impl1.ncd buttonInput_impl1.prf -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml
 
