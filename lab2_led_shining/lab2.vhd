@@ -11,6 +11,8 @@ port(
      key_up: in std_logic;------key to change duty or cycle
      key_down: in std_logic;------key to change duty or cycle
      menu_state: buffer std_logic;
+	 a_to_g :	inout std_logic_vector(6 downto 0);
+	 seg :		out std_logic;
      pulse_out:buffer std_logic;----connect to LED to get the breathing condition
      display:out std_logic
 );
@@ -19,8 +21,8 @@ end entity PWM;
 architecture behavior of PWM is
 
 signal clk0:std_logic;    --分频时钟
-signal cnt1:integer range 0 to 80000;   --锯齿波
-signal cnt2:integer range 0 to 80000;   --三角波
+signal cnt1:integer range 0 to 80000;   --锯齿�
+signal cnt2:integer range 0 to 80000;   --三角�
 signal cycle_pulse:integer range 0 to 3;
 signal duty_pulse:integer range 0 to 3;
 signal cycle:integer range 0 to 80000;
@@ -31,7 +33,7 @@ signal key_down1:std_logic;
 signal key_up1_ls:std_logic;
 signal key_down1_ls:std_logic;
 
-----消抖模块的调用
+----消抖模块的调�
 component CycleSampler
  port(
 	clk: in std_logic;
@@ -45,7 +47,7 @@ P1:CycleSampler port map(clk,key_menu,key_menu1);
 P2:CycleSampler port map(clk,key_up,key_up1);
 P3:CycleSampler port map(clk,key_down,key_down1);
 
------分频，将12MHz分频为60kHz
+-----分频，将12MHz分频�0kHz
 process(clk)
 variable count0: integer range 0 to 200;
 begin
@@ -67,14 +69,14 @@ begin
 	end if;
 end process;
 
----锯齿形脉冲cnt1的产生
+---锯齿形脉冲cnt1的产�
 process(clk0,rst_n,duty_pulse,cycle_pulse)
 begin 
 case duty_pulse is
 	       when 0 => dt<=40;
-	       when 1 => dt<=80;
-	       when 2 => dt<=160;
-	       when 3 => dt<=320;
+	       when 1 => dt<=180;
+	       when 2 => dt<=360;
+	       when 3 => dt<=620;
 end case; 
     if(rst_n='0') then
 	    cnt1<=0;
@@ -86,7 +88,7 @@ end case;
 	 end if;
 end process;
 
------三角脉冲cnt2的产生
+-----三角脉冲cnt2的产�
 process(clk0,rst_n,cycle_pulse)
 variable direction: std_logic;
 begin
@@ -112,7 +114,7 @@ end case;
 	end if;
 end process;
 
----cnt1&cnt2的比较
+---cnt1&cnt2的比�
 process(cnt1,cnt2,clk0)
 begin
     if(clk0'event and clk0='0') then
@@ -124,13 +126,19 @@ begin
 	end if;
 end process;
 
-----按下key_menu键，对于menu_state进行切换，对于模式进行更改
+----按下key_menu键，对于menu_state进行切换，对于模式进行更�
 process(key_menu1,rst_n)
 begin
     if(rst_n='0') then
 	    menu_state<='0';
+		a_to_g <= "1001110"; seg <= '0';--c
 	elsif(key_menu1'event and key_menu1='1') then
 	    menu_state<=not menu_state;
+		if (menu_state='1') then
+			a_to_g <= "1001110"; seg <= '0';--c
+		elsif (menu_state='0') then
+			a_to_g <= "0111101"; seg <= '0';--d
+		end if;
 	end if;
 end process;
 

@@ -7,9 +7,11 @@ entity Key_Table is
       	ROW :		out std_logic_vector(3 downto 0);
       	COL :		in 	std_logic_vector(3 downto 0);
 		button_four:in 	std_logic_vector(3 downto 0);
-		a_to_g :	out std_logic_vector(6 downto 0);
-		led_four:	out std_logic_vector(3 downto 0);
+		a_to_g :	inout std_logic_vector(6 downto 0);
+		a_to_g2 :	inout std_logic_vector(6 downto 0);
+		--led_four:	out std_logic_vector(3 downto 0);
 		seg :		out std_logic;
+		seg2 :		out std_logic;
 		clk	:		in 	std_logic
     );
 end Key_Table;
@@ -70,23 +72,23 @@ begin
 		if num_cnt = 4 then
 		
 			case key_out is
-			when "0111111111111111" =>	a_to_g <= "0110000"; seg <= '0';--1
-			when "1011111111111111" =>	a_to_g <= "1101101"; seg <= '0';--2
-			when "1101111111111111" =>	a_to_g <= "1111001"; seg <= '0';--3
-			when "1110111111111111" =>	a_to_g <= "0110011"; seg <= '0';--4
-			when "1111011111111111" =>	a_to_g <= "1011011"; seg <= '0';--5
-			when "1111101111111111" =>	a_to_g <= "1011111"; seg <= '0';--6
-			when "1111110111111111" =>	a_to_g <= "1110000"; seg <= '0';--7
-			when "1111111011111111" =>	a_to_g <= "1111111"; seg <= '0';--8
-			when "1111111101111111" =>	a_to_g <= "1111011"; seg <= '0';--9
-			when "1111111110111111" =>	a_to_g <= "1110111"; seg <= '0';--a
-			when "1111111111011111" =>	a_to_g <= "0011111"; seg <= '0';--b
-			when "1111111111101111" =>	a_to_g <= "1001110"; seg <= '0';--c
-			when "1111111111110111" =>	a_to_g <= "0111101"; seg <= '0';--d
-			when "1111111111111011" =>	a_to_g <= "1001111"; seg <= '0';--e
-			when "1111111111111101" =>	a_to_g <= "1000111"; seg <= '0';--f
-			when "1111111111111110" =>	a_to_g <= "0110111"; seg <= '0';--H
-			when others 			=>	a_to_g <= "1111110"; seg <= '0';--0
+			when "0111111111111111" =>	a_to_g <= "1111110"; a_to_g2<= "0110000"; seg <= '0'; seg2 <= '0';--01
+			when "1011111111111111" =>	a_to_g <= "1111110"; a_to_g2<= "1101101"; seg <= '0'; seg2 <= '0';--02
+			when "1101111111111111" =>	a_to_g <= "1111110"; a_to_g2<= "1111001"; seg <= '0'; seg2 <= '0';--03
+			when "1110111111111111" =>	a_to_g <= "1111110"; a_to_g2<= "0110011"; seg <= '0'; seg2 <= '0';--04
+			when "1111011111111111" =>	a_to_g <= "1111110"; a_to_g2<= "1011011"; seg <= '0'; seg2 <= '0';--05
+			when "1111101111111111" =>	a_to_g <= "1111110"; a_to_g2<= "1011111"; seg <= '0'; seg2 <= '0';--06
+			when "1111110111111111" =>	a_to_g <= "1111110"; a_to_g2<= "1110000"; seg <= '0'; seg2 <= '0';--07
+			when "1111111011111111" =>	a_to_g <= "1111110"; a_to_g2<= "1111111"; seg <= '0'; seg2 <= '0';--08
+			when "1111111101111111" =>	a_to_g <= "1111110"; a_to_g2<= "1111011"; seg <= '0'; seg2 <= '0';--09
+			when "1111111110111111" =>	a_to_g <= "0110000"; a_to_g2<= "1111110"; seg <= '0'; seg2 <= '0';--10
+			when "1111111111011111" =>	a_to_g <= "0110000"; a_to_g2<= "0110000"; seg <= '0'; seg2 <= '0';--11
+			when "1111111111101111" =>	a_to_g <= "0110000"; a_to_g2<= "1101101"; seg <= '0'; seg2 <= '0';--12
+			when "1111111111110111" =>	a_to_g <= "0110000"; a_to_g2<= "1111001"; seg <= '0'; seg2 <= '0';--13
+			when "1111111111111011" =>	a_to_g <= "0110000"; a_to_g2<= "0110011"; seg <= '0'; seg2 <= '0';--14
+			when "1111111111111101" =>	a_to_g <= "0110000"; a_to_g2<= "1011011"; seg <= '0'; seg2 <= '0';--15
+			when "1111111111111110" =>	a_to_g <= "0110000"; a_to_g2<= "1011111"; seg <= '0'; seg2 <= '0';--16
+			when others 			=>	a_to_g <= a_to_g; a_to_g2<= a_to_g2; seg <= '0'; seg2 <= '0';--0
 			end case;
 		end if;
 
@@ -95,7 +97,14 @@ begin
 			LED_get <= 0;
 		elsif LED_get = 30 then
 			LED_get <= 0;
-			led_four <= BTN_cache;
+			--led_four <= BTN_cache;
+			case BTN_cache is
+			when "1110" => a_to_g <= "0000000"; a_to_g2<= "0110000"; seg <= '0'; seg2 <= '0';--1
+			when "1101" => a_to_g <= "0000000"; a_to_g2<= "1101101"; seg <= '0'; seg2 <= '0';--2
+			when "1011" => a_to_g <= "0000000"; a_to_g2<= "1111001"; seg <= '0'; seg2 <= '0';--3
+			when "0111" => a_to_g <= "0000000"; a_to_g2<= "0110011"; seg <= '0'; seg2 <= '0';--4
+			when others 			=>	a_to_g <= a_to_g; a_to_g2<= a_to_g2; seg <= '0'; seg2 <= '0';--0
+			end case;
 		else 
 			LED_get <= LED_get + 1;
 		end if;

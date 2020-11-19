@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Tue Nov 17 21:10:01 2020
+Wed Nov 18 23:32:29 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -42,46 +42,48 @@ Preference: FREQUENCY 12.000000 MHz ;
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 29.063ns (weighted slack = 58.126ns)
+Passed: The following path meets requirements by 28.088ns (weighted slack = 56.176ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              cnt1_i0_i6  (from clk_c +)
-   Destination:    FF         Data in        pulse_out_96  (to clk0 -)
+   Destination:    FF         Data in        pulse_out_103  (to clk0 -)
 
-   Delay:              12.437ns  (30.5% logic, 69.5% route), 8 logic levels.
+   Delay:              13.412ns  (32.0% logic, 68.0% route), 9 logic levels.
 
  Constraint Details:
 
-     12.437ns physical path delay SLICE_165 to SLICE_187 meets
+     13.412ns physical path delay SLICE_168 to SLICE_190 meets
      41.666ns delay constraint less
-      0.166ns DIN_SET requirement (totaling 41.500ns) by 29.063ns
+      0.166ns DIN_SET requirement (totaling 41.500ns) by 28.088ns
 
  Physical Path Details:
 
-      Data path SLICE_165 to SLICE_187:
+      Data path SLICE_168 to SLICE_190:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452  SLICE_165.CLK to   SLICE_165.Q1 SLICE_165 (from clk_c)
-ROUTE         5   e 1.234   SLICE_165.Q1 to   SLICE_208.B1 cnt1_6
-CTOF_DEL    ---     0.495   SLICE_208.B1 to   SLICE_208.F1 SLICE_208
-ROUTE         1   e 1.234   SLICE_208.F1 to   SLICE_199.B1 n2550
-CTOF_DEL    ---     0.495   SLICE_199.B1 to   SLICE_199.F1 SLICE_199
-ROUTE         1   e 1.234   SLICE_199.F1 to   SLICE_200.D1 n2438
-CTOF_DEL    ---     0.495   SLICE_200.D1 to   SLICE_200.F1 SLICE_200
-ROUTE         1   e 1.234   SLICE_200.F1 to   SLICE_190.D1 n2449
-CTOF_DEL    ---     0.495   SLICE_190.D1 to   SLICE_190.F1 SLICE_190
-ROUTE         1   e 1.234   SLICE_190.F1 to   SLICE_195.D1 n2462
-CTOF_DEL    ---     0.495   SLICE_195.D1 to   SLICE_195.F1 SLICE_195
-ROUTE         1   e 1.234   SLICE_195.F1 to */SLICE_189.M1 n2483
-MTOOFX_DEL  ---     0.376 */SLICE_189.M1 to *LICE_189.OFX1 cnt2_16__I_0_111_i32/SLICE_189
-ROUTE         1   e 1.234 *LICE_189.OFX1 to   SLICE_187.A0 pulse_out_N_174
-CTOF_DEL    ---     0.495   SLICE_187.A0 to   SLICE_187.F0 SLICE_187
-ROUTE         1   e 0.001   SLICE_187.F0 to  SLICE_187.DI0 pulse_out_N_173 (to clk0)
+REG_DEL     ---     0.452  SLICE_168.CLK to   SLICE_168.Q0 SLICE_168 (from clk_c)
+ROUTE         6   e 1.234   SLICE_168.Q0 to   SLICE_219.B1 cnt1_6
+CTOF_DEL    ---     0.495   SLICE_219.B1 to   SLICE_219.F1 SLICE_219
+ROUTE         1   e 1.234   SLICE_219.F1 to   SLICE_200.A1 n2573
+CTOF_DEL    ---     0.495   SLICE_200.A1 to   SLICE_200.F1 SLICE_200
+ROUTE         1   e 1.234   SLICE_200.F1 to   SLICE_197.D1 n2456
+CTOF_DEL    ---     0.495   SLICE_197.D1 to   SLICE_197.F1 SLICE_197
+ROUTE         1   e 1.234   SLICE_197.F1 to   SLICE_193.D1 n2467
+CTOF_DEL    ---     0.495   SLICE_193.D1 to   SLICE_193.F1 SLICE_193
+ROUTE         1   e 1.234   SLICE_193.F1 to   SLICE_203.D1 n2480
+CTOF_DEL    ---     0.495   SLICE_203.D1 to   SLICE_203.F1 SLICE_203
+ROUTE         1   e 0.480   SLICE_203.F1 to   SLICE_203.C0 n2520
+CTOF_DEL    ---     0.495   SLICE_203.C0 to   SLICE_203.F0 SLICE_203
+ROUTE         1   e 1.234   SLICE_203.F0 to */SLICE_192.M1 n2504
+MTOOFX_DEL  ---     0.376 */SLICE_192.M1 to *LICE_192.OFX1 cnt2_16__I_0_122_i32/SLICE_192
+ROUTE         1   e 1.234 *LICE_192.OFX1 to   SLICE_190.A0 pulse_out_N_190
+CTOF_DEL    ---     0.495   SLICE_190.A0 to   SLICE_190.F0 SLICE_190
+ROUTE         1   e 0.001   SLICE_190.F0 to  SLICE_190.DI0 pulse_out_N_189 (to clk0)
                   --------
-                   12.437   (30.5% logic, 69.5% route), 8 logic levels.
+                   13.412   (32.0% logic, 68.0% route), 9 logic levels.
 
-Report:   39.673MHz is the maximum frequency for this preference.
+Report:   36.824MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -89,7 +91,7 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY 12.000000 MHz ;               |   12.000 MHz|   39.673 MHz|   8  
+FREQUENCY 12.000000 MHz ;               |   12.000 MHz|   36.824 MHz|   9  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -102,39 +104,39 @@ Clock Domains Analysis
 
 Found 6 clocks:
 
-Clock Domain: key_menu1   Source: SLICE_182.F0   Loads: 1
+Clock Domain: key_menu1   Source: SLICE_188.F1   Loads: 2
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: clk_c   Source: clk.PAD   Loads: 80
+Clock Domain: clk_c   Source: clk.PAD   Loads: 82
    Covered under: FREQUENCY 12.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: key_menu1   Source: SLICE_182.F0
+   Clock Domain: key_menu1   Source: SLICE_188.F1
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: clk0   Source: SLICE_163.Q0
+   Clock Domain: clk0   Source: SLICE_165.Q0
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0
+   Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_137.F0
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
 
-   Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0
+   Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_108.F0
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
 
-Clock Domain: clk0   Source: SLICE_163.Q0   Loads: 5
+Clock Domain: clk0   Source: SLICE_165.Q0   Loads: 7
    Covered under: FREQUENCY 12.000000 MHz ;
 
    Data transfers from:
    Clock Domain: clk_c   Source: clk.PAD
-      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 47
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 49
 
-Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0   Loads: 19
+Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_137.F0   Loads: 19
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0   Loads: 19
+Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_108.F0   Loads: 19
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: P1/keysamplerpulse   Source: P1/SLICE_107.F0   Loads: 19
+Clock Domain: P1/keysamplerpulse   Source: P1/SLICE_90.F0   Loads: 19
    Covered under: FREQUENCY 12.000000 MHz ;
 
 
@@ -144,11 +146,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 51417 paths, 6 nets, and 1134 connections (93.49% coverage)
+Constraints cover 52845 paths, 6 nets, and 1149 connections (93.19% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Tue Nov 17 21:10:01 2020
+Wed Nov 18 23:32:30 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -188,17 +190,17 @@ Passed: The following path meets requirements by 0.351ns
 
  Constraint Details:
 
-      0.332ns physical path delay P1/SLICE_157 to P1/SLICE_157 meets
+      0.332ns physical path delay P1/SLICE_158 to P1/SLICE_158 meets
      -0.019ns M_HLD and
       0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
 
  Physical Path Details:
 
-      Data path P1/SLICE_157 to P1/SLICE_157:
+      Data path P1/SLICE_158 to P1/SLICE_158:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133 *SLICE_157.CLK to */SLICE_157.Q0 P1/SLICE_157 (from P1/keysamplerpulse)
-ROUTE         2   e 0.199 */SLICE_157.Q0 to */SLICE_157.M1 P1/keystore_0 (to P1/keysamplerpulse)
+REG_DEL     ---     0.133 *SLICE_158.CLK to */SLICE_158.Q0 P1/SLICE_158 (from P1/keysamplerpulse)
+ROUTE         2   e 0.199 */SLICE_158.Q0 to */SLICE_158.M1 P1/keystore_0 (to P1/keysamplerpulse)
                   --------
                     0.332   (40.1% logic, 59.9% route), 1 logic levels.
 
@@ -221,39 +223,39 @@ Clock Domains Analysis
 
 Found 6 clocks:
 
-Clock Domain: key_menu1   Source: SLICE_182.F0   Loads: 1
+Clock Domain: key_menu1   Source: SLICE_188.F1   Loads: 2
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: clk_c   Source: clk.PAD   Loads: 80
+Clock Domain: clk_c   Source: clk.PAD   Loads: 82
    Covered under: FREQUENCY 12.000000 MHz ;
 
    Data transfers from:
-   Clock Domain: key_menu1   Source: SLICE_182.F0
+   Clock Domain: key_menu1   Source: SLICE_188.F1
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: clk0   Source: SLICE_163.Q0
+   Clock Domain: clk0   Source: SLICE_165.Q0
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 1
 
-   Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0
+   Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_137.F0
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
 
-   Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0
+   Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_108.F0
       Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 3
 
-Clock Domain: clk0   Source: SLICE_163.Q0   Loads: 5
+Clock Domain: clk0   Source: SLICE_165.Q0   Loads: 7
    Covered under: FREQUENCY 12.000000 MHz ;
 
    Data transfers from:
    Clock Domain: clk_c   Source: clk.PAD
-      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 47
+      Covered under: FREQUENCY 12.000000 MHz ;   Transfers: 49
 
-Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_72.F0   Loads: 19
+Clock Domain: P3/keysamplerpulse   Source: P3/SLICE_137.F0   Loads: 19
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_119.F0   Loads: 19
+Clock Domain: P2/keysamplerpulse   Source: P2/SLICE_108.F0   Loads: 19
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: P1/keysamplerpulse   Source: P1/SLICE_107.F0   Loads: 19
+Clock Domain: P1/keysamplerpulse   Source: P1/SLICE_90.F0   Loads: 19
    Covered under: FREQUENCY 12.000000 MHz ;
 
 
@@ -263,7 +265,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 51417 paths, 6 nets, and 1200 connections (98.93% coverage)
+Constraints cover 52845 paths, 6 nets, and 1215 connections (98.54% coverage)
 
 
 

@@ -29,7 +29,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: CSBGA132
 // ncd File: led_shining_impl1.ncd
 // Version: Diamond (64-bit) 3.11.0.396.4
-// Written on Tue Nov 17 21:10:14 2020
+// Written on Wed Nov 18 23:32:45 2020
 // M: Minimum Performance Grade
 // iotiming led_shining_impl1.ncd led_shining_impl1.prf -gui -msgset C:/Users/10352/vhdl-labs/lab2_led_shining/promote.xml
 
@@ -65,6 +65,11 @@ rst_n clk0
 
 Port       Internal_Clock
 --------------------------------------------------------
+a_to_g[0]  key_menu1     
+a_to_g[1]  key_menu1     
+a_to_g[4]  key_menu1     
+a_to_g[5]  key_menu1     
+a_to_g[6]  key_menu1     
 display    clk0          
 menu_state key_menu1     
 pulse_out  clk0          

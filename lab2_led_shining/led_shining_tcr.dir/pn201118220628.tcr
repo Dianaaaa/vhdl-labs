@@ -1,0 +1,11 @@
+#Start recording tcl command: 11/18/2020 22:01:37
+#Project Location: C:/Users/10352/vhdl-labs/lab2_led_shining; Project name: led_shining
+prj_project open "C:/Users/10352/vhdl-labs/lab2_led_shining/led_shining.ldf"
+pgr_project save "C:/Users/10352/vhdl-labs/lab2_led_shining/impl1/impl1.xcf"
+prj_src add -exclude "C:/Users/10352/vhdl-labs/lab2_led_shining/impl1/impl1.xcf"
+prj_src enable "C:/Users/10352/vhdl-labs/lab2_led_shining/impl1/impl1.xcf"
+pgr_program run
+pgr_project save "C:/Users/10352/vhdl-labs/lab2_led_shining/impl1/impl1.xcf"
+prj_project save
+prj_project close
+#Stop recording: 11/18/2020 22:06:28

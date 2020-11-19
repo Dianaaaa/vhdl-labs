@@ -1,6 +1,6 @@
 |************************************************************************
 | IBIS Models Generator: Lattice Diamond (64-bit) 3.11.0.396.4
-| Generate date: Tue Nov 17 20:59:48 2020
+| Generate date: Wed Nov 18 21:59:33 2020
 |************************************************************************
 | IBIS File LibisMaker.ibs
 | LibisGen v2.0.1.0, 02/25/2008, Lattice Semiconductor Corporation
@@ -209,6 +209,13 @@ P7            ROW[0]               lvc330s080caaaaaaaou
 N7            ROW[1]               lvc330s080caaaaaaaou
 P8            ROW[2]               lvc330s080caaaaaaaou
 N8            ROW[3]               lvc330s080caaaaaaaou
+A11           a_to_g2[0]           lvc330s080caaaaaaaou
+B12           a_to_g2[1]           lvc330s080caaaaaaaou
+H2            a_to_g2[2]           lvc330s080caaaaaaaou
+H1            a_to_g2[3]           lvc330s080caaaaaaaou
+J1            a_to_g2[4]           lvc330s080caaaaaaaou
+B14           a_to_g2[5]           lvc330s080caaaaaaaou
+C12           a_to_g2[6]           lvc330s080caaaaaaaou
 B9            a_to_g[0]            lvc330s080caaaaaaaou
 A9            a_to_g[1]            lvc330s080caaaaaaaou
 E2            a_to_g[2]            lvc330s080caaaaaaaou
@@ -221,11 +228,8 @@ M13           button_four[1]       lvc330axxxgfaaaaaain
 M14           button_four[2]       lvc330axxxgfaaaaaain
 N14           button_four[3]       lvc330axxxgfaaaaaain
 C1            clk                  lvc330axxxgfaaaaaain
-N13           led_four[0]          lvc330s080caaaaaaaou
-M12           led_four[1]          lvc330s080caaaaaaaou
-P12           led_four[2]          lvc330s080caaaaaaaou
-M11           led_four[3]          lvc330s080caaaaaaaou
 C9            seg                  lvc330s080caaaaaaaou
+A12           seg2                 lvc330s080caaaaaaaou
 |************************************************************************
 [Model]           lvc330axxxgfaaaaaain
 Model_type        Input

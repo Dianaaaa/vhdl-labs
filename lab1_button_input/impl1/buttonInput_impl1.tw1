@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Tue Nov 17 20:59:37 2020
+Wed Nov 18 21:59:21 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -38,54 +38,55 @@ BLOCK RESETPATHS
 
 ================================================================================
 Preference: FREQUENCY 12.000000 MHz ;
-            1537 items scored, 0 timing errors detected.
+            2484 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 67.153ns
+Passed: The following path meets requirements by 66.677ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              key_out_i13  (from apa +)
-   Destination:    FF         Data in        a_to_g_i0_i1  (to apa +)
+   Source:         FF         Q              key_out_i5  (from apa +)
+   Destination:    FF         Data in        a_to_g_i7  (to apa +)
+                   FF                        a_to_g_i6
 
-   Delay:              16.014ns  (30.6% logic, 69.4% route), 10 logic levels.
+   Delay:              16.374ns  (29.2% logic, 70.8% route), 10 logic levels.
 
  Constraint Details:
 
-     16.014ns physical path delay SLICE_42 to SLICE_15 meets
+     16.374ns physical path delay SLICE_76 to SLICE_21 meets
      83.333ns delay constraint less
-      0.166ns DIN_SET requirement (totaling 83.167ns) by 67.153ns
+      0.282ns CE_SET requirement (totaling 83.051ns) by 66.677ns
 
  Physical Path Details:
 
-      Data path SLICE_42 to SLICE_15:
+      Data path SLICE_76 to SLICE_21:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452   SLICE_42.CLK to    SLICE_42.Q1 SLICE_42 (from apa)
-ROUTE        11   e 1.234    SLICE_42.Q1 to    SLICE_68.B1 key_out_13
-CTOF_DEL    ---     0.495    SLICE_68.B1 to    SLICE_68.F1 SLICE_68
-ROUTE         2   e 1.234    SLICE_68.F1 to    SLICE_40.D1 n1990
-CTOF_DEL    ---     0.495    SLICE_40.D1 to    SLICE_40.F1 SLICE_40
-ROUTE         2   e 1.234    SLICE_40.F1 to    SLICE_60.D1 n2016
-CTOF_DEL    ---     0.495    SLICE_60.D1 to    SLICE_60.F1 SLICE_60
-ROUTE         3   e 1.234    SLICE_60.F1 to    SLICE_52.D1 n1999
-CTOF_DEL    ---     0.495    SLICE_52.D1 to    SLICE_52.F1 SLICE_52
-ROUTE         2   e 1.234    SLICE_52.F1 to    SLICE_55.B0 n1306
-CTOF_DEL    ---     0.495    SLICE_55.B0 to    SLICE_55.F0 SLICE_55
-ROUTE         2   e 1.234    SLICE_55.F0 to    SLICE_44.D0 n706
-CTOF_DEL    ---     0.495    SLICE_44.D0 to    SLICE_44.F0 SLICE_44
-ROUTE         2   e 1.234    SLICE_44.F0 to    SLICE_56.B1 n1160
-CTOF_DEL    ---     0.495    SLICE_56.B1 to    SLICE_56.F1 SLICE_56
-ROUTE         2   e 1.234    SLICE_56.F1 to    SLICE_74.D1 n1959
-CTOF_DEL    ---     0.495    SLICE_74.D1 to    SLICE_74.F1 SLICE_74
-ROUTE         1   e 1.234    SLICE_74.F1 to    SLICE_15.A0 n2123
-CTOF_DEL    ---     0.495    SLICE_15.A0 to    SLICE_15.F0 SLICE_15
-ROUTE         1   e 0.001    SLICE_15.F0 to   SLICE_15.DI0 a_to_g_6_N_71_0 (to apa)
+REG_DEL     ---     0.452   SLICE_76.CLK to    SLICE_76.Q1 SLICE_76 (from apa)
+ROUTE        12   e 1.234    SLICE_76.Q1 to    SLICE_50.A1 key_out_5
+CTOF_DEL    ---     0.495    SLICE_50.A1 to    SLICE_50.F1 SLICE_50
+ROUTE        12   e 1.234    SLICE_50.F1 to    SLICE_70.C0 n4101
+CTOF_DEL    ---     0.495    SLICE_70.C0 to    SLICE_70.F0 SLICE_70
+ROUTE         2   e 1.234    SLICE_70.F0 to    SLICE_59.B0 n4083
+CTOF_DEL    ---     0.495    SLICE_59.B0 to    SLICE_59.F0 SLICE_59
+ROUTE         2   e 1.234    SLICE_59.F0 to    SLICE_75.B1 n4071
+CTOF_DEL    ---     0.495    SLICE_75.B1 to    SLICE_75.F1 SLICE_75
+ROUTE         2   e 0.480    SLICE_75.F1 to    SLICE_75.B0 n3736
+CTOF_DEL    ---     0.495    SLICE_75.B0 to    SLICE_75.F0 SLICE_75
+ROUTE         1   e 1.234    SLICE_75.F0 to    SLICE_73.A0 n3486
+CTOF_DEL    ---     0.495    SLICE_73.A0 to    SLICE_73.F0 SLICE_73
+ROUTE         1   e 1.234    SLICE_73.F0 to    SLICE_72.C0 n4_adj_11
+CTOF_DEL    ---     0.495    SLICE_72.C0 to    SLICE_72.F0 SLICE_72
+ROUTE         1   e 1.234    SLICE_72.F0 to    SLICE_71.C0 n12
+CTOF_DEL    ---     0.495    SLICE_71.C0 to    SLICE_71.F0 SLICE_71
+ROUTE         3   e 1.234    SLICE_71.F0 to *8/SLICE_37.M0 n3755
+MTOOFX_DEL  ---     0.376 *8/SLICE_37.M0 to *SLICE_37.OFX0 i3708/SLICE_37
+ROUTE         1   e 1.234 *SLICE_37.OFX0 to    SLICE_21.CE apa_enable_12 (to apa)
                   --------
-                   16.014   (30.6% logic, 69.4% route), 10 logic levels.
+                   16.374   (29.2% logic, 70.8% route), 10 logic levels.
 
-Report:   61.805MHz is the maximum frequency for this preference.
+Report:   60.038MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -93,7 +94,7 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY 12.000000 MHz ;               |   12.000 MHz|   61.805 MHz|  10  
+FREQUENCY 12.000000 MHz ;               |   12.000 MHz|   60.038 MHz|  10  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -109,7 +110,7 @@ Found 2 clocks:
 Clock Domain: clk_c   Source: clk.PAD   Loads: 11
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: apa   Source: SLICE_19.Q0   Loads: 21
+Clock Domain: apa   Source: SLICE_22.Q0   Loads: 22
    Covered under: FREQUENCY 12.000000 MHz ;
 
    Data transfers from:
@@ -123,11 +124,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1537 paths, 2 nets, and 535 connections (93.21% coverage)
+Constraints cover 2484 paths, 2 nets, and 699 connections (94.46% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Tue Nov 17 20:59:37 2020
+Wed Nov 18 21:59:21 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -152,7 +153,7 @@ BLOCK RESETPATHS
 
 ================================================================================
 Preference: FREQUENCY 12.000000 MHz ;
-            1537 items scored, 0 timing errors detected.
+            2484 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -160,8 +161,8 @@ Passed: The following path meets requirements by 0.447ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              clk_cnt_148__i2  (from clk_c +)
-   Destination:    FF         Data in        clk_cnt_148__i2  (to clk_c +)
+   Source:         FF         Q              clk_cnt_299__i7  (from clk_c +)
+   Destination:    FF         Data in        clk_cnt_299__i7  (to clk_c +)
 
    Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
 
@@ -176,10 +177,10 @@ Passed: The following path meets requirements by 0.447ns
       Data path SLICE_0 to SLICE_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    SLICE_0.CLK to     SLICE_0.Q1 SLICE_0 (from clk_c)
-ROUTE         3   e 0.199     SLICE_0.Q1 to     SLICE_0.A1 clk_cnt_2
-CTOF_DEL    ---     0.101     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
-ROUTE         1   e 0.001     SLICE_0.F1 to    SLICE_0.DI1 n73 (to clk_c)
+REG_DEL     ---     0.133    SLICE_0.CLK to     SLICE_0.Q0 SLICE_0 (from clk_c)
+ROUTE         3   e 0.199     SLICE_0.Q0 to     SLICE_0.A0 clk_cnt_7
+CTOF_DEL    ---     0.101     SLICE_0.A0 to     SLICE_0.F0 SLICE_0
+ROUTE         1   e 0.001     SLICE_0.F0 to    SLICE_0.DI0 n68 (to clk_c)
                   --------
                     0.434   (53.9% logic, 46.1% route), 2 logic levels.
 
@@ -205,7 +206,7 @@ Found 2 clocks:
 Clock Domain: clk_c   Source: clk.PAD   Loads: 11
    Covered under: FREQUENCY 12.000000 MHz ;
 
-Clock Domain: apa   Source: SLICE_19.Q0   Loads: 21
+Clock Domain: apa   Source: SLICE_22.Q0   Loads: 22
    Covered under: FREQUENCY 12.000000 MHz ;
 
    Data transfers from:
@@ -219,7 +220,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1537 paths, 2 nets, and 535 connections (93.21% coverage)
+Constraints cover 2484 paths, 2 nets, and 699 connections (94.46% coverage)
 
 
 

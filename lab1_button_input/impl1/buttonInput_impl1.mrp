@@ -15,24 +15,24 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-4000HCCSBGA132
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  11/17/20  20:59:36
+Mapped on:  11/18/20  21:59:19
 
 Design Summary
 --------------
 
-   Number of registers:     58 out of  4635 (1%)
-      PFU registers:           58 out of  4320 (1%)
+   Number of registers:     56 out of  4635 (1%)
+      PFU registers:           56 out of  4320 (1%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:        73 out of  2160 (3%)
-      SLICEs as Logic/ROM:     73 out of  2160 (3%)
+   Number of SLICEs:        93 out of  2160 (4%)
+      SLICEs as Logic/ROM:     93 out of  2160 (4%)
       SLICEs as RAM:            0 out of  1620 (0%)
       SLICEs as Carry:          8 out of  2160 (0%)
-   Number of LUT4s:        145 out of  4320 (3%)
-      Number used as logic LUTs:        129
+   Number of LUT4s:        185 out of  4320 (4%)
+      Number used as logic LUTs:        169
       Number used as distributed RAM:     0
       Number used as ripple logic:       16
       Number used as shift registers:     0
-   Number of PIO sites used: 25 + 4(JTAG) out of 105 (28%)
+   Number of PIO sites used: 29 + 4(JTAG) out of 105 (31%)
    Number of block RAMs:  0 out of 10 (0%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        No
@@ -58,7 +58,7 @@ Design Summary
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  2
-     Net apa: 21 loads, 19 rising, 2 falling (Driver: apa_77 )
+     Net apa: 22 loads, 20 rising, 2 falling (Driver: apa_89 )
      Net clk_c: 11 loads, 11 rising, 0 falling (Driver: PIO clk )
 
                                     Page 1
@@ -66,37 +66,38 @@ Design Summary
 
 
 
-Design:  Key_Table                                     Date:  11/17/20  20:59:36
+Design:  Key_Table                                     Date:  11/18/20  21:59:19
 
 Design Summary (cont)
 ---------------------
-   Number of Clock Enables:  9
-     Net apa_enable_8: 2 loads, 2 LSLICEs
-     Net a_to_g_6__N_78: 4 loads, 4 LSLICEs
+   Number of Clock Enables:  10
+     Net apa_enable_10: 4 loads, 4 LSLICEs
+     Net key_out_15__N_63: 2 loads, 2 LSLICEs
+     Net apa_N_10: 1 loads, 1 LSLICEs
      Net apa_enable_5: 2 loads, 2 LSLICEs
-     Net apa_N_10: 1 loads, 1 LSLICEs
+     Net key_out_15__N_58: 2 loads, 2 LSLICEs
      Net clk_c_enable_1: 1 loads, 1 LSLICEs
-     Net key_out_15__N_45: 2 loads, 2 LSLICEs
-     Net key_out_15__N_55: 2 loads, 2 LSLICEs
-     Net key_out_15__N_50: 2 loads, 2 LSLICEs
-     Net key_out_15__N_60: 2 loads, 2 LSLICEs
+     Net key_out_15__N_48: 2 loads, 2 LSLICEs
+     Net apa_enable_13: 2 loads, 2 LSLICEs
+     Net apa_enable_12: 1 loads, 1 LSLICEs
+     Net key_out_15__N_53: 2 loads, 2 LSLICEs
    Number of LSRs:  4
-     Net n319: 3 loads, 3 LSLICEs
-     Net apa_N_10: 1 loads, 1 LSLICEs
      Net num_cnt_2: 2 loads, 2 LSLICEs
-     Net n359: 2 loads, 2 LSLICEs
+     Net apa_N_10: 1 loads, 1 LSLICEs
+     Net n606: 2 loads, 2 LSLICEs
+     Net n386: 3 loads, 3 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net key_out_11: 15 loads
-     Net key_out_5: 13 loads
-     Net key_out_8: 13 loads
-     Net num_cnt_0: 13 loads
-     Net key_out_0: 12 loads
-     Net key_out_4: 12 loads
-     Net key_out_9: 12 loads
-     Net num_cnt_1: 12 loads
-     Net key_out_1: 11 loads
-     Net key_out_10: 11 loads
+     Net key_out_9: 21 loads
+     Net key_out_1: 18 loads
+     Net key_out_7: 17 loads
+     Net key_out_2: 15 loads
+     Net key_out_6: 15 loads
+     Net key_out_8: 15 loads
+     Net key_out_0: 14 loads
+     Net num_cnt_0: 14 loads
+     Net key_out_3: 13 loads
+     Net key_out_4: 13 loads
 
 
 
@@ -125,17 +126,17 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+
 | ROW[0]              | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| a_to_g[6]           | OUTPUT    | LVCMOS33  |            |
 
                                     Page 2
 
 
 
 
-Design:  Key_Table                                     Date:  11/17/20  20:59:36
+Design:  Key_Table                                     Date:  11/18/20  21:59:19
 
 IO (PIO) Attributes (cont)
 --------------------------
+| a_to_g[6]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | a_to_g[5]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -149,15 +150,23 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | a_to_g[0]           | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led_four[3]         | OUTPUT    | LVCMOS33  |            |
+| a_to_g2[6]          | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led_four[2]         | OUTPUT    | LVCMOS33  |            |
+| a_to_g2[5]          | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led_four[1]         | OUTPUT    | LVCMOS33  |            |
+| a_to_g2[4]          | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| led_four[0]         | OUTPUT    | LVCMOS33  |            |
+| a_to_g2[3]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| a_to_g2[2]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| a_to_g2[1]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| a_to_g2[0]          | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | seg                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| seg2                | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | COL[3]              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -183,42 +192,33 @@ Removed logic
 
 Block i2 undriven or does not drive anything - clipped.
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal apa_N_6 was merged into signal apa
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal clk_cnt_148_add_4_15/S1 undriven or does not drive anything - clipped.
-Signal clk_cnt_148_add_4_15/CO undriven or does not drive anything - clipped.
-Signal clk_cnt_148_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal clk_cnt_148_add_4_1/CI undriven or does not drive anything - clipped.
-Block i2068 was optimized away.
-
-     
 
                                     Page 3
 
 
 
 
-Design:  Key_Table                                     Date:  11/17/20  20:59:36
+Design:  Key_Table                                     Date:  11/18/20  21:59:19
 
+Removed logic (cont)
+--------------------
+Signal apa_N_6 was merged into signal apa
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal clk_cnt_299_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal clk_cnt_299_add_4_1/CI undriven or does not drive anything - clipped.
+Signal clk_cnt_299_add_4_15/S1 undriven or does not drive anything - clipped.
+Signal clk_cnt_299_add_4_15/CO undriven or does not drive anything - clipped.
+Block i3828 was optimized away.
+
+     
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 50 MB
+   Peak Memory Usage: 49 MB
         
-
-
-
-
-
-
-
-
-
-
-
 
 
 

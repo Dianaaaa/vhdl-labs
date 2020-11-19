@@ -24,9 +24,11 @@
             <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1605618882"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1605618870"/>
-            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1605618870"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
         <Report name=".vdbs/digital_clock_impl1_map.vdb" last_build_time="1605618938" last_build_size="167994"/>
         <Report name="IBIS/digital_clock_impl1.ibs" last_build_time="1605618952" last_build_size="65892"/>

@@ -14,26 +14,35 @@ Performance Grade:      4
 PACKAGE:          CSBGA132
 Package Status:                     Final          Version 1.44
 
-Tue Nov 17 21:10:08 2020
+Wed Nov 18 23:32:37 2020
 
 Pinout by Port Name:
 +------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
 | Port Name  | Pin/Bank | Buffer Type  | Site  | PG Enable | BC Enable | Properties                           |
 +------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
+| a_to_g[0]  | B9/0     | LVCMOS25_OUT | PT23C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| a_to_g[1]  | A9/0     | LVCMOS25_OUT | PT21B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| a_to_g[2]  | E2/5     | LVCMOS25_OUT | PL7B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| a_to_g[3]  | E1/5     | LVCMOS25_OUT | PL7A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| a_to_g[4]  | F2/5     | LVCMOS25_OUT | PL8B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| a_to_g[5]  | C11/0    | LVCMOS25_OUT | PT24B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| a_to_g[6]  | A10/0    | LVCMOS25_OUT | PT24A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | clk        | C1/5     | LVCMOS25_IN  | PL4A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | display    | G3/4     | LVCMOS25_OUT | PL10C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | key_down   | N14/1    | LVCMOS25_IN  | PR19B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | key_menu   | L14/1    | LVCMOS25_IN  | PR16A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | key_up     | M14/1    | LVCMOS25_IN  | PR18B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
-| menu_state | N13/1    | LVCMOS25_OUT | PR19A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| menu_state | A11/0    | LVCMOS25_OUT | PT25A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | pulse_out  | P9/2     | LVCMOS25_OUT | PB23A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | rst_n      | M13/1    | LVCMOS25_IN  | PR16B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| seg        | C9/0     | LVCMOS25_OUT | PT21A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 +------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
+| 0    | 2.5V  |
 | 1    | 2.5V  |
 | 2    | 2.5V  |
 | 4    | 2.5V  |
@@ -56,9 +65,9 @@ Vccio by Bank:
 | A4/0     | Reserved: sysCONFIG   |            |              | PT13C | TDO            |           |           |
 | A6/0     | Reserved: sysCONFIG   |            |              | PT15D | TMS            |           |           |
 | A7/0     |     unused, PULL:DOWN |            |              | PT18A | PCLKT0_1       |           |           |
-| A9/0     |     unused, PULL:DOWN |            |              | PT21B |                |           |           |
-| A10/0    |     unused, PULL:DOWN |            |              | PT24A |                |           |           |
-| A11/0    |     unused, PULL:DOWN |            |              | PT25A |                |           |           |
+| A9/0     | a_to_g[1]             | LOCATED    | LVCMOS25_OUT | PT21B |                |           |           |
+| A10/0    | a_to_g[6]             | LOCATED    | LVCMOS25_OUT | PT24A |                |           |           |
+| A11/0    | menu_state            |            | LVCMOS25_OUT | PT25A |                |           |           |
 | A12/0    |     unused, PULL:DOWN |            |              | PT27B |                |           |           |
 | A13/0    |     unused, PULL:DOWN |            |              | PT28D | DONE           |           |           |
 | B1/5     |     unused, PULL:DOWN |            |              | PL3A  | L_GPLLT_FB     |           |           |
@@ -69,7 +78,7 @@ Vccio by Bank:
 | B6/0     | Reserved: sysCONFIG   |            |              | PT15C | TCK            |           |           |
 | B7/0     |     unused, PULL:DOWN |            |              | PT18B | PCLKC0_1       |           |           |
 | B8/0     |     unused, PULL:DOWN |            |              | PT20D | SDA/PCLKC0_0   |           |           |
-| B9/0     |     unused, PULL:DOWN |            |              | PT23C | JTAGENB        |           |           |
+| B9/0     | a_to_g[0]             | LOCATED    | LVCMOS25_OUT | PT23C | JTAGENB        |           |           |
 | B12/0    |     unused, PULL:DOWN |            |              | PT25B |                |           |           |
 | B13/0    |     unused, PULL:DOWN |            |              | PT28C | INITN          |           |           |
 | B14/1    |     unused, PULL:DOWN |            |              | PR2A  | R_GPLLT_FB/DQ0 |           |           |
@@ -79,22 +88,22 @@ Vccio by Bank:
 | C4/0     |     unused, PULL:DOWN |            |              | PT11B |                |           |           |
 | C6/0     |     unused, PULL:DOWN |            |              | PT14B |                |           |           |
 | C8/0     |     unused, PULL:DOWN |            |              | PT20C | SCL/PCLKT0_0   |           |           |
-| C9/0     |     unused, PULL:DOWN |            |              | PT21A |                |           |           |
+| C9/0     | seg                   | LOCATED    | LVCMOS25_OUT | PT21A |                |           |           |
 | C10/0    |     unused, PULL:DOWN |            |              | PT23D | PROGRAMN       |           |           |
-| C11/0    |     unused, PULL:DOWN |            |              | PT24B |                |           |           |
+| C11/0    | a_to_g[5]             | LOCATED    | LVCMOS25_OUT | PT24B |                |           |           |
 | C12/0    |     unused, PULL:DOWN |            |              | PT27A |                |           |           |
 | C13/1    |     unused, PULL:DOWN |            |              | PR2B  | R_GPLLC_FB/DQ0 |           |           |
 | C14/1    |     unused, PULL:DOWN |            |              | PR3A  | R_GPLLT_IN/DQ0 |           |           |
 | D1/5     |     unused, PULL:DOWN |            |              | PL6B  | PCLKC5_0       |           |           |
 | D12/1    |     unused, PULL:DOWN |            |              | PR3B  | R_GPLLC_IN/DQ0 |           |           |
-| E1/5     |     unused, PULL:DOWN |            |              | PL7A  |                |           |           |
-| E2/5     |     unused, PULL:DOWN |            |              | PL7B  |                |           |           |
+| E1/5     | a_to_g[3]             | LOCATED    | LVCMOS25_OUT | PL7A  |                |           |           |
+| E2/5     | a_to_g[2]             | LOCATED    | LVCMOS25_OUT | PL7B  |                |           |           |
 | E3/5     |     unused, PULL:DOWN |            |              | PL8A  |                |           |           |
 | E12/1    |     unused, PULL:DOWN |            |              | PR5A  | DQ0            |           |           |
 | E13/1    |     unused, PULL:DOWN |            |              | PR6A  | DQ0            |           |           |
 | E14/1    |     unused, PULL:DOWN |            |              | PR5B  | DQ0            |           |           |
 | F1/4     |     unused, PULL:DOWN |            |              | PL9A  |                |           |           |
-| F2/5     |     unused, PULL:DOWN |            |              | PL8B  |                |           |           |
+| F2/5     | a_to_g[4]             | LOCATED    | LVCMOS25_OUT | PL8B  |                |           |           |
 | F3/4     |     unused, PULL:DOWN |            |              | PL9B  |                |           |           |
 | F12/1    |     unused, PULL:DOWN |            |              | PR6B  | DQ0            |           |           |
 | F13/1    |     unused, PULL:DOWN |            |              | PR8A  | DQ0            |           |           |
@@ -144,7 +153,7 @@ Vccio by Bank:
 | N9/2     |     unused, PULL:DOWN |            |              | PB23B |                |           |           |
 | N10/2    |     unused, PULL:DOWN |            |              | PB24B |                |           |           |
 | N12/2    |     unused, PULL:DOWN |            |              | PB30A | SN             |           |           |
-| N13/1    | menu_state            | LOCATED    | LVCMOS25_OUT | PR19A | DQ1            |           |           |
+| N13/1    |     unused, PULL:DOWN |            |              | PR19A | DQ1            |           |           |
 | N14/1    | key_down              | LOCATED    | LVCMOS25_IN  | PR19B | DQ1            |           |           |
 | P2/2     |     unused, PULL:DOWN |            |              | PB3A  |                |           |           |
 | P3/2     |     unused, PULL:DOWN |            |              | PB4A  | CSSPIN         |           |           |
@@ -349,14 +358,22 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
+LOCATE  COMP  "a_to_g[0]"  SITE  "B9";
+LOCATE  COMP  "a_to_g[1]"  SITE  "A9";
+LOCATE  COMP  "a_to_g[2]"  SITE  "E2";
+LOCATE  COMP  "a_to_g[3]"  SITE  "E1";
+LOCATE  COMP  "a_to_g[4]"  SITE  "F2";
+LOCATE  COMP  "a_to_g[5]"  SITE  "C11";
+LOCATE  COMP  "a_to_g[6]"  SITE  "A10";
 LOCATE  COMP  "clk"  SITE  "C1";
 LOCATE  COMP  "display"  SITE  "G3";
 LOCATE  COMP  "key_down"  SITE  "N14";
 LOCATE  COMP  "key_menu"  SITE  "L14";
 LOCATE  COMP  "key_up"  SITE  "M14";
-LOCATE  COMP  "menu_state"  SITE  "N13";
+LOCATE  COMP  "menu_state"  SITE  "A11";
 LOCATE  COMP  "pulse_out"  SITE  "P9";
 LOCATE  COMP  "rst_n"  SITE  "M13";
+LOCATE  COMP  "seg"  SITE  "C9";
 
 
 
@@ -368,7 +385,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 17 21:10:08 2020
+Wed Nov 18 23:32:37 2020
 
 
 

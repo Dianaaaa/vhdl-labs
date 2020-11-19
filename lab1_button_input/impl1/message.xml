@@ -46,46 +46,46 @@
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(17): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(19): </Dynamic>
             <Dynamic>key_table_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>17</Navigation>
+            <Navigation>19</Navigation>
         </Message>
         <Message>
             <ID>35928037</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(48): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(50): </Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>48</Navigation>
+            <Navigation>50</Navigation>
         </Message>
         <Message>
             <ID>35928037</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(48): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(50): </Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>48</Navigation>
+            <Navigation>50</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(15): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(17): </Dynamic>
             <Dynamic>Key_Table</Dynamic>
             <Dynamic>Key_Table_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>15</Navigation>
+            <Navigation>17</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(103): </Dynamic>
-            <Dynamic>seg_82</Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(112): </Dynamic>
+            <Dynamic>seg_95</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>103</Navigation>
+            <Navigation>112</Navigation>
         </Message>
         <Message>
             <ID>35001779</ID>
             <Severity>Warning</Severity>
-            <Dynamic>apa_77</Dynamic>
+            <Dynamic>apa_89</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>

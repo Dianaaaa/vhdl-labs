@@ -24,9 +24,11 @@
             <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1605618149"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1605618640"/>
-            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1605618640"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
         <Report name=".vdbs/trafic_light_impl1_map.vdb" last_build_time="1605618671" last_build_size="103750"/>
         <Report name="IBIS/trafic_light_impl1.ibs" last_build_time="1605618686" last_build_size="66860"/>

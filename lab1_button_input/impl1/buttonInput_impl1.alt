@@ -1,6 +1,6 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Tue Nov 17 20:59:59 2020 *
+NOTE DATE CREATED: Wed Nov 18 21:59:42 2020 *
 NOTE DESIGN NAME: Key_Table *
 NOTE DEVICE NAME: LCMXO2-4000HC-4CSBGA132 *
 NOTE PIN ASSIGNMENTS *
@@ -15,11 +15,15 @@ NOTE PINS a_to_g[3] : E1 : out *
 NOTE PINS a_to_g[2] : E2 : out *
 NOTE PINS a_to_g[1] : A9 : out *
 NOTE PINS a_to_g[0] : B9 : out *
-NOTE PINS led_four[3] : M11 : out *
-NOTE PINS led_four[2] : P12 : out *
-NOTE PINS led_four[1] : M12 : out *
-NOTE PINS led_four[0] : N13 : out *
+NOTE PINS a_to_g2[6] : C12 : out *
+NOTE PINS a_to_g2[5] : B14 : out *
+NOTE PINS a_to_g2[4] : J1 : out *
+NOTE PINS a_to_g2[3] : H1 : out *
+NOTE PINS a_to_g2[2] : H2 : out *
+NOTE PINS a_to_g2[1] : B12 : out *
+NOTE PINS a_to_g2[0] : A11 : out *
 NOTE PINS seg : C9 : out *
+NOTE PINS seg2 : A12 : out *
 NOTE PINS COL[3] : L3 : in *
 NOTE PINS COL[2] : N5 : in *
 NOTE PINS COL[1] : P6 : in *

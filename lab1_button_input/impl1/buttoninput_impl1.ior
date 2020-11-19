@@ -29,7 +29,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: CSBGA132
 // ncd File: buttoninput_impl1.ncd
 // Version: Diamond (64-bit) 3.11.0.396.4
-// Written on Tue Nov 17 20:59:48 2020
+// Written on Wed Nov 18 21:59:32 2020
 // M: Minimum Performance Grade
 // iotiming buttonInput_impl1.ncd buttonInput_impl1.prf -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml
 
@@ -67,20 +67,22 @@ butto apa
 
 // Internal_Clock to Output
 
-Port        Internal_Clock
+Port       Internal_Clock
 --------------------------------------------------------
-ROW[0]      apa           
-ROW[1]      apa           
-ROW[2]      apa           
-ROW[3]      apa           
-a_to_g[0]   apa           
-a_to_g[1]   apa           
-a_to_g[2]   apa           
-a_to_g[3]   apa           
-a_to_g[4]   apa           
-a_to_g[5]   apa           
-a_to_g[6]   apa           
-led_four[0] apa           
-led_four[1] apa           
-led_four[2] apa           
-led_four[3] apa           
+ROW[0]     apa           
+ROW[1]     apa           
+ROW[2]     apa           
+ROW[3]     apa           
+a_to_g2[0] apa           
+a_to_g2[1] apa           
+a_to_g2[2] apa           
+a_to_g2[3] apa           
+a_to_g2[4] apa           
+a_to_g2[5] apa           
+a_to_g2[6] apa           
+a_to_g[1]  apa           
+a_to_g[2]  apa           
+a_to_g[3]  apa           
+a_to_g[4]  apa           
+a_to_g[5]  apa           
+a_to_g[6]  apa           

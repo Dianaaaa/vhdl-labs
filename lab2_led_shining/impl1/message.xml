@@ -62,27 +62,47 @@
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(21): </Dynamic>
+            <Dynamic>behavior</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35921205</ID>
+            <Severity>Warning</Severity>
             <Dynamic>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(19): </Dynamic>
+            <Dynamic>PWM</Dynamic>
             <Dynamic>behavior</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd</Navigation>
             <Navigation>19</Navigation>
         </Message>
         <Message>
-            <ID>35921205</ID>
+            <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(17): </Dynamic>
-            <Dynamic>PWM</Dynamic>
-            <Dynamic>behavior</Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(142): </Dynamic>
+            <Dynamic>seg_108</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd</Navigation>
-            <Navigation>17</Navigation>
+            <Navigation>142</Navigation>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>a_to_g</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001748</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>4</Dynamic>
+            <Dynamic>a_to_g</Dynamic>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(86): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(88): </Dynamic>
             <Dynamic>cnt1_i0_i0</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd</Navigation>
-            <Navigation>86</Navigation>
+            <Navigation>88</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
@@ -103,15 +123,15 @@
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=key_menu1 loads=1 clock_loads=1
-   Signal=clk0 loads=5 clock_loads=3</Dynamic>
+   Signal=key_menu1 loads=2 clock_loads=2
+   Signal=clk0 loads=7 clock_loads=3</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=key_menu1 loads=1 clock_loads=1
-   Signal=clk0 loads=5 clock_loads=3</Dynamic>
+   Signal=key_menu1 loads=2 clock_loads=2
+   Signal=clk0 loads=7 clock_loads=3</Dynamic>
         </Message>
     </Task>
     <Task name="TimingSimFileVHD">
