@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1605787062"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1605787064"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1605787066"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1605787073"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1605787079"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1605786999">
+            <Task name="Map" build_result="2" update_result="0" update_time="1605786999"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1605787001"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1605787002"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1605787004"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1605787057">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1605787057"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1605787059"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1605787062"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1605786997">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1605786997"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1605787079"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1605786990"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/MCPU_impl1_map.vdb" last_build_time="1605786999" last_build_size="159918"/>
+        <Report name="IBIS/MCPU_impl1.ibs" last_build_time="1605787062" last_build_size="65655"/>
+        <Report name="MCPU_impl1.bgn" last_build_time="1605787079" last_build_size="4323"/>
+        <Report name="MCPU_impl1.bit" last_build_time="1605787073" last_build_size="23652"/>
+        <Report name="MCPU_impl1.ior" last_build_time="1605787062" last_build_size="2470"/>
+        <Report name="MCPU_impl1.jed" last_build_time="1605787079" last_build_size="849345"/>
+        <Report name="MCPU_impl1.lsedata" last_build_time="1605786994" last_build_size="348049"/>
+        <Report name="MCPU_impl1.ncd" last_build_time="1605787056" last_build_size="689334"/>
+        <Report name="MCPU_impl1.ngd" last_build_time="1605786996" last_build_size="565891"/>
+        <Report name="MCPU_impl1.tw1" last_build_time="1605787001" last_build_size="1083402"/>
+        <Report name="MCPU_impl1.twr" last_build_time="1605787059" last_build_size="1144172"/>
+        <Report name="MCPU_impl1_map.ncd" last_build_time="1605786998" last_build_size="493830"/>
+        <Report name="MCPU_impl1_mapvho.sdf" last_build_time="1605787004" last_build_size="443800"/>
+        <Report name="MCPU_impl1_mapvho.vho" last_build_time="1605787004" last_build_size="3204165"/>
+        <Report name="MCPU_impl1_mapvo.sdf" last_build_time="1605787002" last_build_size="444752"/>
+        <Report name="MCPU_impl1_mapvo.vo" last_build_time="1605787002" last_build_size="495761"/>
+        <Report name="MCPU_impl1_vho.sdf" last_build_time="1605787066" last_build_size="517347"/>
+        <Report name="MCPU_impl1_vho.vho" last_build_time="1605787066" last_build_size="3266163"/>
+        <Report name="MCPU_impl1_vo.sdf" last_build_time="1605787064" last_build_size="519938"/>
+        <Report name="MCPU_impl1_vo.vo" last_build_time="1605787064" last_build_size="511725"/>
+    </Strategy>
+</BuildStatus>

@@ -6,7 +6,7 @@ Performance Grade:      4
 PACKAGE:          CSBGA132
 Package Status:                     Final          Version 1.44
 
-Wed Nov 18 23:32:37 2020
+Thu Nov 19 18:30:26 2020
 
 Pinout by Port Name:
 +------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
@@ -24,7 +24,7 @@ Pinout by Port Name:
 | key_down   | N14/1    | LVCMOS25_IN  | PR19B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | key_menu   | L14/1    | LVCMOS25_IN  | PR16A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | key_up     | M14/1    | LVCMOS25_IN  | PR18B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
-| menu_state | A11/0    | LVCMOS25_OUT | PT25A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| menu_state | B3/0     | LVCMOS25_OUT | PT9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | pulse_out  | P9/2     | LVCMOS25_OUT | PB23A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | rst_n      | M13/1    | LVCMOS25_IN  | PR16B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | seg        | C9/0     | LVCMOS25_OUT | PT21A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
@@ -58,12 +58,12 @@ Pinout by Pin Number:
 | A7/0     |     unused, PULL:DOWN |            |              | PT18A | PCLKT0_1       |           |           |
 | A9/0     | a_to_g[1]             | LOCATED    | LVCMOS25_OUT | PT21B |                |           |           |
 | A10/0    | a_to_g[6]             | LOCATED    | LVCMOS25_OUT | PT24A |                |           |           |
-| A11/0    | menu_state            |            | LVCMOS25_OUT | PT25A |                |           |           |
+| A11/0    |     unused, PULL:DOWN |            |              | PT25A |                |           |           |
 | A12/0    |     unused, PULL:DOWN |            |              | PT27B |                |           |           |
 | A13/0    |     unused, PULL:DOWN |            |              | PT28D | DONE           |           |           |
 | B1/5     |     unused, PULL:DOWN |            |              | PL3A  | L_GPLLT_FB     |           |           |
 | B2/5     |     unused, PULL:DOWN |            |              | PL3B  | L_GPLLC_FB     |           |           |
-| B3/0     |     unused, PULL:DOWN |            |              | PT9B  |                |           |           |
+| B3/0     | menu_state            |            | LVCMOS25_OUT | PT9B  |                |           |           |
 | B4/0     | Reserved: sysCONFIG   |            |              | PT13D | TDI            |           |           |
 | B5/0     |     unused, PULL:DOWN |            |              | PT14A |                |           |           |
 | B6/0     | Reserved: sysCONFIG   |            |              | PT15C | TCK            |           |           |
@@ -361,7 +361,7 @@ LOCATE  COMP  "display"  SITE  "G3";
 LOCATE  COMP  "key_down"  SITE  "N14";
 LOCATE  COMP  "key_menu"  SITE  "L14";
 LOCATE  COMP  "key_up"  SITE  "M14";
-LOCATE  COMP  "menu_state"  SITE  "A11";
+LOCATE  COMP  "menu_state"  SITE  "B3";
 LOCATE  COMP  "pulse_out"  SITE  "P9";
 LOCATE  COMP  "rst_n"  SITE  "M13";
 LOCATE  COMP  "seg"  SITE  "C9";
@@ -376,5 +376,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 18 23:32:37 2020
+Thu Nov 19 18:30:26 2020
 

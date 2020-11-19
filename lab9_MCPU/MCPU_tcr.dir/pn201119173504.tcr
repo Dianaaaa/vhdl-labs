@@ -1,0 +1,9 @@
+#Start recording tcl command: 11/19/2020 17:03:41
+#Project Location: C:/Users/10352/vhdl-labs/lab9_MCPU; Project name: MCPU
+prj_project open "C:/Users/10352/vhdl-labs/lab9_MCPU/MCPU.ldf"
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+prj_run Synthesis -impl impl1
+#Stop recording: 11/19/2020 17:35:04

@@ -15,6 +15,7 @@ entity Key_Table is
 		clk	:		in 	std_logic
     );
 end Key_Table;
+
 ----------------------------------------------------------------
 architecture Key_Table_arch of Key_Table is
 signal clk_cnt:		integer 	range 0 to 12000	;--12MHz,1ms

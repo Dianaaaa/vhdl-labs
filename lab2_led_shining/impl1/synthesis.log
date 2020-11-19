@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 18 23:32:25 2020
+Thu Nov 19 18:30:11 2020
 
 
 Command Line:  synthesis -f led_shining_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab2_led_shining/promote.xml 
@@ -112,7 +112,7 @@ WARNING - synthesis: c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(142): Re
 WARNING - synthesis: Bit 3 of Register a_to_g is stuck at One
 WARNING - synthesis: Bit 4 of Register a_to_g is stuck at One
 WARNING - synthesis: c:/users/10352/vhdl-labs/lab2_led_shining/lab2.vhd(88): Register cnt1_i0_i0 is stuck at Zero. VDB-5013
-Duplicate register/latch removal. a_to_g_i1 is a one-to-one match with menu_state_105.
+Duplicate register/latch removal. menu_state_105 is a one-to-one match with a_to_g_i1.
 GSR instance connected to net rst_n_c.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -126,10 +126,10 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file led_shining_impl1.ngd.
 
 ################### Begin Area Report (PWM)######################
-Number of register bits => 157 of 4635 (3 % )
-CCU2D => 158
+Number of register bits => 158 of 4635 (3 % )
+CCU2D => 160
 FD1P3AX => 26
-FD1P3IX => 11
+FD1P3IX => 12
 FD1S3AX => 15
 FD1S3AY => 1
 FD1S3DX => 96
@@ -138,7 +138,7 @@ GSR => 1
 IB => 5
 INV => 1
 L6MUX21 => 1
-LUT4 => 110
+LUT4 => 116
 OB => 11
 PFUMX => 3
 ################### End Area Report ##################
@@ -150,31 +150,31 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 6
-  Net : clk_c, loads : 143
+  Net : clk_c, loads : 144
+  Net : P2/keysamplerpulse, loads : 35
   Net : P3/keysamplerpulse, loads : 35
   Net : P1/keysamplerpulse, loads : 35
-  Net : P2/keysamplerpulse, loads : 35
   Net : clk0, loads : 6
   Net : P1/key_menu1, loads : 2
 Clock Enable Nets
 Number of Clock Enables: 4
 Top 4 highest fanout Clock Enables:
-  Net : clk_c_enable_36, loads : 33
+  Net : clk_c_enable_37, loads : 34
   Net : rst_n_c, loads : 3
-  Net : clk_c_enable_6, loads : 2
-  Net : clk_c_enable_9, loads : 2
+  Net : clk_c_enable_7, loads : 2
+  Net : clk_c_enable_24, loads : 2
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : cycle_12, loads : 48
-  Net : cycle_pulse_0, loads : 41
-  Net : clk_c_enable_36, loads : 33
-  Net : direction, loads : 18
-  Net : cnt2_16__N_153, loads : 18
-  Net : duty_pulse_0, loads : 17
-  Net : dt_6, loads : 15
+  Net : cycle_12, loads : 47
+  Net : cycle_pulse_0, loads : 40
+  Net : clk_c_enable_37, loads : 34
+  Net : direction, loads : 19
+  Net : cnt2_16__N_153, loads : 19
+  Net : dt_4, loads : 17
+  Net : duty_pulse_0, loads : 14
   Net : n952, loads : 14
-  Net : n1713, loads : 14
-  Net : n2556, loads : 13
+  Net : n2679, loads : 13
+  Net : n2602, loads : 13
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -184,22 +184,22 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk5 [get_nets \P1/keysamplerpulse]     |  200.000 MHz|  554.939 MHz|     1  
+clk5 [get_nets \P3/keysamplerpulse]     |  200.000 MHz|  521.105 MHz|     1  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk4 [get_nets clk0]                    |  200.000 MHz|  180.148 MHz|     3 *
+clk4 [get_nets \P2/keysamplerpulse]     |  200.000 MHz|  521.105 MHz|     1  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk3 [get_nets key_menu1]               |  200.000 MHz|  275.028 MHz|     2  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets clk_c]                   |  200.000 MHz|   68.353 MHz|    14 *
+clk2 [get_nets \P1/keysamplerpulse]     |  200.000 MHz|  554.939 MHz|     1  
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets \P2/keysamplerpulse]     |  200.000 MHz|  521.105 MHz|     1  
+clk1 [get_nets clk0]                    |  200.000 MHz|  186.741 MHz|     3 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets \P3/keysamplerpulse]     |  200.000 MHz|  521.105 MHz|     1  
+clk0 [get_nets clk_c]                   |  200.000 MHz|   66.787 MHz|    12 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -207,8 +207,8 @@ clk0 [get_nets \P3/keysamplerpulse]     |  200.000 MHz|  521.105 MHz|     1
 2 constraints not met.
 
 
-Peak Memory Usage: 85.191  MB
+Peak Memory Usage: 84.723  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.391  secs
+Elapsed CPU time for LSE flow : 1.453  secs
 --------------------------------------------------------------

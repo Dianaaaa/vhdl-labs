@@ -23,21 +23,21 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-4000HCCSBGA132
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  11/18/20  23:32:28
+Mapped on:  11/19/20  18:30:17
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    157 out of  4635 (3%)
-      PFU registers:          157 out of  4320 (4%)
+   Number of registers:    158 out of  4635 (3%)
+      PFU registers:          158 out of  4320 (4%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       217 out of  2160 (10%)
-      SLICEs as Logic/ROM:    217 out of  2160 (10%)
+   Number of SLICEs:       221 out of  2160 (10%)
+      SLICEs as Logic/ROM:    221 out of  2160 (10%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:        158 out of  2160 (7%)
-   Number of LUT4s:        428 out of  4320 (10%)
-      Number used as logic LUTs:        112
+      SLICEs as Carry:        160 out of  2160 (7%)
+   Number of LUT4s:        438 out of  4320 (10%)
+      Number used as logic LUTs:        118
       Number used as distributed RAM:     0
-      Number used as ripple logic:      316
+      Number used as ripple logic:      320
       Number used as shift registers:     0
    Number of PIO sites used: 16 + 4(JTAG) out of 105 (19%)
    Number of block RAMs:  0 out of 10 (0%)
@@ -66,40 +66,40 @@ Mapped on:  11/18/20  23:32:28
      ripple logic.
    Number of clocks:  6
      Net clk_c: 82 loads, 82 rising, 0 falling (Driver: PIO clk )
-     Net key_menu1: 2 loads, 2 rising, 0 falling (Driver: P1/i2_3_lut )
-
      Net clk0: 3 loads, 1 rising, 2 falling (Driver: clk0_96 )
-     Net P1/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
-     P1/add_854_cout )
-     Net P2/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
-     P2/add_855_cout )
+
+     Net key_menu1: 2 loads, 2 rising, 0 falling (Driver: P1/i2_3_lut )
      Net P3/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
-     P3/add_853_cout )
+     P3/add_870_cout )
+     Net P1/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
+     P1/add_871_cout )
+     Net P2/keysamplerpulse: 2 loads, 2 rising, 0 falling (Driver:
+     P2/add_872_cout )
    Number of Clock Enables:  4
-     Net clk_c_enable_36: 19 loads, 19 LSLICEs
-     Net clk_c_enable_6: 2 loads, 2 LSLICEs
+     Net clk_c_enable_7: 2 loads, 2 LSLICEs
+     Net clk_c_enable_37: 19 loads, 19 LSLICEs
      Net rst_n_c: 1 loads, 1 LSLICEs
-     Net clk_c_enable_9: 2 loads, 2 LSLICEs
+     Net clk_c_enable_24: 2 loads, 2 LSLICEs
    Number of LSRs:  7
-     Net n2007: 2 loads, 2 LSLICEs
+     Net n1594: 5 loads, 5 LSLICEs
+     Net n1593: 3 loads, 3 LSLICEs
      Net n1280: 1 loads, 1 LSLICEs
-     Net n2009: 3 loads, 3 LSLICEs
-     Net n1619: 5 loads, 5 LSLICEs
+     Net n1597: 2 loads, 2 LSLICEs
+     Net P3/keysamplerpulse: 17 loads, 17 LSLICEs
      Net P1/keysamplerpulse: 17 loads, 17 LSLICEs
      Net P2/keysamplerpulse: 17 loads, 17 LSLICEs
-     Net P3/keysamplerpulse: 17 loads, 17 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net cycle_12: 48 loads
-     Net cycle_pulse_0: 41 loads
-     Net clk_c_enable_36: 20 loads
-     Net cnt2_16__N_153: 18 loads
-     Net direction: 18 loads
-     Net duty_pulse_0: 17 loads
-     Net dt_6: 15 loads
-     Net n1713: 14 loads
+     Net cycle_12: 47 loads
+     Net cycle_pulse_0: 40 loads
+     Net clk_c_enable_37: 20 loads
+     Net cnt2_16__N_153: 19 loads
+     Net direction: 19 loads
+     Net dt_4: 17 loads
+     Net duty_pulse_0: 14 loads
      Net n952: 14 loads
-     Net n2556: 13 loads
+     Net n2602: 13 loads
+     Net n2679: 13 loads
 
 
 
@@ -161,181 +161,182 @@ Mapped on:  11/18/20  23:32:28
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Signal clk0__inv was merged into signal clk0
-Signal P3/add_853_2/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_2/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_2/CI undriven or does not drive anything - clipped.
-Signal P3/add_853_4/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_4/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_6/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_6/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_8/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_8/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_10/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_10/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_12/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_12/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_14/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_14/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_16/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_16/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_18/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_18/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_20/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_20/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_22/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_22/S0 undriven or does not drive anything - clipped.
-
-Signal P3/add_853_24/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_24/S0 undriven or does not drive anything - clipped.
-Signal P3/add_853_cout/S1 undriven or does not drive anything - clipped.
-Signal P3/add_853_cout/CO undriven or does not drive anything - clipped.
-Signal P3/keysamplerpulsecnt_288_add_4_1/S0 undriven or does not drive anything
-     - clipped.
-Signal P3/keysamplerpulsecnt_288_add_4_1/CI undriven or does not drive anything
-     - clipped.
-Signal P3/keysamplerpulsecnt_288_add_4_33/S1 undriven or does not drive anything
-     - clipped.
-Signal P3/keysamplerpulsecnt_288_add_4_33/CO undriven or does not drive anything
-     - clipped.
-Signal P2/add_855_16/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_16/S0 undriven or does not drive anything - clipped.
+Signal clk0_N_192 was merged into signal clk0
 Signal P2/keysamplerpulsecnt_289_add_4_33/S1 undriven or does not drive anything
      - clipped.
 Signal P2/keysamplerpulsecnt_289_add_4_33/CO undriven or does not drive anything
      - clipped.
-Signal P2/add_855_18/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_18/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_20/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_20/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_22/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_22/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_24/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_24/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_cout/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_cout/CO undriven or does not drive anything - clipped.
-Signal P2/add_855_2/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_2/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_2/CI undriven or does not drive anything - clipped.
-Signal P2/add_855_4/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_4/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_6/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_6/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_8/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_8/S0 undriven or does not drive anything - clipped.
 Signal P2/keysamplerpulsecnt_289_add_4_1/S0 undriven or does not drive anything
      - clipped.
 Signal P2/keysamplerpulsecnt_289_add_4_1/CI undriven or does not drive anything
      - clipped.
-Signal P2/add_855_10/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_10/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_12/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_12/S0 undriven or does not drive anything - clipped.
-Signal P2/add_855_14/S1 undriven or does not drive anything - clipped.
-Signal P2/add_855_14/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_14/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_14/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_16/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_16/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_18/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_18/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_20/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_20/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_22/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_14/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_14/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_2/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_2/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_2/CI undriven or does not drive anything - clipped.
+Signal P2/add_872_4/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_4/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_6/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_6/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_16/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_16/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_18/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_18/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_8/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_8/S0 undriven or does not drive anything - clipped.
 
-Signal P1/add_854_22/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_24/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_24/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_cout/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_cout/CO undriven or does not drive anything - clipped.
-Signal P1/add_854_2/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_2/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_2/CI undriven or does not drive anything - clipped.
-Signal P1/add_854_4/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_4/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_6/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_6/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_8/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_8/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_10/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_10/S0 undriven or does not drive anything - clipped.
-Signal P1/add_854_12/S1 undriven or does not drive anything - clipped.
-Signal P1/add_854_12/S0 undriven or does not drive anything - clipped.
-Signal P1/keysamplerpulsecnt_290_add_4_1/S0 undriven or does not drive anything
-     - clipped.
-Signal P1/keysamplerpulsecnt_290_add_4_1/CI undriven or does not drive anything
-     - clipped.
+Signal P2/add_872_10/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_10/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_20/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_20/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_22/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_22/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_12/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_12/S0 undriven or does not drive anything - clipped.
+Signal P2/add_872_cout/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_cout/CO undriven or does not drive anything - clipped.
+Signal P2/add_872_24/S1 undriven or does not drive anything - clipped.
+Signal P2/add_872_24/S0 undriven or does not drive anything - clipped.
+Signal cnt2_286_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cnt2_286_add_4_1/CI undriven or does not drive anything - clipped.
+Signal P1/add_871_2/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_2/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_2/CI undriven or does not drive anything - clipped.
+Signal P1/add_871_4/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_4/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_6/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_6/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_8/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_8/S0 undriven or does not drive anything - clipped.
 Signal P1/keysamplerpulsecnt_290_add_4_33/S1 undriven or does not drive anything
      - clipped.
 Signal P1/keysamplerpulsecnt_290_add_4_33/CO undriven or does not drive anything
      - clipped.
-Signal add_124_16/S1 undriven or does not drive anything - clipped.
-Signal add_124_16/CO undriven or does not drive anything - clipped.
-Signal add_235_cout/S1 undriven or does not drive anything - clipped.
-Signal add_235_cout/CO undriven or does not drive anything - clipped.
-Signal add_124_2/S0 undriven or does not drive anything - clipped.
-Signal add_124_2/CI undriven or does not drive anything - clipped.
-Signal sub_128_add_2_17/CO undriven or does not drive anything - clipped.
-Signal sub_248_add_2_19/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_19/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_cout/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_cout/CO undriven or does not drive anything - clipped.
-Signal cnt2_286_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal cnt2_286_add_4_1/CI undriven or does not drive anything - clipped.
-Signal sub_249_add_2_2/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_2/S0 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_2/CI undriven or does not drive anything - clipped.
-Signal sub_248_add_2_1/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_249_add_2_4/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_4/S0 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_6/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_6/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_3/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_3/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_5/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_5/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_7/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_7/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_9/S1 undriven or does not drive anything - clipped.
-
-Signal sub_248_add_2_9/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_11/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_11/S0 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_13/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_13/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_10/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_10/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_12/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_12/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_14/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_14/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_16/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_16/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_18/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_18/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_20/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_20/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_22/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_22/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_24/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_24/S0 undriven or does not drive anything - clipped.
+Signal P1/add_871_cout/S1 undriven or does not drive anything - clipped.
+Signal P1/add_871_cout/CO undriven or does not drive anything - clipped.
+Signal P1/keysamplerpulsecnt_290_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal P1/keysamplerpulsecnt_290_add_4_1/CI undriven or does not drive anything
+     - clipped.
 Signal cnt2_286_add_4_17/CO undriven or does not drive anything - clipped.
 Signal count0_284_add_4_1/S0 undriven or does not drive anything - clipped.
 Signal count0_284_add_4_1/CI undriven or does not drive anything - clipped.
-Signal add_283_1/S0 undriven or does not drive anything - clipped.
-Signal add_283_1/CI undriven or does not drive anything - clipped.
 Signal count0_284_add_4_9/S1 undriven or does not drive anything - clipped.
 Signal count0_284_add_4_9/CO undriven or does not drive anything - clipped.
-Signal sub_128_add_2_1/S0 undriven or does not drive anything - clipped.
-Signal sub_128_add_2_1/CI undriven or does not drive anything - clipped.
-Signal sub_249_add_2_8/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal add_283_1/S0 undriven or does not drive anything - clipped.
+Signal add_283_1/CI undriven or does not drive anything - clipped.
+
+Signal add_283_15/CO undriven or does not drive anything - clipped.
+Signal sub_248_add_2_2/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_2/CI undriven or does not drive anything - clipped.
+Signal sub_248_add_2_4/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_4/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_6/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_6/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_8/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_10/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_10/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_12/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_12/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_14/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_14/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_16/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_16/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_18/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_18/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_20/S1 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_20/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_22/S0 undriven or does not drive anything - clipped.
+Signal sub_248_add_2_22/CO undriven or does not drive anything - clipped.
+Signal sub_128_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal sub_128_add_2_2/CI undriven or does not drive anything - clipped.
+Signal add_333_17/S1 undriven or does not drive anything - clipped.
+Signal add_333_17/CO undriven or does not drive anything - clipped.
+Signal P3/keysamplerpulsecnt_288_add_4_33/S1 undriven or does not drive anything
+     - clipped.
+Signal P3/keysamplerpulsecnt_288_add_4_33/CO undriven or does not drive anything
+     - clipped.
+Signal P3/add_870_2/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_2/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_2/CI undriven or does not drive anything - clipped.
+Signal P3/add_870_4/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_4/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_6/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_6/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_8/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_8/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_10/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_10/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_12/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_12/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_14/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_14/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_16/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_16/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_18/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_18/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_20/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_20/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_22/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_22/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_24/S1 undriven or does not drive anything - clipped.
+
+Signal P3/add_870_24/S0 undriven or does not drive anything - clipped.
+Signal P3/add_870_cout/S1 undriven or does not drive anything - clipped.
+Signal P3/add_870_cout/CO undriven or does not drive anything - clipped.
+Signal P3/keysamplerpulsecnt_288_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal P3/keysamplerpulsecnt_288_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal sub_128_add_2_20/S1 undriven or does not drive anything - clipped.
+Signal sub_128_add_2_20/CO undriven or does not drive anything - clipped.
+Signal sub_249_add_2_4/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_4/S0 undriven or does not drive anything - clipped.
+Signal add_333_1/S0 undriven or does not drive anything - clipped.
+Signal add_333_1/CI undriven or does not drive anything - clipped.
+Signal add_235_cout/S1 undriven or does not drive anything - clipped.
+Signal add_235_cout/CO undriven or does not drive anything - clipped.
 Signal add_235_1/S0 undriven or does not drive anything - clipped.
 Signal add_235_1/CI undriven or does not drive anything - clipped.
-Signal sub_249_add_2_10/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_10/S0 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_12/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_12/S0 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_14/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_14/S0 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_16/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_16/S0 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_18/S1 undriven or does not drive anything - clipped.
-Signal sub_249_add_2_18/S0 undriven or does not drive anything - clipped.
 Signal sub_249_add_2_20/S0 undriven or does not drive anything - clipped.
 Signal sub_249_add_2_20/CO undriven or does not drive anything - clipped.
-Signal sub_248_add_2_15/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_15/S0 undriven or does not drive anything - clipped.
-Signal add_283_15/CO undriven or does not drive anything - clipped.
-Signal sub_248_add_2_17/S1 undriven or does not drive anything - clipped.
-Signal sub_248_add_2_17/S0 undriven or does not drive anything - clipped.
-Block i1140 was optimized away.
+Signal sub_249_add_2_18/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_18/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_16/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_16/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_14/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_14/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_12/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_12/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_10/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_10/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_8/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_8/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_2/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_2/S0 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_2/CI undriven or does not drive anything - clipped.
+Signal sub_249_add_2_6/S1 undriven or does not drive anything - clipped.
+Signal sub_249_add_2_6/S0 undriven or does not drive anything - clipped.
+Block i1186 was optimized away.
 
      
 
@@ -371,14 +372,50 @@ GSR Component:
    Register : display_104
    Register : clk0_96
    Register : direction_102
-   Register : count0_284__i0
    Register : key_up1_ls_98
+   Register : count0_284__i0
+   Register : P3/keystore_i0
+   Register : P3/keysamplerpulsecnt_288__i0
+   Register : P3/keysamplerpulsecnt_288__i31
+   Register : P3/keysamplerpulsecnt_288__i30
+   Register : P3/keysamplerpulsecnt_288__i29
+   Register : P3/keysamplerpulsecnt_288__i28
+   Register : P3/keysamplerpulsecnt_288__i27
+   Register : P3/keysamplerpulsecnt_288__i26
+   Register : P3/keysamplerpulsecnt_288__i25
+   Register : P3/keysamplerpulsecnt_288__i24
+   Register : P3/keysamplerpulsecnt_288__i23
+   Register : P3/keysamplerpulsecnt_288__i22
+   Register : P3/keysamplerpulsecnt_288__i21
+   Register : P3/keysamplerpulsecnt_288__i20
+   Register : P3/keysamplerpulsecnt_288__i19
+   Register : P3/keysamplerpulsecnt_288__i18
+   Register : P3/keysamplerpulsecnt_288__i17
+   Register : P3/keysamplerpulsecnt_288__i16
+   Register : P3/keysamplerpulsecnt_288__i15
+   Register : P3/keysamplerpulsecnt_288__i14
+   Register : P3/keysamplerpulsecnt_288__i13
+   Register : P3/keysamplerpulsecnt_288__i12
+   Register : P3/keysamplerpulsecnt_288__i11
+   Register : P3/keysamplerpulsecnt_288__i10
+   Register : P3/keysamplerpulsecnt_288__i9
+   Register : P3/keysamplerpulsecnt_288__i8
+   Register : P3/keysamplerpulsecnt_288__i7
+   Register : P3/keysamplerpulsecnt_288__i6
+   Register : P3/keysamplerpulsecnt_288__i5
+   Register : P3/keysamplerpulsecnt_288__i4
+   Register : P3/keysamplerpulsecnt_288__i3
+   Register : P3/keysamplerpulsecnt_288__i2
+   Register : P3/keysamplerpulsecnt_288__i1
+   Register : P3/keystore_i2
+   Register : P3/keystore_i1
    Register : count0_284__i7
    Register : count0_284__i6
    Register : count0_284__i5
    Register : count0_284__i4
    Register : count0_284__i3
    Register : count0_284__i2
+
    Register : count0_284__i1
    Register : P1/keystore_i0
    Register : P1/keysamplerpulsecnt_290__i0
@@ -415,7 +452,6 @@ GSR Component:
    Register : P1/keysamplerpulsecnt_290__i1
    Register : P1/keystore_i2
    Register : P1/keystore_i1
-
    Register : P2/keystore_i0
    Register : P2/keysamplerpulsecnt_289__i0
    Register : P2/keysamplerpulsecnt_289__i31
@@ -436,6 +472,7 @@ GSR Component:
    Register : P2/keysamplerpulsecnt_289__i16
    Register : P2/keysamplerpulsecnt_289__i15
    Register : P2/keysamplerpulsecnt_289__i14
+
    Register : P2/keysamplerpulsecnt_289__i13
    Register : P2/keysamplerpulsecnt_289__i12
    Register : P2/keysamplerpulsecnt_289__i11
@@ -451,42 +488,6 @@ GSR Component:
    Register : P2/keysamplerpulsecnt_289__i1
    Register : P2/keystore_i2
    Register : P2/keystore_i1
-   Register : P3/keystore_i0
-   Register : P3/keysamplerpulsecnt_288__i0
-   Register : P3/keysamplerpulsecnt_288__i31
-   Register : P3/keysamplerpulsecnt_288__i30
-   Register : P3/keysamplerpulsecnt_288__i29
-   Register : P3/keysamplerpulsecnt_288__i28
-   Register : P3/keysamplerpulsecnt_288__i27
-   Register : P3/keysamplerpulsecnt_288__i26
-   Register : P3/keysamplerpulsecnt_288__i25
-   Register : P3/keysamplerpulsecnt_288__i24
-   Register : P3/keysamplerpulsecnt_288__i23
-   Register : P3/keysamplerpulsecnt_288__i22
-   Register : P3/keysamplerpulsecnt_288__i21
-   Register : P3/keysamplerpulsecnt_288__i20
-   Register : P3/keysamplerpulsecnt_288__i19
-   Register : P3/keysamplerpulsecnt_288__i18
-   Register : P3/keysamplerpulsecnt_288__i17
-   Register : P3/keysamplerpulsecnt_288__i16
-   Register : P3/keysamplerpulsecnt_288__i15
-   Register : P3/keysamplerpulsecnt_288__i14
-   Register : P3/keysamplerpulsecnt_288__i13
-
-   Register : P3/keysamplerpulsecnt_288__i12
-   Register : P3/keysamplerpulsecnt_288__i11
-   Register : P3/keysamplerpulsecnt_288__i10
-   Register : P3/keysamplerpulsecnt_288__i9
-   Register : P3/keysamplerpulsecnt_288__i8
-   Register : P3/keysamplerpulsecnt_288__i7
-   Register : P3/keysamplerpulsecnt_288__i6
-   Register : P3/keysamplerpulsecnt_288__i5
-   Register : P3/keysamplerpulsecnt_288__i4
-   Register : P3/keysamplerpulsecnt_288__i3
-   Register : P3/keysamplerpulsecnt_288__i2
-   Register : P3/keysamplerpulsecnt_288__i1
-   Register : P3/keystore_i2
-   Register : P3/keystore_i1
 
      Components with synchronous local reset also reset by asynchronous GSR
 ----------------------------------------------------------------------
@@ -497,19 +498,20 @@ GSR Component:
      component.
 
      Type and number of components of the type: 
-   Register = 10 
+   Register = 11 
 
      Type and instance name of component: 
-   Register : duty_pulse_285__i1
-   Register : cnt1_i0_i2
    Register : cycle_pulse_287__i1
-   Register : cnt1_i0_i3
    Register : cnt2_286__i1
-   Register : duty_pulse_285__i0
    Register : cnt2_286__i2
-   Register : cnt2_286__i0
-   Register : cycle_pulse_287__i0
    Register : cnt2_286__i3
+   Register : cnt1_i0_i3
+   Register : cnt1_i0_i1
+   Register : cycle_pulse_287__i0
+   Register : cnt1_i0_i2
+   Register : duty_pulse_285__i0
+   Register : cnt2_286__i0
+   Register : duty_pulse_285__i1
 
 
 
@@ -520,8 +522,6 @@ GSR Component:
    Total REAL Time: 0 secs  
    Peak Memory Usage: 50 MB
         
-
-
 
 
 

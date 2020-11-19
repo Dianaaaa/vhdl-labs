@@ -1,0 +1,996 @@
+
+          Lattice Mapping Report File for Design Module 'cpu2system'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
+     MCPU_impl1.ngd -o MCPU_impl1_map.ncd -pr MCPU_impl1.prf -mp MCPU_impl1.mrp
+     -lpf C:/Users/10352/vhdl-labs/lab9_MCPU/impl1/MCPU_impl1.lpf -lpf
+     C:/Users/10352/vhdl-labs/lab9_MCPU/MCPU.lpf -c 0 -gui -msgset
+     C:/Users/10352/vhdl-labs/lab9_MCPU/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-4000HCCSBGA132
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  11/19/20  19:56:37
+
+Design Summary
+--------------
+
+   Number of registers:    536 out of  4635 (12%)
+      PFU registers:          536 out of  4320 (12%)
+      PIO registers:            0 out of   315 (0%)
+   Number of SLICEs:       406 out of  2160 (19%)
+      SLICEs as Logic/ROM:    406 out of  2160 (19%)
+      SLICEs as RAM:            0 out of  1620 (0%)
+      SLICEs as Carry:          6 out of  2160 (0%)
+   Number of LUT4s:        407 out of  4320 (9%)
+      Number used as logic LUTs:        395
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       12
+      Number used as shift registers:     0
+   Number of PIO sites used: 11 + 4(JTAG) out of 105 (14%)
+   Number of block RAMs:  0 out of 10 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  65
+     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
+     Net RAM/mem_62__7__N_271: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_13 )
+
+                                    Page 1
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+Design Summary (cont)
+---------------------
+     Net RAM/mem_61__7__N_268: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_12 )
+     Net RAM/mem_60__7__N_265: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_11 )
+     Net RAM/mem_59__7__N_262: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_10 )
+     Net RAM/mem_58__7__N_259: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_9 )
+     Net RAM/mem_57__7__N_256: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_53 )
+     Net RAM/mem_56__7__N_253: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_54 )
+     Net RAM/mem_55__7__N_250: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut )
+     Net RAM/mem_54__7__N_247: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_20 )
+     Net RAM/mem_53__7__N_244: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_19 )
+     Net RAM/mem_52__7__N_241: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_18 )
+     Net RAM/mem_51__7__N_238: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_17 )
+     Net RAM/mem_50__7__N_235: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_16 )
+     Net RAM/mem_49__7__N_232: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_15 )
+     Net RAM/mem_48__7__N_229: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_14 )
+     Net RAM/mem_47__7__N_226: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_71 )
+     Net RAM/mem_46__7__N_223: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_27 )
+     Net RAM/mem_45__7__N_220: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_26 )
+     Net RAM/mem_44__7__N_217: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_25 )
+     Net RAM/mem_43__7__N_214: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_24 )
+     Net RAM/mem_42__7__N_211: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_23 )
+     Net RAM/mem_41__7__N_208: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_22 )
+     Net RAM/mem_40__7__N_205: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_21 )
+     Net RAM/mem_39__7__N_202: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_72 )
+     Net RAM/mem_38__7__N_199: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_34 )
+     Net RAM/mem_37__7__N_196: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_33 )
+     Net RAM/mem_36__7__N_193: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_32 )
+     Net RAM/mem_35__7__N_190: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_31 )
+     Net RAM/mem_34__7__N_187: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_30 )
+
+                                    Page 2
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+Design Summary (cont)
+---------------------
+     Net RAM/mem_33__7__N_184: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_29 )
+     Net RAM/mem_32__7__N_181: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_28 )
+     Net RAM/mem_31__7__N_178: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_73 )
+     Net RAM/mem_30__7__N_175: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_41 )
+     Net RAM/mem_29__7__N_172: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_40 )
+     Net RAM/mem_28__7__N_169: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_39 )
+     Net RAM/mem_27__7__N_166: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_38 )
+     Net RAM/mem_26__7__N_163: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_37 )
+     Net RAM/mem_25__7__N_160: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_36 )
+     Net RAM/mem_24__7__N_157: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_35 )
+     Net RAM/mem_23__7__N_154: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_74 )
+     Net RAM/mem_22__7__N_151: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_48 )
+     Net RAM/mem_21__7__N_148: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_47 )
+     Net RAM/mem_63__7__N_274: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_75 )
+     Net RAM/mem_20__7__N_145: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_46 )
+     Net RAM/mem_19__7__N_142: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_45 )
+     Net RAM/mem_18__7__N_139: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_44 )
+     Net RAM/mem_17__7__N_136: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_43 )
+     Net RAM/mem_16__7__N_133: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_42 )
+     Net RAM/mem_15__7__N_130: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_77 )
+     Net RAM/mem_14__7__N_127: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_60 )
+     Net RAM/mem_13__7__N_124: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_61 )
+     Net RAM/mem_12__7__N_121: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut )
+     Net RAM/mem_11__7__N_118: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_62 )
+     Net RAM/mem_10__7__N_115: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_51 )
+     Net RAM/mem_9__7__N_112: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_50 )
+     Net RAM/mem_8__7__N_109: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_49 )
+     Net RAM/mem_7__7__N_106: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_4_lut_adj_79 )
+
+                                    Page 3
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+Design Summary (cont)
+---------------------
+     Net RAM/mem_6__7__N_103: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_8 )
+     Net RAM/mem_5__7__N_100: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_52 )
+     Net RAM/mem_4__7__N_97: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_55 )
+     Net RAM/mem_3__7__N_94: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_56 )
+     Net RAM/mem_2__7__N_91: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_57 )
+     Net RAM/mem_1__7__N_88: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_58 )
+     Net RAM/mem_0__7__N_83: 4 loads, 4 rising, 0 falling (Driver:
+     CPU/i1_2_lut_3_lut_4_lut_adj_59 )
+   Number of Clock Enables:  3
+     Net CPU/clk_c_enable_7: 3 loads, 3 LSLICEs
+     Net CPU/clk_c_enable_15: 4 loads, 4 LSLICEs
+     Net CPU/clk_c_enable_8: 1 loads, 1 LSLICEs
+   Number of LSRs:  2
+     Net CPU/n1895: 2 loads, 2 LSLICEs
+     Net CPU/n430: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net address_0: 270 loads
+     Net address_1: 148 loads
+     Net address_2: 76 loads
+     Net data_6: 68 loads
+     Net data_7: 68 loads
+     Net data_0: 66 loads
+     Net data_1: 66 loads
+     Net data_2: 66 loads
+     Net data_3: 66 loads
+     Net data_4: 66 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| reset               | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
+
+                                    Page 4
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| akku_o[0]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[1]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[2]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[3]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[4]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[5]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[6]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[7]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| akku_o[8]           | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i2042 undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal CPU/add_91_1/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_91_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_91_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_91_cout/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_91_cout/CO undriven or does not drive anything - clipped.
+Block i1 was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'reset_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'reset_c' via the GSR component.
+
+     Type and number of components of the type: 
+
+                                    Page 5
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register = 512 
+
+     Type and instance name of component: 
+   Register : RAM/data_7__I_0_5187_i1
+   Register : RAM/data_7__I_0_5184_i1
+   Register : RAM/data_7__I_0_5181_i1
+   Register : RAM/data_7__I_0_5178_i1
+   Register : RAM/data_7__I_0_5175_i1
+   Register : RAM/data_7__I_0_5172_i1
+   Register : RAM/data_7__I_0_5169_i1
+   Register : RAM/data_7__I_0_5166_i1
+   Register : RAM/data_7__I_0_5163_i1
+   Register : RAM/data_7__I_0_5160_i1
+   Register : RAM/data_7__I_0_5157_i1
+   Register : RAM/data_7__I_0_5154_i1
+   Register : RAM/data_7__I_0_5151_i1
+   Register : RAM/data_7__I_0_5148_i1
+   Register : RAM/data_7__I_0_5145_i1
+   Register : RAM/data_7__I_0_5142_i1
+   Register : RAM/data_7__I_0_5139_i1
+   Register : RAM/data_7__I_0_5136_i1
+   Register : RAM/data_7__I_0_5133_i1
+   Register : RAM/data_7__I_0_5130_i1
+   Register : RAM/data_7__I_0_5127_i1
+   Register : RAM/data_7__I_0_5124_i1
+   Register : RAM/data_7__I_0_5121_i1
+   Register : RAM/data_7__I_0_5118_i1
+   Register : RAM/data_7__I_0_5115_i1
+   Register : RAM/data_7__I_0_5112_i1
+   Register : RAM/data_7__I_0_5109_i1
+   Register : RAM/data_7__I_0_5106_i1
+   Register : RAM/data_7__I_0_5103_i1
+   Register : RAM/data_7__I_0_5100_i1
+   Register : RAM/data_7__I_0_5097_i1
+   Register : RAM/data_7__I_0_5094_i1
+   Register : RAM/data_7__I_0_5091_i1
+   Register : RAM/data_7__I_0_5088_i1
+   Register : RAM/data_7__I_0_5085_i1
+   Register : RAM/data_7__I_0_5082_i1
+   Register : RAM/data_7__I_0_5079_i1
+   Register : RAM/data_7__I_0_5076_i1
+   Register : RAM/data_7__I_0_5073_i1
+   Register : RAM/data_7__I_0_5070_i1
+   Register : RAM/data_7__I_0_5067_i1
+   Register : RAM/data_7__I_0_5064_i1
+   Register : RAM/data_7__I_0_i1
+   Register : RAM/data_7__I_0_5061_i1
+   Register : RAM/data_7__I_0_5058_i1
+   Register : RAM/data_7__I_0_5055_i1
+   Register : RAM/data_7__I_0_5052_i1
+   Register : RAM/data_7__I_0_5049_i1
+   Register : RAM/data_7__I_0_5046_i1
+   Register : RAM/data_7__I_0_5043_i1
+   Register : RAM/data_7__I_0_5040_i1
+   Register : RAM/data_7__I_0_5037_i1
+   Register : RAM/data_7__I_0_5034_i1
+
+                                    Page 6
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5031_i1
+   Register : RAM/data_7__I_0_5028_i1
+   Register : RAM/data_7__I_0_5025_i1
+   Register : RAM/data_7__I_0_5022_i1
+   Register : RAM/data_7__I_0_5019_i1
+   Register : RAM/data_7__I_0_5016_i1
+   Register : RAM/data_7__I_0_5013_i1
+   Register : RAM/data_7__I_0_5010_i1
+   Register : RAM/data_7__I_0_5007_i1
+   Register : RAM/data_7__I_0_5004_i1
+   Register : RAM/data_7__I_0_5002_i1
+   Register : RAM/data_7__I_0_5002_i2
+   Register : RAM/data_7__I_0_5002_i3
+   Register : RAM/data_7__I_0_5002_i4
+   Register : RAM/data_7__I_0_5002_i5
+   Register : RAM/data_7__I_0_5002_i6
+   Register : RAM/data_7__I_0_5002_i7
+   Register : RAM/data_7__I_0_5002_i8
+   Register : RAM/data_7__I_0_5004_i2
+   Register : RAM/data_7__I_0_5004_i3
+   Register : RAM/data_7__I_0_5004_i4
+   Register : RAM/data_7__I_0_5004_i5
+   Register : RAM/data_7__I_0_5004_i6
+   Register : RAM/data_7__I_0_5004_i7
+   Register : RAM/data_7__I_0_5004_i8
+   Register : RAM/data_7__I_0_5007_i2
+   Register : RAM/data_7__I_0_5007_i3
+   Register : RAM/data_7__I_0_5007_i4
+   Register : RAM/data_7__I_0_5007_i5
+   Register : RAM/data_7__I_0_5007_i6
+   Register : RAM/data_7__I_0_5007_i7
+   Register : RAM/data_7__I_0_5007_i8
+   Register : RAM/data_7__I_0_5010_i2
+   Register : RAM/data_7__I_0_5010_i3
+   Register : RAM/data_7__I_0_5010_i4
+   Register : RAM/data_7__I_0_5010_i5
+   Register : RAM/data_7__I_0_5010_i6
+   Register : RAM/data_7__I_0_5010_i7
+   Register : RAM/data_7__I_0_5010_i8
+   Register : RAM/data_7__I_0_5013_i2
+   Register : RAM/data_7__I_0_5013_i3
+   Register : RAM/data_7__I_0_5013_i4
+   Register : RAM/data_7__I_0_5013_i5
+   Register : RAM/data_7__I_0_5013_i6
+   Register : RAM/data_7__I_0_5013_i7
+   Register : RAM/data_7__I_0_5013_i8
+   Register : RAM/data_7__I_0_5016_i2
+   Register : RAM/data_7__I_0_5016_i3
+   Register : RAM/data_7__I_0_5016_i4
+   Register : RAM/data_7__I_0_5016_i5
+   Register : RAM/data_7__I_0_5016_i6
+   Register : RAM/data_7__I_0_5016_i7
+   Register : RAM/data_7__I_0_5016_i8
+   Register : RAM/data_7__I_0_5019_i2
+   Register : RAM/data_7__I_0_5019_i3
+   Register : RAM/data_7__I_0_5019_i4
+
+                                    Page 7
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5019_i5
+   Register : RAM/data_7__I_0_5019_i6
+   Register : RAM/data_7__I_0_5019_i7
+   Register : RAM/data_7__I_0_5019_i8
+   Register : RAM/data_7__I_0_5022_i2
+   Register : RAM/data_7__I_0_5022_i3
+   Register : RAM/data_7__I_0_5022_i4
+   Register : RAM/data_7__I_0_5022_i5
+   Register : RAM/data_7__I_0_5022_i6
+   Register : RAM/data_7__I_0_5022_i7
+   Register : RAM/data_7__I_0_5022_i8
+   Register : RAM/data_7__I_0_5025_i2
+   Register : RAM/data_7__I_0_5025_i3
+   Register : RAM/data_7__I_0_5025_i4
+   Register : RAM/data_7__I_0_5025_i5
+   Register : RAM/data_7__I_0_5025_i6
+   Register : RAM/data_7__I_0_5025_i7
+   Register : RAM/data_7__I_0_5025_i8
+   Register : RAM/data_7__I_0_5028_i2
+   Register : RAM/data_7__I_0_5028_i3
+   Register : RAM/data_7__I_0_5028_i4
+   Register : RAM/data_7__I_0_5028_i5
+   Register : RAM/data_7__I_0_5028_i6
+   Register : RAM/data_7__I_0_5028_i7
+   Register : RAM/data_7__I_0_5028_i8
+   Register : RAM/data_7__I_0_5031_i2
+   Register : RAM/data_7__I_0_5031_i3
+   Register : RAM/data_7__I_0_5031_i4
+   Register : RAM/data_7__I_0_5031_i5
+   Register : RAM/data_7__I_0_5031_i6
+   Register : RAM/data_7__I_0_5031_i7
+   Register : RAM/data_7__I_0_5031_i8
+   Register : RAM/data_7__I_0_5034_i2
+   Register : RAM/data_7__I_0_5034_i3
+   Register : RAM/data_7__I_0_5034_i4
+   Register : RAM/data_7__I_0_5034_i5
+   Register : RAM/data_7__I_0_5034_i6
+   Register : RAM/data_7__I_0_5034_i7
+   Register : RAM/data_7__I_0_5034_i8
+   Register : RAM/data_7__I_0_5037_i2
+   Register : RAM/data_7__I_0_5037_i3
+   Register : RAM/data_7__I_0_5037_i4
+   Register : RAM/data_7__I_0_5037_i5
+   Register : RAM/data_7__I_0_5037_i6
+   Register : RAM/data_7__I_0_5037_i7
+   Register : RAM/data_7__I_0_5037_i8
+   Register : RAM/data_7__I_0_5040_i2
+   Register : RAM/data_7__I_0_5040_i3
+   Register : RAM/data_7__I_0_5040_i4
+   Register : RAM/data_7__I_0_5040_i5
+   Register : RAM/data_7__I_0_5040_i6
+   Register : RAM/data_7__I_0_5040_i7
+   Register : RAM/data_7__I_0_5040_i8
+   Register : RAM/data_7__I_0_5043_i2
+   Register : RAM/data_7__I_0_5043_i3
+   Register : RAM/data_7__I_0_5043_i4
+
+                                    Page 8
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5043_i5
+   Register : RAM/data_7__I_0_5043_i6
+   Register : RAM/data_7__I_0_5043_i7
+   Register : RAM/data_7__I_0_5043_i8
+   Register : RAM/data_7__I_0_5046_i2
+   Register : RAM/data_7__I_0_5046_i3
+   Register : RAM/data_7__I_0_5046_i4
+   Register : RAM/data_7__I_0_5046_i5
+   Register : RAM/data_7__I_0_5046_i6
+   Register : RAM/data_7__I_0_5046_i7
+   Register : RAM/data_7__I_0_5046_i8
+   Register : RAM/data_7__I_0_5049_i2
+   Register : RAM/data_7__I_0_5049_i3
+   Register : RAM/data_7__I_0_5049_i4
+   Register : RAM/data_7__I_0_5049_i5
+   Register : RAM/data_7__I_0_5049_i6
+   Register : RAM/data_7__I_0_5049_i7
+   Register : RAM/data_7__I_0_5049_i8
+   Register : RAM/data_7__I_0_5052_i2
+   Register : RAM/data_7__I_0_5052_i3
+   Register : RAM/data_7__I_0_5052_i4
+   Register : RAM/data_7__I_0_5052_i5
+   Register : RAM/data_7__I_0_5052_i6
+   Register : RAM/data_7__I_0_5052_i7
+   Register : RAM/data_7__I_0_5052_i8
+   Register : RAM/data_7__I_0_5055_i2
+   Register : RAM/data_7__I_0_5055_i3
+   Register : RAM/data_7__I_0_5055_i4
+   Register : RAM/data_7__I_0_5055_i5
+   Register : RAM/data_7__I_0_5055_i6
+   Register : RAM/data_7__I_0_5055_i7
+   Register : RAM/data_7__I_0_5055_i8
+   Register : RAM/data_7__I_0_5058_i2
+   Register : RAM/data_7__I_0_5058_i3
+   Register : RAM/data_7__I_0_5058_i4
+   Register : RAM/data_7__I_0_5058_i5
+   Register : RAM/data_7__I_0_5058_i6
+   Register : RAM/data_7__I_0_5058_i7
+   Register : RAM/data_7__I_0_5058_i8
+   Register : RAM/data_7__I_0_5061_i2
+   Register : RAM/data_7__I_0_5061_i3
+   Register : RAM/data_7__I_0_5061_i4
+   Register : RAM/data_7__I_0_5061_i5
+   Register : RAM/data_7__I_0_5061_i6
+   Register : RAM/data_7__I_0_5061_i7
+   Register : RAM/data_7__I_0_5061_i8
+   Register : RAM/data_7__I_0_i2
+   Register : RAM/data_7__I_0_i3
+   Register : RAM/data_7__I_0_i4
+   Register : RAM/data_7__I_0_i5
+   Register : RAM/data_7__I_0_i6
+   Register : RAM/data_7__I_0_i7
+   Register : RAM/data_7__I_0_i8
+   Register : RAM/data_7__I_0_5187_i2
+   Register : RAM/data_7__I_0_5187_i3
+   Register : RAM/data_7__I_0_5187_i4
+
+                                    Page 9
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5187_i5
+   Register : RAM/data_7__I_0_5187_i6
+   Register : RAM/data_7__I_0_5187_i7
+   Register : RAM/data_7__I_0_5187_i8
+   Register : RAM/data_7__I_0_5184_i2
+   Register : RAM/data_7__I_0_5184_i3
+   Register : RAM/data_7__I_0_5184_i4
+   Register : RAM/data_7__I_0_5184_i5
+   Register : RAM/data_7__I_0_5184_i6
+   Register : RAM/data_7__I_0_5184_i7
+   Register : RAM/data_7__I_0_5184_i8
+   Register : RAM/data_7__I_0_5181_i2
+   Register : RAM/data_7__I_0_5181_i3
+   Register : RAM/data_7__I_0_5181_i4
+   Register : RAM/data_7__I_0_5181_i5
+   Register : RAM/data_7__I_0_5181_i6
+   Register : RAM/data_7__I_0_5181_i7
+   Register : RAM/data_7__I_0_5181_i8
+   Register : RAM/data_7__I_0_5178_i2
+   Register : RAM/data_7__I_0_5178_i3
+   Register : RAM/data_7__I_0_5178_i4
+   Register : RAM/data_7__I_0_5178_i5
+   Register : RAM/data_7__I_0_5178_i6
+   Register : RAM/data_7__I_0_5178_i7
+   Register : RAM/data_7__I_0_5178_i8
+   Register : RAM/data_7__I_0_5175_i2
+   Register : RAM/data_7__I_0_5175_i3
+   Register : RAM/data_7__I_0_5175_i4
+   Register : RAM/data_7__I_0_5175_i5
+   Register : RAM/data_7__I_0_5175_i6
+   Register : RAM/data_7__I_0_5175_i7
+   Register : RAM/data_7__I_0_5175_i8
+   Register : RAM/data_7__I_0_5172_i2
+   Register : RAM/data_7__I_0_5172_i3
+   Register : RAM/data_7__I_0_5172_i4
+   Register : RAM/data_7__I_0_5172_i5
+   Register : RAM/data_7__I_0_5172_i6
+   Register : RAM/data_7__I_0_5172_i7
+   Register : RAM/data_7__I_0_5172_i8
+   Register : RAM/data_7__I_0_5169_i2
+   Register : RAM/data_7__I_0_5169_i3
+   Register : RAM/data_7__I_0_5169_i4
+   Register : RAM/data_7__I_0_5169_i5
+   Register : RAM/data_7__I_0_5169_i6
+   Register : RAM/data_7__I_0_5169_i7
+   Register : RAM/data_7__I_0_5169_i8
+   Register : RAM/data_7__I_0_5166_i2
+   Register : RAM/data_7__I_0_5166_i3
+   Register : RAM/data_7__I_0_5166_i4
+   Register : RAM/data_7__I_0_5166_i5
+   Register : RAM/data_7__I_0_5166_i6
+   Register : RAM/data_7__I_0_5166_i7
+   Register : RAM/data_7__I_0_5166_i8
+   Register : RAM/data_7__I_0_5163_i2
+   Register : RAM/data_7__I_0_5163_i3
+   Register : RAM/data_7__I_0_5163_i4
+
+                                   Page 10
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5163_i5
+   Register : RAM/data_7__I_0_5163_i6
+   Register : RAM/data_7__I_0_5163_i7
+   Register : RAM/data_7__I_0_5163_i8
+   Register : RAM/data_7__I_0_5160_i2
+   Register : RAM/data_7__I_0_5160_i3
+   Register : RAM/data_7__I_0_5160_i4
+   Register : RAM/data_7__I_0_5160_i5
+   Register : RAM/data_7__I_0_5160_i6
+   Register : RAM/data_7__I_0_5160_i7
+   Register : RAM/data_7__I_0_5160_i8
+   Register : RAM/data_7__I_0_5157_i2
+   Register : RAM/data_7__I_0_5157_i3
+   Register : RAM/data_7__I_0_5157_i4
+   Register : RAM/data_7__I_0_5157_i5
+   Register : RAM/data_7__I_0_5157_i6
+   Register : RAM/data_7__I_0_5157_i7
+   Register : RAM/data_7__I_0_5157_i8
+   Register : RAM/data_7__I_0_5154_i2
+   Register : RAM/data_7__I_0_5154_i3
+   Register : RAM/data_7__I_0_5154_i4
+   Register : RAM/data_7__I_0_5154_i5
+   Register : RAM/data_7__I_0_5154_i6
+   Register : RAM/data_7__I_0_5154_i7
+   Register : RAM/data_7__I_0_5154_i8
+   Register : RAM/data_7__I_0_5151_i2
+   Register : RAM/data_7__I_0_5151_i3
+   Register : RAM/data_7__I_0_5151_i4
+   Register : RAM/data_7__I_0_5151_i5
+   Register : RAM/data_7__I_0_5151_i6
+   Register : RAM/data_7__I_0_5151_i7
+   Register : RAM/data_7__I_0_5151_i8
+   Register : RAM/data_7__I_0_5148_i2
+   Register : RAM/data_7__I_0_5148_i3
+   Register : RAM/data_7__I_0_5148_i4
+   Register : RAM/data_7__I_0_5148_i5
+   Register : RAM/data_7__I_0_5148_i6
+   Register : RAM/data_7__I_0_5148_i7
+   Register : RAM/data_7__I_0_5148_i8
+   Register : RAM/data_7__I_0_5145_i2
+   Register : RAM/data_7__I_0_5145_i3
+   Register : RAM/data_7__I_0_5145_i4
+   Register : RAM/data_7__I_0_5145_i5
+   Register : RAM/data_7__I_0_5145_i6
+   Register : RAM/data_7__I_0_5145_i7
+   Register : RAM/data_7__I_0_5145_i8
+   Register : RAM/data_7__I_0_5142_i2
+   Register : RAM/data_7__I_0_5142_i3
+   Register : RAM/data_7__I_0_5142_i4
+   Register : RAM/data_7__I_0_5142_i5
+   Register : RAM/data_7__I_0_5142_i6
+   Register : RAM/data_7__I_0_5142_i7
+   Register : RAM/data_7__I_0_5142_i8
+   Register : RAM/data_7__I_0_5139_i2
+   Register : RAM/data_7__I_0_5139_i3
+   Register : RAM/data_7__I_0_5139_i4
+
+                                   Page 11
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5139_i5
+   Register : RAM/data_7__I_0_5139_i6
+   Register : RAM/data_7__I_0_5139_i7
+   Register : RAM/data_7__I_0_5139_i8
+   Register : RAM/data_7__I_0_5136_i2
+   Register : RAM/data_7__I_0_5136_i3
+   Register : RAM/data_7__I_0_5136_i4
+   Register : RAM/data_7__I_0_5136_i5
+   Register : RAM/data_7__I_0_5136_i6
+   Register : RAM/data_7__I_0_5136_i7
+   Register : RAM/data_7__I_0_5136_i8
+   Register : RAM/data_7__I_0_5133_i2
+   Register : RAM/data_7__I_0_5133_i3
+   Register : RAM/data_7__I_0_5133_i4
+   Register : RAM/data_7__I_0_5133_i5
+   Register : RAM/data_7__I_0_5133_i6
+   Register : RAM/data_7__I_0_5133_i7
+   Register : RAM/data_7__I_0_5133_i8
+   Register : RAM/data_7__I_0_5130_i2
+   Register : RAM/data_7__I_0_5130_i3
+   Register : RAM/data_7__I_0_5130_i4
+   Register : RAM/data_7__I_0_5130_i5
+   Register : RAM/data_7__I_0_5130_i6
+   Register : RAM/data_7__I_0_5130_i7
+   Register : RAM/data_7__I_0_5130_i8
+   Register : RAM/data_7__I_0_5127_i2
+   Register : RAM/data_7__I_0_5127_i3
+   Register : RAM/data_7__I_0_5127_i4
+   Register : RAM/data_7__I_0_5127_i5
+   Register : RAM/data_7__I_0_5127_i6
+   Register : RAM/data_7__I_0_5127_i7
+   Register : RAM/data_7__I_0_5127_i8
+   Register : RAM/data_7__I_0_5124_i2
+   Register : RAM/data_7__I_0_5124_i3
+   Register : RAM/data_7__I_0_5124_i4
+   Register : RAM/data_7__I_0_5124_i5
+   Register : RAM/data_7__I_0_5124_i6
+   Register : RAM/data_7__I_0_5124_i7
+   Register : RAM/data_7__I_0_5124_i8
+   Register : RAM/data_7__I_0_5121_i2
+   Register : RAM/data_7__I_0_5121_i3
+   Register : RAM/data_7__I_0_5121_i4
+   Register : RAM/data_7__I_0_5121_i5
+   Register : RAM/data_7__I_0_5121_i6
+   Register : RAM/data_7__I_0_5121_i7
+   Register : RAM/data_7__I_0_5121_i8
+   Register : RAM/data_7__I_0_5118_i2
+   Register : RAM/data_7__I_0_5118_i3
+   Register : RAM/data_7__I_0_5118_i4
+   Register : RAM/data_7__I_0_5118_i5
+   Register : RAM/data_7__I_0_5118_i6
+   Register : RAM/data_7__I_0_5118_i7
+   Register : RAM/data_7__I_0_5118_i8
+   Register : RAM/data_7__I_0_5115_i2
+   Register : RAM/data_7__I_0_5115_i3
+   Register : RAM/data_7__I_0_5115_i4
+
+                                   Page 12
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5115_i5
+   Register : RAM/data_7__I_0_5115_i6
+   Register : RAM/data_7__I_0_5115_i7
+   Register : RAM/data_7__I_0_5115_i8
+   Register : RAM/data_7__I_0_5112_i2
+   Register : RAM/data_7__I_0_5112_i3
+   Register : RAM/data_7__I_0_5112_i4
+   Register : RAM/data_7__I_0_5112_i5
+   Register : RAM/data_7__I_0_5112_i6
+   Register : RAM/data_7__I_0_5112_i7
+   Register : RAM/data_7__I_0_5112_i8
+   Register : RAM/data_7__I_0_5109_i2
+   Register : RAM/data_7__I_0_5109_i3
+   Register : RAM/data_7__I_0_5109_i4
+   Register : RAM/data_7__I_0_5109_i5
+   Register : RAM/data_7__I_0_5109_i6
+   Register : RAM/data_7__I_0_5109_i7
+   Register : RAM/data_7__I_0_5109_i8
+   Register : RAM/data_7__I_0_5106_i2
+   Register : RAM/data_7__I_0_5106_i3
+   Register : RAM/data_7__I_0_5106_i4
+   Register : RAM/data_7__I_0_5106_i5
+   Register : RAM/data_7__I_0_5106_i6
+   Register : RAM/data_7__I_0_5106_i7
+   Register : RAM/data_7__I_0_5106_i8
+   Register : RAM/data_7__I_0_5103_i2
+   Register : RAM/data_7__I_0_5103_i3
+   Register : RAM/data_7__I_0_5103_i4
+   Register : RAM/data_7__I_0_5103_i5
+   Register : RAM/data_7__I_0_5103_i6
+   Register : RAM/data_7__I_0_5103_i7
+   Register : RAM/data_7__I_0_5103_i8
+   Register : RAM/data_7__I_0_5100_i2
+   Register : RAM/data_7__I_0_5100_i3
+   Register : RAM/data_7__I_0_5100_i4
+   Register : RAM/data_7__I_0_5100_i5
+   Register : RAM/data_7__I_0_5100_i6
+   Register : RAM/data_7__I_0_5100_i7
+   Register : RAM/data_7__I_0_5100_i8
+   Register : RAM/data_7__I_0_5097_i2
+   Register : RAM/data_7__I_0_5097_i3
+   Register : RAM/data_7__I_0_5097_i4
+   Register : RAM/data_7__I_0_5097_i5
+   Register : RAM/data_7__I_0_5097_i6
+   Register : RAM/data_7__I_0_5097_i7
+   Register : RAM/data_7__I_0_5097_i8
+   Register : RAM/data_7__I_0_5094_i2
+   Register : RAM/data_7__I_0_5094_i3
+   Register : RAM/data_7__I_0_5094_i4
+   Register : RAM/data_7__I_0_5094_i5
+   Register : RAM/data_7__I_0_5094_i6
+   Register : RAM/data_7__I_0_5094_i7
+   Register : RAM/data_7__I_0_5094_i8
+   Register : RAM/data_7__I_0_5091_i2
+   Register : RAM/data_7__I_0_5091_i3
+   Register : RAM/data_7__I_0_5091_i4
+
+                                   Page 13
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5091_i5
+   Register : RAM/data_7__I_0_5091_i6
+   Register : RAM/data_7__I_0_5091_i7
+   Register : RAM/data_7__I_0_5091_i8
+   Register : RAM/data_7__I_0_5088_i2
+   Register : RAM/data_7__I_0_5088_i3
+   Register : RAM/data_7__I_0_5088_i4
+   Register : RAM/data_7__I_0_5088_i5
+   Register : RAM/data_7__I_0_5088_i6
+   Register : RAM/data_7__I_0_5088_i7
+   Register : RAM/data_7__I_0_5088_i8
+   Register : RAM/data_7__I_0_5085_i2
+   Register : RAM/data_7__I_0_5085_i3
+   Register : RAM/data_7__I_0_5085_i4
+   Register : RAM/data_7__I_0_5085_i5
+   Register : RAM/data_7__I_0_5085_i6
+   Register : RAM/data_7__I_0_5085_i7
+   Register : RAM/data_7__I_0_5085_i8
+   Register : RAM/data_7__I_0_5082_i2
+   Register : RAM/data_7__I_0_5082_i3
+   Register : RAM/data_7__I_0_5082_i4
+   Register : RAM/data_7__I_0_5082_i5
+   Register : RAM/data_7__I_0_5082_i6
+   Register : RAM/data_7__I_0_5082_i7
+   Register : RAM/data_7__I_0_5082_i8
+   Register : RAM/data_7__I_0_5079_i2
+   Register : RAM/data_7__I_0_5079_i3
+   Register : RAM/data_7__I_0_5079_i4
+   Register : RAM/data_7__I_0_5079_i5
+   Register : RAM/data_7__I_0_5079_i6
+   Register : RAM/data_7__I_0_5079_i7
+   Register : RAM/data_7__I_0_5079_i8
+   Register : RAM/data_7__I_0_5076_i2
+   Register : RAM/data_7__I_0_5076_i3
+   Register : RAM/data_7__I_0_5076_i4
+   Register : RAM/data_7__I_0_5076_i5
+   Register : RAM/data_7__I_0_5076_i6
+   Register : RAM/data_7__I_0_5076_i7
+   Register : RAM/data_7__I_0_5076_i8
+   Register : RAM/data_7__I_0_5073_i2
+   Register : RAM/data_7__I_0_5073_i3
+   Register : RAM/data_7__I_0_5073_i4
+   Register : RAM/data_7__I_0_5073_i5
+   Register : RAM/data_7__I_0_5073_i6
+   Register : RAM/data_7__I_0_5073_i7
+   Register : RAM/data_7__I_0_5073_i8
+   Register : RAM/data_7__I_0_5070_i2
+   Register : RAM/data_7__I_0_5070_i3
+   Register : RAM/data_7__I_0_5070_i4
+   Register : RAM/data_7__I_0_5070_i5
+   Register : RAM/data_7__I_0_5070_i6
+   Register : RAM/data_7__I_0_5070_i7
+   Register : RAM/data_7__I_0_5070_i8
+   Register : RAM/data_7__I_0_5067_i2
+   Register : RAM/data_7__I_0_5067_i3
+   Register : RAM/data_7__I_0_5067_i4
+
+                                   Page 14
+
+
+
+
+Design:  cpu2system                                    Date:  11/19/20  19:56:37
+
+GSR Usage (cont)
+----------------
+   Register : RAM/data_7__I_0_5067_i5
+   Register : RAM/data_7__I_0_5067_i6
+   Register : RAM/data_7__I_0_5067_i7
+   Register : RAM/data_7__I_0_5067_i8
+   Register : RAM/data_7__I_0_5064_i2
+   Register : RAM/data_7__I_0_5064_i3
+   Register : RAM/data_7__I_0_5064_i4
+   Register : RAM/data_7__I_0_5064_i5
+   Register : RAM/data_7__I_0_5064_i6
+   Register : RAM/data_7__I_0_5064_i7
+   Register : RAM/data_7__I_0_5064_i8
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'reset_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 3 
+
+     Type and instance name of component: 
+   Register : CPU/states__i2
+   Register : CPU/states__i1
+   Register : CPU/states__i0
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 53 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 15
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

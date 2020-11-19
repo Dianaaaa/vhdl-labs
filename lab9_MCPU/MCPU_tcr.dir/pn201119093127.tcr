@@ -1,0 +1,10 @@
+#Start recording tcl command: 11/19/2020 09:03:16
+#Project Location: C:/Users/10352/vhdl-labs/lab9_MCPU; Project name: MCPU
+prj_project new -name "MCPU" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
+prj_project save
+prj_src add "C:/Users/10352/vhdl-labs/lab9_MCPU/testbench.vhd" "C:/Users/10352/vhdl-labs/lab9_MCPU/cpu2system.vhd" "C:/Users/10352/vhdl-labs/lab9_MCPU/sram64kx8.vhd" "C:/Users/10352/vhdl-labs/lab9_MCPU/tb02cpu2.vhd"
+prj_src syn_sim -src "C:/Users/10352/vhdl-labs/lab9_MCPU/testbench.vhd" SimulateOnly
+prj_run Synthesis -impl impl1
+prj_src syn_sim -src "C:/Users/10352/vhdl-labs/lab9_MCPU/tb02cpu2.vhd" SimulateOnly
+prj_src syn_sim -src "C:/Users/10352/vhdl-labs/lab9_MCPU/tb02cpu2.vhd" SynthesisAndSimulate
+#Stop recording: 11/19/2020 09:31:27

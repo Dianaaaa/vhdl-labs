@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/10352/vhdl-labs/lab2_led_shining/impl1/led_shining_impl1.jed</File>
-			<FileTime>11/18/20 23:32:55</FileTime>
-			<JedecChecksum>0xD328</JedecChecksum>
+			<FileTime>11/19/20 18:30:43</FileTime>
+			<JedecChecksum>0xFD9B</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
@@ -48,9 +48,5 @@
 		<CableName>USB2</CableName>
 		<PortAdd>FTUSB-0</PortAdd>
 		<USBID>Single RS232-HS Location 0000 Serial </USBID>
-		<JTAGPinSetting>
-			TRST	ABSENT;
-			ISPEN	ABSENT;
-		</JTAGPinSetting>
 	</CableOptions>
 </ispXCF>

@@ -1,0 +1,31 @@
+---------------------------------------------------
+Report for cell cpu2system
+   Instance path: cpu2system
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     406.00        100.0
+                                  LUT4	     395.00        100.0
+                                 IOBUF	         11        100.0
+                                PFUREG	        536        100.0
+                                RIPPLE	          6        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+      sram64kx8("sram64kx8.dat")(1,13)	          1        92.2
+                              CPU8BIT2	          1         7.8
+---------------------------------------------------
+Report for cell sram64kx8("sram64kx8.dat")(1,13)
+   Instance path: cpu2system/RAM
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     374.25        92.2
+                                  LUT4	     309.50        78.4
+                                PFUREG	        512        95.5
+---------------------------------------------------
+Report for cell CPU8BIT2
+   Instance path: cpu2system/CPU
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      31.75         7.8
+                                  LUT4	      85.50        21.6
+                                PFUREG	         24         4.5
+                                RIPPLE	          6        100.0

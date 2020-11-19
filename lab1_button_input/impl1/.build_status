@@ -2,53 +2,53 @@
 <BuildStatus>
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
-            <Task name="IBIS" build_result="2" update_result="0" update_time="1605707975"/>
-            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1605707976"/>
-            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1605707977"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1605707980"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1605707983"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1605776586"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1605776587"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1605776589"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1605776592"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1605776595"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1605707960">
-            <Task name="Map" build_result="2" update_result="0" update_time="1605707960"/>
-            <Task name="MapTrace" build_result="2" update_result="0" update_time="1605707961"/>
-            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1605707962"/>
-            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1605707963"/>
+        <Milestone name="Map" build_result="2" build_time="1605776570">
+            <Task name="Map" build_result="2" update_result="0" update_time="1605776570"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1605776571"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1605776573"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1605776574"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1605707970">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1605707970"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1605707971"/>
-            <Task name="IOTiming" build_result="2" update_result="0" update_time="1605707972"/>
+        <Milestone name="PAR" build_result="2" build_time="1605776582">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1605776582"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1605776583"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1605776585"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1605707907">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1605707907"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1605707907"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1605776359">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1605776359"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1605776359"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1605707902"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1605776348"/>
             <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
             <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/buttonInput_impl1_map.vdb" last_build_time="1605707960" last_build_size="61885"/>
-        <Report name="IBIS/buttonInput_impl1.ibs" last_build_time="1605707975" last_build_size="68043"/>
-        <Report name="buttonInput_impl1.bgn" last_build_time="1605707982" last_build_size="4373"/>
-        <Report name="buttonInput_impl1.bit" last_build_time="1605707980" last_build_size="18185"/>
-        <Report name="buttonInput_impl1.ior" last_build_time="1605707972" last_build_size="2725"/>
-        <Report name="buttonInput_impl1.jed" last_build_time="1605707982" last_build_size="849939"/>
-        <Report name="buttonInput_impl1.lsedata" last_build_time="1605707906" last_build_size="159183"/>
-        <Report name="buttonInput_impl1.ncd" last_build_time="1605707970" last_build_size="189750"/>
-        <Report name="buttonInput_impl1.ngd" last_build_time="1605707907" last_build_size="140829"/>
-        <Report name="buttonInput_impl1.tw1" last_build_time="1605707961" last_build_size="9371"/>
-        <Report name="buttonInput_impl1.twr" last_build_time="1605707971" last_build_size="53708"/>
-        <Report name="buttonInput_impl1_map.ncd" last_build_time="1605707960" last_build_size="130496"/>
-        <Report name="buttonInput_impl1_mapvho.sdf" last_build_time="1605707963" last_build_size="112047"/>
-        <Report name="buttonInput_impl1_mapvho.vho" last_build_time="1605707963" last_build_size="824698"/>
-        <Report name="buttonInput_impl1_mapvo.sdf" last_build_time="1605707962" last_build_size="110790"/>
-        <Report name="buttonInput_impl1_mapvo.vo" last_build_time="1605707962" last_build_size="113375"/>
-        <Report name="buttonInput_impl1_vho.sdf" last_build_time="1605707977" last_build_size="126262"/>
-        <Report name="buttonInput_impl1_vho.vho" last_build_time="1605707977" last_build_size="859349"/>
-        <Report name="buttonInput_impl1_vo.sdf" last_build_time="1605707976" last_build_size="125034"/>
-        <Report name="buttonInput_impl1_vo.vo" last_build_time="1605707976" last_build_size="122048"/>
+        <Report name=".vdbs/buttonInput_impl1_map.vdb" last_build_time="1605776570" last_build_size="61885"/>
+        <Report name="IBIS/buttonInput_impl1.ibs" last_build_time="1605776586" last_build_size="68043"/>
+        <Report name="buttonInput_impl1.bgn" last_build_time="1605776595" last_build_size="4373"/>
+        <Report name="buttonInput_impl1.bit" last_build_time="1605776592" last_build_size="18185"/>
+        <Report name="buttonInput_impl1.ior" last_build_time="1605776585" last_build_size="2725"/>
+        <Report name="buttonInput_impl1.jed" last_build_time="1605776595" last_build_size="849939"/>
+        <Report name="buttonInput_impl1.lsedata" last_build_time="1605776355" last_build_size="159183"/>
+        <Report name="buttonInput_impl1.ncd" last_build_time="1605776582" last_build_size="189750"/>
+        <Report name="buttonInput_impl1.ngd" last_build_time="1605776359" last_build_size="140829"/>
+        <Report name="buttonInput_impl1.tw1" last_build_time="1605776571" last_build_size="9371"/>
+        <Report name="buttonInput_impl1.twr" last_build_time="1605776583" last_build_size="53708"/>
+        <Report name="buttonInput_impl1_map.ncd" last_build_time="1605776569" last_build_size="130496"/>
+        <Report name="buttonInput_impl1_mapvho.sdf" last_build_time="1605776574" last_build_size="112047"/>
+        <Report name="buttonInput_impl1_mapvho.vho" last_build_time="1605776574" last_build_size="824698"/>
+        <Report name="buttonInput_impl1_mapvo.sdf" last_build_time="1605776573" last_build_size="110790"/>
+        <Report name="buttonInput_impl1_mapvo.vo" last_build_time="1605776572" last_build_size="113375"/>
+        <Report name="buttonInput_impl1_vho.sdf" last_build_time="1605776588" last_build_size="126262"/>
+        <Report name="buttonInput_impl1_vho.vho" last_build_time="1605776588" last_build_size="859349"/>
+        <Report name="buttonInput_impl1_vo.sdf" last_build_time="1605776587" last_build_size="125034"/>
+        <Report name="buttonInput_impl1_vo.vo" last_build_time="1605776587" last_build_size="122048"/>
     </Strategy>
 </BuildStatus>

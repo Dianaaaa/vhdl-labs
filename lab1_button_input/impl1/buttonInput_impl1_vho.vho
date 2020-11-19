@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.11.0.396.4
 
 -- ldbanno -n VHDL -o buttonInput_impl1_vho.vho -w -neg -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml buttonInput_impl1.ncd 
--- Netlist created on Wed Nov 18 21:59:19 2020
--- Netlist written on Wed Nov 18 21:59:37 2020
+-- Netlist created on Thu Nov 19 17:02:48 2020
+-- Netlist written on Thu Nov 19 17:03:08 2020
 -- Design is for device LCMXO2-4000HC
 -- Design is for package CSBGA132
 -- Design is for performance grade 4

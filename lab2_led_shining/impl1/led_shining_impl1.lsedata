@@ -1,12 +1,12 @@
 <top name = "PWM"  library = "work"  arch = "RTL"  entry = "VHDL">
 
 <clocks>
-    <clockitem name = "key_menu1"  type = "net" />
-    <clockitem name = "clk0"  type = "net" />
     <clockitem name = "clk"  type = "port" />
-    <clockitem name = "P2/keysamplerpulse_N_233"  type = "net" />
-    <clockitem name = "P3/keysamplerpulse_N_233"  type = "net" />
+    <clockitem name = "clk0"  type = "net" />
+    <clockitem name = "key_menu1"  type = "net" />
     <clockitem name = "P1/keysamplerpulse_N_233"  type = "net" />
+    <clockitem name = "P3/keysamplerpulse_N_233"  type = "net" />
+    <clockitem name = "P2/keysamplerpulse_N_233"  type = "net" />
 </clocks>
 
 <!--

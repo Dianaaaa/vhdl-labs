@@ -20,7 +20,7 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/10352/vhdl-labs/lab1_button_input/impl1/buttonInput_impl1.jed</File>
-			<FileTime>11/18/20 21:59:42</FileTime>
+			<FileTime>11/19/20 17:03:15</FileTime>
 			<JedecChecksum>0x90C5</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>

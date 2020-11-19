@@ -123,15 +123,15 @@
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=key_menu1 loads=2 clock_loads=2
-   Signal=clk0 loads=7 clock_loads=3</Dynamic>
+   Signal=clk0 loads=7 clock_loads=3
+   Signal=key_menu1 loads=2 clock_loads=2</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=key_menu1 loads=2 clock_loads=2
-   Signal=clk0 loads=7 clock_loads=3</Dynamic>
+   Signal=clk0 loads=7 clock_loads=3
+   Signal=key_menu1 loads=2 clock_loads=2</Dynamic>
         </Message>
     </Task>
     <Task name="TimingSimFileVHD">

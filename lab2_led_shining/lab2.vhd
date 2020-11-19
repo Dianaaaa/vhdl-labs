@@ -73,10 +73,10 @@ end process;
 process(clk0,rst_n,duty_pulse,cycle_pulse)
 begin 
 case duty_pulse is
-	       when 0 => dt<=40;
-	       when 1 => dt<=180;
-	       when 2 => dt<=360;
-	       when 3 => dt<=620;
+	       when 0 => dt<=0;
+	       when 1 => dt<=10;
+	       when 2 => dt<=20;
+	       when 3 => dt<=820;
 end case; 
     if(rst_n='0') then
 	    cnt1<=0;

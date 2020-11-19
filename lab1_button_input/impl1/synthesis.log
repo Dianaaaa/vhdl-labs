@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 18 21:58:25 2020
+Thu Nov 19 16:59:15 2020
 
 
 Command Line:  synthesis -f buttonInput_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab1_button_input/promote.xml 
@@ -79,13 +79,13 @@ Compile Design Begin
 INFO - synthesis: The default VHDL library search path is now "C:/Users/10352/vhdl-labs/lab1_button_input/impl1". VHDL-1504
 Analyzing VHDL file c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd. VHDL-1481
 INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(4): analyzing entity key_table. VHDL-1012
-INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(19): analyzing architecture key_table_arch. VHDL-1010
+INFO - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(20): analyzing architecture key_table_arch. VHDL-1010
 unit Key_Table is not yet analyzed. VHDL-1485
-WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(50): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(51): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
 unit Key_Table is not yet analyzed. VHDL-1485
 c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(4): executing Key_Table(Key_Table_arch)
 
-WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(50): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(51): case statement does not cover all choices. 'others' clause is needed. VHDL-1037
 WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(17): replacing existing netlist Key_Table(Key_Table_arch). VHDL-1205
 Top module name (VHDL): Key_Table
 Loading NGL library 'C:/lscc/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
@@ -112,7 +112,7 @@ Top-level module name = Key_Table.
 
 
 
-WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(112): Register seg_95 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(113): Register seg_95 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 WARNING - synthesis: Initial value found on instance apa_89 will be ignored.
 Duplicate register/latch removal. a_to_g_i7 is a one-to-one match with a_to_g_i2.
@@ -199,8 +199,8 @@ clk0 [get_nets apa]                     |  200.000 MHz|   57.458 MHz|    10 *
 2 constraints not met.
 
 
-Peak Memory Usage: 85.078  MB
+Peak Memory Usage: 84.848  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.859  secs
+Elapsed CPU time for LSE flow : 1.641  secs
 --------------------------------------------------------------

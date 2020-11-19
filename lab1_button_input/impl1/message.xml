@@ -46,24 +46,24 @@
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(19): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(20): </Dynamic>
             <Dynamic>key_table_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>19</Navigation>
+            <Navigation>20</Navigation>
         </Message>
         <Message>
             <ID>35928037</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(50): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(51): </Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>50</Navigation>
+            <Navigation>51</Navigation>
         </Message>
         <Message>
             <ID>35928037</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(50): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(51): </Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>50</Navigation>
+            <Navigation>51</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
@@ -77,10 +77,10 @@
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(112): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd(113): </Dynamic>
             <Dynamic>seg_95</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab1_button_input/key_input.vhd</Navigation>
-            <Navigation>112</Navigation>
+            <Navigation>113</Navigation>
         </Message>
         <Message>
             <ID>35001779</ID>
