@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Nov 20 10:28:18 2020
+Mon Nov 23 13:57:07 2020
 
 
 Command Line:  synthesis -f MCPU_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab9_MCPU/promote.xml 
@@ -88,8 +88,8 @@ INFO - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/sram64kx8.vhd(10): analyzin
 INFO - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/sram64kx8.vhd(23): analyzing architecture sram_behaviour. VHDL-1010
 unit cpu2system is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd. VHDL-1481
-INFO - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(9): analyzing entity cpu8bit2. VHDL-1012
-INFO - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(20): analyzing architecture cpu_arch. VHDL-1010
+INFO - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(5): analyzing entity cpu8bit2. VHDL-1012
+INFO - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(16): analyzing architecture cpu_arch. VHDL-1010
 unit cpu2system is not yet analyzed. VHDL-1485
 unit cpu2system is not yet analyzed. VHDL-1485
 c:/users/10352/vhdl-labs/lab9_mcpu/cpu2system.vhd(7): executing cpu2system(arch)
@@ -118,6 +118,39 @@ WARNING - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/sram64kx8.vhd(83): Trans
 
 
 
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file mult_5u_5u.v. VERI-1482
+WARNING - synthesis: net \CPU/n296 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n361 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n362 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n428 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n544 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n613 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n614 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n684 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n752 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n753 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n754 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n824 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n893 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n894 does not have a driver. VDB-1002
+WARNING - synthesis: net \CPU/n964 does not have a driver. VDB-1002
+WARNING - synthesis: c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(35): input port a[4] is not connected on this instance. VDB-1013
+######## Missing driver on net \CPU/n296. Patching with GND.
+######## Missing driver on net \CPU/n361. Patching with GND.
+######## Missing driver on net \CPU/n362. Patching with GND.
+######## Missing driver on net \CPU/n428. Patching with GND.
+######## Missing driver on net \CPU/n544. Patching with GND.
+######## Missing driver on net \CPU/n613. Patching with GND.
+######## Missing driver on net \CPU/n614. Patching with GND.
+######## Missing driver on net \CPU/n684. Patching with GND.
+######## Missing driver on net \CPU/n752. Patching with GND.
+######## Missing driver on net \CPU/n753. Patching with GND.
+######## Missing driver on net \CPU/n754. Patching with GND.
+######## Missing driver on net \CPU/n824. Patching with GND.
+######## Missing driver on net \CPU/n893. Patching with GND.
+######## Missing driver on net \CPU/n894. Patching with GND.
+######## Missing driver on net \CPU/n964. Patching with GND.
 GSR instance connected to net reset_c.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -131,19 +164,22 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file MCPU_impl1.ngd.
 
 ################### Begin Area Report (cpu2system)######################
-Number of register bits => 536 of 4635 (11 % )
-CCU2D => 6
-FD1P3AX => 15
-FD1S1A => 487
-FD1S1AY => 25
+Number of register bits => 547 of 4635 (11 % )
+AND2 => 7
+CCU2D => 170
+FADD2B => 9
+FD1P3AX => 26
+FD1S1A => 499
+FD1S1AY => 13
 FD1S3AX => 6
 FD1S3IX => 3
 GSR => 1
 IB => 2
 L6MUX21 => 96
-LUT4 => 401
+LUT4 => 1588
+MULT2 => 6
 OB => 9
-PFUMX => 136
+PFUMX => 203
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -153,89 +189,89 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 65
-  Net : clk_c, loads : 26
-  Net : CPU/mem_50__7__N_253, loads : 8
-  Net : CPU/mem_51__7__N_256, loads : 8
-  Net : CPU/mem_2__7__N_109, loads : 8
-  Net : CPU/mem_52__7__N_259, loads : 8
-  Net : CPU/mem_4__7__N_115, loads : 8
-  Net : CPU/mem_55__7__N_268, loads : 8
-  Net : CPU/mem_8__7__N_127, loads : 8
-  Net : CPU/mem_56__7__N_271, loads : 8
-  Net : CPU/mem_11__7__N_136, loads : 8
-  Net : CPU/mem_58__7__N_277, loads : 8
-  Net : CPU/mem_15__7__N_148, loads : 8
-  Net : CPU/mem_59__7__N_280, loads : 8
-  Net : CPU/mem_18__7__N_157, loads : 8
-  Net : CPU/mem_60__7__N_283, loads : 8
-  Net : CPU/mem_20__7__N_163, loads : 8
-  Net : CPU/mem_63__7__N_292, loads : 8
-  Net : CPU/mem_24__7__N_175, loads : 8
-  Net : CPU/mem_44__7__N_235, loads : 8
-  Net : CPU/mem_27__7__N_184, loads : 8
-  Net : CPU/mem_47__7__N_244, loads : 8
-  Net : CPU/mem_31__7__N_196, loads : 8
-  Net : CPU/mem_48__7__N_247, loads : 8
-  Net : CPU/mem_34__7__N_205, loads : 8
-  Net : CPU/mem_0__7__N_101, loads : 8
-  Net : CPU/mem_36__7__N_211, loads : 8
-  Net : CPU/mem_3__7__N_112, loads : 8
-  Net : CPU/mem_40__7__N_223, loads : 8
-  Net : CPU/mem_7__7__N_124, loads : 8
-  Net : CPU/mem_43__7__N_232, loads : 8
-  Net : CPU/mem_10__7__N_133, loads : 8
-  Net : CPU/mem_32__7__N_199, loads : 8
-  Net : CPU/mem_12__7__N_139, loads : 8
-  Net : CPU/mem_39__7__N_220, loads : 8
-  Net : CPU/mem_16__7__N_151, loads : 8
-  Net : CPU/mem_28__7__N_187, loads : 8
-  Net : CPU/mem_19__7__N_160, loads : 8
-  Net : CPU/mem_42__7__N_229, loads : 8
-  Net : CPU/mem_23__7__N_172, loads : 8
-  Net : CPU/mem_35__7__N_208, loads : 8
-  Net : CPU/mem_26__7__N_181, loads : 8
-  Net : RAM/mem_62__7__N_289, loads : 8
-  Net : RAM/mem_30__7__N_193, loads : 8
-  Net : RAM/mem_61__7__N_286, loads : 8
-  Net : RAM/mem_29__7__N_190, loads : 8
-  Net : RAM/mem_54__7__N_265, loads : 8
-  Net : RAM/mem_25__7__N_178, loads : 8
-  Net : RAM/mem_49__7__N_250, loads : 8
-  Net : RAM/mem_22__7__N_169, loads : 8
-  Net : RAM/mem_45__7__N_238, loads : 8
-  Net : RAM/mem_21__7__N_166, loads : 8
-  Net : RAM/mem_38__7__N_217, loads : 8
-  Net : RAM/mem_17__7__N_154, loads : 8
-  Net : RAM/mem_33__7__N_202, loads : 8
-  Net : RAM/mem_14__7__N_145, loads : 8
-  Net : RAM/mem_53__7__N_262, loads : 8
-  Net : RAM/mem_13__7__N_142, loads : 8
-  Net : RAM/mem_41__7__N_226, loads : 8
-  Net : RAM/mem_9__7__N_130, loads : 8
-  Net : RAM/mem_57__7__N_274, loads : 8
-  Net : RAM/mem_6__7__N_121, loads : 8
-  Net : RAM/mem_37__7__N_214, loads : 8
-  Net : RAM/mem_5__7__N_118, loads : 8
-  Net : RAM/mem_46__7__N_241, loads : 8
-  Net : RAM/mem_1__7__N_106, loads : 8
+  Net : clk_c, loads : 37
+  Net : RAM/mem_32__7__N_204, loads : 8
+  Net : RAM/mem_31__7__N_201, loads : 8
+  Net : RAM/mem_62__7__N_294, loads : 8
+  Net : RAM/mem_30__7__N_198, loads : 8
+  Net : RAM/mem_60__7__N_288, loads : 8
+  Net : RAM/mem_29__7__N_195, loads : 8
+  Net : RAM/mem_58__7__N_282, loads : 8
+  Net : RAM/mem_28__7__N_192, loads : 8
+  Net : RAM/mem_56__7__N_276, loads : 8
+  Net : RAM/mem_27__7__N_189, loads : 8
+  Net : RAM/mem_54__7__N_270, loads : 8
+  Net : RAM/mem_26__7__N_186, loads : 8
+  Net : RAM/mem_52__7__N_264, loads : 8
+  Net : RAM/mem_25__7__N_183, loads : 8
+  Net : RAM/mem_50__7__N_258, loads : 8
+  Net : RAM/mem_24__7__N_180, loads : 8
+  Net : RAM/mem_48__7__N_252, loads : 8
+  Net : RAM/mem_23__7__N_177, loads : 8
+  Net : RAM/mem_46__7__N_246, loads : 8
+  Net : RAM/mem_22__7__N_174, loads : 8
+  Net : RAM/mem_44__7__N_240, loads : 8
+  Net : RAM/mem_21__7__N_171, loads : 8
+  Net : RAM/mem_42__7__N_234, loads : 8
+  Net : RAM/mem_20__7__N_168, loads : 8
+  Net : RAM/mem_40__7__N_228, loads : 8
+  Net : RAM/mem_19__7__N_165, loads : 8
+  Net : RAM/mem_38__7__N_222, loads : 8
+  Net : RAM/mem_18__7__N_162, loads : 8
+  Net : RAM/mem_36__7__N_216, loads : 8
+  Net : RAM/mem_17__7__N_159, loads : 8
+  Net : RAM/mem_34__7__N_210, loads : 8
+  Net : RAM/mem_16__7__N_156, loads : 8
+  Net : RAM/mem_63__7__N_297, loads : 8
+  Net : RAM/mem_15__7__N_153, loads : 8
+  Net : RAM/mem_59__7__N_285, loads : 8
+  Net : RAM/mem_14__7__N_150, loads : 8
+  Net : RAM/mem_55__7__N_273, loads : 8
+  Net : RAM/mem_13__7__N_147, loads : 8
+  Net : RAM/mem_51__7__N_261, loads : 8
+  Net : RAM/mem_12__7__N_144, loads : 8
+  Net : RAM/mem_47__7__N_249, loads : 8
+  Net : RAM/mem_11__7__N_141, loads : 8
+  Net : RAM/mem_43__7__N_237, loads : 8
+  Net : RAM/mem_10__7__N_138, loads : 8
+  Net : RAM/mem_39__7__N_225, loads : 8
+  Net : RAM/mem_9__7__N_135, loads : 8
+  Net : RAM/mem_35__7__N_213, loads : 8
+  Net : RAM/mem_8__7__N_132, loads : 8
+  Net : RAM/mem_61__7__N_291, loads : 8
+  Net : RAM/mem_7__7__N_129, loads : 8
+  Net : RAM/mem_53__7__N_267, loads : 8
+  Net : RAM/mem_6__7__N_126, loads : 8
+  Net : RAM/mem_45__7__N_243, loads : 8
+  Net : RAM/mem_5__7__N_123, loads : 8
+  Net : RAM/mem_37__7__N_219, loads : 8
+  Net : RAM/mem_4__7__N_120, loads : 8
+  Net : RAM/mem_57__7__N_279, loads : 8
+  Net : RAM/mem_3__7__N_117, loads : 8
+  Net : RAM/mem_41__7__N_231, loads : 8
+  Net : RAM/mem_2__7__N_114, loads : 8
+  Net : RAM/mem_49__7__N_255, loads : 8
+  Net : RAM/mem_1__7__N_111, loads : 8
+  Net : RAM/mem_33__7__N_207, loads : 8
+  Net : RAM/mem_0__7__N_106, loads : 8
 Clock Enable Nets
 Number of Clock Enables: 3
 Top 3 highest fanout Clock Enables:
-  Net : CPU/clk_c_enable_15, loads : 8
-  Net : CPU/clk_c_enable_7, loads : 6
-  Net : CPU/clk_c_enable_8, loads : 1
+  Net : CPU/clk_c_enable_26, loads : 16
+  Net : CPU/clk_c_enable_22, loads : 9
+  Net : CPU/clk_c_enable_20, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : CPU/address_0, loads : 268
+  Net : CPU/address_0, loads : 283
   Net : CPU/address_1, loads : 139
-  Net : CPU/address_2, loads : 89
-  Net : RAM/data_5, loads : 70
-  Net : RAM/data_7, loads : 69
-  Net : RAM/data_6, loads : 69
-  Net : RAM/data_4, loads : 66
-  Net : RAM/data_3, loads : 66
-  Net : RAM/data_2, loads : 66
-  Net : RAM/data_1, loads : 66
+  Net : CPU/akku_o_c_2, loads : 81
+  Net : CPU/address_2, loads : 74
+  Net : CPU/akku_o_c_3, loads : 71
+  Net : CPU/akku_o_c_1, loads : 70
+  Net : CPU/akku_o_c_4, loads : 69
+  Net : RAM/data_5, loads : 69
+  Net : RAM/data_7, loads : 68
+  Net : RAM/data_6, loads : 68
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -245,199 +281,199 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk64 [get_nets mem_0__7__N_101]        |  200.000 MHz|  109.745 MHz|     8 *
+clk64 [get_nets \RAM/mem_0__7__N_106]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk63 [get_nets \RAM/mem_1__7__N_106]   |  200.000 MHz|  109.745 MHz|     8 *
+clk63 [get_nets \RAM/mem_1__7__N_111]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk62 [get_nets mem_2__7__N_109]        |  200.000 MHz|  109.745 MHz|     8 *
+clk62 [get_nets \RAM/mem_2__7__N_114]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk61 [get_nets mem_3__7__N_112]        |  200.000 MHz|  109.745 MHz|     8 *
+clk61 [get_nets \RAM/mem_63__7__N_297]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk60 [get_nets mem_4__7__N_115]        |  200.000 MHz|  109.745 MHz|     8 *
+clk60 [get_nets \RAM/mem_62__7__N_294]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk59 [get_nets mem_63__7__N_292]       |  200.000 MHz|  109.745 MHz|     8 *
+clk59 [get_nets \RAM/mem_61__7__N_291]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk58 [get_nets \RAM/mem_62__7__N_289]  |  200.000 MHz|  109.745 MHz|     8 *
+clk58 [get_nets \RAM/mem_60__7__N_288]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk57 [get_nets \RAM/mem_61__7__N_286]  |  200.000 MHz|  109.745 MHz|     8 *
+clk57 [get_nets \RAM/mem_59__7__N_285]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk56 [get_nets mem_60__7__N_283]       |  200.000 MHz|  109.745 MHz|     8 *
+clk56 [get_nets \RAM/mem_58__7__N_282]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk55 [get_nets mem_59__7__N_280]       |  200.000 MHz|  109.745 MHz|     8 *
+clk55 [get_nets \RAM/mem_57__7__N_279]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk54 [get_nets mem_58__7__N_277]       |  200.000 MHz|  109.745 MHz|     8 *
+clk54 [get_nets \RAM/mem_56__7__N_276]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk53 [get_nets \RAM/mem_57__7__N_274]  |  200.000 MHz|  109.745 MHz|     8 *
+clk53 [get_nets \RAM/mem_55__7__N_273]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk52 [get_nets mem_56__7__N_271]       |  200.000 MHz|  109.745 MHz|     8 *
+clk52 [get_nets \RAM/mem_54__7__N_270]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk51 [get_nets mem_55__7__N_268]       |  200.000 MHz|  109.745 MHz|     8 *
+clk51 [get_nets \RAM/mem_53__7__N_267]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk50 [get_nets \RAM/mem_54__7__N_265]  |  200.000 MHz|  109.745 MHz|     8 *
+clk50 [get_nets \RAM/mem_52__7__N_264]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk49 [get_nets \RAM/mem_53__7__N_262]  |  200.000 MHz|  109.745 MHz|     8 *
+clk49 [get_nets \RAM/mem_51__7__N_261]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk48 [get_nets mem_52__7__N_259]       |  200.000 MHz|  109.745 MHz|     8 *
+clk48 [get_nets \RAM/mem_50__7__N_258]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk47 [get_nets mem_51__7__N_256]       |  200.000 MHz|  109.745 MHz|     8 *
+clk47 [get_nets \RAM/mem_49__7__N_255]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk46 [get_nets mem_50__7__N_253]       |  200.000 MHz|  109.745 MHz|     8 *
+clk46 [get_nets \RAM/mem_48__7__N_252]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk45 [get_nets \RAM/mem_49__7__N_250]  |  200.000 MHz|  109.745 MHz|     8 *
+clk45 [get_nets \RAM/mem_47__7__N_249]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk44 [get_nets mem_48__7__N_247]       |  200.000 MHz|  109.745 MHz|     8 *
+clk44 [get_nets \RAM/mem_46__7__N_246]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk43 [get_nets mem_47__7__N_244]       |  200.000 MHz|  109.745 MHz|     8 *
+clk43 [get_nets \RAM/mem_45__7__N_243]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk42 [get_nets \RAM/mem_46__7__N_241]  |  200.000 MHz|  109.745 MHz|     8 *
+clk42 [get_nets \RAM/mem_44__7__N_240]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk41 [get_nets \RAM/mem_45__7__N_238]  |  200.000 MHz|  109.745 MHz|     8 *
+clk41 [get_nets \RAM/mem_43__7__N_237]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk40 [get_nets mem_44__7__N_235]       |  200.000 MHz|  109.745 MHz|     8 *
+clk40 [get_nets \RAM/mem_42__7__N_234]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk39 [get_nets mem_43__7__N_232]       |  200.000 MHz|  109.745 MHz|     8 *
+clk39 [get_nets \RAM/mem_41__7__N_231]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk38 [get_nets mem_42__7__N_229]       |  200.000 MHz|  109.745 MHz|     8 *
+clk38 [get_nets \RAM/mem_40__7__N_228]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk37 [get_nets \RAM/mem_41__7__N_226]  |  200.000 MHz|  109.745 MHz|     8 *
+clk37 [get_nets \RAM/mem_39__7__N_225]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk36 [get_nets mem_40__7__N_223]       |  200.000 MHz|  109.745 MHz|     8 *
+clk36 [get_nets \RAM/mem_38__7__N_222]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk35 [get_nets mem_39__7__N_220]       |  200.000 MHz|  109.745 MHz|     8 *
+clk35 [get_nets \RAM/mem_37__7__N_219]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk34 [get_nets \RAM/mem_38__7__N_217]  |  200.000 MHz|  109.745 MHz|     8 *
+clk34 [get_nets \RAM/mem_36__7__N_216]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk33 [get_nets \RAM/mem_37__7__N_214]  |  200.000 MHz|  109.745 MHz|     8 *
+clk33 [get_nets \RAM/mem_35__7__N_213]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk32 [get_nets mem_36__7__N_211]       |  200.000 MHz|  109.745 MHz|     8 *
+clk32 [get_nets \RAM/mem_34__7__N_210]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk31 [get_nets mem_35__7__N_208]       |  200.000 MHz|  109.745 MHz|     8 *
+clk31 [get_nets \RAM/mem_33__7__N_207]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk30 [get_nets mem_34__7__N_205]       |  200.000 MHz|  109.745 MHz|     8 *
+clk30 [get_nets \RAM/mem_32__7__N_204]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk29 [get_nets \RAM/mem_33__7__N_202]  |  200.000 MHz|  109.745 MHz|     8 *
+clk29 [get_nets \RAM/mem_31__7__N_201]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk28 [get_nets mem_32__7__N_199]       |  200.000 MHz|  109.745 MHz|     8 *
+clk28 [get_nets \RAM/mem_30__7__N_198]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk27 [get_nets mem_31__7__N_196]       |  200.000 MHz|  109.745 MHz|     8 *
+clk27 [get_nets \RAM/mem_29__7__N_195]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk26 [get_nets \RAM/mem_30__7__N_193]  |  200.000 MHz|  109.745 MHz|     8 *
+clk26 [get_nets \RAM/mem_28__7__N_192]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk25 [get_nets \RAM/mem_29__7__N_190]  |  200.000 MHz|  109.745 MHz|     8 *
+clk25 [get_nets \RAM/mem_27__7__N_189]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk24 [get_nets mem_28__7__N_187]       |  200.000 MHz|  109.745 MHz|     8 *
+clk24 [get_nets \RAM/mem_26__7__N_186]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk23 [get_nets mem_27__7__N_184]       |  200.000 MHz|  109.745 MHz|     8 *
+clk23 [get_nets \RAM/mem_25__7__N_183]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk22 [get_nets mem_26__7__N_181]       |  200.000 MHz|  109.745 MHz|     8 *
+clk22 [get_nets \RAM/mem_24__7__N_180]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk21 [get_nets mem_8__7__N_127]        |  200.000 MHz|  109.745 MHz|     8 *
+clk21 [get_nets \RAM/mem_23__7__N_177]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk20 [get_nets mem_7__7__N_124]        |  200.000 MHz|  109.745 MHz|     8 *
+clk20 [get_nets \RAM/mem_22__7__N_174]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk19 [get_nets \RAM/mem_25__7__N_178]  |  200.000 MHz|  109.745 MHz|     8 *
+clk19 [get_nets \RAM/mem_21__7__N_171]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk18 [get_nets \RAM/mem_6__7__N_121]   |  200.000 MHz|  109.745 MHz|     8 *
+clk18 [get_nets \RAM/mem_20__7__N_168]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk17 [get_nets \RAM/mem_5__7__N_118]   |  200.000 MHz|  109.745 MHz|     8 *
+clk17 [get_nets \RAM/mem_19__7__N_165]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk16 [get_nets mem_24__7__N_175]       |  200.000 MHz|  109.745 MHz|     8 *
+clk16 [get_nets \RAM/mem_18__7__N_162]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk15 [get_nets mem_23__7__N_172]       |  200.000 MHz|  109.745 MHz|     8 *
+clk15 [get_nets \RAM/mem_17__7__N_159]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk14 [get_nets \RAM/mem_22__7__N_169]  |  200.000 MHz|  109.745 MHz|     8 *
+clk14 [get_nets \RAM/mem_16__7__N_156]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk13 [get_nets \RAM/mem_21__7__N_166]  |  200.000 MHz|  109.745 MHz|     8 *
+clk13 [get_nets \RAM/mem_15__7__N_153]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk12 [get_nets mem_20__7__N_163]       |  200.000 MHz|  109.745 MHz|     8 *
+clk12 [get_nets \RAM/mem_14__7__N_150]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk11 [get_nets mem_19__7__N_160]       |  200.000 MHz|  109.745 MHz|     8 *
+clk11 [get_nets \RAM/mem_13__7__N_147]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk10 [get_nets mem_18__7__N_157]       |  200.000 MHz|  109.745 MHz|     8 *
+clk10 [get_nets \RAM/mem_12__7__N_144]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk9 [get_nets \RAM/mem_17__7__N_154]   |  200.000 MHz|  109.745 MHz|     8 *
+clk9 [get_nets \RAM/mem_11__7__N_141]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk8 [get_nets mem_16__7__N_151]        |  200.000 MHz|  109.745 MHz|     8 *
+clk8 [get_nets \RAM/mem_10__7__N_138]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk7 [get_nets mem_15__7__N_148]        |  200.000 MHz|  109.745 MHz|     8 *
+clk7 [get_nets \RAM/mem_9__7__N_135]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk6 [get_nets \RAM/mem_14__7__N_145]   |  200.000 MHz|  109.745 MHz|     8 *
+clk6 [get_nets \RAM/mem_8__7__N_132]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk5 [get_nets \RAM/mem_13__7__N_142]   |  200.000 MHz|  109.745 MHz|     8 *
+clk5 [get_nets \RAM/mem_7__7__N_129]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk4 [get_nets mem_12__7__N_139]        |  200.000 MHz|  109.745 MHz|     8 *
+clk4 [get_nets \RAM/mem_6__7__N_126]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets mem_11__7__N_136]        |  200.000 MHz|  109.745 MHz|     8 *
+clk3 [get_nets \RAM/mem_5__7__N_123]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets clk_c]                   |  200.000 MHz|   70.043 MHz|    12 *
+clk2 [get_nets \RAM/mem_4__7__N_120]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets mem_10__7__N_133]        |  200.000 MHz|  109.745 MHz|     8 *
+clk1 [get_nets \RAM/mem_3__7__N_117]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets \RAM/mem_9__7__N_130]    |  200.000 MHz|  109.745 MHz|     8 *
+clk0 [get_nets clk_c]                   |  200.000 MHz|    4.804 MHz|   143 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -445,8 +481,8 @@ clk0 [get_nets \RAM/mem_9__7__N_130]    |  200.000 MHz|  109.745 MHz|     8 *
 65 constraints not met.
 
 
-Peak Memory Usage: 86.105  MB
+Peak Memory Usage: 177.348  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.891  secs
+Elapsed CPU time for LSE flow : 16.281  secs
 --------------------------------------------------------------

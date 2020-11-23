@@ -24,11 +24,11 @@ architecture sram_behaviour of sram64kx8 is
 	signal address : integer range 0 to 63;
 	type memory_array is                                -- 定义RAM的数据存储数组类型
         array (integer	range 0 to 63) of std_logic_vector( 7 downto 0 );
-	signal mem: memory_array := ("10110011", --0
-									"11100010", --1
-									"10111111", --2
-									"11110101", --3
-									"11000100", --4
+	signal mem: memory_array :=    ("10100111", --0
+									"11100101", --1
+									"11000010", --2
+									"00000000", --3
+									"00000000", --4
 									"00000000", --5
 									"00000000", --6
 									"00000000", --7

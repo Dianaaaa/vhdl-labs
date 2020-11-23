@@ -22,21 +22,21 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-4000HCCSBGA132
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  11/20/20  10:28:24
+Mapped on:  11/23/20  13:57:25
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    536 out of  4635 (12%)
-      PFU registers:          536 out of  4320 (12%)
+   Number of registers:    547 out of  4635 (12%)
+      PFU registers:          547 out of  4320 (13%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       406 out of  2160 (19%)
-      SLICEs as Logic/ROM:    406 out of  2160 (19%)
+   Number of SLICEs:       987 out of  2160 (46%)
+      SLICEs as Logic/ROM:    987 out of  2160 (46%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:          6 out of  2160 (0%)
-   Number of LUT4s:        413 out of  4320 (10%)
-      Number used as logic LUTs:        401
+      SLICEs as Carry:        185 out of  2160 (9%)
+   Number of LUT4s:        1972 out of  4320 (46%)
+      Number used as logic LUTs:        1602
       Number used as distributed RAM:     0
-      Number used as ripple logic:       12
+      Number used as ripple logic:      370
       Number used as shift registers:     0
    Number of PIO sites used: 11 + 4(JTAG) out of 105 (14%)
    Number of block RAMs:  0 out of 10 (0%)
@@ -64,157 +64,157 @@ Mapped on:  11/20/20  10:28:24
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  65
-     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
-     Net RAM/mem_63__7__N_292: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_15 )
+     Net clk_c: 23 loads, 23 rising, 0 falling (Driver: PIO clk )
+     Net RAM/mem_63__7__N_297: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_14 )
 
-     Net RAM/mem_62__7__N_289: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_73 )
-     Net RAM/mem_61__7__N_286: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_61 )
-     Net RAM/mem_60__7__N_283: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_14 )
-     Net RAM/mem_59__7__N_280: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_13 )
-     Net RAM/mem_58__7__N_277: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_12 )
-     Net RAM/mem_57__7__N_274: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_51 )
-     Net RAM/mem_56__7__N_271: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_11 )
-     Net RAM/mem_55__7__N_268: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_20 )
-     Net RAM/mem_54__7__N_265: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_70 )
-     Net RAM/mem_53__7__N_262: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_63 )
-     Net RAM/mem_52__7__N_259: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_19 )
-     Net RAM/mem_51__7__N_256: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_18 )
-     Net RAM/mem_50__7__N_253: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_17 )
-     Net RAM/mem_49__7__N_250: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_52 )
-     Net RAM/mem_48__7__N_247: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_16 )
-     Net RAM/mem_47__7__N_244: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_25 )
-     Net RAM/mem_46__7__N_241: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_72 )
-     Net RAM/mem_45__7__N_238: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_64 )
-     Net RAM/mem_44__7__N_235: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_24 )
-     Net RAM/mem_43__7__N_232: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_23 )
-     Net RAM/mem_42__7__N_229: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_22 )
-     Net RAM/mem_41__7__N_226: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_53 )
-     Net RAM/mem_40__7__N_223: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_21 )
-     Net RAM/mem_39__7__N_220: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_30 )
-     Net RAM/mem_38__7__N_217: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_4_lut_adj_62 )
-     Net RAM/mem_37__7__N_214: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_65 )
-     Net RAM/mem_36__7__N_211: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_29 )
-     Net RAM/mem_35__7__N_208: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_28 )
-
-     Net RAM/mem_34__7__N_205: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_27 )
-     Net RAM/mem_33__7__N_202: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_54 )
-     Net RAM/mem_32__7__N_199: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_26 )
-     Net RAM/mem_31__7__N_196: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_39 )
-     Net RAM/mem_30__7__N_193: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_4_lut )
-     Net RAM/mem_29__7__N_190: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_66 )
-     Net RAM/mem_28__7__N_187: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_34 )
-     Net RAM/mem_27__7__N_184: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_33 )
-     Net RAM/mem_26__7__N_181: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_32 )
-     Net RAM/mem_25__7__N_178: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_56 )
-     Net RAM/mem_24__7__N_175: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_31 )
-     Net RAM/mem_23__7__N_172: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_44 )
-     Net RAM/mem_22__7__N_169: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_69 )
-     Net RAM/mem_21__7__N_166: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_67 )
-     Net RAM/mem_20__7__N_163: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_43 )
-     Net RAM/mem_19__7__N_160: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_42 )
-     Net RAM/mem_18__7__N_157: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_41 )
-     Net RAM/mem_17__7__N_154: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_58 )
-     Net RAM/mem_16__7__N_151: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_40 )
-     Net RAM/mem_15__7__N_148: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_8 )
-     Net RAM/mem_14__7__N_145: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_57 )
-     Net RAM/mem_13__7__N_142: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_68 )
-     Net RAM/mem_12__7__N_139: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_9 )
-     Net RAM/mem_11__7__N_136: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_47 )
-     Net RAM/mem_10__7__N_133: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_46 )
-     Net RAM/mem_9__7__N_130: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_59 )
-     Net RAM/mem_8__7__N_127: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_45 )
-     Net RAM/mem_7__7__N_124: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_10 )
-
-     Net RAM/mem_6__7__N_121: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_55 )
-     Net RAM/mem_5__7__N_118: 4 loads, 4 rising, 0 falling (Driver:
-     RAM/i1_2_lut_3_lut_4_lut_adj_60 )
-     Net RAM/mem_4__7__N_115: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_48 )
-     Net RAM/mem_3__7__N_112: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_49 )
-     Net RAM/mem_2__7__N_109: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut_adj_50 )
-     Net RAM/mem_1__7__N_106: 4 loads, 4 rising, 0 falling (Driver:
+     Net RAM/mem_62__7__N_294: 4 loads, 4 rising, 0 falling (Driver:
      RAM/i1_2_lut_3_lut_4_lut )
-     Net RAM/mem_0__7__N_101: 4 loads, 4 rising, 0 falling (Driver:
-     CPU/i1_2_lut_3_lut_4_lut )
+     Net RAM/mem_61__7__N_291: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_45 )
+     Net RAM/mem_60__7__N_288: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_46 )
+     Net RAM/mem_59__7__N_285: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_48 )
+     Net RAM/mem_58__7__N_282: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_49 )
+     Net RAM/mem_57__7__N_279: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_55 )
+     Net RAM/mem_56__7__N_276: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_56 )
+     Net RAM/mem_55__7__N_273: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_15 )
+     Net RAM/mem_54__7__N_270: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_18 )
+     Net RAM/mem_53__7__N_267: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_10 )
+     Net RAM/mem_52__7__N_264: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_11 )
+     Net RAM/mem_51__7__N_261: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_12 )
+     Net RAM/mem_50__7__N_258: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_13 )
+     Net RAM/mem_49__7__N_255: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_70 )
+     Net RAM/mem_48__7__N_252: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_69 )
+     Net RAM/mem_47__7__N_249: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_16 )
+     Net RAM/mem_46__7__N_246: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_23 )
+     Net RAM/mem_45__7__N_243: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_22 )
+     Net RAM/mem_44__7__N_240: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_21 )
+     Net RAM/mem_43__7__N_237: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_20 )
+     Net RAM/mem_42__7__N_234: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_19 )
+     Net RAM/mem_41__7__N_231: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_68 )
+     Net RAM/mem_40__7__N_228: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_67 )
+     Net RAM/mem_39__7__N_225: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_8 )
+     Net RAM/mem_38__7__N_222: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_28 )
+     Net RAM/mem_37__7__N_219: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_27 )
+     Net RAM/mem_36__7__N_216: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_26 )
+     Net RAM/mem_35__7__N_213: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_25 )
+
+     Net RAM/mem_34__7__N_210: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_24 )
+     Net RAM/mem_33__7__N_207: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_66 )
+     Net RAM/mem_32__7__N_204: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_65 )
+     Net RAM/mem_31__7__N_201: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_9 )
+     Net RAM/mem_30__7__N_198: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_33 )
+     Net RAM/mem_29__7__N_195: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_32 )
+     Net RAM/mem_28__7__N_192: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_31 )
+     Net RAM/mem_27__7__N_189: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_30 )
+     Net RAM/mem_26__7__N_186: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_29 )
+     Net RAM/mem_25__7__N_183: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_64 )
+     Net RAM/mem_24__7__N_180: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_63 )
+     Net RAM/mem_23__7__N_177: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_39 )
+     Net RAM/mem_22__7__N_174: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_38 )
+     Net RAM/mem_21__7__N_171: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_37 )
+     Net RAM/mem_20__7__N_168: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_36 )
+     Net RAM/mem_19__7__N_165: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_35 )
+     Net RAM/mem_18__7__N_162: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_34 )
+     Net RAM/mem_17__7__N_159: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_62 )
+     Net RAM/mem_16__7__N_156: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_61 )
+     Net RAM/mem_15__7__N_153: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_17 )
+     Net RAM/mem_14__7__N_150: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_44 )
+     Net RAM/mem_13__7__N_147: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_43 )
+     Net RAM/mem_12__7__N_144: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_42 )
+     Net RAM/mem_11__7__N_141: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_41 )
+     Net RAM/mem_10__7__N_138: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_40 )
+     Net RAM/mem_9__7__N_135: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_60 )
+     Net RAM/mem_8__7__N_132: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_59 )
+     Net RAM/mem_7__7__N_129: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_50 )
+
+     Net RAM/mem_6__7__N_126: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_51 )
+     Net RAM/mem_5__7__N_123: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_52 )
+     Net RAM/mem_4__7__N_120: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_53 )
+     Net RAM/mem_3__7__N_117: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_54 )
+     Net RAM/mem_2__7__N_114: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_47 )
+     Net RAM/mem_1__7__N_111: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_58 )
+     Net RAM/mem_0__7__N_106: 4 loads, 4 rising, 0 falling (Driver:
+     RAM/i1_2_lut_3_lut_4_lut_adj_57 )
    Number of Clock Enables:  3
-     Net CPU/clk_c_enable_15: 4 loads, 4 LSLICEs
-     Net CPU/clk_c_enable_7: 3 loads, 3 LSLICEs
-     Net CPU/clk_c_enable_8: 1 loads, 1 LSLICEs
+     Net CPU/clk_c_enable_26: 8 loads, 8 LSLICEs
+     Net CPU/clk_c_enable_22: 8 loads, 8 LSLICEs
+     Net CPU/clk_c_enable_20: 1 loads, 1 LSLICEs
    Number of LSRs:  2
-     Net CPU/n1908: 2 loads, 2 LSLICEs
-     Net CPU/n605: 1 loads, 1 LSLICEs
+     Net CPU/n46244: 2 loads, 2 LSLICEs
+     Net CPU/n22192: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net address_0: 269 loads
+     Net address_0: 284 loads
      Net address_1: 140 loads
-     Net address_2: 90 loads
-     Net data_5: 71 loads
-     Net data_6: 70 loads
-     Net data_7: 70 loads
-     Net data_0: 67 loads
-     Net data_1: 67 loads
-     Net data_2: 67 loads
-     Net data_3: 67 loads
+     Net akku_o_c_2: 82 loads
+     Net address_2: 75 loads
+     Net akku_o_c_3: 72 loads
+     Net akku_o_c_1: 71 loads
+     Net akku_o_c_4: 70 loads
+     Net data_5: 70 loads
+     Net data_6: 69 loads
+     Net data_7: 69 loads
 
 
 
@@ -266,14 +266,190 @@ Mapped on:  11/20/20  10:28:24
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i1937 undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal CPU/add_132_1/S1 undriven or does not drive anything - clipped.
-Signal CPU/add_132_1/S0 undriven or does not drive anything - clipped.
-Signal CPU/add_132_1/CI undriven or does not drive anything - clipped.
-Signal CPU/add_132_11/S1 undriven or does not drive anything - clipped.
-Signal CPU/add_132_11/CO undriven or does not drive anything - clipped.
+Signal CPU/add_281_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_281_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_281_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_281_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_283_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_283_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_283_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_283_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_334_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_334_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_334_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_334_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_336_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_336_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_336_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_336_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_338_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_338_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_1770_1/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_1770_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_1770_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_338_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_338_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_340_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_340_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_340_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_340_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_388_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_388_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_388_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_388_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_390_1/S0 undriven or does not drive anything - clipped.
+
+Signal CPU/add_390_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_390_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_390_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_392_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_392_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_392_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_392_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_394_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_394_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_1770_cout/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_1770_cout/CO undriven or does not drive anything - clipped.
+Signal CPU/add_394_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_394_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_445_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_445_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_445_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_445_7/CO undriven or does not drive anything - clipped.
+Signal CPU/div_39_add_193_1/S1 undriven or does not drive anything - clipped.
+Signal CPU/div_39_add_193_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_39_add_193_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_447_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_447_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_447_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_447_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_449_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_449_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_449_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_449_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_451_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_451_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_451_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_451_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_494_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_494_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_494_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_494_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_496_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_496_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_39_add_193_9/CO undriven or does not drive anything - clipped.
+Signal CPU/add_496_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_496_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_498_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_498_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_46_add_193_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_46_add_193_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_498_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_498_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_500_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_500_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_500_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_500_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_502_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_502_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_46_add_193_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_502_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_502_7/CO undriven or does not drive anything - clipped.
+
+Signal CPU/div_39_add_172_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_39_add_172_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_275_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_275_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_39_add_172_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_551_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_551_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_551_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_551_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_553_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_553_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_553_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_553_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_555_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_555_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_555_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_555_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_557_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_557_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_557_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_557_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_559_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_559_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_559_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_559_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_605_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_605_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_605_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_605_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_607_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_607_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_275_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_275_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_607_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_607_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_609_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_609_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_609_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_609_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_611_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_611_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_611_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_611_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_613_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_613_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_613_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_613_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_1769_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_1769_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_1769_9/CO undriven or does not drive anything - clipped.
+Signal CPU/add_277_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_277_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_53_add_193_1/S1 undriven or does not drive anything - clipped.
+Signal CPU/div_53_add_193_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_53_add_193_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_53_add_193_9/CO undriven or does not drive anything - clipped.
+
+Signal CPU/div_53_add_172_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_53_add_172_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_53_add_172_7/CO undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_166_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_166_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_166_7/CO undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_187_1/S1 undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_187_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_187_1/CI undriven or does not drive anything - clipped.
+Signal CPU/div_28_add_187_9/CO undriven or does not drive anything - clipped.
+Signal CPU/mult_5u_5u_0_cin_lr_add_0/S1 undriven or does not drive anything -
+     clipped.
+Signal CPU/mult_5u_5u_0_cin_lr_add_0/S0 undriven or does not drive anything -
+     clipped.
+Signal CPU/mult_5u_5u_0_mult_2_2/CO undriven or does not drive anything -
+     clipped.
+Signal CPU/mult_5u_5u_0_mult_0_2/CO undriven or does not drive anything -
+     clipped.
+Signal CPU/t_mult_5u_5u_0_add_1_3/COUT undriven or does not drive anything -
+     clipped.
+Signal CPU/Cadd_t_mult_5u_5u_0_1_1/S0 undriven or does not drive anything -
+     clipped.
+Signal CPU/mult_5u_5u_0_add_0_4/COUT undriven or does not drive anything -
+     clipped.
+Signal CPU/Cadd_mult_5u_5u_0_0_1/S0 undriven or does not drive anything -
+     clipped.
+Signal CPU/mult_5u_5u_0_cin_lr_add_2/S1 undriven or does not drive anything -
+     clipped.
+Signal CPU/mult_5u_5u_0_cin_lr_add_2/S0 undriven or does not drive anything -
+     clipped.
+Signal CPU/add_277_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_277_7/CO undriven or does not drive anything - clipped.
+Signal CPU/add_279_1/S0 undriven or does not drive anything - clipped.
+Signal CPU/add_279_1/CI undriven or does not drive anything - clipped.
+Signal CPU/add_279_7/S1 undriven or does not drive anything - clipped.
+Signal CPU/add_279_7/CO undriven or does not drive anything - clipped.
 Block i1 was optimized away.
 
      
@@ -297,11 +473,11 @@ GSR Component:
      Components with disabled GSR Property
 -------------------------------------
 
+
      These components have the GSR property set to DISABLED. The components will
      not respond to the reset signal 'reset_c' via the GSR component.
 
      Type and number of components of the type: 
-
    Register = 512 
 
      Type and instance name of component: 
@@ -353,12 +529,12 @@ GSR Component:
    Register : RAM/data_7__I_0_5055_i1
    Register : RAM/data_7__I_0_5052_i1
    Register : RAM/data_7__I_0_5049_i1
+
    Register : RAM/data_7__I_0_5046_i1
    Register : RAM/data_7__I_0_5043_i1
    Register : RAM/data_7__I_0_5040_i1
    Register : RAM/data_7__I_0_5037_i1
    Register : RAM/data_7__I_0_5034_i1
-
    Register : RAM/data_7__I_0_5031_i1
    Register : RAM/data_7__I_0_5028_i1
    Register : RAM/data_7__I_0_5025_i1
@@ -391,20 +567,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5007_i6
    Register : RAM/data_7__I_0_5007_i7
    Register : RAM/data_7__I_0_5007_i8
-   Register : RAM/data_7__I_0_5010_i2
-   Register : RAM/data_7__I_0_5010_i3
-   Register : RAM/data_7__I_0_5010_i4
-   Register : RAM/data_7__I_0_5010_i5
-   Register : RAM/data_7__I_0_5010_i6
-   Register : RAM/data_7__I_0_5010_i7
-   Register : RAM/data_7__I_0_5010_i8
-   Register : RAM/data_7__I_0_5013_i2
-   Register : RAM/data_7__I_0_5013_i3
-   Register : RAM/data_7__I_0_5013_i4
-   Register : RAM/data_7__I_0_5013_i5
-   Register : RAM/data_7__I_0_5013_i6
-   Register : RAM/data_7__I_0_5013_i7
-   Register : RAM/data_7__I_0_5013_i8
    Register : RAM/data_7__I_0_i2
    Register : RAM/data_7__I_0_i3
    Register : RAM/data_7__I_0_i4
@@ -415,7 +577,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5187_i2
    Register : RAM/data_7__I_0_5187_i3
    Register : RAM/data_7__I_0_5187_i4
-
    Register : RAM/data_7__I_0_5187_i5
    Register : RAM/data_7__I_0_5187_i6
    Register : RAM/data_7__I_0_5187_i7
@@ -425,6 +586,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5184_i4
    Register : RAM/data_7__I_0_5184_i5
    Register : RAM/data_7__I_0_5184_i6
+
    Register : RAM/data_7__I_0_5184_i7
    Register : RAM/data_7__I_0_5184_i8
    Register : RAM/data_7__I_0_5181_i2
@@ -472,7 +634,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5163_i2
    Register : RAM/data_7__I_0_5163_i3
    Register : RAM/data_7__I_0_5163_i4
-
    Register : RAM/data_7__I_0_5163_i5
    Register : RAM/data_7__I_0_5163_i6
    Register : RAM/data_7__I_0_5163_i7
@@ -482,6 +643,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5160_i4
    Register : RAM/data_7__I_0_5160_i5
    Register : RAM/data_7__I_0_5160_i6
+
    Register : RAM/data_7__I_0_5160_i7
    Register : RAM/data_7__I_0_5160_i8
    Register : RAM/data_7__I_0_5157_i2
@@ -529,7 +691,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5139_i2
    Register : RAM/data_7__I_0_5139_i3
    Register : RAM/data_7__I_0_5139_i4
-
    Register : RAM/data_7__I_0_5139_i5
    Register : RAM/data_7__I_0_5139_i6
    Register : RAM/data_7__I_0_5139_i7
@@ -539,6 +700,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5136_i4
    Register : RAM/data_7__I_0_5136_i5
    Register : RAM/data_7__I_0_5136_i6
+
    Register : RAM/data_7__I_0_5136_i7
    Register : RAM/data_7__I_0_5136_i8
    Register : RAM/data_7__I_0_5133_i2
@@ -586,7 +748,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5115_i2
    Register : RAM/data_7__I_0_5115_i3
    Register : RAM/data_7__I_0_5115_i4
-
    Register : RAM/data_7__I_0_5115_i5
    Register : RAM/data_7__I_0_5115_i6
    Register : RAM/data_7__I_0_5115_i7
@@ -596,6 +757,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5112_i4
    Register : RAM/data_7__I_0_5112_i5
    Register : RAM/data_7__I_0_5112_i6
+
    Register : RAM/data_7__I_0_5112_i7
    Register : RAM/data_7__I_0_5112_i8
    Register : RAM/data_7__I_0_5109_i2
@@ -643,7 +805,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5091_i2
    Register : RAM/data_7__I_0_5091_i3
    Register : RAM/data_7__I_0_5091_i4
-
    Register : RAM/data_7__I_0_5091_i5
    Register : RAM/data_7__I_0_5091_i6
    Register : RAM/data_7__I_0_5091_i7
@@ -653,6 +814,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5088_i4
    Register : RAM/data_7__I_0_5088_i5
    Register : RAM/data_7__I_0_5088_i6
+
    Register : RAM/data_7__I_0_5088_i7
    Register : RAM/data_7__I_0_5088_i8
    Register : RAM/data_7__I_0_5085_i2
@@ -700,7 +862,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5067_i2
    Register : RAM/data_7__I_0_5067_i3
    Register : RAM/data_7__I_0_5067_i4
-
    Register : RAM/data_7__I_0_5067_i5
    Register : RAM/data_7__I_0_5067_i6
    Register : RAM/data_7__I_0_5067_i7
@@ -710,6 +871,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5064_i4
    Register : RAM/data_7__I_0_5064_i5
    Register : RAM/data_7__I_0_5064_i6
+
    Register : RAM/data_7__I_0_5064_i7
    Register : RAM/data_7__I_0_5064_i8
    Register : RAM/data_7__I_0_5061_i2
@@ -757,7 +919,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5043_i2
    Register : RAM/data_7__I_0_5043_i3
    Register : RAM/data_7__I_0_5043_i4
-
    Register : RAM/data_7__I_0_5043_i5
    Register : RAM/data_7__I_0_5043_i6
    Register : RAM/data_7__I_0_5043_i7
@@ -767,6 +928,7 @@ GSR Component:
    Register : RAM/data_7__I_0_5040_i4
    Register : RAM/data_7__I_0_5040_i5
    Register : RAM/data_7__I_0_5040_i6
+
    Register : RAM/data_7__I_0_5040_i7
    Register : RAM/data_7__I_0_5040_i8
    Register : RAM/data_7__I_0_5037_i2
@@ -814,7 +976,6 @@ GSR Component:
    Register : RAM/data_7__I_0_5019_i2
    Register : RAM/data_7__I_0_5019_i3
    Register : RAM/data_7__I_0_5019_i4
-
    Register : RAM/data_7__I_0_5019_i5
    Register : RAM/data_7__I_0_5019_i6
    Register : RAM/data_7__I_0_5019_i7
@@ -824,8 +985,23 @@ GSR Component:
    Register : RAM/data_7__I_0_5016_i4
    Register : RAM/data_7__I_0_5016_i5
    Register : RAM/data_7__I_0_5016_i6
+
    Register : RAM/data_7__I_0_5016_i7
    Register : RAM/data_7__I_0_5016_i8
+   Register : RAM/data_7__I_0_5013_i2
+   Register : RAM/data_7__I_0_5013_i3
+   Register : RAM/data_7__I_0_5013_i4
+   Register : RAM/data_7__I_0_5013_i5
+   Register : RAM/data_7__I_0_5013_i6
+   Register : RAM/data_7__I_0_5013_i7
+   Register : RAM/data_7__I_0_5013_i8
+   Register : RAM/data_7__I_0_5010_i2
+   Register : RAM/data_7__I_0_5010_i3
+   Register : RAM/data_7__I_0_5010_i4
+   Register : RAM/data_7__I_0_5010_i5
+   Register : RAM/data_7__I_0_5010_i6
+   Register : RAM/data_7__I_0_5010_i7
+   Register : RAM/data_7__I_0_5010_i8
 
      Components with synchronous local reset also reset by asynchronous GSR
 ----------------------------------------------------------------------
@@ -839,24 +1015,19 @@ GSR Component:
    Register = 3 
 
      Type and instance name of component: 
-   Register : CPU/states__i2
-   Register : CPU/states__i1
    Register : CPU/states__i0
+   Register : CPU/states__i1
+   Register : CPU/states__i2
 
 
 
 <A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
 -------------------------
 
-   Total CPU Time: 0 secs  
-   Total REAL Time: 2 secs  
-   Peak Memory Usage: 53 MB
+   Total CPU Time: 1 secs  
+   Total REAL Time: 3 secs  
+   Peak Memory Usage: 61 MB
         
-
-
-
-
-
 
 
 

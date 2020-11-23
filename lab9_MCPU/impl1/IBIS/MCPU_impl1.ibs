@@ -1,6 +1,6 @@
 |************************************************************************
 | IBIS Models Generator: Lattice Diamond (64-bit) 3.11.0.396.4
-| Generate date: Fri Nov 20 10:29:44 2020
+| Generate date: Mon Nov 23 13:58:53 2020
 |************************************************************************
 | IBIS File LibisMaker.ibs
 | LibisGen v2.0.1.0, 02/25/2008, Lattice Semiconductor Corporation
@@ -209,7 +209,7 @@ P11           akku_o[4]            lvc250s080caaaaaaaou
 N10           akku_o[5]            lvc250s080caaaaaaaou
 N9            akku_o[6]            lvc250s080caaaaaaaou
 P9            akku_o[7]            lvc250s080caaaaaaaou
-M9            akku_o[8]            lvc250s080caaaaaaaou
+P7            akku_o[8]            lvc250s080caaaaaaaou
 C1            clk                  lvc250axxxggaaaaaain
 L14           reset                lvc250axxxggaaaaaain
 |************************************************************************

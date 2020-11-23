@@ -29,7 +29,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: CSBGA132
 // ncd File: mcpu_impl1.ncd
 // Version: Diamond (64-bit) 3.11.0.396.4
-// Written on Fri Nov 20 10:29:43 2020
+// Written on Mon Nov 23 13:58:52 2020
 // M: Minimum Performance Grade
 // iotiming MCPU_impl1.ncd MCPU_impl1.prf -gui -msgset C:/Users/10352/vhdl-labs/lab9_MCPU/promote.xml
 
@@ -41,21 +41,21 @@ Worst Case Results across Performance Grades (M, 6, 5, 4):
 
 Port  Clock Edge  Setup Performance_Grade  Hold Performance_Grade
 ----------------------------------------------------------------------
-clk   reset R     7.296      4       4.272     4
-reset clk   R     8.091      4       8.758     4
+clk   reset R    11.580      4       5.766     4
+reset clk   R    14.469      4      10.210     4
 
 
 // Clock to Output Delay
 
 Port      Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
 ------------------------------------------------------------------------
-akku_o[0] clk   R    10.193         4        3.168          M
-akku_o[1] clk   R    10.496         4        3.249          M
-akku_o[2] clk   R     9.977         4        3.116          M
-akku_o[3] clk   R    10.376         4        3.227          M
-akku_o[4] clk   R    10.281         4        3.199          M
-akku_o[5] clk   R     9.763         4        3.062          M
-akku_o[6] clk   R     9.162         4        2.898          M
-akku_o[7] clk   R     9.476         4        2.983          M
-akku_o[8] clk   R     9.463         4        2.979          M
+akku_o[0] clk   R    13.725         4        4.073          M
+akku_o[1] clk   R    12.316         4        3.699          M
+akku_o[2] clk   R    11.875         4        3.580          M
+akku_o[3] clk   R    11.875         4        3.580          M
+akku_o[4] clk   R    11.448         4        3.476          M
+akku_o[5] clk   R    13.120         4        3.979          M
+akku_o[6] clk   R    11.335         4        3.460          M
+akku_o[7] clk   R    10.971         4        3.397          M
+akku_o[8] clk   R    10.529         4        3.248          M
 WARNING: you must also run trce with hold speed: 4

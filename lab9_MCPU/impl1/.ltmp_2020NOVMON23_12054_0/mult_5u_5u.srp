@@ -1,0 +1,30 @@
+SCUBA, Version Diamond (64-bit) 3.11.0.396.4
+Mon Nov 23 12:00:55 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : c:/lscc/diamond/3.11_x64/ispfpga/bin/nt64/scuba.exe -w -n mult_5u_5u -lang verilog -bb -arch xo2c00 -type dspmult -pfu_mult -widtha 5 -widthb 5 -widthp 10 -pl_stages 0 
+    Circuit name     : mult_5u_5u
+    Module type      : dspmult
+    Module Version   : 4.2
+    Ports            : 
+	Inputs       : A[4:0], B[4:0]
+	Outputs      : P[9:0]
+    I/O buffer       : not inserted
+    EDIF output      : mult_5u_5u.edn
+    Verilog output   : mult_5u_5u.v
+    Verilog template : mult_5u_5u_tmpl.v
+    Verilog testbench: tb_mult_5u_5u_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : mult_5u_5u.srp
+    Element Usage    :
+           AND2 : 7
+         FADD2B : 11
+          MULT2 : 6
+    Estimated Resource Usage:
+            LUT : 41

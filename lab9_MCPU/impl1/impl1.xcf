@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/10352/vhdl-labs/lab9_MCPU/impl1/MCPU_impl1.jed</File>
-			<FileTime>11/20/20 10:30:10</FileTime>
-			<JedecChecksum>0x028D</JedecChecksum>
+			<FileTime>11/23/20 14:00:25</FileTime>
+			<JedecChecksum>0x4C87</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

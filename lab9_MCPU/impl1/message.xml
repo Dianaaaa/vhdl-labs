@@ -70,18 +70,18 @@
         <Message>
             <ID>35921012</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(9): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(5): </Dynamic>
             <Dynamic>cpu8bit2</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd</Navigation>
-            <Navigation>9</Navigation>
+            <Navigation>5</Navigation>
         </Message>
         <Message>
             <ID>35921010</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(20): </Dynamic>
+            <Dynamic>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(16): </Dynamic>
             <Dynamic>cpu_arch</Dynamic>
             <Navigation>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd</Navigation>
-            <Navigation>20</Navigation>
+            <Navigation>16</Navigation>
         </Message>
         <Message>
             <ID>35921205</ID>
@@ -129,6 +129,104 @@
 </Dynamic>
         </Message>
         <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n296</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n361</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n362</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n428</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n544</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n613</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n614</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n684</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n752</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n753</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n754</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n824</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n893</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n894</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic></Dynamic>
+            <Dynamic>\CPU/n964</Dynamic>
+        </Message>
+        <Message>
+            <ID>35931013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(35): </Dynamic>
+            <Dynamic>a[4]</Dynamic>
+            <Navigation>c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
         </Message>
@@ -147,37 +245,31 @@
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=RAM/mem_63__7__N_292 loads=4 clock_loads=4
-   Signal=RAM/mem_62__7__N_289 loads=4 clock_loads=4
-   Signal=RAM/mem_61__7__N_286 loads=4 clock_loads=4
-   Signal=RAM/mem_60__7__N_283 loads=4 clock_loads=4
-   Signal=RAM/mem_59__7__N_280 loads=4 clock_loads=4
-   Signal=RAM/mem_58__7__N_277 loads=4 clock_loads=4
+   Signal=RAM/mem_63__7__N_297 loads=4 clock_loads=4
+   Signal=RAM/mem_62__7__N_294 loads=4 clock_loads=4
+   Signal=RAM/mem_61__7__N_291 loads=4 clock_loads=4
+   Signal=RAM/mem_60__7__N_288 loads=4 clock_loads=4
+   Signal=RAM/mem_59__7__N_285 loads=4 clock_loads=4
+   Signal=RAM/mem_58__7__N_282 loads=4 clock_loads=4
    Sig   ....   k_loads=4
-   Signal=RAM/mem_2__7__N_109 loads=4 clock_loads=4
-   Signal=RAM/mem_1__7__N_106 loads=4 clock_loads=4
-   Signal=RAM/mem_0__7__N_101 loads=4 clock_loads=4</Dynamic>
-        </Message>
-        <Message>
-            <ID>62001129</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>4096</Dynamic>
-            <Dynamic>250</Dynamic>
+   Signal=RAM/mem_2__7__N_114 loads=4 clock_loads=4
+   Signal=RAM/mem_1__7__N_111 loads=4 clock_loads=4
+   Signal=RAM/mem_0__7__N_106 loads=4 clock_loads=4</Dynamic>
         </Message>
         <Message>
             <ID>66011008</ID>
             <Severity>Warning</Severity>
             <Dynamic>
-   Signal=RAM/mem_63__7__N_292 loads=4 clock_loads=4
-   Signal=RAM/mem_62__7__N_289 loads=4 clock_loads=4
-   Signal=RAM/mem_61__7__N_286 loads=4 clock_loads=4
-   Signal=RAM/mem_60__7__N_283 loads=4 clock_loads=4
-   Signal=RAM/mem_59__7__N_280 loads=4 clock_loads=4
-   Signal=RAM/mem_58__7__N_277 loads=4 clock_loads=4
+   Signal=RAM/mem_63__7__N_297 loads=4 clock_loads=4
+   Signal=RAM/mem_62__7__N_294 loads=4 clock_loads=4
+   Signal=RAM/mem_61__7__N_291 loads=4 clock_loads=4
+   Signal=RAM/mem_60__7__N_288 loads=4 clock_loads=4
+   Signal=RAM/mem_59__7__N_285 loads=4 clock_loads=4
+   Signal=RAM/mem_58__7__N_282 loads=4 clock_loads=4
    Sig   ....   k_loads=4
-   Signal=RAM/mem_2__7__N_109 loads=4 clock_loads=4
-   Signal=RAM/mem_1__7__N_106 loads=4 clock_loads=4
-   Signal=RAM/mem_0__7__N_101 loads=4 clock_loads=4</Dynamic>
+   Signal=RAM/mem_2__7__N_114 loads=4 clock_loads=4
+   Signal=RAM/mem_1__7__N_111 loads=4 clock_loads=4
+   Signal=RAM/mem_0__7__N_106 loads=4 clock_loads=4</Dynamic>
         </Message>
     </Task>
     <Task name="TimingSimFileVHD">

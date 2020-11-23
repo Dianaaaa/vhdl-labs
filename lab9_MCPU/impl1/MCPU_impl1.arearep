@@ -1,44 +1,51 @@
 ----------------------------------------------------------------------
 Report for cell cpu2system.TECH
-Register bits:  536 of 4635 (11.564%)
+Register bits:  547 of 4635 (11.802%)
 I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         6          100.0
-                            FD1P3AX        15          100.0
-                             FD1S1A       487          100.0
-                            FD1S1AY        25          100.0
+                               AND2         7          100.0
+                              CCU2D       170          100.0
+                             FADD2B         9          100.0
+                            FD1P3AX        26          100.0
+                             FD1S1A       499          100.0
+                            FD1S1AY        13          100.0
                             FD1S3AX         6          100.0
                             FD1S3IX         3          100.0
                                 GSR         1          100.0
                                  IB         2          100.0
                             L6MUX21        96          100.0
-                               LUT4       401          100.0
+                               LUT4      1588          100.0
+                              MULT2         6          100.0
                                  OB         9          100.0
-                              PFUMX       136          100.0
+                              PFUMX       203          100.0
 SUB MODULES
                            CPU8BIT2         1
    sram64kx8("sram64kx8.dat")(1,13)         1
-                              TOTAL      1189
-----------------------------------------------------------------------
-Report for cell sram64kx8("sram64kx8.dat")(1,13).v1
-Instance Path : RAM
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                             FD1S1A       487          100.0
-                            FD1S1AY        25          100.0
-                            L6MUX21        96          100.0
-                               LUT4       321           80.0
-                              PFUMX       136          100.0
-                              TOTAL      1065
+                              TOTAL      2640
 ----------------------------------------------------------------------
 Report for cell CPU8BIT2.v1
 Instance Path : CPU
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D         6          100.0
-                            FD1P3AX        15          100.0
+                               AND2         7          100.0
+                              CCU2D       170          100.0
+                             FADD2B         9          100.0
+                            FD1P3AX        26          100.0
                             FD1S3AX         6          100.0
                             FD1S3IX         3          100.0
-                               LUT4        80           20.0
-                              TOTAL       110
+                               LUT4      1225           77.1
+                              MULT2         6          100.0
+                              PFUMX        67           33.0
+                              TOTAL      1519
+----------------------------------------------------------------------
+Report for cell sram64kx8("sram64kx8.dat")(1,13).v1
+Instance Path : RAM
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                             FD1S1A       499          100.0
+                            FD1S1AY        13          100.0
+                            L6MUX21        96          100.0
+                               LUT4       363           22.9
+                              PFUMX       136           67.0
+                              TOTAL      1107

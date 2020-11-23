@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Nov 20 10:28:18 2020
+Mon Nov 23 13:57:07 2020
 
 
 Command Line:  synthesis -f MCPU_impl1_lattice.synproj -gui -msgset C:/Users/10352/vhdl-labs/lab9_MCPU/promote.xml 
@@ -91,8 +91,8 @@ Analyzing VHDL file c:/users/10352/vhdl-labs/lab9_mcpu/sram64kx8.vhd. VHDL-1481
     <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab9_mcpu/sram64kx8.vhd(23): " arg1="sram_behaviour" arg2="c:/users/10352/vhdl-labs/lab9_mcpu/sram64kx8.vhd" arg3="23"  />
 unit cpu2system is not yet analyzed. VHDL-1485
 Analyzing VHDL file c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd. VHDL-1481
-    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(9): " arg1="cpu8bit2" arg2="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd" arg3="9"  />
-    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(20): " arg1="cpu_arch" arg2="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd" arg3="20"  />
+    <postMsg mid="35921012" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(5): " arg1="cpu8bit2" arg2="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd" arg3="5"  />
+    <postMsg mid="35921010" type="Info"    dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(16): " arg1="cpu_arch" arg2="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd" arg3="16"  />
 unit cpu2system is not yet analyzed. VHDL-1485
 unit cpu2system is not yet analyzed. VHDL-1485
 c:/users/10352/vhdl-labs/lab9_mcpu/cpu2system.vhd(7): executing cpu2system(arch)
@@ -116,6 +116,69 @@ Top-level module name = cpu2system.
 
 
 
+SCUBA, Version Diamond (64-bit) 3.11.0.396.4
+Mon Nov 23 13:57:09 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+BEGIN SCUBA Module Synthesis
+
+    Issued command   : c:/lscc/diamond/3.11_x64/ispfpga/bin/nt64/scuba.exe -w -n mult_5u_5u -lang verilog -bb -arch xo2c00 -type dspmult -pfu_mult -widtha 5 -widthb 5 -widthp 10 -pl_stages 0 
+    Circuit name     : mult_5u_5u
+    Module type      : dspmult
+    Module Version   : 4.2
+    Ports            : 
+	Inputs       : A[4:0], B[4:0]
+	Outputs      : P[9:0]
+    I/O buffer       : not inserted
+    EDIF output      : mult_5u_5u.edn
+    Verilog output   : mult_5u_5u.v
+    Verilog template : mult_5u_5u_tmpl.v
+    Verilog testbench: tb_mult_5u_5u_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : mult_5u_5u.srp
+    Estimated Resource Usage:
+            LUT : 41
+
+END   SCUBA Module Synthesis
+Analyzing Verilog file C:/lscc/diamond/3.11_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Analyzing Verilog file mult_5u_5u.v. VERI-1482
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n296"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n361"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n362"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n428"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n544"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n613"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n614"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n684"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n752"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n753"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n754"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n824"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n893"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n894"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="0" arg0="" arg1="\CPU/n964"  />
+    <postMsg mid="35931013" type="Warning" dynamic="2" navigation="2" arg0="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd(35): " arg1="a[4]" arg2="c:/users/10352/vhdl-labs/lab9_mcpu/tb02cpu2.vhd" arg3="35"  />
+######## Missing driver on net \CPU/n296. Patching with GND.
+######## Missing driver on net \CPU/n361. Patching with GND.
+######## Missing driver on net \CPU/n362. Patching with GND.
+######## Missing driver on net \CPU/n428. Patching with GND.
+######## Missing driver on net \CPU/n544. Patching with GND.
+######## Missing driver on net \CPU/n613. Patching with GND.
+######## Missing driver on net \CPU/n614. Patching with GND.
+######## Missing driver on net \CPU/n684. Patching with GND.
+######## Missing driver on net \CPU/n752. Patching with GND.
+######## Missing driver on net \CPU/n753. Patching with GND.
+######## Missing driver on net \CPU/n754. Patching with GND.
+######## Missing driver on net \CPU/n824. Patching with GND.
+######## Missing driver on net \CPU/n893. Patching with GND.
+######## Missing driver on net \CPU/n894. Patching with GND.
+######## Missing driver on net \CPU/n964. Patching with GND.
 GSR instance connected to net reset_c.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -132,25 +195,28 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-   1190 blocks expanded
+   2641 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file MCPU_impl1.ngd.
 
 ################### Begin Area Report (cpu2system)######################
-Number of register bits => 536 of 4635 (11 % )
-CCU2D => 6
-FD1P3AX => 15
-FD1S1A => 487
-FD1S1AY => 25
+Number of register bits => 547 of 4635 (11 % )
+AND2 => 7
+CCU2D => 170
+FADD2B => 9
+FD1P3AX => 26
+FD1S1A => 499
+FD1S1AY => 13
 FD1S3AX => 6
 FD1S3IX => 3
 GSR => 1
 IB => 2
 L6MUX21 => 96
-LUT4 => 401
+LUT4 => 1588
+MULT2 => 6
 OB => 9
-PFUMX => 136
+PFUMX => 203
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -160,89 +226,89 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 65
-  Net : clk_c, loads : 26
-  Net : CPU/mem_50__7__N_253, loads : 8
-  Net : CPU/mem_51__7__N_256, loads : 8
-  Net : CPU/mem_2__7__N_109, loads : 8
-  Net : CPU/mem_52__7__N_259, loads : 8
-  Net : CPU/mem_4__7__N_115, loads : 8
-  Net : CPU/mem_55__7__N_268, loads : 8
-  Net : CPU/mem_8__7__N_127, loads : 8
-  Net : CPU/mem_56__7__N_271, loads : 8
-  Net : CPU/mem_11__7__N_136, loads : 8
-  Net : CPU/mem_58__7__N_277, loads : 8
-  Net : CPU/mem_15__7__N_148, loads : 8
-  Net : CPU/mem_59__7__N_280, loads : 8
-  Net : CPU/mem_18__7__N_157, loads : 8
-  Net : CPU/mem_60__7__N_283, loads : 8
-  Net : CPU/mem_20__7__N_163, loads : 8
-  Net : CPU/mem_63__7__N_292, loads : 8
-  Net : CPU/mem_24__7__N_175, loads : 8
-  Net : CPU/mem_44__7__N_235, loads : 8
-  Net : CPU/mem_27__7__N_184, loads : 8
-  Net : CPU/mem_47__7__N_244, loads : 8
-  Net : CPU/mem_31__7__N_196, loads : 8
-  Net : CPU/mem_48__7__N_247, loads : 8
-  Net : CPU/mem_34__7__N_205, loads : 8
-  Net : CPU/mem_0__7__N_101, loads : 8
-  Net : CPU/mem_36__7__N_211, loads : 8
-  Net : CPU/mem_3__7__N_112, loads : 8
-  Net : CPU/mem_40__7__N_223, loads : 8
-  Net : CPU/mem_7__7__N_124, loads : 8
-  Net : CPU/mem_43__7__N_232, loads : 8
-  Net : CPU/mem_10__7__N_133, loads : 8
-  Net : CPU/mem_32__7__N_199, loads : 8
-  Net : CPU/mem_12__7__N_139, loads : 8
-  Net : CPU/mem_39__7__N_220, loads : 8
-  Net : CPU/mem_16__7__N_151, loads : 8
-  Net : CPU/mem_28__7__N_187, loads : 8
-  Net : CPU/mem_19__7__N_160, loads : 8
-  Net : CPU/mem_42__7__N_229, loads : 8
-  Net : CPU/mem_23__7__N_172, loads : 8
-  Net : CPU/mem_35__7__N_208, loads : 8
-  Net : CPU/mem_26__7__N_181, loads : 8
-  Net : RAM/mem_62__7__N_289, loads : 8
-  Net : RAM/mem_30__7__N_193, loads : 8
-  Net : RAM/mem_61__7__N_286, loads : 8
-  Net : RAM/mem_29__7__N_190, loads : 8
-  Net : RAM/mem_54__7__N_265, loads : 8
-  Net : RAM/mem_25__7__N_178, loads : 8
-  Net : RAM/mem_49__7__N_250, loads : 8
-  Net : RAM/mem_22__7__N_169, loads : 8
-  Net : RAM/mem_45__7__N_238, loads : 8
-  Net : RAM/mem_21__7__N_166, loads : 8
-  Net : RAM/mem_38__7__N_217, loads : 8
-  Net : RAM/mem_17__7__N_154, loads : 8
-  Net : RAM/mem_33__7__N_202, loads : 8
-  Net : RAM/mem_14__7__N_145, loads : 8
-  Net : RAM/mem_53__7__N_262, loads : 8
-  Net : RAM/mem_13__7__N_142, loads : 8
-  Net : RAM/mem_41__7__N_226, loads : 8
-  Net : RAM/mem_9__7__N_130, loads : 8
-  Net : RAM/mem_57__7__N_274, loads : 8
-  Net : RAM/mem_6__7__N_121, loads : 8
-  Net : RAM/mem_37__7__N_214, loads : 8
-  Net : RAM/mem_5__7__N_118, loads : 8
-  Net : RAM/mem_46__7__N_241, loads : 8
-  Net : RAM/mem_1__7__N_106, loads : 8
+  Net : clk_c, loads : 37
+  Net : RAM/mem_32__7__N_204, loads : 8
+  Net : RAM/mem_31__7__N_201, loads : 8
+  Net : RAM/mem_62__7__N_294, loads : 8
+  Net : RAM/mem_30__7__N_198, loads : 8
+  Net : RAM/mem_60__7__N_288, loads : 8
+  Net : RAM/mem_29__7__N_195, loads : 8
+  Net : RAM/mem_58__7__N_282, loads : 8
+  Net : RAM/mem_28__7__N_192, loads : 8
+  Net : RAM/mem_56__7__N_276, loads : 8
+  Net : RAM/mem_27__7__N_189, loads : 8
+  Net : RAM/mem_54__7__N_270, loads : 8
+  Net : RAM/mem_26__7__N_186, loads : 8
+  Net : RAM/mem_52__7__N_264, loads : 8
+  Net : RAM/mem_25__7__N_183, loads : 8
+  Net : RAM/mem_50__7__N_258, loads : 8
+  Net : RAM/mem_24__7__N_180, loads : 8
+  Net : RAM/mem_48__7__N_252, loads : 8
+  Net : RAM/mem_23__7__N_177, loads : 8
+  Net : RAM/mem_46__7__N_246, loads : 8
+  Net : RAM/mem_22__7__N_174, loads : 8
+  Net : RAM/mem_44__7__N_240, loads : 8
+  Net : RAM/mem_21__7__N_171, loads : 8
+  Net : RAM/mem_42__7__N_234, loads : 8
+  Net : RAM/mem_20__7__N_168, loads : 8
+  Net : RAM/mem_40__7__N_228, loads : 8
+  Net : RAM/mem_19__7__N_165, loads : 8
+  Net : RAM/mem_38__7__N_222, loads : 8
+  Net : RAM/mem_18__7__N_162, loads : 8
+  Net : RAM/mem_36__7__N_216, loads : 8
+  Net : RAM/mem_17__7__N_159, loads : 8
+  Net : RAM/mem_34__7__N_210, loads : 8
+  Net : RAM/mem_16__7__N_156, loads : 8
+  Net : RAM/mem_63__7__N_297, loads : 8
+  Net : RAM/mem_15__7__N_153, loads : 8
+  Net : RAM/mem_59__7__N_285, loads : 8
+  Net : RAM/mem_14__7__N_150, loads : 8
+  Net : RAM/mem_55__7__N_273, loads : 8
+  Net : RAM/mem_13__7__N_147, loads : 8
+  Net : RAM/mem_51__7__N_261, loads : 8
+  Net : RAM/mem_12__7__N_144, loads : 8
+  Net : RAM/mem_47__7__N_249, loads : 8
+  Net : RAM/mem_11__7__N_141, loads : 8
+  Net : RAM/mem_43__7__N_237, loads : 8
+  Net : RAM/mem_10__7__N_138, loads : 8
+  Net : RAM/mem_39__7__N_225, loads : 8
+  Net : RAM/mem_9__7__N_135, loads : 8
+  Net : RAM/mem_35__7__N_213, loads : 8
+  Net : RAM/mem_8__7__N_132, loads : 8
+  Net : RAM/mem_61__7__N_291, loads : 8
+  Net : RAM/mem_7__7__N_129, loads : 8
+  Net : RAM/mem_53__7__N_267, loads : 8
+  Net : RAM/mem_6__7__N_126, loads : 8
+  Net : RAM/mem_45__7__N_243, loads : 8
+  Net : RAM/mem_5__7__N_123, loads : 8
+  Net : RAM/mem_37__7__N_219, loads : 8
+  Net : RAM/mem_4__7__N_120, loads : 8
+  Net : RAM/mem_57__7__N_279, loads : 8
+  Net : RAM/mem_3__7__N_117, loads : 8
+  Net : RAM/mem_41__7__N_231, loads : 8
+  Net : RAM/mem_2__7__N_114, loads : 8
+  Net : RAM/mem_49__7__N_255, loads : 8
+  Net : RAM/mem_1__7__N_111, loads : 8
+  Net : RAM/mem_33__7__N_207, loads : 8
+  Net : RAM/mem_0__7__N_106, loads : 8
 Clock Enable Nets
 Number of Clock Enables: 3
 Top 3 highest fanout Clock Enables:
-  Net : CPU/clk_c_enable_15, loads : 8
-  Net : CPU/clk_c_enable_7, loads : 6
-  Net : CPU/clk_c_enable_8, loads : 1
+  Net : CPU/clk_c_enable_26, loads : 16
+  Net : CPU/clk_c_enable_22, loads : 9
+  Net : CPU/clk_c_enable_20, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : CPU/address_0, loads : 268
+  Net : CPU/address_0, loads : 283
   Net : CPU/address_1, loads : 139
-  Net : CPU/address_2, loads : 89
-  Net : RAM/data_5, loads : 70
-  Net : RAM/data_7, loads : 69
-  Net : RAM/data_6, loads : 69
-  Net : RAM/data_4, loads : 66
-  Net : RAM/data_3, loads : 66
-  Net : RAM/data_2, loads : 66
-  Net : RAM/data_1, loads : 66
+  Net : CPU/akku_o_c_2, loads : 81
+  Net : CPU/address_2, loads : 74
+  Net : CPU/akku_o_c_3, loads : 71
+  Net : CPU/akku_o_c_1, loads : 70
+  Net : CPU/akku_o_c_4, loads : 69
+  Net : RAM/data_5, loads : 69
+  Net : RAM/data_7, loads : 68
+  Net : RAM/data_6, loads : 68
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -252,199 +318,199 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk64 [get_nets mem_0__7__N_101]        |  200.000 MHz|  109.745 MHz|     8 *
+clk64 [get_nets \RAM/mem_0__7__N_106]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk63 [get_nets \RAM/mem_1__7__N_106]   |  200.000 MHz|  109.745 MHz|     8 *
+clk63 [get_nets \RAM/mem_1__7__N_111]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk62 [get_nets mem_2__7__N_109]        |  200.000 MHz|  109.745 MHz|     8 *
+clk62 [get_nets \RAM/mem_2__7__N_114]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk61 [get_nets mem_3__7__N_112]        |  200.000 MHz|  109.745 MHz|     8 *
+clk61 [get_nets \RAM/mem_63__7__N_297]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk60 [get_nets mem_4__7__N_115]        |  200.000 MHz|  109.745 MHz|     8 *
+clk60 [get_nets \RAM/mem_62__7__N_294]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk59 [get_nets mem_63__7__N_292]       |  200.000 MHz|  109.745 MHz|     8 *
+clk59 [get_nets \RAM/mem_61__7__N_291]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk58 [get_nets \RAM/mem_62__7__N_289]  |  200.000 MHz|  109.745 MHz|     8 *
+clk58 [get_nets \RAM/mem_60__7__N_288]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk57 [get_nets \RAM/mem_61__7__N_286]  |  200.000 MHz|  109.745 MHz|     8 *
+clk57 [get_nets \RAM/mem_59__7__N_285]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk56 [get_nets mem_60__7__N_283]       |  200.000 MHz|  109.745 MHz|     8 *
+clk56 [get_nets \RAM/mem_58__7__N_282]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk55 [get_nets mem_59__7__N_280]       |  200.000 MHz|  109.745 MHz|     8 *
+clk55 [get_nets \RAM/mem_57__7__N_279]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk54 [get_nets mem_58__7__N_277]       |  200.000 MHz|  109.745 MHz|     8 *
+clk54 [get_nets \RAM/mem_56__7__N_276]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk53 [get_nets \RAM/mem_57__7__N_274]  |  200.000 MHz|  109.745 MHz|     8 *
+clk53 [get_nets \RAM/mem_55__7__N_273]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk52 [get_nets mem_56__7__N_271]       |  200.000 MHz|  109.745 MHz|     8 *
+clk52 [get_nets \RAM/mem_54__7__N_270]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk51 [get_nets mem_55__7__N_268]       |  200.000 MHz|  109.745 MHz|     8 *
+clk51 [get_nets \RAM/mem_53__7__N_267]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk50 [get_nets \RAM/mem_54__7__N_265]  |  200.000 MHz|  109.745 MHz|     8 *
+clk50 [get_nets \RAM/mem_52__7__N_264]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk49 [get_nets \RAM/mem_53__7__N_262]  |  200.000 MHz|  109.745 MHz|     8 *
+clk49 [get_nets \RAM/mem_51__7__N_261]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk48 [get_nets mem_52__7__N_259]       |  200.000 MHz|  109.745 MHz|     8 *
+clk48 [get_nets \RAM/mem_50__7__N_258]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk47 [get_nets mem_51__7__N_256]       |  200.000 MHz|  109.745 MHz|     8 *
+clk47 [get_nets \RAM/mem_49__7__N_255]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk46 [get_nets mem_50__7__N_253]       |  200.000 MHz|  109.745 MHz|     8 *
+clk46 [get_nets \RAM/mem_48__7__N_252]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk45 [get_nets \RAM/mem_49__7__N_250]  |  200.000 MHz|  109.745 MHz|     8 *
+clk45 [get_nets \RAM/mem_47__7__N_249]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk44 [get_nets mem_48__7__N_247]       |  200.000 MHz|  109.745 MHz|     8 *
+clk44 [get_nets \RAM/mem_46__7__N_246]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk43 [get_nets mem_47__7__N_244]       |  200.000 MHz|  109.745 MHz|     8 *
+clk43 [get_nets \RAM/mem_45__7__N_243]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk42 [get_nets \RAM/mem_46__7__N_241]  |  200.000 MHz|  109.745 MHz|     8 *
+clk42 [get_nets \RAM/mem_44__7__N_240]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk41 [get_nets \RAM/mem_45__7__N_238]  |  200.000 MHz|  109.745 MHz|     8 *
+clk41 [get_nets \RAM/mem_43__7__N_237]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk40 [get_nets mem_44__7__N_235]       |  200.000 MHz|  109.745 MHz|     8 *
+clk40 [get_nets \RAM/mem_42__7__N_234]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk39 [get_nets mem_43__7__N_232]       |  200.000 MHz|  109.745 MHz|     8 *
+clk39 [get_nets \RAM/mem_41__7__N_231]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk38 [get_nets mem_42__7__N_229]       |  200.000 MHz|  109.745 MHz|     8 *
+clk38 [get_nets \RAM/mem_40__7__N_228]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk37 [get_nets \RAM/mem_41__7__N_226]  |  200.000 MHz|  109.745 MHz|     8 *
+clk37 [get_nets \RAM/mem_39__7__N_225]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk36 [get_nets mem_40__7__N_223]       |  200.000 MHz|  109.745 MHz|     8 *
+clk36 [get_nets \RAM/mem_38__7__N_222]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk35 [get_nets mem_39__7__N_220]       |  200.000 MHz|  109.745 MHz|     8 *
+clk35 [get_nets \RAM/mem_37__7__N_219]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk34 [get_nets \RAM/mem_38__7__N_217]  |  200.000 MHz|  109.745 MHz|     8 *
+clk34 [get_nets \RAM/mem_36__7__N_216]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk33 [get_nets \RAM/mem_37__7__N_214]  |  200.000 MHz|  109.745 MHz|     8 *
+clk33 [get_nets \RAM/mem_35__7__N_213]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk32 [get_nets mem_36__7__N_211]       |  200.000 MHz|  109.745 MHz|     8 *
+clk32 [get_nets \RAM/mem_34__7__N_210]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk31 [get_nets mem_35__7__N_208]       |  200.000 MHz|  109.745 MHz|     8 *
+clk31 [get_nets \RAM/mem_33__7__N_207]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk30 [get_nets mem_34__7__N_205]       |  200.000 MHz|  109.745 MHz|     8 *
+clk30 [get_nets \RAM/mem_32__7__N_204]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk29 [get_nets \RAM/mem_33__7__N_202]  |  200.000 MHz|  109.745 MHz|     8 *
+clk29 [get_nets \RAM/mem_31__7__N_201]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk28 [get_nets mem_32__7__N_199]       |  200.000 MHz|  109.745 MHz|     8 *
+clk28 [get_nets \RAM/mem_30__7__N_198]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk27 [get_nets mem_31__7__N_196]       |  200.000 MHz|  109.745 MHz|     8 *
+clk27 [get_nets \RAM/mem_29__7__N_195]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk26 [get_nets \RAM/mem_30__7__N_193]  |  200.000 MHz|  109.745 MHz|     8 *
+clk26 [get_nets \RAM/mem_28__7__N_192]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk25 [get_nets \RAM/mem_29__7__N_190]  |  200.000 MHz|  109.745 MHz|     8 *
+clk25 [get_nets \RAM/mem_27__7__N_189]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk24 [get_nets mem_28__7__N_187]       |  200.000 MHz|  109.745 MHz|     8 *
+clk24 [get_nets \RAM/mem_26__7__N_186]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk23 [get_nets mem_27__7__N_184]       |  200.000 MHz|  109.745 MHz|     8 *
+clk23 [get_nets \RAM/mem_25__7__N_183]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk22 [get_nets mem_26__7__N_181]       |  200.000 MHz|  109.745 MHz|     8 *
+clk22 [get_nets \RAM/mem_24__7__N_180]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk21 [get_nets mem_8__7__N_127]        |  200.000 MHz|  109.745 MHz|     8 *
+clk21 [get_nets \RAM/mem_23__7__N_177]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk20 [get_nets mem_7__7__N_124]        |  200.000 MHz|  109.745 MHz|     8 *
+clk20 [get_nets \RAM/mem_22__7__N_174]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk19 [get_nets \RAM/mem_25__7__N_178]  |  200.000 MHz|  109.745 MHz|     8 *
+clk19 [get_nets \RAM/mem_21__7__N_171]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk18 [get_nets \RAM/mem_6__7__N_121]   |  200.000 MHz|  109.745 MHz|     8 *
+clk18 [get_nets \RAM/mem_20__7__N_168]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk17 [get_nets \RAM/mem_5__7__N_118]   |  200.000 MHz|  109.745 MHz|     8 *
+clk17 [get_nets \RAM/mem_19__7__N_165]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk16 [get_nets mem_24__7__N_175]       |  200.000 MHz|  109.745 MHz|     8 *
+clk16 [get_nets \RAM/mem_18__7__N_162]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk15 [get_nets mem_23__7__N_172]       |  200.000 MHz|  109.745 MHz|     8 *
+clk15 [get_nets \RAM/mem_17__7__N_159]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk14 [get_nets \RAM/mem_22__7__N_169]  |  200.000 MHz|  109.745 MHz|     8 *
+clk14 [get_nets \RAM/mem_16__7__N_156]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk13 [get_nets \RAM/mem_21__7__N_166]  |  200.000 MHz|  109.745 MHz|     8 *
+clk13 [get_nets \RAM/mem_15__7__N_153]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk12 [get_nets mem_20__7__N_163]       |  200.000 MHz|  109.745 MHz|     8 *
+clk12 [get_nets \RAM/mem_14__7__N_150]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk11 [get_nets mem_19__7__N_160]       |  200.000 MHz|  109.745 MHz|     8 *
+clk11 [get_nets \RAM/mem_13__7__N_147]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk10 [get_nets mem_18__7__N_157]       |  200.000 MHz|  109.745 MHz|     8 *
+clk10 [get_nets \RAM/mem_12__7__N_144]  |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk9 [get_nets \RAM/mem_17__7__N_154]   |  200.000 MHz|  109.745 MHz|     8 *
+clk9 [get_nets \RAM/mem_11__7__N_141]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk8 [get_nets mem_16__7__N_151]        |  200.000 MHz|  109.745 MHz|     8 *
+clk8 [get_nets \RAM/mem_10__7__N_138]   |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk7 [get_nets mem_15__7__N_148]        |  200.000 MHz|  109.745 MHz|     8 *
+clk7 [get_nets \RAM/mem_9__7__N_135]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk6 [get_nets \RAM/mem_14__7__N_145]   |  200.000 MHz|  109.745 MHz|     8 *
+clk6 [get_nets \RAM/mem_8__7__N_132]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk5 [get_nets \RAM/mem_13__7__N_142]   |  200.000 MHz|  109.745 MHz|     8 *
+clk5 [get_nets \RAM/mem_7__7__N_129]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk4 [get_nets mem_12__7__N_139]        |  200.000 MHz|  109.745 MHz|     8 *
+clk4 [get_nets \RAM/mem_6__7__N_126]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk3 [get_nets mem_11__7__N_136]        |  200.000 MHz|  109.745 MHz|     8 *
+clk3 [get_nets \RAM/mem_5__7__N_123]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets clk_c]                   |  200.000 MHz|   70.043 MHz|    12 *
+clk2 [get_nets \RAM/mem_4__7__N_120]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets mem_10__7__N_133]        |  200.000 MHz|  109.745 MHz|     8 *
+clk1 [get_nets \RAM/mem_3__7__N_117]    |  200.000 MHz|  107.400 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets \RAM/mem_9__7__N_130]    |  200.000 MHz|  109.745 MHz|     8 *
+clk0 [get_nets clk_c]                   |  200.000 MHz|    4.804 MHz|   143 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -452,10 +518,10 @@ clk0 [get_nets \RAM/mem_9__7__N_130]    |  200.000 MHz|  109.745 MHz|     8 *
 65 constraints not met.
 
 
-Peak Memory Usage: 86.105  MB
+Peak Memory Usage: 177.348  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.891  secs
+Elapsed CPU time for LSE flow : 16.281  secs
 --------------------------------------------------------------
 
 map -a "MachXO2" -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial   "MCPU_impl1.ngd" -o "MCPU_impl1_map.ncd" -pr "MCPU_impl1.prf" -mp "MCPU_impl1.mrp" -lpf "C:/Users/10352/vhdl-labs/lab9_MCPU/impl1/MCPU_impl1.lpf" -lpf "C:/Users/10352/vhdl-labs/lab9_MCPU/MCPU.lpf" -c 0           
@@ -488,21 +554,23 @@ Removing unused logic...
 
 Optimizing...
 
+5 CCU2 constant inputs absorbed.
+
 
 
 
 Design Summary:
-   Number of registers:    536 out of  4635 (12%)
-      PFU registers:          536 out of  4320 (12%)
+   Number of registers:    547 out of  4635 (12%)
+      PFU registers:          547 out of  4320 (13%)
       PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       406 out of  2160 (19%)
-      SLICEs as Logic/ROM:    406 out of  2160 (19%)
+   Number of SLICEs:       987 out of  2160 (46%)
+      SLICEs as Logic/ROM:    987 out of  2160 (46%)
       SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:          6 out of  2160 (0%)
-   Number of LUT4s:        413 out of  4320 (10%)
-      Number used as logic LUTs:        401
+      SLICEs as Carry:        185 out of  2160 (9%)
+   Number of LUT4s:        1972 out of  4320 (46%)
+      Number used as logic LUTs:        1602
       Number used as distributed RAM:     0
-      Number used as ripple logic:       12
+      Number used as ripple logic:      370
       Number used as shift registers:     0
    Number of PIO sites used: 11 + 4(JTAG) out of 105 (14%)
    Number of block RAMs:  0 out of 10 (0%)
@@ -528,90 +596,90 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  65
-     Net clk_c: 14 loads, 14 rising, 0 falling (Driver: PIO clk )
-     Net RAM/mem_63__7__N_292: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_15 )
-     Net RAM/mem_62__7__N_289: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_73 )
-     Net RAM/mem_61__7__N_286: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_61 )
-     Net RAM/mem_60__7__N_283: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_14 )
-     Net RAM/mem_59__7__N_280: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_13 )
-     Net RAM/mem_58__7__N_277: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_12 )
-     Net RAM/mem_57__7__N_274: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_51 )
-     Net RAM/mem_56__7__N_271: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_11 )
-     Net RAM/mem_55__7__N_268: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_20 )
-     Net RAM/mem_54__7__N_265: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_70 )
-     Net RAM/mem_53__7__N_262: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_63 )
-     Net RAM/mem_52__7__N_259: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_19 )
-     Net RAM/mem_51__7__N_256: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_18 )
-     Net RAM/mem_50__7__N_253: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_17 )
-     Net RAM/mem_49__7__N_250: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_52 )
-     Net RAM/mem_48__7__N_247: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_16 )
-     Net RAM/mem_47__7__N_244: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_25 )
-     Net RAM/mem_46__7__N_241: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_72 )
-     Net RAM/mem_45__7__N_238: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_64 )
-     Net RAM/mem_44__7__N_235: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_24 )
-     Net RAM/mem_43__7__N_232: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_23 )
-     Net RAM/mem_42__7__N_229: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_22 )
-     Net RAM/mem_41__7__N_226: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_53 )
-     Net RAM/mem_40__7__N_223: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_21 )
-     Net RAM/mem_39__7__N_220: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_30 )
-     Net RAM/mem_38__7__N_217: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_4_lut_adj_62 )
-     Net RAM/mem_37__7__N_214: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_65 )
-     Net RAM/mem_36__7__N_211: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_29 )
-     Net RAM/mem_35__7__N_208: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_28 )
-     Net RAM/mem_34__7__N_205: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_27 )
-     Net RAM/mem_33__7__N_202: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_54 )
-     Net RAM/mem_32__7__N_199: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_26 )
-     Net RAM/mem_31__7__N_196: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_39 )
-     Net RAM/mem_30__7__N_193: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_4_lut )
-     Net RAM/mem_29__7__N_190: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_66 )
-     Net RAM/mem_28__7__N_187: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_34 )
-     Net RAM/mem_27__7__N_184: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_33 )
-     Net RAM/mem_26__7__N_181: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_32 )
-     Net RAM/mem_25__7__N_178: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_56 )
-     Net RAM/mem_24__7__N_175: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_31 )
-     Net RAM/mem_23__7__N_172: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_44 )
-     Net RAM/mem_22__7__N_169: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_69 )
-     Net RAM/mem_21__7__N_166: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_67 )
-     Net RAM/mem_20__7__N_163: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_43 )
-     Net RAM/mem_19__7__N_160: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_42 )
-     Net RAM/mem_18__7__N_157: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_41 )
-     Net RAM/mem_17__7__N_154: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_58 )
-     Net RAM/mem_16__7__N_151: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_40 )
-     Net RAM/mem_15__7__N_148: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_8 )
-     Net RAM/mem_14__7__N_145: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_57 )
-     Net RAM/mem_13__7__N_142: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_68 )
-     Net RAM/mem_12__7__N_139: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_9 )
-     Net RAM/mem_11__7__N_136: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_47 )
-     Net RAM/mem_10__7__N_133: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_46 )
-     Net RAM/mem_9__7__N_130: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_59 )
-     Net RAM/mem_8__7__N_127: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_45 )
-     Net RAM/mem_7__7__N_124: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_10 )
-     Net RAM/mem_6__7__N_121: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_55 )
-     Net RAM/mem_5__7__N_118: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_60 )
-     Net RAM/mem_4__7__N_115: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_48 )
-     Net RAM/mem_3__7__N_112: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_49 )
-     Net RAM/mem_2__7__N_109: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut_adj_50 )
-     Net RAM/mem_1__7__N_106: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut )
-     Net RAM/mem_0__7__N_101: 4 loads, 4 rising, 0 falling (Driver: CPU/i1_2_lut_3_lut_4_lut )
+     Net clk_c: 23 loads, 23 rising, 0 falling (Driver: PIO clk )
+     Net RAM/mem_63__7__N_297: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_14 )
+     Net RAM/mem_62__7__N_294: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut )
+     Net RAM/mem_61__7__N_291: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_45 )
+     Net RAM/mem_60__7__N_288: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_46 )
+     Net RAM/mem_59__7__N_285: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_48 )
+     Net RAM/mem_58__7__N_282: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_49 )
+     Net RAM/mem_57__7__N_279: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_55 )
+     Net RAM/mem_56__7__N_276: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_56 )
+     Net RAM/mem_55__7__N_273: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_15 )
+     Net RAM/mem_54__7__N_270: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_18 )
+     Net RAM/mem_53__7__N_267: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_10 )
+     Net RAM/mem_52__7__N_264: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_11 )
+     Net RAM/mem_51__7__N_261: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_12 )
+     Net RAM/mem_50__7__N_258: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_13 )
+     Net RAM/mem_49__7__N_255: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_70 )
+     Net RAM/mem_48__7__N_252: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_69 )
+     Net RAM/mem_47__7__N_249: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_16 )
+     Net RAM/mem_46__7__N_246: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_23 )
+     Net RAM/mem_45__7__N_243: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_22 )
+     Net RAM/mem_44__7__N_240: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_21 )
+     Net RAM/mem_43__7__N_237: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_20 )
+     Net RAM/mem_42__7__N_234: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_19 )
+     Net RAM/mem_41__7__N_231: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_68 )
+     Net RAM/mem_40__7__N_228: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_67 )
+     Net RAM/mem_39__7__N_225: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_8 )
+     Net RAM/mem_38__7__N_222: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_28 )
+     Net RAM/mem_37__7__N_219: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_27 )
+     Net RAM/mem_36__7__N_216: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_26 )
+     Net RAM/mem_35__7__N_213: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_25 )
+     Net RAM/mem_34__7__N_210: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_24 )
+     Net RAM/mem_33__7__N_207: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_66 )
+     Net RAM/mem_32__7__N_204: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_65 )
+     Net RAM/mem_31__7__N_201: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_9 )
+     Net RAM/mem_30__7__N_198: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_33 )
+     Net RAM/mem_29__7__N_195: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_32 )
+     Net RAM/mem_28__7__N_192: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_31 )
+     Net RAM/mem_27__7__N_189: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_30 )
+     Net RAM/mem_26__7__N_186: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_29 )
+     Net RAM/mem_25__7__N_183: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_64 )
+     Net RAM/mem_24__7__N_180: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_63 )
+     Net RAM/mem_23__7__N_177: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_39 )
+     Net RAM/mem_22__7__N_174: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_38 )
+     Net RAM/mem_21__7__N_171: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_37 )
+     Net RAM/mem_20__7__N_168: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_36 )
+     Net RAM/mem_19__7__N_165: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_35 )
+     Net RAM/mem_18__7__N_162: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_34 )
+     Net RAM/mem_17__7__N_159: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_62 )
+     Net RAM/mem_16__7__N_156: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_61 )
+     Net RAM/mem_15__7__N_153: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_17 )
+     Net RAM/mem_14__7__N_150: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_44 )
+     Net RAM/mem_13__7__N_147: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_43 )
+     Net RAM/mem_12__7__N_144: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_42 )
+     Net RAM/mem_11__7__N_141: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_41 )
+     Net RAM/mem_10__7__N_138: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_40 )
+     Net RAM/mem_9__7__N_135: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_60 )
+     Net RAM/mem_8__7__N_132: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_59 )
+     Net RAM/mem_7__7__N_129: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_50 )
+     Net RAM/mem_6__7__N_126: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_51 )
+     Net RAM/mem_5__7__N_123: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_52 )
+     Net RAM/mem_4__7__N_120: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_53 )
+     Net RAM/mem_3__7__N_117: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_54 )
+     Net RAM/mem_2__7__N_114: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_47 )
+     Net RAM/mem_1__7__N_111: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_58 )
+     Net RAM/mem_0__7__N_106: 4 loads, 4 rising, 0 falling (Driver: RAM/i1_2_lut_3_lut_4_lut_adj_57 )
    Number of Clock Enables:  3
-     Net CPU/clk_c_enable_15: 4 loads, 4 LSLICEs
-     Net CPU/clk_c_enable_7: 3 loads, 3 LSLICEs
-     Net CPU/clk_c_enable_8: 1 loads, 1 LSLICEs
+     Net CPU/clk_c_enable_26: 8 loads, 8 LSLICEs
+     Net CPU/clk_c_enable_22: 8 loads, 8 LSLICEs
+     Net CPU/clk_c_enable_20: 1 loads, 1 LSLICEs
    Number of LSRs:  2
-     Net CPU/n1908: 2 loads, 2 LSLICEs
-     Net CPU/n605: 1 loads, 1 LSLICEs
+     Net CPU/n46244: 2 loads, 2 LSLICEs
+     Net CPU/n22192: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net address_0: 269 loads
+     Net address_0: 284 loads
      Net address_1: 140 loads
-     Net address_2: 90 loads
-     Net data_5: 71 loads
-     Net data_6: 70 loads
-     Net data_7: 70 loads
-     Net data_0: 67 loads
-     Net data_1: 67 loads
-     Net data_2: 67 loads
-     Net data_3: 67 loads
+     Net akku_o_c_2: 82 loads
+     Net address_2: 75 loads
+     Net akku_o_c_3: 72 loads
+     Net akku_o_c_1: 71 loads
+     Net akku_o_c_4: 70 loads
+     Net data_5: 70 loads
+     Net data_6: 69 loads
+     Net data_7: 69 loads
  
 
    Number of warnings:  0
@@ -619,9 +687,9 @@ Design Summary:
 
 
 
-Total CPU Time: 0 secs  
-Total REAL Time: 2 secs  
-Peak Memory Usage: 53 MB
+Total CPU Time: 1 secs  
+Total REAL Time: 3 secs  
+Peak Memory Usage: 61 MB
 
 Dumping design to file MCPU_impl1_map.ncd.
 
@@ -652,7 +720,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Fri Nov 20 10:28:27 2020
+Mon Nov 23 13:57:29 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -678,14 +746,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
+Timing errors: 4096  Score: 445322248
+Cumulative negative slack: 445322248
 
-Constraints cover 77780 paths, 65 nets, and 2324 connections (90.22% coverage)
+Constraints cover 2147483647 paths, 65 nets, and 7551 connections (92.74% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Fri Nov 20 10:28:28 2020
+Mon Nov 23 13:57:30 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -714,23 +782,23 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 77780 paths, 65 nets, and 2372 connections (92.08% coverage)
+Constraints cover 2147483647 paths, 65 nets, and 7938 connections (97.49% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 0 (setup), 0 (hold)
-Score: 0 (setup), 0 (hold)
-Cumulative negative slack: 0 (0+0)
+Timing errors: 4096 (setup), 0 (hold)
+Score: 445322248 (setup), 0 (hold)
+Cumulative negative slack: 445322248 (445322248+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
-Total CPU Time: 1 secs 
+Total CPU Time: 2 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 61 MB
+Peak Memory Usage: 75 MB
 
 
 ldbanno "MCPU_impl1_map.ncd" -n Verilog -o "MCPU_impl1_mapvo.vo" -w -neg
@@ -758,9 +826,9 @@ Converting design MCPU_impl1_map.ncd into .ldb format.
 Writing Verilog netlist to file MCPU_impl1_mapvo.vo
 Writing SDF timing to file MCPU_impl1_mapvo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 55 MB
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 77 MB
 
 ldbanno "MCPU_impl1_map.ncd" -n VHDL -o "MCPU_impl1_mapvho.vho" -w -neg
 ldbanno: version Diamond (64-bit) 3.11.0.396.4
@@ -787,9 +855,9 @@ Converting design MCPU_impl1_map.ncd into .ldb format.
 Writing VHDL netlist to file MCPU_impl1_mapvho.vho
 Writing SDF timing to file MCPU_impl1_mapvho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 0 secs 
-Peak Memory Usage: 55 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 77 MB
 
 mpartrce -p "MCPU_impl1.p2t" -f "MCPU_impl1.p3t" -tf "MCPU_impl1.pt" "MCPU_impl1_map.ncd" "MCPU_impl1.ncd"
 
@@ -798,7 +866,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "MCPU_impl1_map.ncd"
-Fri Nov 20 10:28:33 2020
+Mon Nov 23 13:57:38 2020
 
 PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/10352/vhdl-labs/lab9_MCPU/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF MCPU_impl1_map.ncd MCPU_impl1.dir/5_1.ncd MCPU_impl1.prf
@@ -825,19 +893,19 @@ Device utilization summary:
    PIO (prelim)   11+4(JTAG)/280     5% used
                   11+4(JTAG)/105     14% bonded
 
-   SLICE            406/2160         18% used
+   SLICE            987/2160         45% used
 
    GSR                1/1           100% used
 
 
-Number of Signals: 913
-Number of Connections: 2576
+Number of Signals: 2480
+Number of Connections: 8142
 
 Pin Constraint Summary:
    10 out of 11 pins locked (90% locked).
 
 The following 1 signal is selected to use the primary clock routing resources:
-    clk_c (driver: clk, clk load #: 14)
+    clk_c (driver: clk, clk load #: 23)
 
     <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="clk_c" arg1="Primary" arg2="clk" arg3="C1" arg4="Primary"  />
 
@@ -846,18 +914,18 @@ No signal is selected as secondary clock.
 Signal reset_c is selected as Global Set/Reset.
 .
 Starting Placer Phase 0.
-............
-Finished Placer Phase 0.  REAL time: 22 secs 
+..........
+Finished Placer Phase 0.  REAL time: 5 secs 
 
 Starting Placer Phase 1.
-....................
-Placer score = 141933.
-Finished Placer Phase 1.  REAL time: 30 secs 
+............
+Placer score = 9986138.
+Finished Placer Phase 1.  REAL time: 15 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  141519
-Finished Placer Phase 2.  REAL time: 31 secs 
+Placer score =  9675671
+Finished Placer Phase 2.  REAL time: 17 secs 
 
 
 ------------------ Clock Report ------------------
@@ -870,7 +938,7 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 14
+  PRIMARY "clk_c" from comp "clk" on PIO site "C1 (PL4A)", clk load = 23
 
   PRIMARY  : 1 out of 8 (12%)
   SECONDARY: 0 out of 8 (0%)
@@ -899,18 +967,18 @@ I/O Bank Usage Summary:
 | 5        | 1 / 10 ( 10%) | 2.5V       | -         |
 +----------+---------------+------------+-----------+
 
-Total placer CPU time: 24 secs 
+Total placer CPU time: 14 secs 
 
 Dumping design to file MCPU_impl1.dir/5_1.ncd.
 
-0 connections routed; 2576 unrouted.
+0 connections routed; 8142 unrouted.
 Starting router resource preassignment
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=RAM/mem_63__7__N_292 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_62__7__N_289 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_61__7__N_286 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_60__7__N_283 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_59__7__N_280 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_58__7__N_277 loads=4 clock_loads=4&#xA;   Sig   ....   k_loads=4&#xA;   Signal=RAM/mem_2__7__N_109 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_1__7__N_106 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_0__7__N_101 loads=4 clock_loads=4"  />
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=RAM/mem_63__7__N_297 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_62__7__N_294 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_61__7__N_291 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_60__7__N_288 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_59__7__N_285 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_58__7__N_282 loads=4 clock_loads=4&#xA;   Sig   ....   k_loads=4&#xA;   Signal=RAM/mem_2__7__N_114 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_1__7__N_111 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_0__7__N_106 loads=4 clock_loads=4"  />
 
-Completed router resource preassignment. Real time: 41 secs 
+Completed router resource preassignment. Real time: 19 secs 
 
-Start NBR router at 10:29:15 11/20/20
+Start NBR router at 13:57:58 11/23/20
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -925,149 +993,145 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 10:29:16 11/20/20
+Start NBR special constraint process at 13:57:58 11/23/20
 
-Start NBR section for initial routing at 10:29:17 11/20/20
+Start NBR section for initial routing at 13:58:01 11/23/20
+Level 1, iteration 1
+56(0.02%) conflicts; 7077(86.92%) untouched conns; 241556841 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -70.690ns/-241556.841ns; real time: 25 secs 
+Level 2, iteration 1
+259(0.11%) conflicts; 5613(68.94%) untouched conns; 234808233 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.095ns/-234808.233ns; real time: 27 secs 
+Level 3, iteration 1
+211(0.09%) conflicts; 4467(54.86%) untouched conns; 236138611 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.307ns/-236138.612ns; real time: 28 secs 
 Level 4, iteration 1
-260(0.11%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 63.445ns/0.000ns; real time: 45 secs 
+519(0.22%) conflicts; 0(0.00%) untouched conn; 240304238 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.600ns/-240304.238ns; real time: 32 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 10:29:18 11/20/20
+Start NBR section for normal routing at 13:58:10 11/23/20
 Level 4, iteration 1
-202(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 57.783ns/0.000ns; real time: 46 secs 
+484(0.20%) conflicts; 0(0.00%) untouched conn; 237314179 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.819ns/-237314.180ns; real time: 34 secs 
 Level 4, iteration 2
-155(0.06%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 57.783ns/0.000ns; real time: 47 secs 
+393(0.16%) conflicts; 0(0.00%) untouched conn; 237858511 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.943ns/-237858.512ns; real time: 36 secs 
 Level 4, iteration 3
-127(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 58.162ns/0.000ns; real time: 48 secs 
+312(0.13%) conflicts; 0(0.00%) untouched conn; 238410584 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.025ns/-238410.585ns; real time: 38 secs 
 Level 4, iteration 4
-108(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 58.162ns/0.000ns; real time: 48 secs 
+264(0.11%) conflicts; 0(0.00%) untouched conn; 238410584 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.025ns/-238410.585ns; real time: 39 secs 
 Level 4, iteration 5
-99(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 58.168ns/0.000ns; real time: 49 secs 
+230(0.10%) conflicts; 0(0.00%) untouched conn; 238601301 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.979ns/-238601.302ns; real time: 41 secs 
 Level 4, iteration 6
-72(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 58.168ns/0.000ns; real time: 49 secs 
+213(0.09%) conflicts; 0(0.00%) untouched conn; 238601301 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -67.979ns/-238601.302ns; real time: 42 secs 
 Level 4, iteration 7
-65(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 58.168ns/0.000ns; real time: 50 secs 
+179(0.07%) conflicts; 0(0.00%) untouched conn; 239538871 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.300ns/-239538.872ns; real time: 44 secs 
 Level 4, iteration 8
-54(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 58.168ns/0.000ns; real time: 50 secs 
+152(0.06%) conflicts; 0(0.00%) untouched conn; 239538871 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.300ns/-239538.872ns; real time: 45 secs 
 Level 4, iteration 9
-50(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 57.796ns/0.000ns; real time: 51 secs 
+134(0.06%) conflicts; 0(0.00%) untouched conn; 240252848 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.530ns/-240252.848ns; real time: 46 secs 
 Level 4, iteration 10
-46(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 57.796ns/0.000ns; real time: 51 secs 
+114(0.05%) conflicts; 0(0.00%) untouched conn; 240252848 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.530ns/-240252.848ns; real time: 47 secs 
 Level 4, iteration 11
-35(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 57.269ns/0.000ns; real time: 52 secs 
+83(0.03%) conflicts; 0(0.00%) untouched conn; 243240005 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.293ns/-243240.005ns; real time: 48 secs 
 Level 4, iteration 12
-32(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 57.269ns/0.000ns; real time: 52 secs 
+67(0.03%) conflicts; 0(0.00%) untouched conn; 243240005 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.293ns/-243240.005ns; real time: 49 secs 
 Level 4, iteration 13
-23(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 53 secs 
+47(0.02%) conflicts; 0(0.00%) untouched conn; 244589903 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.581ns/-244589.904ns; real time: 50 secs 
 Level 4, iteration 14
-18(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 53 secs 
+51(0.02%) conflicts; 0(0.00%) untouched conn; 244589903 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.581ns/-244589.904ns; real time: 50 secs 
 Level 4, iteration 15
-14(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 53 secs 
+33(0.01%) conflicts; 0(0.00%) untouched conn; 246119875 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.935ns/-246119.875ns; real time: 51 secs 
 Level 4, iteration 16
-9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 53 secs 
+26(0.01%) conflicts; 0(0.00%) untouched conn; 246119875 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.935ns/-246119.875ns; real time: 51 secs 
 Level 4, iteration 17
-9(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 54 secs 
+24(0.01%) conflicts; 0(0.00%) untouched conn; 245951597 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.924ns/-245951.597ns; real time: 52 secs 
 Level 4, iteration 18
-6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 54 secs 
+17(0.01%) conflicts; 0(0.00%) untouched conn; 245951597 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.924ns/-245951.597ns; real time: 53 secs 
 Level 4, iteration 19
-4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 55 secs 
+12(0.00%) conflicts; 0(0.00%) untouched conn; 246008336 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.924ns/-246008.336ns; real time: 54 secs 
 Level 4, iteration 20
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 55 secs 
+6(0.00%) conflicts; 0(0.00%) untouched conn; 246008336 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.924ns/-246008.336ns; real time: 54 secs 
 Level 4, iteration 21
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 55 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 246020547 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.924ns/-246020.547ns; real time: 54 secs 
 Level 4, iteration 22
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 55 secs 
-Level 4, iteration 23
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 56 secs 
-Level 4, iteration 24
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 56 secs 
-Level 4, iteration 25
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 56 secs 
-Level 4, iteration 26
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 56 secs 
-Level 4, iteration 27
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 57 secs 
-Level 4, iteration 28
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 57 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 246020547 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.924ns/-246020.547ns; real time: 55 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 10:29:30 11/20/20
-    <postMsg mid="62001129" type="Warning" dynamic="2" navigation="0" arg0="4096" arg1="250"  />
-
-Start NBR section for re-routing at 10:29:32 11/20/20
+Start NBR section for performance tuning (iteration 1) at 13:58:33 11/23/20
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 59.262ns/0.000ns; real time: 59 secs 
+17(0.01%) conflicts; 0(0.00%) untouched conn; 242441171 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -68.887ns/-242441.172ns; real time: 55 secs 
+Level 4, iteration 2
+8(0.00%) conflicts; 0(0.00%) untouched conn; 245666133 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.957ns/-245666.134ns; real time: 56 secs 
 
-Start NBR section for post-routing at 10:29:32 11/20/20
+Start NBR section for re-routing at 13:58:35 11/23/20
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 245909084 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -69.903ns/-245909.084ns; real time: 58 secs 
+
+Start NBR section for post-routing at 13:58:36 11/23/20
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 59.262ns
-  Timing score<setup> : 0
+  Number of connections with timing violations : 4800 (58.95%)
+  Estimated worst slack<setup> : -69.903ns
+  Timing score<setup> : 284845451
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=RAM/mem_63__7__N_292 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_62__7__N_289 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_61__7__N_286 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_60__7__N_283 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_59__7__N_280 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_58__7__N_277 loads=4 clock_loads=4&#xA;   Sig   ....   k_loads=4&#xA;   Signal=RAM/mem_2__7__N_109 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_1__7__N_106 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_0__7__N_101 loads=4 clock_loads=4"  />
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=RAM/mem_63__7__N_297 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_62__7__N_294 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_61__7__N_291 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_60__7__N_288 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_59__7__N_285 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_58__7__N_282 loads=4 clock_loads=4&#xA;   Sig   ....   k_loads=4&#xA;   Signal=RAM/mem_2__7__N_114 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_1__7__N_111 loads=4 clock_loads=4&#xA;   Signal=RAM/mem_0__7__N_106 loads=4 clock_loads=4"  />
 
-Total CPU time 55 secs 
-Total REAL time: 1 mins 4 secs 
+Total CPU time 1 mins 1 secs 
+Total REAL time: 1 mins 6 secs 
 Completely routed.
-End of route.  2576 routed (100.00%); 0 unrouted.
+End of route.  8142 routed (100.00%); 0 unrouted.
 
-Hold time timing score: 5823, hold timing errors: 4096
+Hold time timing score: 6046, hold timing errors: 4096
 
-Timing score: 0 
+Timing score: 284845451 
 
 Dumping design to file MCPU_impl1.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 59.262
-PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = -2.745
-PAR_SUMMARY::Timing score<hold /<ns>> = 5823.254
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -69.903
+PAR_SUMMARY::Timing score<setup/<ns>> = 284845.451
+PAR_SUMMARY::Worst  slack<hold /<ns>> = -3.188
+PAR_SUMMARY::Timing score<hold /<ns>> = 6046.469
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 55 secs 
-Total REAL time to completion: 1 mins 4 secs 
+Total CPU  time to completion: 1 mins 2 secs 
+Total REAL time to completion: 1 mins 7 secs 
 
 par done!
 
@@ -1104,7 +1168,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Fri Nov 20 10:29:38 2020
+Mon Nov 23 13:58:46 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1130,14 +1194,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 0  Score: 0
-Cumulative negative slack: 0
+Timing errors: 4096  Score: 284845451
+Cumulative negative slack: 284845451
 
-Constraints cover 77780 paths, 65 nets, and 2421 connections (93.98% coverage)
+Constraints cover 2147483647 paths, 65 nets, and 7822 connections (96.07% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Fri Nov 20 10:29:39 2020
+Mon Nov 23 13:58:47 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1163,26 +1227,26 @@ BLOCK RESETPATHS
 Timing summary (Hold):
 ---------------
 
-Timing errors: 4096  Score: 5823254
-Cumulative negative slack: 5823254
+Timing errors: 4096  Score: 6046469
+Cumulative negative slack: 6046469
 
-Constraints cover 77780 paths, 65 nets, and 2394 connections (92.93% coverage)
+Constraints cover 2147483647 paths, 65 nets, and 7946 connections (97.59% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 0 (setup), 4096 (hold)
-Score: 0 (setup), 5823254 (hold)
-Cumulative negative slack: 5823254 (0+5823254)
+Timing errors: 4096 (setup), 4096 (hold)
+Score: 284845451 (setup), 6046469 (hold)
+Cumulative negative slack: 290891920 (284845451+6046469)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 
 Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 62 MB
+Total REAL Time: 3 secs 
+Peak Memory Usage: 76 MB
 
 
 iotiming  "MCPU_impl1.ncd" "MCPU_impl1.prf"
@@ -1260,7 +1324,7 @@ Done.
 ibisgen "MCPU_impl1.pad" "C:/lscc/diamond/3.11_x64/cae_library/ibis/machxo2.ibs"   
 IBIS Models Generator: Lattice Diamond (64-bit) 3.11.0.396.4
 
-Fri Nov 20 10:29:44 2020
+Mon Nov 23 13:58:53 2020
 
 Comp: akku_o[0]
  Site: N13
@@ -1327,7 +1391,7 @@ Comp: akku_o[7]
  SLEW=SLOW 
 -----------------------
 Comp: akku_o[8]
- Site: M9
+ Site: P7
  Type: OUT
  IO_TYPE=LVCMOS25 
  DRIVE=8mA 
@@ -1384,9 +1448,9 @@ Loading preferences from mcpu_impl1.prf.
 Writing Verilog netlist to file MCPU_impl1_vo.vo
 Writing SDF timing to file MCPU_impl1_vo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 58 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 4 secs 
+Peak Memory Usage: 83 MB
 
 ldbanno "MCPU_impl1.ncd" -n VHDL -o "MCPU_impl1_vho.vho"         -w -neg 
 ldbanno: version Diamond (64-bit) 3.11.0.396.4
@@ -1414,9 +1478,9 @@ Loading preferences from mcpu_impl1.prf.
 Writing VHDL netlist to file MCPU_impl1_vho.vho
 Writing SDF timing to file MCPU_impl1_vho.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 58 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 83 MB
 
 tmcheck -par "MCPU_impl1.par" 
 
@@ -1493,9 +1557,9 @@ Creating bit map...
 Bitstream Status: Final           Version 1.95.
  
 Saving bit stream in "MCPU_impl1.bit".
-Total CPU Time: 3 secs 
+Total CPU Time: 4 secs 
 Total REAL Time: 4 secs 
-Peak Memory Usage: 232 MB
+Peak Memory Usage: 261 MB
 
 tmcheck -par "MCPU_impl1.par" 
 
@@ -1582,6 +1646,6 @@ UFM Utilization: General Purpose Flash Memory.
 Available General Purpose Flash Memory:  767 Pages (Page 0 to Page 766).
 Initialized UFM Pages:                     0 Page.
  
-Total CPU Time: 4 secs 
+Total CPU Time: 3 secs 
 Total REAL Time: 5 secs 
-Peak Memory Usage: 225 MB
+Peak Memory Usage: 278 MB
