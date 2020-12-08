@@ -1,6 +1,0 @@
-#Start recording tcl command: 11/19/2020 14:34:22
-#Project Location: C:/Users/10352/vhdl-labs/lab4_digital_clock; Project name: digital_clock
-prj_project open "C:/Users/10352/vhdl-labs/lab4_digital_clock/digital_clock.ldf"
-pgr_project open "C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1/impl1.xcf"
-prj_project close
-#Stop recording: 11/19/2020 14:47:04

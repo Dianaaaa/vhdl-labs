@@ -1,6 +1,0 @@
-#Start recording tcl command: 11/17/2020 21:10:40
-#Project Location: C:/Users/10352/vhdl-labs/lab3_traffic_light; Project name: trafic_light
-prj_project open "C:/Users/10352/vhdl-labs/lab3_traffic_light/trafic_light.ldf"
-prj_run Export -impl impl1
-prj_project close
-#Stop recording: 11/17/2020 21:11:48

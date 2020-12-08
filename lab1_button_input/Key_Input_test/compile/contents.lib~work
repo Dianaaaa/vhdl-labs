@@ -1,9 +1,0 @@
-4
-~E 1 "./../key_input.vhd" 4 Key_Input
-~A 1 "./../key_input.vhd" 16 Key_Input_arch
-~E 1 "./../key_pressing_detector.vhd" 4 key_pressing_detector
-~A 1 "./../key_pressing_detector.vhd" 16 key_pressing_detector_arch
-~E 1 "./../segment_led_decoder.vhd" 4 segment_led_decoder
-~A 1 "./../segment_led_decoder.vhd" 12 seg_led_decoder_arch
-~E 1 "./../Key_Input_tb.vhd" 25 testbench
-~A 1 "./../Key_Input_tb.vhd" 28 behavior

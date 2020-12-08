@@ -1,377 +1,0 @@
-<HTML>
-<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
---------------------------------------------------------------------------------
-Lattice Synthesis Timing Report, Version  
-Wed Nov 04 15:15:50 2020
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-
-<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
-------------------
-Design:     Key_Input
-Constraint file:  
-Report level:    verbose report, limited to 3 items per constraint
---------------------------------------------------------------------------------
-
-
-
-================================================================================
-Constraint: create_clock -period 5.000000 -name clk2 [get_nets clk_c]
-            312 items scored, 144 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Error:  The following path violates requirements by 4.953ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3AX    CK             \detector/clk_cnt_154__i0  (from clk_c +)
-   Destination:    FD1S3IX    CD             \detector/num_cnt__i0  (to clk_c +)
-
-   Delay:                   9.793ns  (29.7% logic, 70.3% route), 6 logic levels.
-
- Constraint Details:
-
-      9.793ns data_path \detector/clk_cnt_154__i0 to \detector/num_cnt__i0 violates
-      5.000ns delay constraint less
-      0.160ns L_S requirement (totaling 4.840ns) by 4.953ns
-
- Path Details: \detector/clk_cnt_154__i0 to \detector/num_cnt__i0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \detector/clk_cnt_154__i0 (from clk_c)
-Route         2   e 1.198                                  \detector/clk_cnt[0]
-LUT4        ---     0.493              C to Z              \detector/i4_4_lut_adj_45
-Route         1   e 0.941                                  \detector/n10
-LUT4        ---     0.493              B to Z              \detector/i5_3_lut
-Route         2   e 1.141                                  \detector/n3946
-LUT4        ---     0.493              A to Z              \detector/i3_3_lut
-Route         1   e 0.941                                  \detector/n8
-LUT4        ---     0.493              C to Z              \detector/i3778_4_lut
-Route         5   e 1.405                                  \detector/apa_N_10
-LUT4        ---     0.493              C to Z              \detector/i3728_2_lut_2_lut_3_lut_4_lut
-Route         3   e 1.258                                  \detector/n567
-                  --------
-                    9.793  (29.7% logic, 70.3% route), 6 logic levels.
-
-
-Error:  The following path violates requirements by 4.953ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3AX    CK             \detector/clk_cnt_154__i0  (from clk_c +)
-   Destination:    FD1P3IX    CD             \detector/num_cnt__i2  (to clk_c +)
-
-   Delay:                   9.793ns  (29.7% logic, 70.3% route), 6 logic levels.
-
- Constraint Details:
-
-      9.793ns data_path \detector/clk_cnt_154__i0 to \detector/num_cnt__i2 violates
-      5.000ns delay constraint less
-      0.160ns L_S requirement (totaling 4.840ns) by 4.953ns
-
- Path Details: \detector/clk_cnt_154__i0 to \detector/num_cnt__i2
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \detector/clk_cnt_154__i0 (from clk_c)
-Route         2   e 1.198                                  \detector/clk_cnt[0]
-LUT4        ---     0.493              C to Z              \detector/i4_4_lut_adj_45
-Route         1   e 0.941                                  \detector/n10
-LUT4        ---     0.493              B to Z              \detector/i5_3_lut
-Route         2   e 1.141                                  \detector/n3946
-LUT4        ---     0.493              A to Z              \detector/i3_3_lut
-Route         1   e 0.941                                  \detector/n8
-LUT4        ---     0.493              C to Z              \detector/i3778_4_lut
-Route         5   e 1.405                                  \detector/apa_N_10
-LUT4        ---     0.493              C to Z              \detector/i3728_2_lut_2_lut_3_lut_4_lut
-Route         3   e 1.258                                  \detector/n567
-                  --------
-                    9.793  (29.7% logic, 70.3% route), 6 logic levels.
-
-
-Error:  The following path violates requirements by 4.953ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3AX    CK             \detector/clk_cnt_154__i0  (from clk_c +)
-   Destination:    FD1P3IX    CD             \detector/num_cnt__i1  (to clk_c +)
-
-   Delay:                   9.793ns  (29.7% logic, 70.3% route), 6 logic levels.
-
- Constraint Details:
-
-      9.793ns data_path \detector/clk_cnt_154__i0 to \detector/num_cnt__i1 violates
-      5.000ns delay constraint less
-      0.160ns L_S requirement (totaling 4.840ns) by 4.953ns
-
- Path Details: \detector/clk_cnt_154__i0 to \detector/num_cnt__i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \detector/clk_cnt_154__i0 (from clk_c)
-Route         2   e 1.198                                  \detector/clk_cnt[0]
-LUT4        ---     0.493              C to Z              \detector/i4_4_lut_adj_45
-Route         1   e 0.941                                  \detector/n10
-LUT4        ---     0.493              B to Z              \detector/i5_3_lut
-Route         2   e 1.141                                  \detector/n3946
-LUT4        ---     0.493              A to Z              \detector/i3_3_lut
-Route         1   e 0.941                                  \detector/n8
-LUT4        ---     0.493              C to Z              \detector/i3778_4_lut
-Route         5   e 1.405                                  \detector/apa_N_10
-LUT4        ---     0.493              C to Z              \detector/i3728_2_lut_2_lut_3_lut_4_lut
-Route         3   e 1.258                                  \detector/n567
-                  --------
-                    9.793  (29.7% logic, 70.3% route), 6 logic levels.
-
-Warning: 9.953 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets \detector/apa]
-            2012 items scored, 1954 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Error:  The following path violates requirements by 8.428ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3AX    CK             \detector/key_out_i6  (from \detector/apa +)
-   Destination:    FD1P3IX    SP             \detector/key_id_i0  (to \detector/apa +)
-
-   Delay:                  13.143ns  (29.6% logic, 70.4% route), 8 logic levels.
-
- Constraint Details:
-
-     13.143ns data_path \detector/key_out_i6 to \detector/key_id_i0 violates
-      5.000ns delay constraint less
-      0.285ns LCE_S requirement (totaling 4.715ns) by 8.428ns
-
- Path Details: \detector/key_out_i6 to \detector/key_id_i0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \detector/key_out_i6 (from \detector/apa)
-Route        10   e 1.662                                  \detector/key_out[6]
-LUT4        ---     0.493              A to Z              \detector/i1_2_lut_rep_101
-Route         2   e 1.141                                  \detector/n4362
-LUT4        ---     0.493              A to Z              \detector/n39_bdd_2_lut_3801_4_lut
-Route         1   e 0.941                                  \detector/n4267
-LUT4        ---     0.493              B to Z              \detector/i1_4_lut_adj_36
-Route         1   e 0.941                                  \detector/n74_adj_170
-LUT4        ---     0.493              B to Z              \detector/i2_4_lut_adj_33
-Route         1   e 0.941                                  \detector/n3758
-LUT4        ---     0.493              B to Z              \detector/i1_4_lut_adj_32
-Route         2   e 1.141                                  \detector/n33
-LUT4        ---     0.493              D to Z              \detector/i1_3_lut_4_lut_adj_42
-Route         4   e 1.340                                  \detector/n3978
-LUT4        ---     0.493              D to Z              \detector/i38_3_lut_4_lut
-Route         2   e 1.141                                  \detector/apa_enable_15
-                  --------
-                   13.143  (29.6% logic, 70.4% route), 8 logic levels.
-
-
-Error:  The following path violates requirements by 8.428ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3AX    CK             \detector/key_out_i6  (from \detector/apa +)
-   Destination:    FD1P3AX    SP             \detector/key_id_i1  (to \detector/apa +)
-
-   Delay:                  13.143ns  (29.6% logic, 70.4% route), 8 logic levels.
-
- Constraint Details:
-
-     13.143ns data_path \detector/key_out_i6 to \detector/key_id_i1 violates
-      5.000ns delay constraint less
-      0.285ns LCE_S requirement (totaling 4.715ns) by 8.428ns
-
- Path Details: \detector/key_out_i6 to \detector/key_id_i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \detector/key_out_i6 (from \detector/apa)
-Route        10   e 1.662                                  \detector/key_out[6]
-LUT4        ---     0.493              A to Z              \detector/i1_2_lut_rep_101
-Route         2   e 1.141                                  \detector/n4362
-LUT4        ---     0.493              A to Z              \detector/n39_bdd_2_lut_3801_4_lut
-Route         1   e 0.941                                  \detector/n4267
-LUT4        ---     0.493              B to Z              \detector/i1_4_lut_adj_36
-Route         1   e 0.941                                  \detector/n74_adj_170
-LUT4        ---     0.493              B to Z              \detector/i2_4_lut_adj_33
-Route         1   e 0.941                                  \detector/n3758
-LUT4        ---     0.493              B to Z              \detector/i1_4_lut_adj_32
-Route         2   e 1.141                                  \detector/n33
-LUT4        ---     0.493              D to Z              \detector/i1_3_lut_4_lut_adj_42
-Route         4   e 1.340                                  \detector/n3978
-LUT4        ---     0.493              D to Z              \detector/i38_3_lut_4_lut
-Route         2   e 1.141                                  \detector/apa_enable_15
-                  --------
-                   13.143  (29.6% logic, 70.4% route), 8 logic levels.
-
-
-Error:  The following path violates requirements by 8.325ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3AX    CK             \detector/key_out_i7  (from \detector/apa +)
-   Destination:    FD1P3IX    SP             \detector/key_id_i0  (to \detector/apa +)
-
-   Delay:                  13.040ns  (29.9% logic, 70.1% route), 8 logic levels.
-
- Constraint Details:
-
-     13.040ns data_path \detector/key_out_i7 to \detector/key_id_i0 violates
-      5.000ns delay constraint less
-      0.285ns LCE_S requirement (totaling 4.715ns) by 8.325ns
-
- Path Details: \detector/key_out_i7 to \detector/key_id_i0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \detector/key_out_i7 (from \detector/apa)
-Route         7   e 1.559                                  \detector/key_out[7]
-LUT4        ---     0.493              B to Z              \detector/i1_2_lut_rep_101
-Route         2   e 1.141                                  \detector/n4362
-LUT4        ---     0.493              A to Z              \detector/n39_bdd_2_lut_3801_4_lut
-Route         1   e 0.941                                  \detector/n4267
-LUT4        ---     0.493              B to Z              \detector/i1_4_lut_adj_36
-Route         1   e 0.941                                  \detector/n74_adj_170
-LUT4        ---     0.493              B to Z              \detector/i2_4_lut_adj_33
-Route         1   e 0.941                                  \detector/n3758
-LUT4        ---     0.493              B to Z              \detector/i1_4_lut_adj_32
-Route         2   e 1.141                                  \detector/n33
-LUT4        ---     0.493              D to Z              \detector/i1_3_lut_4_lut_adj_42
-Route         4   e 1.340                                  \detector/n3978
-LUT4        ---     0.493              D to Z              \detector/i38_3_lut_4_lut
-Route         2   e 1.141                                  \detector/apa_enable_15
-                  --------
-                   13.040  (29.9% logic, 70.1% route), 8 logic levels.
-
-Warning: 13.428 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets seg1_6__N_154]
-            0 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
---------------
---------------------------------------------------------------------------------
-Constraint                              |   Constraint|       Actual|Levels
---------------------------------------------------------------------------------
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets clk_c]                   |     5.000 ns|     9.953 ns|     6 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets \detector/apa]           |     5.000 ns|    13.428 ns|     8 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets seg1_6__N_154]           |            -|            -|     0  
-                                        |             |             |
---------------------------------------------------------------------------------
-
-
-2 constraints not met.
-
---------------------------------------------------------------------------------
-Critical Nets                           |   Loads|  Errors| % of total
---------------------------------------------------------------------------------
-\detector/n33                           |       2|    1155|     55.05%
-                                        |        |        |
-\detector/apa_enable_19                 |      16|    1088|     51.86%
-                                        |        |        |
-\detector/n4_adj_169                    |       1|     567|     27.03%
-                                        |        |        |
-\detector/n3758                         |       1|     504|     24.02%
-                                        |        |        |
-\detector/n74_adj_170                   |       1|     336|     16.02%
-                                        |        |        |
-\detector/n4368                         |       1|     315|     15.01%
-                                        |        |        |
-\detector/n3978                         |       4|     275|     13.11%
-                                        |        |        |
-\detector/n4010                         |       3|     252|     12.01%
-                                        |        |        |
-\detector/n1211                         |       9|     230|     10.96%
-                                        |        |        |
---------------------------------------------------------------------------------
-
-
-<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
----------------
-
-Timing errors: 2098  Score: 8224534
-
-Constraints cover  2324 paths, 174 nets, and 537 connections (54.1% coverage)
-
-
-Peak memory: 87592960 bytes, TRCE: 0 bytes, DLYMAN: 0 bytes
-CPU_TIME_REPORT: 0 secs 
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

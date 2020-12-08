@@ -1,659 +1,0 @@
-<HTML>
-<HEAD><TITLE>Project Summary</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Mrp"></A>
-       Lattice Mapping Report File for Design Module 'electricalClock'
-
-
-
-<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
-
-Command line:   map -a MachXO2 -p LCMXO2-4000HC -t CSBGA132 -s 4 -oc Commercial
-     digital_clock_impl1.ngd -o digital_clock_impl1_map.ncd -pr
-     digital_clock_impl1.prf -mp digital_clock_impl1.mrp -lpf
-     C:/Users/10352/vhdl-labs/lab4_digital_clock/impl1/digital_clock_impl1.lpf
-     -lpf C:/Users/10352/vhdl-labs/lab4_digital_clock/digital_clock.lpf -c 0
-     -gui 
-Target Vendor:  LATTICE
-Target Device:  LCMXO2-4000HCCSBGA132
-Target Performance:   4
-Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  11/17/20  21:15:37
-
-
-<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    293 out of  4635 (6%)
-      PFU registers:          293 out of  4320 (7%)
-      PIO registers:            0 out of   315 (0%)
-   Number of SLICEs:       293 out of  2160 (14%)
-      SLICEs as Logic/ROM:    293 out of  2160 (14%)
-      SLICEs as RAM:            0 out of  1620 (0%)
-      SLICEs as Carry:        102 out of  2160 (5%)
-   Number of LUT4s:        582 out of  4320 (13%)
-      Number used as logic LUTs:        378
-      Number used as distributed RAM:     0
-      Number used as ripple logic:      204
-      Number used as shift registers:     0
-   Number of PIO sites used: 15 + 4(JTAG) out of 105 (18%)
-   Number of block RAMs:  0 out of 10 (0%)
-   Number of GSRs:        1 out of 1 (100%)
-   EFB used :        No
-   JTAG used :       No
-   Readback used :   No
-   Oscillator used : No
-   Startup used :    No
-   POR :             On
-   Bandgap :         On
-   Number of Power Controller:  0 out of 1 (0%)
-   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
-   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
-   Number of DCCA:  0 out of 8 (0%)
-   Number of DCMA:  0 out of 2 (0%)
-   Number of PLLs:  0 out of 2 (0%)
-   Number of DQSDLLs:  0 out of 2 (0%)
-   Number of CLKDIVC:  0 out of 4 (0%)
-   Number of ECLKSYNCA:  0 out of 4 (0%)
-   Number of ECLKBRIDGECS:  0 out of 2 (0%)
-   Notes:-
-      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
-     distributed RAMs) + 2*(Number of ripple logic)
-      2. Number of logic LUT4s does not include count of distributed RAM and
-     ripple logic.
-   Number of clocks:  1
-     Net clk_c: 174 loads, 174 rising, 0 falling (Driver: PIO clk )
-   Number of Clock Enables:  22
-
-     Net clk_c_enable_53: 3 loads, 3 LSLICEs
-     Net tm/clk_c_enable_61: 1 loads, 1 LSLICEs
-     Net clk_c_enable_60: 3 loads, 3 LSLICEs
-     Net tm/clk_c_enable_55: 3 loads, 3 LSLICEs
-     Net clk_c_enable_50: 2 loads, 2 LSLICEs
-     Net tm/clk_c_enable_48: 3 loads, 3 LSLICEs
-     Net tm/clk_c_enable_45: 3 loads, 3 LSLICEs
-     Net tm/clk_c_enable_42: 2 loads, 2 LSLICEs
-     Net tm/clk_c_enable_38: 2 loads, 2 LSLICEs
-     Net tm/clk_c_enable_39: 2 loads, 2 LSLICEs
-     Net tm/clk_c_enable_41: 3 loads, 3 LSLICEs
-     Net tm/clk_c_enable_40: 2 loads, 2 LSLICEs
-     Net controller/moderec_1__N_149: 1 loads, 1 LSLICEs
-     Net re/clk_c_enable_14: 1 loads, 1 LSLICEs
-     Net re/clk_c_enable_10: 1 loads, 1 LSLICEs
-     Net dt/clk_c_enable_28: 9 loads, 9 LSLICEs
-     Net dt/din_N_372: 1 loads, 1 LSLICEs
-     Net dt/clk_c_enable_57: 1 loads, 1 LSLICEs
-     Net rstkey/keystore_2__N_139: 2 loads, 2 LSLICEs
-     Net modekey/keystore_2__N_139: 2 loads, 2 LSLICEs
-     Net downkey/keystore_2__N_139: 2 loads, 2 LSLICEs
-     Net upkey/keystore_2__N_139: 2 loads, 2 LSLICEs
-   Number of LSRs:  10
-     Net tm/n3120: 1 loads, 1 LSLICEs
-     Net re/n4541: 1 loads, 1 LSLICEs
-     Net dt/n2337: 2 loads, 2 LSLICEs
-     Net dt/n3124: 8 loads, 8 LSLICEs
-     Net dt/n3123: 17 loads, 17 LSLICEs
-     Net rstkey/n3118: 17 loads, 17 LSLICEs
-     Net secondGen/n3117: 17 loads, 17 LSLICEs
-     Net modekey/n3119: 17 loads, 17 LSLICEs
-     Net downkey/n3122: 17 loads, 17 LSLICEs
-     Net upkey/n3121: 17 loads, 17 LSLICEs
-   Number of nets driven by tri-state buffers:  0
-   Top 10 highest fanout non-clock nets:
-     Net mode_1: 38 loads
-     Net mode_0: 30 loads
-     Net tm/n7623: 21 loads
-     Net n8077: 19 loads
-     Net downkey/n3122: 18 loads
-     Net dt/n3123: 18 loads
-     Net hL_0: 18 loads
-     Net modekey/n3119: 18 loads
-     Net rstkey/n3118: 18 loads
-     Net secondGen/n3117: 18 loads
-
-
-
-
-   Number of warnings:  0
-   Number of errors:    0
-     
-
-
-
-
-
-
-
-
-<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
-
-   No errors or warnings present.
-
-
-
-<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
-
-+---------------------+-----------+-----------+------------+
-| IO Name             | Direction | Levelmode | IO         |
-|                     |           |  IO_TYPE  | Register   |
-+---------------------+-----------+-----------+------------+
-| down_key            | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| up_key              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| mode_key            | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| rst_key             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| clk                 | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| rck                 | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| sck                 | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| din                 | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| secDisp             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| modedisplay[0]      | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| modedisplay[1]      | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| modedisplay[2]      | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| modedisplay[3]      | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| PortA               | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| PortB               | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-
-
-<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
-
-Block i6684 undriven or does not drive anything - clipped.
-Signal n612 was merged into signal rst_key_state
-Signal tm/n7674 was merged into signal sL_3
-Signal tm/n7662 was merged into signal mL_3
-Signal GND_net undriven or does not drive anything - clipped.
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal upkey/keysamplerpulsecnt_1581_add_4_1/S0 undriven or does not drive
-     anything - clipped.
-Signal upkey/keysamplerpulsecnt_1581_add_4_1/CI undriven or does not drive
-     anything - clipped.
-Signal upkey/keysamplerpulsecnt_1581_add_4_33/S1 undriven or does not drive
-     anything - clipped.
-
-Signal upkey/keysamplerpulsecnt_1581_add_4_33/CO undriven or does not drive
-     anything - clipped.
-Signal downkey/keysamplerpulsecnt_1582_add_4_33/S1 undriven or does not drive
-     anything - clipped.
-Signal downkey/keysamplerpulsecnt_1582_add_4_33/CO undriven or does not drive
-     anything - clipped.
-Signal downkey/keysamplerpulsecnt_1582_add_4_1/S0 undriven or does not drive
-     anything - clipped.
-Signal downkey/keysamplerpulsecnt_1582_add_4_1/CI undriven or does not drive
-     anything - clipped.
-Signal modekey/keysamplerpulsecnt_1580_add_4_1/S0 undriven or does not drive
-     anything - clipped.
-Signal modekey/keysamplerpulsecnt_1580_add_4_1/CI undriven or does not drive
-     anything - clipped.
-Signal modekey/keysamplerpulsecnt_1580_add_4_33/S1 undriven or does not drive
-     anything - clipped.
-Signal modekey/keysamplerpulsecnt_1580_add_4_33/CO undriven or does not drive
-     anything - clipped.
-Signal secondGen/seccnt_1578_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal secondGen/seccnt_1578_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Signal secondGen/seccnt_1578_add_4_33/S1 undriven or does not drive anything -
-     clipped.
-Signal secondGen/seccnt_1578_add_4_33/CO undriven or does not drive anything -
-     clipped.
-Signal rstkey/keysamplerpulsecnt_1579_add_4_33/S1 undriven or does not drive
-     anything - clipped.
-Signal rstkey/keysamplerpulsecnt_1579_add_4_33/CO undriven or does not drive
-     anything - clipped.
-Signal rstkey/keysamplerpulsecnt_1579_add_4_1/S0 undriven or does not drive
-     anything - clipped.
-Signal rstkey/keysamplerpulsecnt_1579_add_4_1/CI undriven or does not drive
-     anything - clipped.
-Signal dt/shift_clock_cnt_1589_add_4_33/S1 undriven or does not drive anything -
-     clipped.
-Signal dt/shift_clock_cnt_1589_add_4_33/CO undriven or does not drive anything -
-     clipped.
-Signal dt/shift_clock_cnt_1589_add_4_1/S0 undriven or does not drive anything -
-     clipped.
-Signal dt/shift_clock_cnt_1589_add_4_1/CI undriven or does not drive anything -
-     clipped.
-Block rstkey/i213_1_lut was optimized away.
-Block tm/mux_1135_i4_4_lut_then_1_lut was optimized away.
-Block tm/mux_652_i4_4_lut_then_1_lut was optimized away.
-Block i1 was optimized away.
-
-     
-
-
-
-<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
----------
-
-GSR Component:
-   The Global Set Reset (GSR) resource has been used to implement a global reset
-        of the design. The reset signal used for GSR control is 'rst_key_state'.
-        
-
-
-     GSR Property:
-   The design components with GSR property set to ENABLED will respond to global
-        set reset while the components with GSR property set to DISABLED will
-        not.
-        
-
-     Components with disabled GSR Property
--------------------------------------
-
-     These components have the GSR property set to DISABLED. The components will
-     not respond to the reset signal 'rst_key_state' via the GSR component.
-
-     Type and number of components of the type: 
-   Register = 168 
-
-     Type and instance name of component: 
-   Register : secDisp_9
-   Register : tm/upkey_ls_186
-   Register : tm/downkey_ls_187
-   Register : tm/sec_ls_188
-   Register : controller/mode_i1
-   Register : controller/modekey_ls_21
-   Register : controller/mode_i2
-   Register : re/int_times_33
-   Register : re/PA_ls_31
-   Register : re/act_cache__i1
-   Register : re/act_cache_tmp_32
-   Register : re/act_cache__i2
-   Register : dt/codeP__i0
-   Register : dt/shift_clock_ls_56
-   Register : dt/codeP__i2
-   Register : dt/codeP__i1
-   Register : rstkey/keysamplerpulse_31
-   Register : rstkey/keysamplerpulse_ls_32
-   Register : rstkey/keystate_34
-   Register : rstkey/keystore_i0_i0
-   Register : rstkey/keysamplerpulsecnt_1579__i0
-   Register : rstkey/keysamplerpulsecnt_1579__i31
-   Register : rstkey/keysamplerpulsecnt_1579__i30
-   Register : rstkey/keysamplerpulsecnt_1579__i29
-   Register : rstkey/keysamplerpulsecnt_1579__i28
-   Register : rstkey/keysamplerpulsecnt_1579__i27
-   Register : rstkey/keysamplerpulsecnt_1579__i26
-   Register : rstkey/keysamplerpulsecnt_1579__i25
-   Register : rstkey/keysamplerpulsecnt_1579__i24
-   Register : rstkey/keysamplerpulsecnt_1579__i23
-   Register : rstkey/keysamplerpulsecnt_1579__i22
-   Register : rstkey/keysamplerpulsecnt_1579__i21
-   Register : rstkey/keysamplerpulsecnt_1579__i20
-   Register : rstkey/keysamplerpulsecnt_1579__i19
-   Register : rstkey/keysamplerpulsecnt_1579__i18
-   Register : rstkey/keysamplerpulsecnt_1579__i17
-   Register : rstkey/keysamplerpulsecnt_1579__i16
-   Register : rstkey/keysamplerpulsecnt_1579__i15
-   Register : rstkey/keysamplerpulsecnt_1579__i14
-
-   Register : rstkey/keysamplerpulsecnt_1579__i13
-   Register : rstkey/keysamplerpulsecnt_1579__i12
-   Register : rstkey/keysamplerpulsecnt_1579__i11
-   Register : rstkey/keysamplerpulsecnt_1579__i10
-   Register : rstkey/keysamplerpulsecnt_1579__i9
-   Register : rstkey/keysamplerpulsecnt_1579__i8
-   Register : rstkey/keysamplerpulsecnt_1579__i7
-   Register : rstkey/keysamplerpulsecnt_1579__i6
-   Register : rstkey/keysamplerpulsecnt_1579__i5
-   Register : rstkey/keysamplerpulsecnt_1579__i4
-   Register : rstkey/keysamplerpulsecnt_1579__i3
-   Register : rstkey/keysamplerpulsecnt_1579__i2
-   Register : rstkey/keysamplerpulsecnt_1579__i1
-   Register : rstkey/keystore_i0_i2
-   Register : rstkey/keystore_i0_i1
-   Register : modekey/keysamplerpulse_31
-   Register : modekey/keysamplerpulse_ls_32
-   Register : modekey/keystate_34
-   Register : modekey/keystore_i0_i0
-   Register : modekey/keystore_i0_i2
-   Register : modekey/keystore_i0_i1
-   Register : modekey/keysamplerpulsecnt_1580__i0
-   Register : modekey/keysamplerpulsecnt_1580__i31
-   Register : modekey/keysamplerpulsecnt_1580__i30
-   Register : modekey/keysamplerpulsecnt_1580__i29
-   Register : modekey/keysamplerpulsecnt_1580__i28
-   Register : modekey/keysamplerpulsecnt_1580__i27
-   Register : modekey/keysamplerpulsecnt_1580__i26
-   Register : modekey/keysamplerpulsecnt_1580__i25
-   Register : modekey/keysamplerpulsecnt_1580__i24
-   Register : modekey/keysamplerpulsecnt_1580__i23
-   Register : modekey/keysamplerpulsecnt_1580__i22
-   Register : modekey/keysamplerpulsecnt_1580__i21
-   Register : modekey/keysamplerpulsecnt_1580__i20
-   Register : modekey/keysamplerpulsecnt_1580__i19
-   Register : modekey/keysamplerpulsecnt_1580__i18
-   Register : modekey/keysamplerpulsecnt_1580__i17
-   Register : modekey/keysamplerpulsecnt_1580__i16
-   Register : modekey/keysamplerpulsecnt_1580__i15
-   Register : modekey/keysamplerpulsecnt_1580__i14
-   Register : modekey/keysamplerpulsecnt_1580__i13
-   Register : modekey/keysamplerpulsecnt_1580__i12
-   Register : modekey/keysamplerpulsecnt_1580__i11
-   Register : modekey/keysamplerpulsecnt_1580__i10
-   Register : modekey/keysamplerpulsecnt_1580__i9
-   Register : modekey/keysamplerpulsecnt_1580__i8
-   Register : modekey/keysamplerpulsecnt_1580__i7
-   Register : modekey/keysamplerpulsecnt_1580__i6
-   Register : modekey/keysamplerpulsecnt_1580__i5
-   Register : modekey/keysamplerpulsecnt_1580__i4
-   Register : modekey/keysamplerpulsecnt_1580__i3
-   Register : modekey/keysamplerpulsecnt_1580__i2
-   Register : modekey/keysamplerpulsecnt_1580__i1
-   Register : downkey/keystore_i0_i0
-   Register : downkey/keysamplerpulse_31
-   Register : downkey/keysamplerpulse_ls_32
-
-   Register : downkey/keystate_34
-   Register : downkey/keysamplerpulsecnt_1582__i0
-   Register : downkey/keysamplerpulsecnt_1582__i31
-   Register : downkey/keysamplerpulsecnt_1582__i30
-   Register : downkey/keysamplerpulsecnt_1582__i29
-   Register : downkey/keysamplerpulsecnt_1582__i28
-   Register : downkey/keysamplerpulsecnt_1582__i27
-   Register : downkey/keysamplerpulsecnt_1582__i26
-   Register : downkey/keysamplerpulsecnt_1582__i25
-   Register : downkey/keysamplerpulsecnt_1582__i24
-   Register : downkey/keysamplerpulsecnt_1582__i23
-   Register : downkey/keysamplerpulsecnt_1582__i22
-   Register : downkey/keysamplerpulsecnt_1582__i21
-   Register : downkey/keysamplerpulsecnt_1582__i20
-   Register : downkey/keysamplerpulsecnt_1582__i19
-   Register : downkey/keysamplerpulsecnt_1582__i18
-   Register : downkey/keysamplerpulsecnt_1582__i17
-   Register : downkey/keysamplerpulsecnt_1582__i16
-   Register : downkey/keysamplerpulsecnt_1582__i15
-   Register : downkey/keysamplerpulsecnt_1582__i14
-   Register : downkey/keysamplerpulsecnt_1582__i13
-   Register : downkey/keysamplerpulsecnt_1582__i12
-   Register : downkey/keysamplerpulsecnt_1582__i11
-   Register : downkey/keysamplerpulsecnt_1582__i10
-   Register : downkey/keysamplerpulsecnt_1582__i9
-   Register : downkey/keysamplerpulsecnt_1582__i8
-   Register : downkey/keysamplerpulsecnt_1582__i7
-   Register : downkey/keysamplerpulsecnt_1582__i6
-   Register : downkey/keysamplerpulsecnt_1582__i5
-   Register : downkey/keysamplerpulsecnt_1582__i4
-   Register : downkey/keysamplerpulsecnt_1582__i3
-   Register : downkey/keysamplerpulsecnt_1582__i2
-   Register : downkey/keysamplerpulsecnt_1582__i1
-   Register : downkey/keystore_i0_i2
-   Register : downkey/keystore_i0_i1
-   Register : upkey/keystore_i0_i0
-   Register : upkey/keysamplerpulse_31
-   Register : upkey/keysamplerpulse_ls_32
-   Register : upkey/keystate_34
-   Register : upkey/keystore_i0_i2
-   Register : upkey/keystore_i0_i1
-   Register : upkey/keysamplerpulsecnt_1581__i0
-   Register : upkey/keysamplerpulsecnt_1581__i31
-   Register : upkey/keysamplerpulsecnt_1581__i30
-   Register : upkey/keysamplerpulsecnt_1581__i29
-   Register : upkey/keysamplerpulsecnt_1581__i28
-   Register : upkey/keysamplerpulsecnt_1581__i27
-   Register : upkey/keysamplerpulsecnt_1581__i26
-   Register : upkey/keysamplerpulsecnt_1581__i25
-   Register : upkey/keysamplerpulsecnt_1581__i24
-   Register : upkey/keysamplerpulsecnt_1581__i23
-   Register : upkey/keysamplerpulsecnt_1581__i22
-   Register : upkey/keysamplerpulsecnt_1581__i21
-   Register : upkey/keysamplerpulsecnt_1581__i20
-   Register : upkey/keysamplerpulsecnt_1581__i19
-   Register : upkey/keysamplerpulsecnt_1581__i18
-
-   Register : upkey/keysamplerpulsecnt_1581__i17
-   Register : upkey/keysamplerpulsecnt_1581__i16
-   Register : upkey/keysamplerpulsecnt_1581__i15
-   Register : upkey/keysamplerpulsecnt_1581__i14
-   Register : upkey/keysamplerpulsecnt_1581__i13
-   Register : upkey/keysamplerpulsecnt_1581__i12
-   Register : upkey/keysamplerpulsecnt_1581__i11
-   Register : upkey/keysamplerpulsecnt_1581__i10
-   Register : upkey/keysamplerpulsecnt_1581__i9
-   Register : upkey/keysamplerpulsecnt_1581__i8
-   Register : upkey/keysamplerpulsecnt_1581__i7
-   Register : upkey/keysamplerpulsecnt_1581__i6
-   Register : upkey/keysamplerpulsecnt_1581__i5
-   Register : upkey/keysamplerpulsecnt_1581__i4
-   Register : upkey/keysamplerpulsecnt_1581__i3
-   Register : upkey/keysamplerpulsecnt_1581__i2
-   Register : upkey/keysamplerpulsecnt_1581__i1
-
-     Components with synchronous local reset also reset by asynchronous GSR
-----------------------------------------------------------------------
-
-     These components have the GSR property set to ENABLED and the local reset
-     is synchronous. The components will respond to the synchronous local reset
-     and to the unrelated asynchronous reset signal 'rst_key_state' via the GSR
-     component.
-
-     Type and number of components of the type: 
-   Register = 80 
-
-     Type and instance name of component: 
-   Register : tm/hHRec1_1585__i0
-   Register : dt/shift_cnt_FSM__i3
-   Register : dt/shift_cnt_FSM__i2
-   Register : dt/shift_cnt_FSM__i1
-   Register : dt/shift_cnt_FSM__i7
-   Register : dt/shift_cnt_FSM__i6
-   Register : dt/shift_cnt_FSM__i5
-   Register : dt/shift_cnt_FSM__i4
-   Register : dt/shift_cnt_FSM__i9
-   Register : dt/shift_cnt_FSM__i8
-   Register : dt/shift_cnt_FSM__i10
-   Register : dt/shift_clock_cnt_1589__i31
-   Register : dt/shift_cnt_FSM__i15
-   Register : dt/shift_cnt_FSM__i14
-   Register : dt/shift_cnt_FSM__i13
-   Register : dt/shift_cnt_FSM__i12
-   Register : dt/shift_cnt_FSM__i11
-   Register : dt/shift_clock_cnt_1589__i30
-   Register : dt/shift_clock_cnt_1589__i29
-   Register : dt/shift_clock_cnt_1589__i28
-   Register : dt/shift_clock_cnt_1589__i27
-   Register : dt/shift_clock_cnt_1589__i26
-   Register : dt/shift_clock_cnt_1589__i25
-   Register : dt/shift_clock_cnt_1589__i24
-   Register : dt/shift_clock_cnt_1589__i23
-   Register : dt/shift_clock_cnt_1589__i22
-
-   Register : dt/shift_clock_cnt_1589__i21
-   Register : dt/shift_clock_cnt_1589__i20
-   Register : dt/shift_clock_cnt_1589__i19
-   Register : dt/shift_clock_cnt_1589__i18
-   Register : dt/shift_clock_cnt_1589__i17
-   Register : dt/shift_clock_cnt_1589__i16
-   Register : dt/shift_clock_cnt_1589__i15
-   Register : dt/shift_clock_cnt_1589__i14
-   Register : dt/shift_clock_cnt_1589__i13
-   Register : dt/shift_clock_cnt_1589__i12
-   Register : dt/shift_clock_cnt_1589__i11
-   Register : dt/shift_clock_cnt_1589__i10
-   Register : dt/shift_clock_cnt_1589__i9
-   Register : dt/shift_clock_cnt_1589__i8
-   Register : dt/shift_clock_cnt_1589__i7
-   Register : dt/shift_clock_cnt_1589__i6
-   Register : dt/shift_clock_cnt_1589__i5
-   Register : dt/shift_clock_cnt_1589__i4
-   Register : dt/shift_clock_cnt_1589__i3
-   Register : dt/shift_clock_cnt_1589__i2
-   Register : dt/shift_clock_cnt_1589__i1
-   Register : dt/shift_clock_cnt_1589__i0
-   Register : secondGen/seccnt_1578__i0
-   Register : secondGen/seccnt_1578__i31
-   Register : secondGen/seccnt_1578__i30
-   Register : secondGen/seccnt_1578__i29
-   Register : secondGen/seccnt_1578__i28
-   Register : secondGen/seccnt_1578__i27
-   Register : secondGen/seccnt_1578__i26
-   Register : secondGen/seccnt_1578__i25
-   Register : secondGen/seccnt_1578__i24
-   Register : secondGen/seccnt_1578__i23
-   Register : secondGen/seccnt_1578__i22
-   Register : secondGen/seccnt_1578__i21
-   Register : secondGen/seccnt_1578__i20
-   Register : secondGen/seccnt_1578__i19
-   Register : secondGen/seccnt_1578__i18
-   Register : secondGen/seccnt_1578__i17
-   Register : secondGen/seccnt_1578__i16
-   Register : secondGen/seccnt_1578__i15
-   Register : secondGen/seccnt_1578__i14
-   Register : secondGen/seccnt_1578__i13
-   Register : secondGen/seccnt_1578__i12
-   Register : secondGen/seccnt_1578__i11
-   Register : secondGen/seccnt_1578__i10
-   Register : secondGen/seccnt_1578__i9
-   Register : secondGen/seccnt_1578__i8
-   Register : secondGen/seccnt_1578__i7
-   Register : secondGen/seccnt_1578__i6
-   Register : secondGen/seccnt_1578__i5
-   Register : secondGen/seccnt_1578__i4
-   Register : secondGen/seccnt_1578__i3
-   Register : secondGen/seccnt_1578__i2
-   Register : secondGen/seccnt_1578__i1
-
-
-
-
-
-<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
--------------------------
-
-   Total CPU Time: 0 secs  
-   Total REAL Time: 0 secs  
-   Peak Memory Usage: 53 MB
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-     Copyright (c) 1995 AT&T Corp.   All rights reserved.
-     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-     Copyright (c) 2001 Agere Systems   All rights reserved.
-     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
-     reserved.
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

@@ -1,9 +1,0 @@
-#Start recording tcl command: 11/17/2020 21:13:42
-#Project Location: C:/Users/10352/vhdl-labs/lab4_digital_clock; Project name: digital_clock
-prj_project new -name "digital_clock" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
-prj_project save
-prj_src add "C:/Users/10352/vhdl-labs/lab4_digital_clock/ClockDivider.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/CycleSampler.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/DataTo595.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/ModeCtrler.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/RotaryEncoder.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/timeencoder.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/Timer.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/Timer1.vhd" "C:/Users/10352/vhdl-labs/lab4_digital_clock/TopDesign.vhd"
-prj_run Synthesis -impl impl1
-prj_run Export -impl impl1
-prj_run Export -impl impl1
-#Stop recording: 11/17/2020 21:16:09

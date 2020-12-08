@@ -1,4 +1,0 @@
-MESSAGE "File: C:\Users\10352\vhdl-labs\lab1_button_input\Key_Input_test\Key_Input_tb.vhd" 
-MESSAGE "Compile Entity "testbench"" 
-MESSAGE "Compile Architecture "behavior" of Entity "testbench"" 
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]" 

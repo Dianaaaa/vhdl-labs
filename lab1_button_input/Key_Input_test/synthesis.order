@@ -1,4 +1,0 @@
-i<>.\segment_led_decoder.vhd
-i<>.\key_pressing_detector.vhd
-i<>.\key_input.vhd
-i<>.\Key_Input_tb.vhd

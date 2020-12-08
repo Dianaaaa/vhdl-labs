@@ -1,9 +1,0 @@
-#Start recording tcl command: 11/17/2020 21:01:08
-#Project Location: C:/Users/10352/vhdl-labs/lab3_traffic_light; Project name: trafic_light
-prj_project new -name "trafic_light" -impl "impl1" -dev LCMXO2-4000HC-4MG132C -synthesis "lse"
-prj_project save
-prj_src add "C:/Users/10352/vhdl-labs/lab3_traffic_light/CycleSampler.vhd" "C:/Users/10352/vhdl-labs/lab3_traffic_light/TopDesign.vhd"
-prj_run Synthesis -impl impl1
-prj_run Synthesis -impl impl1
-prj_run Export -impl impl1
-#Stop recording: 11/17/2020 21:04:22
